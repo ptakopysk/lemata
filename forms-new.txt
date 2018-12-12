@@ -1,0 +1,1 @@
+/net/projects/LSD/embeddings/data_w2v_format/cs/w2v/cnk_syn4/forms-new.txt
