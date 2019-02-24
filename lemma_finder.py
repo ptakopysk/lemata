@@ -37,6 +37,8 @@ ap.add_argument("-n", "--number", type=int,
         help="How many embeddings to read in")
 ap.add_argument("-N", "--normalize", action="store_true",
         help="Normalize the embeddings")
+ap.add_argument("-S", "--stems", action="store_true",
+        help="only look for words with the same stem")
 ap.add_argument("-G", "--gold_stems", action="store_true",
         help="only look for lemmas with the right stem; gold stem used, i.e.  the longest common prefix of the form and the true lemma, also potentially removing 'ne-' prefix")
 ap.add_argument("-s", "--similarity", type=str,
@@ -45,9 +47,9 @@ args = ap.parse_args()
 
 def similarity(word, otherword):
     sim = 0
-    if ap.similarity == 'jw':
+    if args.similarity == 'jw':
         sim = -distance.get_jaro_distance(word, otherword)
-    if ap.similarity == 'jwxcos':
+    if args.similarity == 'jwxcos':
         emb1 = embedding[word]
         emb2 = embedding[otherword]
         cos_sim = inner(emb1, emb2)/(norm(emb1)*norm(emb2))
@@ -111,6 +113,21 @@ def find_gold_stem(form, lemma):
         stem = stem[:-1]
     return stem
 
+def gray_stems(form):
+    stems = set()
+    length = len(form)
+    lcform = form.lower()
+    if len(form) > 6:
+        stems.add(form[:5])
+        stems.add(lcform[:5])
+    else:
+        stop = int(length/2)
+        stems.add(form[:stop])
+        stems.add(lcform[:stop])
+    stems.discard('')
+    return stems
+    
+
 def gold_stems(form, lemma):
     stems = set()
     stems.add(find_gold_stem(form, lemma))
@@ -169,6 +186,8 @@ else:
         best_sim = -2
         best_lemma = 'NONE'
         stems = None
+        if args.stems:
+            stems = gray_stems(form)
         if args.gold_stems:
             stems = gold_stems(form, form2lemma[form])
         pos = form2pos[form]
