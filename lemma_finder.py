@@ -19,6 +19,8 @@ from ast import literal_eval as make_tuple
 from sklearn.metrics import confusion_matrix
 import itertools
 
+from pyjarowinkler import distance
+
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -37,12 +39,26 @@ ap.add_argument("-N", "--normalize", action="store_true",
         help="Normalize the embeddings")
 ap.add_argument("-G", "--gold_stems", action="store_true",
         help="only look for lemmas with the right stem; gold stem used, i.e.  the longest common prefix of the form and the true lemma, also potentially removing 'ne-' prefix")
+ap.add_argument("-s", "--similarity", type=str,
+        help="Similarity: cos or jw")
 args = ap.parse_args()
 
 def similarity(word, otherword):
-    emb1 = embedding[word]
-    emb2 = embedding[otherword]
-    return inner(emb1, emb2)/(norm(emb1)*norm(emb2))
+    sim = 0
+    if ap.similarity == 'jw':
+        sim = -distance.get_jaro_distance(word, otherword)
+    if ap.similarity == 'jwxcos':
+        emb1 = embedding[word]
+        emb2 = embedding[otherword]
+        cos_sim = inner(emb1, emb2)/(norm(emb1)*norm(emb2))
+        jw_sim = 1-distance.get_jaro_distance(word, otherword)
+        sim = jw_sim * cos_sim
+    else:
+        # cos
+        emb1 = embedding[word]
+        emb2 = embedding[otherword]
+        sim = inner(emb1, emb2)/(norm(emb1)*norm(emb2))
+    return sim
 
 # read in embs
 embedding = defaultdict(list)
@@ -152,7 +168,7 @@ else:
     for form in form2lemma:
         best_sim = -2
         best_lemma = 'NONE'
-        stem = None
+        stems = None
         if args.gold_stems:
             stems = gold_stems(form, form2lemma[form])
         pos = form2pos[form]
