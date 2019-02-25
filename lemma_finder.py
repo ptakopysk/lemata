@@ -21,6 +21,8 @@ import itertools
 
 from pyjarowinkler import distance
 
+import unidecode
+
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -43,24 +45,32 @@ ap.add_argument("-G", "--gold_stems", action="store_true",
         help="only look for lemmas with the right stem; gold stem used, i.e.  the longest common prefix of the form and the true lemma, also potentially removing 'ne-' prefix")
 ap.add_argument("-s", "--similarity", type=str,
         help="Similarity: cos or jw")
+ap.add_argument("-U", "--upperbound", action="store_true",
+        help="Highest achievable accuracy given the settings (esp. stem pruning)")
 args = ap.parse_args()
 
+
+def embsim(word, otherword):
+    # called distance but is actually similarity
+    sim = distance.get_jaro_distance(word, otherword)
+    uword = unidecode.unidecode(word)
+    uotherword = unidecode.unidecode(otherword)
+    usim = distance.get_jaro_distance(uword, uotherword)    
+    return (sim+usim)/2
+
+def jwsim(word, otherword):
+    emb1 = embedding[word]
+    emb2 = embedding[otherword]
+    return inner(emb1, emb2)/(norm(emb1)*norm(emb2))
+
 def similarity(word, otherword):
-    sim = 0
     if args.similarity == 'jw':
-        sim = -distance.get_jaro_distance(word, otherword)
-    if args.similarity == 'jwxcos':
-        emb1 = embedding[word]
-        emb2 = embedding[otherword]
-        cos_sim = inner(emb1, emb2)/(norm(emb1)*norm(emb2))
-        jw_sim = 1-distance.get_jaro_distance(word, otherword)
-        sim = jw_sim * cos_sim
+        return jwsim(word, otherword)
+    elif args.similarity == 'jwxcos':
+        return jwsim(word, otherword) * embsim(word, otherword)
     else:
         # cos
-        emb1 = embedding[word]
-        emb2 = embedding[otherword]
-        sim = inner(emb1, emb2)/(norm(emb1)*norm(emb2))
-    return sim
+        return embsim(word, otherword)
 
 # read in embs
 embedding = defaultdict(list)
@@ -115,15 +125,11 @@ def find_gold_stem(form, lemma):
 
 def gray_stems(form):
     stems = set()
-    length = len(form)
     lcform = form.lower()
-    if len(form) > 6:
-        stems.add(form[:5])
-        stems.add(lcform[:5])
-    else:
-        stop = int(length/2)
-        stems.add(form[:stop])
-        stems.add(lcform[:stop])
+    length = len(form)
+    stop = int(length/2)
+    stems.add(form[:stop])
+    stems.add(lcform[:stop])
     stems.discard('')
     return stems
     
@@ -191,12 +197,16 @@ else:
         if args.gold_stems:
             stems = gold_stems(form, form2lemma[form])
         pos = form2pos[form]
-        for lemma in lemmas[pos]:
-            if check_stem(lemma, stems):
-                sim = similarity(form, lemma)
-                if sim > best_sim:
-                    best_sim = sim
-                    best_lemma = lemma
+        if args.upperbound:
+            if check_stem(form2lemma[form], stems):
+                best_lemma = form2lemma[form]
+        else:
+            for lemma in lemmas[pos]:
+                if check_stem(lemma, stems):
+                    sim = similarity(form, lemma)
+                    if sim > best_sim:
+                        best_sim = sim
+                        best_lemma = lemma
         
         ok = best_lemma == form2lemma[form]
         print(form, '->', best_lemma, round(best_sim, 2), ok)
