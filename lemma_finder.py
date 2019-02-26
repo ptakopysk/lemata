@@ -63,11 +63,16 @@ def jwsim(word, otherword):
     emb2 = embedding[otherword]
     return inner(emb1, emb2)/(norm(emb1)*norm(emb2))
 
+def lensim(word, otherword):
+    return 1 / (1 + 0.05*abs(len(word) - len(otherword)))
+
 def similarity(word, otherword):
     if args.similarity == 'jw':
         return jwsim(word, otherword)
     elif args.similarity == 'jwxcos':
         return jwsim(word, otherword) * embsim(word, otherword)
+    elif args.similarity == 'jwxcosxlen':
+        return jwsim(word, otherword) * embsim(word, otherword) * lensim(word, otherword);
     else:
         # cos
         return embsim(word, otherword)
