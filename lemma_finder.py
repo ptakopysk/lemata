@@ -51,17 +51,17 @@ args = ap.parse_args()
 
 
 def embsim(word, otherword):
+    emb1 = embedding[word]
+    emb2 = embedding[otherword]
+    return inner(emb1, emb2)/(norm(emb1)*norm(emb2))
+
+def jwsim(word, otherword):
     # called distance but is actually similarity
     sim = distance.get_jaro_distance(word, otherword)
     uword = unidecode.unidecode(word)
     uotherword = unidecode.unidecode(otherword)
     usim = distance.get_jaro_distance(uword, uotherword)    
     return (sim+usim)/2
-
-def jwsim(word, otherword):
-    emb1 = embedding[word]
-    emb2 = embedding[otherword]
-    return inner(emb1, emb2)/(norm(emb1)*norm(emb2))
 
 def lensim(word, otherword):
     return 1 / (1 + 0.05*abs(len(word) - len(otherword)))
