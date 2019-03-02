@@ -127,6 +127,8 @@ for form1 in forms:
     # compute all
     allsims = ValueSortedDict()
     for form2 in forms:
+        if form1 == form2:
+            continue
         if form2 not in embedding:
             continue
         allsims[form2] = -similarity(form1, form2)
@@ -149,6 +151,7 @@ def cluster_lemma(cluster):
 good = 0
 total = 0
 for form, lemma in test_data:
+    #print(form, lemma, file=sys.stderr)
     if form in lemmas:
         continue
     if form not in embedding:
@@ -162,6 +165,7 @@ for form, lemma in test_data:
         # have (but without various filterins)
         next_form, _ = sims[form].peekitem(len(cluster) - 1)
         cluster.add(next_form)
+        #print(next_form, file=sys.stderr)
     found_lemma = cluster_lemma(cluster)
     found_sim = -sims[form][found_lemma] if found_lemma in sims[form] else -2
     ok = (found_lemma == lemma)
