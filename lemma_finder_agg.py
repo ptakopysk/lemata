@@ -5,6 +5,7 @@ import argparse
 import sys
 from collections import defaultdict
 from sortedcollections import ValueSortedDict
+from collections import OrderedDict
 
 from sklearn.metrics import accuracy_score
 from numpy import inner
@@ -44,6 +45,8 @@ ap.add_argument("-s", "--similarity", type=str,
         help="Similarity: cos or jw")
 ap.add_argument("-L", "--length", type=float, default=0.05,
         help="Weight for length similarity")
+ap.add_argument("-C", "--cut", type=int, default=100,
+        help="Cut down the number of most similar words to 100 for each word")
 args = ap.parse_args()
 
 
@@ -121,11 +124,19 @@ sims = dict()
 for form1 in forms:
     if form1 not in embedding:
         continue
-    sims[form1] = ValueSortedDict()
+    # compute all
+    allsims = ValueSortedDict()
     for form2 in forms:
         if form2 not in embedding:
             continue
-        sims[form1][form2] = similarity(form1, form2)
+        allsims[form2] = similarity(form1, form2)
+    # store top C
+    sims[form1] = ValueSortedDict()
+    for form2 in allsims.keys()[:args.cut]:
+        sims[form1][form2] = allsims[form2]
+    # progress
+    if len(sims) % 1000 == 0:
+        print(len(sims), file=sys.stderr)
 print('Done computing similarities', file=sys.stderr)
 
 def cluster_lemma(cluster):
@@ -145,14 +156,22 @@ for form, lemma in test_data:
     
     total += 1
     cluster = {form}
-    while cluster_lemma(cluster) == None:
+    while cluster_lemma(cluster) == None and len(cluster) < args.cut:
         # TODO find nearest going over all forms in cluster!!!
         # now finds nearest lemma to form, ie should be identical to what I
         # have (but without various filterins)
-        _, next_form = sims[form].peekitem(len(cluster) - 1)
+        next_form, _ = sims[form].peekitem(len(cluster) - 1)
         cluster.add(next_form)
-    if cluster_lemma(cluster) == lemma:
+    found_lemma = cluster_lemma(cluster)
+    found_sim = sims[form][found_lemma] if found_lemma in sims[form] else -2
+    ok = (found_lemma == lemma)
+    if ok:
         good += 1
+    print(form, '->', found_lemma, round(found_sim, 4), ok)
+    if not ok:
+        unfound_sim = sims[form][lemma] if lemma in sims[form] else -2
+        print(form, '->', lemma, round(unfound_sim, 4), 'UNFOUND')
+
     
 print('RESULT:', good, '/', total, '=', round(good/total*100,2), '%')
 
