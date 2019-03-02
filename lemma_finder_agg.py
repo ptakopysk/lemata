@@ -129,7 +129,7 @@ for form1 in forms:
     for form2 in forms:
         if form2 not in embedding:
             continue
-        allsims[form2] = similarity(form1, form2)
+        allsims[form2] = -similarity(form1, form2)
     # store top C
     sims[form1] = ValueSortedDict()
     for form2 in allsims.keys()[:args.cut]:
@@ -163,13 +163,13 @@ for form, lemma in test_data:
         next_form, _ = sims[form].peekitem(len(cluster) - 1)
         cluster.add(next_form)
     found_lemma = cluster_lemma(cluster)
-    found_sim = sims[form][found_lemma] if found_lemma in sims[form] else -2
+    found_sim = -sims[form][found_lemma] if found_lemma in sims[form] else -2
     ok = (found_lemma == lemma)
     if ok:
         good += 1
     print(form, '->', found_lemma, round(found_sim, 4), ok)
     if not ok:
-        unfound_sim = sims[form][lemma] if lemma in sims[form] else -2
+        unfound_sim = -sims[form][lemma] if lemma in sims[form] else -2
         print(form, '->', lemma, round(unfound_sim, 4), 'UNFOUND')
 
     

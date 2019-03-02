@@ -47,6 +47,8 @@ ap.add_argument("-s", "--similarity", type=str,
         help="Similarity: cos or jw")
 ap.add_argument("-U", "--upperbound", action="store_true",
         help="Highest achievable accuracy given the settings (esp. stem pruning)")
+ap.add_argument("-L", "--length", type=float, default=0.05,
+        help="Weight for length similarity")
 args = ap.parse_args()
 
 
@@ -64,7 +66,7 @@ def jwsim(word, otherword):
     return (sim+usim)/2
 
 def lensim(word, otherword):
-    return 1 / (1 + 0.05*abs(len(word) - len(otherword)))
+    return 1 / (1 + args.length * abs(len(word) - len(otherword)) )
 
 def similarity(word, otherword):
     if args.similarity == 'jw':
@@ -73,6 +75,8 @@ def similarity(word, otherword):
         return jwsim(word, otherword) * embsim(word, otherword)
     elif args.similarity == 'jwxcosxlen':
         return jwsim(word, otherword) * embsim(word, otherword) * lensim(word, otherword);
+    elif args.similarity == 'len':
+        return lensim(word, otherword);
     else:
         # cos
         return embsim(word, otherword)

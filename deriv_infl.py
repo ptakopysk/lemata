@@ -27,6 +27,8 @@ ap.add_argument("-N", "--normalize", action="store_true",
         help="Normalize the embeddings")
 ap.add_argument("-s", "--similarity", type=str,
         help="Similarity: cos or jw or jwxcos or jwxcosxlen")
+ap.add_argument("-l", "--length", type=float, default=0.05,
+        help="Weight for length similarity")
 args = ap.parse_args()
 
 
@@ -44,7 +46,7 @@ def jwsim(word, otherword):
     return (sim+usim)/2
 
 def lensim(word, otherword):
-    return 1 / (1 + 0.05*abs(len(word) - len(otherword)))
+    return 1 / (1 + args.length * abs(len(word) - len(otherword)) )
 
 def similarity(word, otherword):
     if args.similarity == 'jw':
