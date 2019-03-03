@@ -39,6 +39,10 @@ ap.add_argument('conllu_test',
         help='file with the forms and lemmas')
 ap.add_argument("-n", "--number", type=int,
         help="How many embeddings to read in")
+ap.add_argument("-f", "--formbase", action="store_true",
+        help="Base the search only on the original form")
+ap.add_argument("-V", "--verbose", action="store_true",
+        help="Print more verbose progress info")
 ap.add_argument("-N", "--normalize", action="store_true",
         help="Normalize the embeddings")
 ap.add_argument("-s", "--similarity", type=str,
@@ -120,61 +124,104 @@ with open(args.conllu_test) as conllufile:
 print('Done reading', file=sys.stderr)
 
 print('Compute all similarities', file=sys.stderr)
-sims = dict()
+# distances instead of similarities for lowest distances to come first in
+# natural ordering
+dists = dict()
 for form1 in forms:
     if form1 not in embedding:
         continue
     # compute all
-    allsims = ValueSortedDict()
+    alldists = ValueSortedDict()
     for form2 in forms:
         if form1 == form2:
             continue
         if form2 not in embedding:
             continue
-        allsims[form2] = -similarity(form1, form2)
+        # similarity to distance
+        alldists[form2] = -similarity(form1, form2)
     # store top C
-    sims[form1] = ValueSortedDict()
-    for form2 in allsims.keys()[:args.cut]:
-        sims[form1][form2] = allsims[form2]
+    dists[form1] = ValueSortedDict()
+    for form2 in alldists.keys()[:args.cut]:
+        dists[form1][form2] = alldists[form2]
     # progress
-    if len(sims) % 1000 == 0:
-        print(len(sims), file=sys.stderr)
+    if len(dists) % 1000 == 0:
+        print(len(dists), file=sys.stderr)
 print('Done computing similarities', file=sys.stderr)
 
 def cluster_lemma(cluster):
-    result = None
-    for form in cluster:
-        if form in lemmas:
-            result = form
-    return result
+    lemma = cluster.intersection(lemmas)
+    if len(lemma) == 1:
+        return lemma.pop()
+    else:
+        assert len(lemma) == 0
+        return None
+
+def find_lemma_agg(form):
+    # find nearest going over all forms in cluster
+    cluster = {form}
+    while cluster_lemma(cluster) == None:
+        next_form = None
+        next_dist = 2  # distances are -1..1 so 2 is infinity
+        for cluster_form in cluster:
+            for cand_form, cand_dist in dists[cluster_form].items():
+                # find first not in cluster yet
+                if cand_form not in cluster:
+                    # must be better than what we currently have
+                    if cand_dist < next_dist:
+                        next_form = cand_form
+                        next_dist = cand_dist
+                        if args.verbose:
+                            print(next_form, next_dist, file=sys.stderr)
+                    # break anyway
+                    break                
+        if next_form == None:
+            # did not find anything, nothing more to do here
+            return None
+        else:
+            cluster.add(next_form)
+            if args.verbose:
+                print(next_form, file=sys.stderr)
+    return cluster_lemma(cluster)
+
+def find_lemma_formbase(form):
+    # finds nearest lemma to form, ie should be identical to what I
+    # have (but without various filterins)
+    for cand_form in dists[form]:
+        if args.verbose:
+            print(cand_form, file=sys.stderr)
+        if cand_form in lemmas:
+            return cand_form
+    return None
+
+def get_sim(form1, form2):
+    if form1 in dists and form2 in dists[form1]:
+        # distance to similarity
+        return -dists[form1][form2]
+    else:
+        return -2
 
 good = 0
 total = 0
 for form, lemma in test_data:
-    #print(form, lemma, file=sys.stderr)
+    if args.verbose:
+        print(form, lemma, file=sys.stderr)
     if form in lemmas:
         continue
     if form not in embedding:
         continue
     
-    total += 1
-    cluster = {form}
-    while cluster_lemma(cluster) == None and len(cluster) < args.cut:
-        # TODO find nearest going over all forms in cluster!!!
-        # now finds nearest lemma to form, ie should be identical to what I
-        # have (but without various filterins)
-        next_form, _ = sims[form].peekitem(len(cluster) - 1)
-        cluster.add(next_form)
-        #print(next_form, file=sys.stderr)
-    found_lemma = cluster_lemma(cluster)
-    found_sim = -sims[form][found_lemma] if found_lemma in sims[form] else -2
+    if args.formbase:
+        found_lemma = find_lemma_formbase(form)
+    else:
+        found_lemma = find_lemma_agg(form)
+        
     ok = (found_lemma == lemma)
+    print(form, '->', found_lemma, round(get_sim(form, found_lemma), 4), ok)
+    total += 1
     if ok:
         good += 1
-    print(form, '->', found_lemma, round(found_sim, 4), ok)
-    if not ok:
-        unfound_sim = -sims[form][lemma] if lemma in sims[form] else -2
-        print(form, '->', lemma, round(unfound_sim, 4), 'UNFOUND')
+    else:
+        print('GOLD:', form, '->', lemma, round(get_sim(form, lemma), 4))
 
     
 print('RESULT:', good, '/', total, '=', round(good/total*100,2), '%')
