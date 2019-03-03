@@ -39,4 +39,4 @@ set -o xtrace
 
 renice 10 $$ >&2
 
-python3 -u lemma_finder_agg.py -s jwxcosxlen -n 1000 fasttext.cs cs_pdt-ud-all.conllu cs_pdt-ud-dev.conllu
+./deriv_infl.py -s jwxcosxlen -l 0.2 -n 1000000 fasttext.cs cs_pdt-ud-dev.conllu derinet-1-7.tsv

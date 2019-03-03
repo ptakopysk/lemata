@@ -39,4 +39,4 @@ set -o xtrace
 
 renice 10 $$ >&2
 
-python3 -u lemma_finder_agg.py -s jwxcosxlen -n 1000 fasttext.cs cs_pdt-ud-all.conllu cs_pdt-ud-dev.conllu
+./lemma_finder.py -S  -s len -n 1000000 fasttext.cs cs_pdt-ud-dev.conllu
