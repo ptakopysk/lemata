@@ -47,10 +47,14 @@ ap.add_argument("-N", "--normalize", action="store_true",
         help="Normalize the embeddings")
 ap.add_argument("-s", "--similarity", type=str,
         help="Similarity: cos or jw")
+ap.add_argument("-S", "--stems", action="store_true",
+        help="only look for words with the same stem")
 ap.add_argument("-L", "--length", type=float, default=0.05,
         help="Weight for length similarity")
 ap.add_argument("-C", "--cut", type=int, default=100,
         help="Cut down the number of most similar words to 100 for each word")
+ap.add_argument("-U", "--upperbound", action="store_true",
+        help="Highest achievable accuracy given the settings (esp. stem pruning)")
 args = ap.parse_args()
 
 
@@ -95,9 +99,13 @@ with open(args.embeddings) as embfile:
         if args.normalize:
             embedding[fields[0]] /= norm(embedding[fields[0]])
 
+def get_stem(form):
+    return form[:2]
+
 print('Read in forms and lemmas', file=sys.stderr)
 forms = set()
 lemmas = set()
+forms_stemmed = defaultdict(set)
 with open(args.conllu_all) as conllufile:
     for line in conllufile:
         fields = line.split()
@@ -109,6 +117,8 @@ with open(args.conllu_all) as conllufile:
             forms.add(form)
             forms.add(lemma)
             lemmas.add(lemma)
+            forms_stemmed[get_stem(form)].add(form)
+            forms_stemmed[get_stem(lemma)].add(lemma)
 
 print('Read in test form-lemma pairs', file=sys.stderr)
 test_data = list()
@@ -123,6 +133,13 @@ with open(args.conllu_test) as conllufile:
             test_data.append((form, lemma))
 print('Done reading', file=sys.stderr)
 
+def get_dist(form1, form2):
+    # similarity to distance
+    if form1 != form2 and form1 in embedding and form2 in embedding:
+        return -similarity(form1, form2)
+    else:
+        return None
+
 print('Compute all similarities', file=sys.stderr)
 # distances instead of similarities for lowest distances to come first in
 # natural ordering
@@ -132,13 +149,15 @@ for form1 in forms:
         continue
     # compute all
     alldists = ValueSortedDict()
-    for form2 in forms:
-        if form1 == form2:
-            continue
-        if form2 not in embedding:
-            continue
-        # similarity to distance
-        alldists[form2] = -similarity(form1, form2)
+    iter_forms = None
+    if args.stems:
+        iter_forms = forms_stemmed[get_stem(form1)]
+    else:
+        iter_forms = forms
+    for form2 in iter_forms:
+        dist = get_dist(form1, form2)
+        if dist is not None:
+            alldists[form2] = dist
     # store top C
     dists[form1] = ValueSortedDict()
     for form2 in alldists.keys()[:args.cut]:
@@ -210,7 +229,10 @@ for form, lemma in test_data:
     if form not in embedding:
         continue
     
-    if args.formbase:
+    if args.upperbound:
+        # TODO for agg I should look whether there is path within dists...
+        found_lemma = lemma if lemma in dists[form] else None
+    elif args.formbase:
         found_lemma = find_lemma_formbase(form)
     else:
         found_lemma = find_lemma_agg(form)
