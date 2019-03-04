@@ -51,6 +51,8 @@ ap.add_argument("-S", "--stems", action="store_true",
         help="only look for words with the same stem")
 ap.add_argument("-L", "--length", type=float, default=0.05,
         help="Weight for length similarity")
+ap.add_argument("-l", "--lowercase", action="store_true",
+        help="lowercase input forms")
 ap.add_argument("-C", "--cut", type=int, default=100,
         help="Cut down the number of most similar words to 100 for each word")
 ap.add_argument("-U", "--upperbound", action="store_true",
@@ -114,6 +116,9 @@ with open(args.conllu_all) as conllufile:
             form = fields[1]
             lemma = fields[2]
             # pos = fields[3]
+            if args.lowercase:
+                form = form.lower()
+                lemma = lemma.lower()
             forms.add(form)
             forms.add(lemma)
             lemmas.add(lemma)
@@ -130,6 +135,9 @@ with open(args.conllu_test) as conllufile:
             form = fields[1]
             lemma = fields[2]
             # pos = fields[3]
+            if args.lowercase:
+                form = form.lower()
+                lemma = lemma.lower()
             test_data.append((form, lemma))
 print('Done reading', file=sys.stderr)
 
