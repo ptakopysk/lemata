@@ -1,0 +1,1 @@
+a=find_lemmas_agg_100k_LLL_TTT_MMM_FFFUUU.shc; for M in cos jw jwxcos jwxcosxlen; do for F in '-f' '-f -U' ''; do f=${F/ /}; b=${a/MMM/$M}; c=${b/FFFUUU/$f}; sed -e "s/MMM/$M/" -e "s/FFFUUU/$F/" $a > $c;done;done

@@ -39,4 +39,6 @@ set -o xtrace
 
 renice 10 $$ >&2
 
-python3 -u lemma_finder_agg.py -s cos -n 100000 emb/cc.LLL.300.vec tb/LLL_TTT-ud-all.conllu tb/LLL_TTT-ud-dev.conllu -S 
+cd ..
+
+python3 -u lemma_finder_agg.py -s jw -n 100000 emb/cc.LLL.300.vec tb/LLL_TTT-ud-all.conllu tb/LLL_TTT-ud-dev.conllu -S -f -U
