@@ -119,11 +119,13 @@ with open(args.conllu_all) as conllufile:
             if args.lowercase:
                 form = form.lower()
                 lemma = lemma.lower()
-            forms.add(form)
-            forms.add(lemma)
-            lemmas.add(lemma)
-            forms_stemmed[get_stem(form)].add(form)
-            forms_stemmed[get_stem(lemma)].add(lemma)
+            if form in embedding:
+                forms.add(form)
+                forms_stemmed[get_stem(form)].add(form)
+            if lemma in embedding:
+                forms.add(lemma)
+                lemmas.add(lemma)
+                forms_stemmed[get_stem(lemma)].add(lemma)
 
 print('Read in test form-lemma pairs', file=sys.stderr)
 test_data = list()
@@ -161,6 +163,8 @@ def get_sim(form1, form2):
 # cluster each hypercluster
 
 L = 'average'
+print(forms_stemmed)
+print(forms_stemmed.items())
 for stem, forms in forms_stemmed.items():
     # vocabulary
     index2word = list(forms)
@@ -174,6 +178,8 @@ for stem, forms in forms_stemmed.items():
     for i1 in range(I):
         for i2 in range(I):
             D[i1,i2] = get_dist(index2word[i1], index2word[i2])
+            if args.verbose:
+                print(i1, i2, D[i1,i2])
 
     C = int(I/10) + 1
 
