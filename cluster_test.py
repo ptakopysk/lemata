@@ -14,13 +14,11 @@ from sklearn.metrics.pairwise import pairwise_distances
 from pyjarowinkler import distance
 
 def jwsim(word, otherword):
-    #print(word)
-    #print(otherword)
     # called distance but is actually similarity
     sim = distance.get_jaro_distance(word, otherword)
     return sim
 
-data = np.array([
+index2word = [
         'auto',
         'automat',
         'autogram',
@@ -33,21 +31,26 @@ data = np.array([
         'astenický',
         'autoerotický',
         'erotický',
+        'excentrický',
         'automaty',
         'automatický',
         'antenoly',
-        ])
+        ]
 
-# Reshape the data.
-# X = np.arange(len(data)).reshape(-1, 1)
-X = data.reshape(-1, 1)
-print(X.shape)
-print(X)
+N = len(index2word)
 
-D = np.array([[]])
-for f1 in data:
-    for f2 in data:
-        D[f1,f2] = jwsim(f1, f2)
+word2index = dict()
+index = 0
+for index, word in enumerate(index2word):
+    word2index[word] = index
+
+
+D = np.zeros((N,N))
+for i1 in range(N):
+    for i2 in range(N):
+        D[i1,i2] = jwsim(index2word[i1], index2word[i2])
+
+print(D)
 
 #D = pairwise_distances(X, metric=jwsim)
 
