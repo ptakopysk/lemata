@@ -9,10 +9,6 @@ import numpy as np
 
 from sklearn.cluster import AgglomerativeClustering
 
-from sklearn.metrics.pairwise import pairwise_distances
-
-from scipy.sparse import dok_matrix
-
 from pyjarowinkler import distance
 
 def jwdist(word, otherword):
@@ -46,7 +42,6 @@ def get_stem(form):
     #return 'a'
 
 word2index = dict()
-index = 0
 for index, word in enumerate(index2word):
     word2index[word] = index
 
