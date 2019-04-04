@@ -50,33 +50,49 @@ index = 0
 for index, word in enumerate(index2word):
     word2index[word] = index
 
-D = np.zeros((N,N))
-# TODO only iterate over what makes sense
-for i1 in range(N):
-    for i2 in range(N):
-        # if get_stem(index2word[i1]) == get_stem(index2word[i2]):
-            D[i1,i2] = jwdist(index2word[i1], index2word[i2])
+hyperclusters = defaultdict(set)
+for index, word in enumerate(index2word):
+    hyperclusters[get_stem(word)].add(index)
 
 L = 'average'
 #L = 'single'
 #L = 'complete'
-clustering = AgglomerativeClustering(affinity='precomputed',
-        linkage=L,
-        connectivity = D,
-        compute_full_tree = False,
-        n_clusters=3)
+C = 2
+for stem in hyperclusters:
+    indices = hyperclusters[stem]
+    I = len(indices)
 
-labels = clustering.fit_predict(D)
-# print(labels)
+    # index -- global, all words
+    # local index -- local for indices, 0-based sequence
+    # or maybe: do not use the global indices at all, just compute the
+    # index2word and word2index locally
+    index2li = dict()
+    li2index = dict()
+    for li, index in enumerate(indices):
+        index2li[index] = li
+        li2index[li] = index
 
-label2words = defaultdict(list)
-for index in range(N):
-    label2words[labels[index]].append(index)
+    D = np.empty((I, I))
+    for i1, li1 in index2li.items():
+        for i2, li2 in index2li.items():
+            D[li1,li2] = jwdist(index2word[i1], index2word[i2])
 
-for label in label2words:
-    print('Cluster', label)
-    for index in label2words[label]:
-        print(index2word[index])
-    print()
+    clustering = AgglomerativeClustering(affinity='precomputed',
+            linkage = L,
+            compute_full_tree = False,
+            n_clusters=C)
+
+    labels = clustering.fit_predict(D)
+
+    label2words = defaultdict(list)
+    for i, li in index2li.items():
+        label2words[labels[li]].append(i)
+
+    print('Stem', stem)
+    for label in range(C):
+        print('Cluster', label)
+        for index in label2words[label]:
+            print(index2word[index])
+        print()
 
 
