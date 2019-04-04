@@ -13,10 +13,9 @@ from sklearn.metrics.pairwise import pairwise_distances
 
 from pyjarowinkler import distance
 
-def jwsim(word, otherword):
+def jwdist(word, otherword):
     # called distance but is actually similarity
-    sim = distance.get_jaro_distance(word, otherword)
-    return sim
+    return 1-distance.get_jaro_distance(word, otherword)
 
 index2word = [
         'auto',
@@ -48,16 +47,21 @@ for index, word in enumerate(index2word):
 D = np.zeros((N,N))
 for i1 in range(N):
     for i2 in range(N):
-        D[i1,i2] = jwsim(index2word[i1], index2word[i2])
+        D[i1,i2] = jwdist(index2word[i1], index2word[i2])
 
-print(D)
-
-#D = pairwise_distances(X, metric=jwsim)
-
-# clustering = AgglomerativeClustering(affinity=jwsim, linkage='average')
 clustering = AgglomerativeClustering(affinity='precomputed', linkage='average')
 
-clustering.fit(D)
+labels = clustering.fit_predict(D)
+# print(labels)
 
+label2words = defaultdict(list)
+for index in range(N):
+    label2words[labels[index]].append(index)
+
+for label in label2words:
+    print('Cluster', label)
+    for index in label2words[label]:
+        print(index2word[index])
+    print()
 
 
