@@ -50,23 +50,12 @@ index = 0
 for index, word in enumerate(index2word):
     word2index[word] = index
 
-# D = np.zeros((N,N))
-# sparse matrix
-D = dok_matrix((N,N), dtype=float)
+D = np.zeros((N,N))
 # TODO only iterate over what makes sense
 for i1 in range(N):
     for i2 in range(N):
-        if get_stem(index2word[i1]) == get_stem(index2word[i2]):
+        # if get_stem(index2word[i1]) == get_stem(index2word[i2]):
             D[i1,i2] = jwdist(index2word[i1], index2word[i2])
-
-#print(D)
-
-DD = np.zeros((N,N))
-for i1 in range(N):
-    for i2 in range(N):
-        DD[i1,i2] = jwdist(index2word[i1], index2word[i2])
-
-print(DD)
 
 L = 'average'
 #L = 'single'
@@ -77,7 +66,7 @@ clustering = AgglomerativeClustering(affinity='precomputed',
         compute_full_tree = False,
         n_clusters=3)
 
-labels = clustering.fit_predict(DD)
+labels = clustering.fit_predict(D)
 # print(labels)
 
 label2words = defaultdict(list)
