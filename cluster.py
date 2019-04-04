@@ -143,7 +143,8 @@ print('Done reading', file=sys.stderr)
 
 def get_dist(form1, form2):
     # similarity to distance
-    if form1 != form2 and form1 in embedding and form2 in embedding:
+    # if form1 != form2 and form1 in embedding and form2 in embedding:
+    if form1 in embedding and form2 in embedding:
         return -similarity(form1, form2)
     else:
         return None
@@ -168,6 +169,7 @@ for stem, forms in forms_stemmed.items():
         word2index[word] = index
 
     I = len(index2word)
+    
     D = np.empty((I, I))
     for i1 in range(I):
         for i2 in range(I):
@@ -179,6 +181,16 @@ for stem, forms in forms_stemmed.items():
             linkage = L,
             compute_full_tree = False,
             n_clusters=C)
+
+    if args.verbose:
+        print(stem)
+        print(forms)
+        print(I)
+        print(C)
+        print(D)
+
+    if (I == 1):
+        break
 
     labels = clustering.fit_predict(D)
 
