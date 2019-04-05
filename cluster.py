@@ -178,10 +178,8 @@ for stem, forms in forms_stemmed.items():
     for i1 in range(I):
         for i2 in range(I):
             D[i1,i2] = get_dist(index2word[i1], index2word[i2])
-            if args.verbose:
-                print(i1, i2, D[i1,i2])
 
-    C = int(I/10) + 1
+    C = max(int(I/10), 2)
 
     clustering = AgglomerativeClustering(affinity='precomputed',
             linkage = L,
@@ -193,12 +191,15 @@ for stem, forms in forms_stemmed.items():
         print(forms)
         print(I)
         print(C)
-        print(D)
+        #print(D)
 
-    if (I == 1):
-        break
-
-    labels = clustering.fit_predict(D)
+    if (I > 1):
+        labels = clustering.fit_predict(D)
+    else:
+        # just one word -> just one cluster
+        assert I == 1
+        C = 1
+        labels = [0]
 
     label2words = defaultdict(list)
     for i in range(I):
