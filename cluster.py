@@ -106,7 +106,7 @@ def get_stem(form):
 
 print('Read in forms and lemmas', file=sys.stderr)
 forms = set()
-lemmas = set()
+lemmas = set()  # not currently used
 forms_stemmed = defaultdict(set)
 with open(args.conllu_all) as conllufile:
     for line in conllufile:
@@ -123,9 +123,9 @@ with open(args.conllu_all) as conllufile:
                 forms.add(form)
                 forms_stemmed[get_stem(form)].add(form)
             if lemma in embedding:
-                forms.add(lemma)
                 lemmas.add(lemma)
-                forms_stemmed[get_stem(lemma)].add(lemma)
+                #forms.add(lemma)
+                #forms_stemmed[get_stem(lemma)].add(lemma)
 
 print('Read in test form-lemma pairs', file=sys.stderr)
 test_data = list()
@@ -163,8 +163,6 @@ def get_sim(form1, form2):
 # cluster each hypercluster
 
 L = 'average'
-print(forms_stemmed)
-print(forms_stemmed.items())
 for stem, forms in forms_stemmed.items():
     # vocabulary
     index2word = list(forms)
