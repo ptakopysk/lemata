@@ -1,0 +1,13704 @@
+Stem |
+Cluster 0
+|
+
+Stem Ra
+Cluster 0
+Rady
+Radek
+Rakovník
+Rada
+
+Cluster 1
+Rakousko
+Rakousku
+Rakouska
+
+Stem na
+Cluster 0
+naši
+najednou
+najevo
+naopak
+našem
+navíc
+našeho
+našich
+naší
+našim
+naše
+nahoru
+nakonec
+nadále
+naprosto
+naším
+nahoře
+navzdory
+nad
+nadmořské
+naproti
+naposledy
+napříč
+navzájem
+natolik
+našimi
+naštěstí
+naplno
+
+Cluster 1
+napsala
+najde
+napište
+nabídnout
+nabízíme
+nalézt
+najít
+nakupovat
+nahradit
+nabízí
+např
+nachází
+nabídku
+například
+najdou
+našli
+nabídkou
+nalezené
+nabídce
+navrhl
+naučit
+najdeme
+nabídne
+naleznete
+našel
+najdete
+navštívil
+nastoupil
+navštívit
+nacházející
+napsal
+nabízených
+našla
+nabízejí
+nabídka
+namísto
+napsat
+nacházejí
+nabídek
+nahradil
+nabídky
+nastala
+
+Cluster 2
+naděje
+napětí
+
+Cluster 3
+nahrávání
+nastavení
+nařízení
+nakládání
+natáčení
+nasazení
+nastavit
+
+Cluster 4
+na
+
+Cluster 5
+navazuje
+nazývá
+
+Cluster 6
+narodil
+narozeniny
+narození
+nar
+narodila
+
+Cluster 7
+nakladatelství
+
+Stem te
+Cluster 0
+textu
+termín
+texty
+testování
+textů
+terénu
+text
+termínu
+testy
+termíny
+testu
+test
+testů
+
+Cluster 1
+telefonů
+tel
+telefonu
+telefon
+televizní
+televize
+televizních
+telefonicky
+televizi
+telefony
+telefonní
+
+Cluster 2
+textil
+technické
+technický
+technikou
+terapie
+textilní
+technika
+techniku
+techniky
+technik
+technická
+technických
+technického
+technologií
+technologie
+technologii
+technicky
+teorii
+teorie
+
+Cluster 3
+teplota
+tepla
+teplo
+teplotě
+teplotu
+tepelné
+teploty
+teplé
+
+Cluster 4
+tenis
+terasa
+
+Cluster 5
+teď
+tento
+teprve
+tedy
+tehdy
+teda
+tebe
+ten
+tenhle
+tentokrát
+tehdejší
+
+Stem Po
+Cluster 0
+Pouze
+Počet
+Porovnejte
+Použití
+Pozemky
+Poprvé
+Policie
+Používá
+Postupně
+Popis
+Poradna
+Poslanecké
+Postel
+Poslední
+Pondělí
+Pod
+Pokračovat
+Potom
+Poptávka
+Požadavky
+Poznámka
+Poté
+Později
+Pohled
+Postup
+Podrobnosti
+Počasí
+Pomocí
+Podmínky
+Podívejte
+Pobyt
+Potřebujete
+Podnikání
+Pokud
+Podobné
+Pohádka
+Podle
+Podobně
+Podpora
+Pojištění
+Poslat
+Pozor
+
+Cluster 1
+Po
+
+Cluster 2
+Polska
+Polsko
+Polsku
+
+Cluster 3
+Power
+
+Stem ry
+Cluster 0
+rychlý
+rychlosti
+rychlejší
+rychlostí
+rychlost
+rychlou
+rychleji
+rychle
+rychlé
+rychlá
+
+Cluster 1
+ryb
+ryby
+rybníků
+rybník
+
+Stem po
+Cluster 0
+postavu
+polohy
+pozici
+pojetí
+povolání
+pocity
+postav
+pohled
+polohu
+pocit
+potenciál
+poloha
+pozice
+postavy
+postavení
+pohledu
+postoj
+pohlaví
+pozitivní
+poloze
+postava
+post
+postoje
+posílení
+
+Cluster 1
+pokožky
+potravin
+populace
+potomky
+potravy
+potraviny
+posádky
+
+Cluster 2
+postupu
+popsal
+postupů
+pokyny
+pokusy
+popisuje
+postupovat
+podmínkou
+postupy
+poznámka
+požadavky
+podklady
+podmínkami
+podmínky
+požadavek
+požadavků
+popis
+pokusil
+postup
+poznatky
+podmínek
+pokusu
+pokus
+podmínkách
+poznámky
+požadavkům
+popisu
+
+Cluster 3
+pohybu
+pohodlí
+pohodlné
+pohodě
+pořádku
+pohodlně
+pohon
+pohybuje
+pohybovat
+pohyb
+
+Cluster 4
+podívat
+potěší
+potvrzen
+popsat
+potvrdil
+porazil
+počítá
+postavena
+potvrdit
+podává
+pochopit
+počítat
+postaven
+postavit
+poznat
+podat
+posílat
+požádat
+poslal
+poslat
+požádal
+podání
+postavil
+ponechat
+
+Cluster 5
+pokračoval
+pořádání
+pokračuje
+pokračovat
+pokračování
+pořádá
+
+Cluster 6
+poháru
+polévka
+potoka
+potok
+pohár
+
+Cluster 7
+použité
+pocházející
+pocházel
+považován
+pořízení
+používané
+použity
+považuji
+pomocí
+používá
+pochází
+použil
+považována
+používám
+považují
+používán
+použití
+používat
+používají
+používání
+použitím
+použita
+používáním
+považuje
+považovat
+používal
+pořídit
+použit
+pocházejí
+použít
+
+Cluster 8
+podaří
+poskytne
+potřebu
+podporu
+podporovat
+potřebují
+poskytování
+potřebám
+podpořit
+podpoře
+poskytuje
+poskytovat
+potřeby
+potřeba
+poskytnout
+požadované
+podporují
+pomohl
+pomoc
+pomáhají
+potřebovat
+podpory
+potřebujete
+pomáhat
+povede
+potřebuje
+pomoci
+pomohou
+pomůže
+potřebné
+povedlo
+podařilo
+podporuje
+podstatné
+potřeb
+podpora
+podrobnosti
+podporou
+poradí
+pokrytí
+poradit
+poskytují
+pomáhá
+poskytnutí
+
+Cluster 9
+podobných
+podobný
+podoba
+pokročilé
+podobné
+podobu
+povahy
+podobná
+podobného
+podobně
+podobě
+podobnou
+podoby
+populární
+
+Cluster 10
+pokoje
+pobytu
+pokojů
+podlahy
+pokojové
+polštáře
+ponožky
+podložky
+pokojích
+pobyt
+pomůcky
+pobyty
+postele
+povlečení
+pokoji
+pokoj
+postel
+
+Cluster 11
+pozemní
+požáru
+potrubí
+požární
+pozemních
+podzemní
+
+Cluster 12
+podnikatelů
+poslanců
+policie
+politice
+politik
+podnikatel
+politici
+politická
+politiku
+poradenství
+policii
+podniků
+politické
+policisté
+podnik
+politický
+podnikatelé
+politika
+politických
+poslanec
+podniku
+policejní
+poradce
+podniky
+politiky
+podnikání
+politickou
+politického
+podnikatele
+
+Cluster 13
+pozor
+porovnání
+pokles
+poškození
+poklesu
+pozorování
+pozornost
+poznání
+povědomí
+porušení
+poruchy
+potvrzení
+pozornosti
+povolení
+posouzení
+podezření
+pochopení
+
+Cluster 14
+potom
+poměrně
+polovinu
+pochopitelně
+počátkem
+posledního
+polovině
+poslední
+podstatně
+podzim
+pozdě
+podruhé
+pokaždé
+popřípadě
+poněkud
+počátku
+podstatě
+pořádně
+pololetí
+polovina
+poprvé
+postupně
+poloviny
+pokud
+pouze
+později
+pořád
+poté
+posledních
+pomalu
+posléze
+podzimní
+posledním
+pondělí
+podrobně
+postupem
+
+Cluster 15
+po
+porodu
+
+Cluster 16
+pošta
+pobočka
+poštovní
+poštovné
+pobočky
+pošty
+pobočkou
+poštou
+
+Cluster 17
+pole
+pozadí
+poli
+
+Cluster 18
+poplatků
+poplatky
+položka
+položky
+poplatek
+položek
+poplatku
+
+Cluster 19
+poptávek
+poptávky
+poptávka
+poptávku
+
+Cluster 20
+pořadu
+portálu
+pořad
+
+Cluster 21
+povstání
+
+Cluster 22
+počítači
+počítače
+počítač
+počítačové
+počítačů
+počítačových
+
+Cluster 23
+pozměnit
+
+Cluster 24
+polský
+polské
+
+Cluster 25
+povinen
+pojištění
+povinnosti
+pojistného
+pojišťovna
+povinné
+povinností
+pojišťovny
+pojistné
+povinnost
+
+Cluster 26
+pojmů
+pojmy
+pojmenování
+pojem
+
+Cluster 27
+počasí
+posezení
+
+Cluster 28
+podílí
+podíl
+počet
+poměry
+poměr
+podílu
+počtem
+pořadí
+počtu
+podle
+podílel
+počty
+poměru
+
+Cluster 29
+povrchu
+povrchovou
+povrch
+pod
+povrchem
+
+Cluster 30
+pouzdra
+pouzdro
+
+Cluster 31
+poblíž
+pobřeží
+povodí
+podél
+pohoří
+
+Cluster 32
+pouhých
+
+Cluster 33
+postižením
+postižení
+postižené
+potíže
+
+Cluster 34
+pozdějších
+pozdější
+
+Cluster 35
+pozdravem
+
+Cluster 36
+pohádky
+povídky
+povídek
+poezie
+
+Cluster 37
+pozemků
+pozemky
+pozemek
+pozemku
+
+Cluster 38
+podepsal
+podpis
+
+Stem ?
+Cluster 0
+?
+
+Stem a
+Cluster 0
+a
+
+Stem .
+Cluster 0
+.
+
+Stem Vá
+Cluster 0
+Vám
+Vás
+Vámi
+Vánoční
+Vážení
+Váš
+Vánoce
+
+Cluster 1
+Václava
+Václav
+
+Stem ob
+Cluster 0
+obličej
+obličeje
+obrany
+obětí
+oběti
+obránce
+obranu
+
+Cluster 1
+obtížné
+obecně
+obrovský
+obecný
+občas
+oblíbené
+obecná
+obvykle
+obvyklé
+oblíbený
+obavy
+obecné
+oblíbených
+obrovské
+
+Cluster 2
+obuv
+objednat
+obchodním
+obchodních
+oblečení
+objednávku
+obchody
+oběd
+obchodování
+objednávky
+obchodu
+obchodního
+obchodech
+objednání
+obchod
+obchodů
+občerstvení
+obchodní
+obchodě
+
+Cluster 3
+obor
+oborů
+oblasti
+obory
+oblastech
+oboru
+oblastí
+oborech
+oblast
+období
+
+Cluster 4
+občanský
+obci
+občané
+občanství
+občany
+obecního
+občanů
+obyvatele
+obcí
+obce
+obyvatelstva
+obyvatelstvo
+obyvatel
+občanská
+obyvatelé
+obec
+občanské
+obecní
+obcích
+občanského
+
+Cluster 5
+objevuje
+objeví
+objevily
+obsadil
+obrátit
+obdržel
+objevila
+objevit
+objevují
+objevili
+obhájil
+objevil
+
+Cluster 6
+obsahuje
+objemu
+obal
+obsah
+obsahem
+objem
+obsahující
+obalu
+obsahu
+obsahovat
+obsahují
+
+Cluster 7
+obrázek
+obrazovky
+objekt
+obrázku
+objektů
+obrázků
+objektu
+obr
+obrázky
+objekty
+obrazů
+obrazu
+obrazy
+obraz
+
+Cluster 8
+obsluze
+obsluha
+obnovení
+obsazení
+
+Cluster 9
+oběma
+obou
+oba
+obě
+
+Cluster 10
+obvodu
+obvod
+
+Stem pl
+Cluster 0
+ploch
+plochou
+plochu
+plátně
+ploše
+plyn
+plocha
+plochy
+plynu
+plastu
+
+Cluster 1
+plný
+plánování
+plní
+plně
+plná
+plány
+platba
+platí
+plnou
+platné
+plánuje
+platnost
+plánu
+platnosti
+plné
+plnění
+plnit
+plán
+platby
+plném
+platný
+platném
+plněním
+platit
+plánů
+platební
+
+Cluster 2
+plus
+
+Cluster 3
+pláž
+planety
+pleti
+pláže
+plavky
+plavání
+plody
+pleť
+
+Stem do
+Cluster 0
+dobré
+dostatečně
+dostat
+dobrým
+dosavadní
+doporučuje
+dosáhla
+dost
+dostupných
+dokonalý
+dokonce
+doporučit
+dostupnost
+dobrého
+docela
+dosti
+dokud
+dostatek
+dostalo
+dobu
+dodal
+dokázal
+dostatečné
+doslova
+dobou
+doporučení
+doposud
+dosud
+dostanou
+dosáhl
+dosáhnout
+dobře
+doplňuje
+dobách
+dob
+dojde
+dobrém
+dozvědět
+dokonale
+dobrá
+dobrý
+dobrou
+dochází
+dostupné
+dostává
+dostanu
+dostane
+dodává
+doporučuji
+doplnit
+dostaly
+doporučujeme
+době
+dostupný
+dokázali
+doba
+dozvíte
+dostali
+dokáže
+dojít
+dobrých
+dostanete
+dosažení
+dodnes
+dostupná
+dočasně
+došlo
+doby
+dostala
+dostal
+dodat
+dokonalé
+dosahuje
+
+Cluster 1
+dospělých
+dospělí
+dobrodružství
+dospělé
+dopoledne
+dovednosti
+dovedností
+
+Cluster 2
+dohoda
+dohodě
+dodržovat
+dodržování
+dohody
+dohodu
+
+Cluster 3
+domácích
+domy
+domov
+domě
+domácnosti
+domova
+domky
+doma
+domácího
+domů
+domácí
+domácnost
+domu
+domácností
+domácím
+
+Cluster 4
+doprava
+dopravních
+dotaci
+dotací
+dopravní
+dotace
+dopravou
+dopravu
+dopravě
+dopravy
+
+Cluster 5
+dosah
+dopadne
+dopad
+
+Cluster 6
+dodavatel
+dodávky
+dodavatele
+dodání
+doručení
+dokončena
+doručeno
+dokončení
+
+Cluster 7
+do
+
+Cluster 8
+doufám
+domníváte
+
+Cluster 9
+dovnitř
+dolů
+dolní
+dopředu
+dole
+
+Cluster 10
+dopis
+dokumentace
+dokumentaci
+doklady
+dokument
+dotazy
+dojem
+dokumentů
+doklad
+dokumenty
+dotaz
+dokumentu
+
+Cluster 11
+doc
+doktor
+
+Cluster 12
+dolarů
+dohromady
+
+Cluster 13
+dovolené
+dovolená
+dovolenou
+dovoleno
+dovolit
+
+Cluster 14
+doplňků
+doplňkové
+doplňky
+doplnění
+doplněn
+doplněk
+
+Stem je
+Cluster 0
+jestli
+jednoduše
+jednalo
+jedinou
+jelikož
+jen
+jestliže
+jejím
+jenže
+jejíž
+jehož
+jednak
+jenž
+jednoduchá
+jedné
+jediným
+jednom
+jediného
+jedna
+jednoduché
+jednoznačně
+jedná
+jednoduchý
+jednou
+jejímu
+jednodušší
+jejímž
+jeho
+jejích
+jedinečnou
+jednání
+jednu
+ještě
+jež
+jej
+jejího
+jediný
+jeden
+jediné
+jejich
+jejichž
+jediná
+její
+jedinečný
+jenom
+jednoho
+jedno
+jednat
+jedině
+jedním
+
+Cluster 1
+jednotlivými
+jednotek
+jednotlivých
+jednotlivé
+jednotky
+jednotku
+jednotka
+
+Cluster 2
+je
+jest
+
+Cluster 3
+jel
+jede
+jet
+jezdí
+jezdit
+
+Cluster 4
+jezero
+jezera
+jeskyně
+
+Cluster 5
+jemné
+jemně
+
+Cluster 6
+jevů
+jedinců
+jedince
+
+Stem př
+Cluster 0
+přízemí
+předmětem
+předmětu
+předměty
+předmětů
+předmět
+
+Cluster 1
+příčinou
+příkladem
+případu
+příčiny
+připomínky
+příležitostí
+případech
+příběhy
+případů
+příklad
+případ
+příznaky
+přiznání
+přání
+příklady
+příběhu
+přidané
+příběhů
+případě
+překvapení
+příběh
+příležitost
+příležitosti
+případy
+
+Cluster 2
+příslušného
+předpis
+příkaz
+předpisu
+příspěvková
+příslušný
+předpisů
+přílohy
+příručka
+příloha
+příloze
+příslušných
+předpisy
+příslušné
+
+Cluster 3
+převzetí
+příchodu
+převodu
+přínos
+přístupu
+přepravu
+přítomnosti
+přístup
+přepravy
+převod
+přechodu
+přenos
+přítomnost
+přístupem
+přerušení
+příjezdu
+předání
+přechod
+přenosu
+přednost
+
+Cluster 4
+přístroj
+přípravek
+přípravky
+přístroje
+připojení
+příslušenství
+přístrojů
+přípravku
+
+Cluster 5
+předseda
+předsedou
+předsedy
+představenstva
+
+Cluster 6
+příštího
+příští
+předchůdce
+příštích
+předchozím
+předchozí
+předchozích
+před
+předtím
+přelomu
+příště
+předchozího
+předem
+
+Cluster 7
+přítel
+příbuzných
+přátel
+přátelé
+příbuzné
+přáteli
+předky
+přátele
+přítele
+přítelem
+přátelství
+
+Cluster 8
+přijat
+přihlásit
+přijetí
+přihlášení
+přihlášené
+přihlášených
+
+Cluster 9
+představení
+přesvědčení
+přednášky
+předpoklady
+představy
+předpokládá
+předpokládané
+představ
+představu
+předpověď
+přednáška
+
+Cluster 10
+přijdou
+připadá
+připravené
+přidal
+připomíná
+přidat
+představuje
+přinesla
+připravit
+přišel
+přidáme
+přinese
+převzal
+přinesl
+přípravy
+připraveno
+představila
+přidán
+připravili
+přidala
+přijal
+přijmout
+připravil
+přípravu
+přijít
+připojit
+přechází
+přišlo
+připraven
+představit
+přijde
+přichází
+přípravě
+přesvědčit
+přispívá
+představil
+představují
+představí
+přišla
+přináší
+přizpůsobit
+přešel
+přečíst
+připravuje
+příprava
+přišli
+
+Cluster 11
+přítok
+
+Cluster 12
+příjmením
+příjmení
+
+Cluster 13
+příplatek
+
+Cluster 14
+předním
+předních
+přední
+
+Cluster 15
+př
+
+Cluster 16
+příspěvky
+příspěvek
+příjem
+příspěvků
+příspěvku
+příjmy
+příjmů
+příjemce
+příjmu
+
+Cluster 17
+přírodních
+přírodě
+příroda
+přírodního
+přírodní
+přírody
+
+Cluster 18
+příjemné
+přirozené
+přesto
+přesné
+přirozeně
+přitom
+při
+příjemná
+přesný
+především
+převážně
+přibližně
+případné
+přímý
+přestože
+přesně
+přehled
+příjemný
+případně
+přičemž
+příliš
+přímé
+přece
+příjemně
+přes
+přeci
+přímo
+
+Cluster 19
+překladatel
+přeložil
+překlad
+překladu
+
+Cluster 20
+přeji
+
+Stem V
+Cluster 0
+V
+
+Stem ,
+Cluster 0
+,
+
+Stem že
+Cluster 0
+ženu
+žen
+železnice
+železniční
+ženské
+ženská
+ženy
+ženou
+žebříčku
+žena
+
+Cluster 1
+že
+
+Stem se
+Cluster 0
+sektoru
+sedmi
+seznam
+servery
+set
+servisní
+sedm
+servis
+sezoně
+sekci
+seznamu
+servisu
+sezónu
+sezóně
+sezony
+semifinále
+sety
+sekce
+seriálu
+seznamy
+sekund
+sezóny
+sezonu
+sestavy
+server
+selhání
+seriál
+
+Cluster 1
+setkat
+seminář
+semináře
+setkání
+se
+setkal
+sehnat
+seznámit
+sem
+
+Cluster 2
+sestra
+seniory
+seniorů
+sestry
+sedí
+sebe
+sebou
+
+Cluster 3
+sever
+severu
+severní
+severním
+severně
+
+Cluster 4
+sexu
+sex
+sexy
+sedací
+sexuální
+sen
+
+Stem de
+Cluster 0
+desky
+demokracie
+desek
+desku
+design
+deník
+definice
+detail
+detaily
+dekorace
+deska
+desce
+deníku
+designu
+
+Cluster 1
+des
+der
+departementu
+de
+del
+
+Cluster 2
+definitivně
+desítek
+devíti
+deset
+deseti
+denně
+devět
+denní
+dejte
+delší
+desetiletí
+den
+desítky
+
+Stem čí
+Cluster 0
+čísla
+čísle
+číst
+číslem
+čínské
+číslo
+čísel
+
+Cluster 1
+čím
+čímž
+
+Stem ve
+Cluster 0
+vejce
+vesmíru
+vesnici
+veletrhu
+venkovní
+ven
+venkova
+večeře
+večera
+vesnice
+večeři
+venku
+večer
+
+Cluster 1
+vedlo
+veřejný
+velkého
+veřejná
+vedle
+velkých
+velké
+velká
+velkou
+vedením
+velkém
+vedení
+veškeré
+veřejného
+veřejnou
+velikost
+velkým
+veřejné
+vede
+veškerou
+velice
+vedoucí
+vedlejší
+velmi
+velikosti
+velkými
+velký
+velikostí
+vedou
+veřejnosti
+veřejnost
+veřejně
+vedly
+vedla
+veřejných
+vedl
+
+Cluster 2
+verzi
+verze
+verzí
+
+Cluster 3
+velitel
+
+Cluster 4
+ve
+
+Stem ne
+Cluster 0
+nejlevněji
+ne
+
+Cluster 1
+necelých
+nejdříve
+nejpozději
+nejrůznějších
+nejen
+nejvýše
+nejmenší
+nejlevnějších
+nejlepším
+nejstarší
+nejvýznamnějších
+nejlepší
+nejvyšším
+největšího
+nejznámější
+nejlepších
+nejvíc
+nejlépe
+nejstarších
+nejvýznamnější
+největších
+nejnižší
+nejvyšší
+nejčastější
+než
+nejdřív
+nejnovějších
+nejnovější
+nejoblíbenější
+neposlední
+nejdůležitější
+nejvíce
+nejmladší
+nejbližší
+nejspíš
+nejprve
+nejlepšího
+nejčastěji
+nedávno
+nejenom
+nejrůznější
+největším
+nejméně
+nejhorší
+neustále
+největší
+
+Cluster 2
+nebyly
+neměli
+nemůžeme
+nebudete
+nechte
+neví
+nebyla
+nemůžete
+nechat
+nemám
+neváhejte
+nechtějí
+nedošlo
+nejedná
+nechybí
+nevidím
+nechci
+nechcete
+nebyl
+nepatří
+nemusíte
+nevíte
+neexistuje
+nechal
+nepovedlo
+nechápu
+nesplňují
+nepodařilo
+nemá
+neznamená
+nelze
+neumí
+nemělo
+nejde
+neměly
+nemají
+nemůže
+nedá
+nevím
+neobsahuje
+nestačí
+neodpovídá
+neměl
+nejsou
+nesmí
+nemáme
+nemohu
+nevadí
+neplatí
+nechce
+nechá
+nechali
+nemůžu
+nebylo
+nemohou
+nešlo
+nebudou
+není
+nemusí
+nejsem
+nejsme
+nemohli
+nemáte
+nebude
+nechala
+nemohl
+nemohla
+nelíbí
+nebudu
+nebyli
+neměla
+nejste
+nechtěl
+necháme
+
+Cluster 3
+neděle
+neděli
+
+Cluster 4
+nezaměstnanosti
+nemovitost
+nemovitosti
+nemovitostí
+
+Cluster 5
+nebezpečí
+nezbytné
+nedostatku
+nežádoucí
+negativní
+nebezpečné
+nedostatek
+nedostatky
+
+Cluster 6
+neboli
+nebo
+neboť
+
+Cluster 7
+nerez
+
+Cluster 8
+nedaleko
+
+Cluster 9
+nehty
+
+Cluster 10
+nebe
+
+Cluster 11
+neprodává
+
+Cluster 12
+nemocnici
+nemocnice
+nehody
+nemoci
+nemocí
+nemoc
+
+Cluster 13
+nese
+
+Cluster 14
+nezávislé
+nezávislost
+
+Stem ho
+Cluster 0
+houby
+horách
+hospodářské
+hor
+horské
+housle
+horní
+holka
+hospodářství
+holky
+hospodářských
+horním
+hora
+hospodaření
+hory
+
+Cluster 1
+hod
+hodinu
+hodinami
+hodnot
+hodit
+hodnotou
+hodnocení
+hodně
+hodnotě
+hodí
+hodnoty
+hovoří
+hodiny
+hodina
+hojně
+hodině
+hodinky
+hodnotit
+hodnotí
+hodnota
+hodinách
+hodin
+horší
+hodnotu
+
+Cluster 2
+hotely
+hotel
+hotelů
+hosty
+hostů
+hotelu
+hosté
+
+Cluster 3
+ho
+
+Stem sv
+Cluster 0
+svazu
+svalů
+svazek
+svaly
+svahu
+svaz
+
+Cluster 1
+světlo
+světem
+svobody
+svých
+svědomí
+světa
+světových
+světle
+svém
+světové
+své
+svoje
+svým
+svůj
+svojí
+svými
+světového
+svobodu
+světla
+světovou
+svá
+svoji
+svět
+svou
+světová
+svého
+světě
+světový
+svému
+
+Cluster 2
+svátky
+sv
+svatební
+svatého
+svátek
+svatba
+svaté
+
+Cluster 3
+svědčí
+
+Stem pr
+Cluster 0
+profesionální
+praktických
+práva
+prestižní
+prakticky
+pracovník
+praxi
+praktické
+pracovního
+právnické
+pracovníci
+právník
+praktický
+pracoviště
+pracovní
+práv
+právních
+pracovním
+právu
+právní
+praxe
+praktická
+právnických
+právo
+právním
+pracovníků
+profesní
+práci
+pracovníky
+pracovních
+práce
+prací
+právního
+právem
+
+Cluster 1
+prvních
+protože
+prvního
+právě
+prostě
+proč
+průběh
+prý
+průběžně
+pro
+proto
+první
+pravidelné
+prosím
+prvním
+pravdu
+průběhu
+pravidelně
+pravda
+pravděpodobnost
+pravděpodobné
+prozatím
+pravděpodobně
+
+Cluster 2
+protokol
+protokolu
+prohlášení
+prohlásil
+
+Cluster 3
+problému
+prostory
+problémů
+problémem
+prostředků
+procesor
+projekty
+problém
+prostorů
+programy
+prostor
+projekt
+prostorách
+programem
+procesů
+programování
+prostředí
+programu
+prostředky
+problematiku
+problematice
+prostorem
+procesoru
+problémy
+proces
+projektu
+procesy
+prostředek
+projektů
+program
+prostoru
+problematiky
+procesu
+programů
+
+Cluster 4
+prezentace
+prohlídky
+prodloužení
+prohlédnout
+prezentaci
+provoz
+provozování
+provozu
+provozních
+provádění
+prostřednictvím
+provozní
+provedení
+projednání
+propojení
+provozního
+
+Cluster 5
+produkt
+prodejní
+prodává
+produkce
+producent
+produkty
+produktů
+prodeje
+prodejna
+pronájmy
+prodeji
+produktu
+prodejně
+prodávat
+prodat
+pronájem
+produkci
+prodej
+pronájmu
+prodejny
+prodejce
+prodávající
+
+Cluster 6
+prsten
+prsty
+prsa
+
+Cluster 7
+princ
+princezna
+premiér
+premiéra
+prezidentem
+premiéru
+prezident
+prezidenta
+
+Cluster 8
+projevy
+projev
+projevuje
+projevu
+prospěch
+
+Cluster 9
+prádlo
+proti
+praní
+prachu
+proudu
+prádla
+proud
+
+Cluster 10
+průkaz
+profilu
+průzkum
+profil
+průvodce
+průzkumu
+
+Cluster 11
+průměru
+procenta
+průměrné
+průměr
+procent
+
+Cluster 12
+probíhá
+provedena
+provést
+provádí
+proběhlo
+provedl
+provede
+proběhla
+proběhne
+proběhl
+probíhala
+provozuje
+pracovat
+pracují
+projít
+provádět
+pracovala
+probíhat
+prochází
+prošel
+protéká
+pracoval
+probíhají
+pracuje
+
+Cluster 13
+prosince
+prosinci
+prosinec
+
+Cluster 14
+prázdniny
+pryč
+prázdný
+prázdné
+
+Cluster 15
+pr
+
+Cluster 16
+průmysl
+průmyslová
+průmyslu
+průmyslových
+průmyslové
+
+Cluster 17
+provincie
+provincii
+
+Cluster 18
+prof
+profesor
+profesorem
+
+Cluster 19
+pražské
+pražských
+pražského
+pražském
+
+Cluster 20
+prevenci
+preventivní
+primárně
+prevence
+primární
+
+Cluster 21
+pravou
+pravém
+pravé
+pravý
+pravá
+
+Cluster 22
+pravidla
+pravidel
+principy
+pravidlo
+prvků
+princip
+prvky
+prvek
+principu
+
+Stem té
+Cluster 0
+téhož
+té
+též
+téhle
+téměř
+této
+
+Cluster 1
+témata
+tématu
+témat
+tématem
+téma
+
+Stem st
+Cluster 0
+stará
+stávající
+stejného
+strávil
+staré
+starší
+stálo
+stejně
+stál
+stala
+stále
+starého
+stojící
+středověku
+staršího
+starý
+stává
+stihli
+stejném
+starších
+stáří
+stávajících
+stane
+stejným
+starých
+stejnou
+sto
+stovky
+strašně
+stála
+stejný
+stejné
+stali
+století
+stovkami
+stačí
+stejná
+stal
+stojí
+staly
+stalo
+
+Cluster 1
+startu
+středisko
+stezka
+stadion
+stanice
+start
+střediska
+stanici
+stadionu
+stanic
+
+Cluster 2
+stupňů
+středně
+středním
+studené
+střední
+středu
+stupně
+středního
+stupni
+středních
+stupeň
+středa
+střed
+
+Cluster 3
+standard
+stanovených
+stabilitu
+strukturu
+strategii
+struktura
+stanovení
+stabilní
+strategie
+standardy
+struktury
+stanovena
+stanoví
+standardní
+standardu
+stanovené
+
+Cluster 4
+stranách
+strany
+stránka
+strana
+stránkách
+stránce
+stránku
+stran
+stránek
+stranu
+straně
+stránky
+stahování
+stažení
+stáhnout
+stranou
+
+Cluster 5
+stavebních
+stěna
+stavebním
+stavební
+stavbou
+stavba
+stavebního
+střechy
+stavby
+stavebnictví
+střešní
+stavbě
+staveb
+stavbu
+staví
+stěny
+stavět
+stěnu
+
+Cluster 6
+styku
+stání
+
+Cluster 7
+stavy
+statek
+stavu
+status
+stav
+
+Cluster 8
+style
+styl
+stylem
+střih
+stylu
+střihu
+
+Cluster 9
+stroje
+stromy
+stromů
+stromu
+stolek
+stoly
+strom
+stolu
+stůl
+stroj
+strojů
+stolní
+stolky
+
+Cluster 10
+starosti
+starosta
+strach
+starosty
+
+Cluster 11
+stížností
+stížnost
+
+Cluster 12
+stříbrné
+stříbrná
+stříbro
+
+Cluster 13
+stopy
+
+Cluster 14
+studií
+studovat
+studium
+studenty
+studio
+studiové
+studia
+studentům
+statistiky
+studenti
+studie
+studiu
+studijní
+studoval
+student
+studentů
+stejnojmenné
+
+Cluster 15
+státě
+státem
+státního
+státních
+států
+stát
+státech
+státy
+státním
+státu
+státní
+
+Cluster 16
+str
+st
+
+Cluster 17
+stravy
+stravování
+
+Stem Úd
+Cluster 0
+Údaje
+
+Stem sm
+Cluster 0
+smrtí
+smrti
+smazat
+smrt
+
+Cluster 1
+smlouvu
+smluvní
+směrem
+smlouvě
+směr
+smluv
+smlouva
+smyslu
+směru
+smlouvy
+smysl
+směrnice
+směsi
+směs
+
+Stem Ch
+Cluster 0
+Chris
+Chtěla
+Christian
+Chcete
+Chtěl
+Charles
+Chceš
+Chci
+
+Cluster 1
+Chrudim
+Cheb
+Chorvatsko
+Chomutov
+
+Stem js
+Cluster 0
+jsi
+jsme
+jste
+jsem
+
+Cluster 1
+jsou
+
+Stem k
+Cluster 0
+k
+
+Stem Je
+Cluster 0
+Jeho
+Jestli
+Jestliže
+Jeseník
+Jejím
+Jednoduše
+Jedná
+Ještě
+Jelikož
+Jejich
+Jedna
+Jednou
+Jean
+Ježíše
+Jednalo
+Jen
+Jednotlivé
+Ježíš
+Jedním
+Jeden
+Jenže
+Její
+
+Cluster 1
+Je
+
+Stem tu
+Cluster 0
+tudíž
+turnaje
+tuhle
+turistů
+turnaji
+turisty
+turistických
+turnaj
+turistické
+turné
+tu
+tuto
+
+Cluster 1
+tun
+tuku
+
+Stem uv
+Cluster 0
+uvnitř
+uvolnění
+
+Cluster 1
+uvedeného
+uvidíte
+uvedení
+uvedených
+uvedena
+uvádí
+uvedeno
+uvedla
+uvedl
+uvidíme
+uvedený
+uvedené
+uvést
+uvedeny
+uveden
+
+Stem mn
+Cluster 0
+mnohem
+mnoha
+mnoho
+mnohé
+mnohdy
+mnozí
+množstvím
+množství
+
+Cluster 1
+mně
+mne
+mnou
+
+Stem ot
+Cluster 0
+otázek
+otázku
+otevřít
+otázky
+otevření
+otevřel
+otázka
+otázkou
+otevřený
+otevřená
+otevřena
+otevřeno
+otevřených
+otevřené
+
+Cluster 1
+otcem
+otce
+otec
+
+Stem kt
+Cluster 0
+kterou
+který
+kterém
+která
+které
+kterému
+kterých
+kterého
+kterým
+kterými
+
+Cluster 1
+kteří
+
+Stem mé
+Cluster 0
+médií
+média
+méně
+
+Cluster 1
+mé
+mém
+mého
+
+Stem ná
+Cluster 0
+nádoby
+nádobí
+nádvoří
+nápoje
+nádrže
+náměstí
+nábytku
+nápojů
+nádraží
+nádrž
+nástroj
+nářadí
+nástrojů
+nábytek
+nástroje
+
+Cluster 1
+následné
+následně
+nádherné
+náročné
+následky
+následujících
+následek
+následuje
+náhodou
+následujícího
+nám
+náš
+následujícím
+náleží
+nás
+námi
+následující
+náhle
+
+Cluster 2
+nákup
+návštěvníky
+návštěvu
+nástupu
+návštěvníci
+návštěvníků
+návštěvnosti
+nákupu
+návratu
+nástupce
+návrat
+návštěvě
+návštěva
+návštěvy
+nárůst
+
+Cluster 3
+nápad
+náhled
+návrhů
+názorů
+názory
+návrhem
+návod
+návrhy
+nápady
+náladu
+názoru
+návrhu
+návrh
+názor
+
+Cluster 4
+náhradu
+nákladní
+námořní
+náklady
+náhrada
+nákladů
+nároky
+náplň
+nárok
+náhradní
+
+Cluster 5
+náboženství
+násilí
+náboženské
+národnosti
+národní
+národního
+národa
+národním
+národních
+národů
+
+Cluster 6
+náměstek
+
+Cluster 7
+názvu
+název
+názvy
+názvem
+názvů
+
+Stem os
+Cluster 0
+osvětlení
+osvobození
+osady
+ostrov
+ostrovy
+osídlení
+osada
+ostrovů
+ostrova
+oslavy
+ostrově
+
+Cluster 1
+ostatních
+osobností
+ostatními
+osudy
+osobním
+osud
+osobu
+osob
+osobně
+ostatní
+osoba
+osobního
+osobám
+osa
+osobních
+osobnost
+osoby
+osy
+osobní
+ostatně
+ostatním
+osloví
+osobě
+osobou
+osobnosti
+
+Cluster 2
+osm
+osmi
+
+Stem ch
+Cluster 0
+chyb
+chvíli
+chybí
+chystá
+chce
+chodí
+chráněn
+chtěla
+chování
+chceme
+chápu
+chrání
+chceš
+chvilku
+chybu
+chovat
+chtějí
+chvíle
+chuti
+chuť
+chybět
+chyba
+chtěli
+chci
+chránit
+chodit
+chyby
+chcete
+chybný
+chráněné
+chtít
+chutí
+chtěl
+
+Cluster 1
+chlazení
+charakteristika
+chleba
+chod
+charakteru
+charakter
+
+Cluster 2
+chůze
+chemické
+chemických
+chemie
+
+Cluster 3
+chalupy
+chata
+chrám
+chaty
+chrámu
+
+Stem Js
+Cluster 0
+Jsme
+Jsem
+Jste
+
+Cluster 1
+Jsou
+
+Stem zd
+Cluster 0
+zdravotním
+zdrojů
+zdaleka
+zdroj
+zda
+zde
+zdarma
+zdravotních
+zdravotnictví
+zdroje
+zdá
+zdraví
+zdejší
+zdravotnických
+zdravotní
+zdrojem
+zdravé
+zdravý
+zdravotnické
+zdravotního
+zdravotnická
+zdravotně
+
+Cluster 1
+zdi
+
+Stem v
+Cluster 0
+v
+
+Stem so
+Cluster 0
+sociálních
+souvislosti
+soudu
+sociální
+soudem
+souhlasí
+soukromí
+soutěž
+soutěží
+souhlasím
+soud
+související
+soustředění
+soukromé
+souhlasu
+sousední
+soudce
+soupeře
+souvisejících
+součástí
+soukromý
+soukromých
+současně
+souhlas
+sociálně
+sociálního
+současný
+současného
+souvisí
+soudní
+sociálním
+souladu
+součást
+současnosti
+soutěži
+soutěže
+současné
+současných
+
+Cluster 1
+sobota
+sobotu
+som
+so
+
+Cluster 2
+socha
+soustava
+soustavy
+sochy
+sochař
+souprava
+soupravy
+
+Cluster 3
+sobě
+
+Cluster 4
+soubor
+souborů
+souboru
+sortiment
+soubory
+softwaru
+souhrn
+software
+sortimentu
+
+Cluster 5
+soli
+
+Stem s
+Cluster 0
+s
+
+Stem ja
+Cluster 0
+jasně
+jasný
+jaké
+jakéhokoliv
+jaký
+jaro
+jakoukoliv
+jara
+jakoby
+jakmile
+jakékoliv
+jaře
+jakož
+jak
+jakékoli
+jakožto
+jasné
+jaderné
+jaká
+jako
+jakýkoliv
+japonské
+jakou
+jarní
+jakým
+
+Cluster 1
+ja
+
+Cluster 2
+jazyky
+jazyk
+jazyka
+jazyce
+jazyků
+jazyková
+jazykem
+jazycích
+jazykové
+
+Stem vý
+Cluster 0
+výměny
+výběru
+výběr
+výměnu
+výběrem
+výpadku
+výměna
+
+Cluster 1
+výpočet
+výkon
+výkony
+výskyt
+výpis
+výsledkem
+výskytu
+výpočetní
+výzkumu
+vývoji
+výkonem
+vývojem
+výkonu
+výstupy
+výdajů
+výsledky
+výsledků
+vývoje
+vývoj
+výstupu
+výnosy
+výpočtu
+výkonný
+výstup
+výdaje
+výsledku
+výsledek
+výzkum
+
+Cluster 2
+výlety
+výhled
+výpravy
+výhledem
+výlet
+výletů
+
+Cluster 3
+výstava
+výstavě
+výstavu
+výcvik
+výstavba
+výuce
+výstavby
+výchovy
+výuky
+výuka
+výuku
+výchova
+výstavbu
+výstavbě
+výživy
+výstavy
+výtvarných
+výtvarné
+
+Cluster 4
+výročí
+výbor
+výroční
+výboru
+
+Cluster 5
+výrobků
+výrobci
+výrobě
+výrobu
+výrobky
+výrobku
+výrobou
+výroby
+výrobních
+výrobce
+výrobní
+výrobek
+výrobního
+výroba
+výrobců
+
+Cluster 6
+výzva
+výzvy
+
+Cluster 7
+výšce
+výši
+výšku
+výše
+výška
+výšky
+výměře
+
+Cluster 8
+výborný
+výhod
+výhradně
+výhodu
+významný
+významně
+výhodou
+výrazně
+výborné
+výhodné
+výrazné
+výbornou
+významným
+výjimky
+významná
+výhody
+výjimkou
+významné
+výborně
+významnou
+významných
+výjimečně
+
+Cluster 9
+výklad
+význam
+významu
+výraz
+výrazy
+
+Cluster 10
+výprodeje
+
+Cluster 11
+východu
+východ
+východním
+východě
+východní
+
+Stem Mů
+Cluster 0
+Můžete
+Můžeme
+Může
+
+Cluster 1
+Můj
+
+Stem ta
+Cluster 0
+tažení
+tajemství
+
+Cluster 1
+tabule
+tablet
+tablety
+taška
+tabulka
+tabulce
+tabulky
+tašky
+
+Cluster 2
+také
+takhle
+tady
+taková
+takových
+tak
+takto
+tahle
+takový
+ta
+takřka
+tamní
+taneční
+taky
+takovou
+taktéž
+takovém
+takové
+takového
+takže
+tato
+tam
+takovým
+
+Stem úd
+Cluster 0
+údržbu
+údržba
+údaj
+údajů
+údajně
+údaje
+
+Cluster 1
+údolí
+
+Stem P
+Cluster 0
+P
+
+Stem L
+Cluster 0
+L
+
+Stem Os
+Cluster 0
+Ostravě
+Ostrov
+Ostravy
+Ostrava
+
+Cluster 1
+Ostatní
+Osobní
+Osobně
+
+Stem Kd
+Cluster 0
+Kde
+Kdy
+Kdo
+
+Cluster 1
+Když
+
+Stem od
+Cluster 0
+odkazy
+odborný
+odborníci
+odst
+odbornou
+odborného
+oddíl
+odkaz
+odbor
+odkazů
+odstavce
+odborná
+odborníky
+odvětví
+odborníků
+odborných
+odboru
+oddílu
+odborné
+odkazu
+oddělení
+
+Cluster 1
+odejít
+odsouzen
+odešel
+odpočinek
+oddlužení
+odpočinku
+odchodu
+odpoledne
+odmítá
+odmítl
+odvolání
+odmítnutí
+
+Cluster 2
+odlišné
+odporu
+odehrál
+odpovědí
+odpovídající
+odolné
+odpověď
+odehrává
+odpovídají
+odpovědnosti
+odráží
+odpor
+odpovídat
+odpovědi
+odolný
+odpovídá
+odolnost
+odpovědět
+odpovědnost
+
+Cluster 3
+od
+ode
+
+Cluster 4
+odpady
+odběr
+odstranit
+odstranění
+odstraňování
+odběru
+odpadních
+odpad
+odpadů
+odesílání
+odpadu
+
+Cluster 5
+odtud
+odkud
+
+Stem úp
+Cluster 0
+úplně
+úplné
+úpadku
+
+Cluster 1
+úpravu
+úpravou
+úpravě
+úprav
+úpravy
+úprava
+
+Stem vš
+Cluster 0
+však
+všemi
+všechna
+všemu
+vše
+všechny
+všem
+všeho
+všechno
+všude
+všichni
+vším
+všech
+
+Cluster 1
+všeobecné
+všeobecně
+
+Stem pí
+Cluster 0
+písmena
+písní
+písemně
+písně
+písemného
+písemná
+písemné
+píseň
+
+Cluster 1
+píše
+
+Stem tý
+Cluster 0
+týdnu
+týmem
+tým
+týdny
+týdne
+týdnech
+týden
+týmů
+týmy
+týdně
+týmu
+týdnů
+
+Cluster 1
+týkající
+týká
+týče
+
+Stem -
+Cluster 0
+-
+
+Stem li
+Cluster 0
+list
+lidí
+limit
+listiny
+listů
+lidských
+linky
+listy
+lidi
+liší
+ligy
+lize
+linek
+lidmi
+lidské
+lidové
+linku
+literatura
+literaturu
+lidé
+linka
+likvidaci
+licenci
+literatury
+lidem
+lidská
+lidského
+literatuře
+linie
+listu
+litrů
+literární
+liga
+lidech
+lidu
+licence
+
+Cluster 1
+li
+
+Cluster 2
+listopad
+listopadu
+
+Stem vě
+Cluster 0
+vědí
+většinou
+vědomí
+věří
+vědci
+věříme
+věnoval
+většině
+věda
+věty
+věcech
+věci
+věd
+vědy
+věc
+větší
+většinu
+věcí
+věnovat
+věřit
+vědeckých
+vědět
+věkové
+věnuje
+většiny
+věta
+věnována
+věřím
+větším
+většího
+věděl
+vědecké
+věku
+věk
+větších
+většina
+
+Cluster 1
+větví
+věž
+věže
+věží
+větve
+větru
+
+Cluster 2
+věřitele
+
+Cluster 3
+vězení
+
+Stem ji
+Cluster 0
+jisté
+jinou
+jistotu
+jiní
+jihovýchodní
+jihu
+jimi
+jim
+jižním
+jiné
+již
+jih
+jižní
+jich
+jiném
+jiných
+jiným
+jiný
+jinému
+jinde
+jinými
+jistě
+jiného
+jižně
+jistý
+jiná
+jinak
+
+Cluster 1
+ji
+
+Stem ud
+Cluster 0
+udělali
+udržení
+udává
+udělal
+udělá
+udělala
+udělat
+udržovat
+udržuje
+udržet
+
+Cluster 1
+události
+událost
+událostí
+
+Stem u
+Cluster 0
+u
+
+Stem kd
+Cluster 0
+kdo
+když
+kdy
+kdysi
+kde
+
+Cluster 1
+kdykoliv
+
+Stem dá
+Cluster 0
+dálnici
+dálkové
+dálnice
+dámské
+dárky
+dárek
+dámy
+
+Cluster 1
+dávají
+dám
+dávky
+dávka
+dávám
+dává
+dávno
+dáme
+dávku
+dále
+dál
+dát
+dá
+dávat
+
+Stem JU
+Cluster 0
+JUDr
+
+Stem Ph
+Cluster 0
+PhDr
+
+Cluster 1
+Philips
+
+Stem Ol
+Cluster 0
+Oldřich
+Olga
+
+Cluster 1
+Olomoucký
+Olomouci
+Olomouc
+
+Stem Ko
+Cluster 0
+Kostel
+Komise
+Kompaktní
+Kolem
+Konstrukce
+Komerční
+Konference
+Kontrola
+Komentáře
+Kontaktní
+Kompatibilní
+Konec
+Kompletní
+Koncem
+Kolik
+Kosmetika
+Kontakty
+Koupelna
+Kontakt
+Koupit
+Komedie
+
+Cluster 1
+Komenského
+Košice
+Kolín
+
+Stem :
+Cluster 0
+:
+
+Stem ka
+Cluster 0
+kameny
+kartu
+kapitál
+kapitálu
+kapacitu
+kapacitou
+karty
+kalhotky
+kamna
+kamenné
+kapacity
+kanalizace
+kanálu
+kamene
+kabely
+kartou
+karta
+kamennou
+kapsy
+kapacita
+kabel
+kamera
+kabelu
+kanály
+kalhoty
+karet
+kanál
+kanálů
+kamery
+
+Cluster 1
+každém
+každou
+každý
+každoročně
+každé
+každému
+každého
+kamarády
+kam
+každým
+každodenní
+každá
+každých
+
+Cluster 2
+kariéry
+kaple
+kanceláři
+kariéra
+kanceláří
+kapli
+kanceláře
+kandidáta
+kancelář
+kampaň
+kariéře
+katalog
+kariéru
+kapely
+katolické
+kalendáře
+kapela
+kalendář
+katalogu
+kampaně
+kandidátů
+
+Cluster 3
+kapitán
+kardinál
+
+Cluster 4
+ka
+
+Cluster 5
+katastrální
+katastru
+katastrálním
+
+Cluster 6
+kapitola
+kapitoly
+kategorii
+kategoriích
+kategorie
+kategorií
+
+Stem Ná
+Cluster 0
+Náměstí
+Následně
+Následující
+Nábytek
+Návrh
+Národní
+Národním
+Náklady
+Náš
+Návrat
+Národního
+Návod
+Název
+
+Cluster 1
+Náchod
+
+Stem 25
+Cluster 0
+256
+2500
+250
+255
+252
+
+Cluster 1
+25
+
+Stem Pr
+Cluster 0
+Produkty
+Pronájem
+Práce
+Profil
+Právní
+Prodej
+Pravidla
+Program
+Právo
+Prezentace
+Projekt
+Pracovní
+Prodám
+Průvodce
+Provedení
+Profesionální
+
+Cluster 1
+Prix
+Premier
+Press
+Prima
+
+Cluster 2
+Praha
+Prahu
+Prahou
+Praze
+Pražský
+Pražské
+Prachatice
+Pražská
+Prahy
+Prostějov
+Prague
+
+Cluster 3
+Prvním
+Problém
+Právě
+První
+Proč
+Pro
+Protože
+Prezident
+Prostě
+Proti
+Prosím
+Proto
+
+Stem 1
+Cluster 0
+1
+
+Stem +
+Cluster 0
++
+
+Stem (
+Cluster 0
+(
+
+Stem 02
+Cluster 0
+02
+
+Stem )
+Cluster 0
+)
+
+Stem 27
+Cluster 0
+27
+
+Cluster 1
+270
+
+Stem Ob
+Cluster 0
+Oblíbené
+Obecně
+Občanské
+Obchod
+Obecní
+Obuv
+Obecné
+Oblast
+Obce
+Obec
+Obchodní
+
+Cluster 1
+Obě
+Objem
+Obsahuje
+Oba
+Obrazy
+Obr
+Obsah
+Obrázek
+Objevte
+Obrázky
+Obraz
+
+Stem 3
+Cluster 0
+3
+
+Stem Vý
+Cluster 0
+Výběr
+Výhody
+Výuka
+Výše
+Výroba
+Výška
+Vývoj
+Výsledkem
+Výrobce
+Výkon
+Výrobní
+Výprodej
+Význam
+Výstava
+Výsledek
+Výsledky
+Výpis
+
+Cluster 1
+Východní
+Výroční
+
+Stem ty
+Cluster 0
+typické
+typy
+typů
+typ
+typu
+
+Cluster 1
+tyhle
+ty
+tyto
+
+Stem Zp
+Cluster 0
+Způsob
+Zpráva
+Zprávy
+Zpracování
+Zpracoval
+
+Cluster 1
+Zpět
+
+Stem ti
+Cluster 0
+tisíc
+tis
+tip
+tisk
+tiskárny
+tituly
+titulky
+titulů
+tipů
+tiskové
+tisíce
+titulu
+tipy
+titul
+tisku
+
+Cluster 1
+tito
+ti
+
+Stem A
+Cluster 0
+A
+
+Stem 4
+Cluster 0
+4
+
+Stem /
+Cluster 0
+/
+
+Stem 12
+Cluster 0
+122
+120
+127
+128
+124
+123
+129
+125
+121
+1200
+
+Cluster 1
+12
+
+Stem re
+Cluster 0
+režimu
+režiséra
+režie
+režim
+rekord
+režisér
+
+Cluster 1
+respondentů
+republika
+region
+regionálních
+reprezentace
+regionu
+respektive
+reprezentant
+resp
+republiku
+republice
+republiky
+regionální
+respondent
+reprezentaci
+regionů
+
+Cluster 2
+reklamace
+reakcí
+rekonstrukce
+realizaci
+reagovat
+realizovat
+realizace
+relativně
+revize
+rekonstrukci
+revoluce
+reaguje
+reakce
+reálném
+reálné
+reakci
+reformy
+revoluci
+redukce
+regulace
+
+Cluster 3
+reproduktory
+
+Cluster 4
+rejstřík
+registrace
+registr
+rejstříku
+registraci
+registrovat
+registrační
+registru
+
+Cluster 5
+recenze
+recepty
+recenzi
+reference
+redakce
+redakční
+receptů
+recept
+
+Cluster 6
+rezervace
+restaurace
+renesanční
+restaurací
+rekreační
+reklamu
+rekreačních
+reality
+rekreačního
+reklamní
+realitní
+relaxační
+reklamy
+reklam
+realitních
+rezervaci
+reklama
+restauraci
+
+Stem an
+Cluster 0
+ani
+angličtina
+angličtině
+anebo
+analýzu
+aneb
+anglického
+analýzy
+analýze
+angličtiny
+aniž
+anglicky
+anglický
+analýza
+ano
+anglické
+anglickém
+
+Cluster 1
+and
+an
+
+Stem Ro
+Cluster 0
+Road
+Royal
+Rokycany
+Robert
+Roman
+Rod
+Rock
+
+Cluster 1
+Rok
+Rodinné
+Rozhovor
+Rozlišení
+Rodinný
+Rozhodně
+Rodina
+Rozpočet
+Rozhodnutí
+Rozhodčí
+Rozvoj
+Roku
+Rozměry
+Roční
+Rovněž
+Rozšíření
+Rozsah
+
+Stem mm
+Cluster 0
+mm
+
+Stem x
+Cluster 0
+x
+
+Stem 38
+Cluster 0
+380
+
+Cluster 1
+38
+
+Stem 23
+Cluster 0
+239
+235
+230
+
+Cluster 1
+23
+
+Stem Ce
+Cluster 0
+Celkově
+Cestování
+Celkem
+Cena
+Celková
+Cesta
+Celkové
+Celý
+Celá
+Cestovní
+Ceny
+Celkový
+
+Cluster 1
+Centrální
+Center
+Centrum
+
+Stem Kč
+Cluster 0
+Kč
+
+Stem Fa
+Cluster 0
+Fax
+
+Cluster 1
+Fakulta
+
+Stem kv
+Cluster 0
+květiny
+května
+květy
+květnu
+květen
+
+Cluster 1
+kvalitním
+kvůli
+kvalitu
+kvalitní
+kvalifikace
+kvality
+kvalita
+kvalifikaci
+kvalitou
+kvalitě
+kvalitních
+kvalitního
+
+Stem no
+Cluster 0
+nocí
+noci
+nože
+nohy
+noc
+normální
+nošení
+normálně
+nosit
+noční
+notebook
+nohou
+nosí
+
+Cluster 1
+no
+not
+
+Cluster 2
+novin
+nový
+novinách
+nových
+norem
+nové
+novou
+novými
+nového
+novinář
+novinky
+nová
+nově
+novinek
+novém
+noviny
+normy
+novým
+
+Stem pa
+Cluster 0
+partnerem
+park
+panel
+papíry
+parlamentu
+partnerů
+pacienta
+partnera
+parkování
+památek
+pamětní
+papír
+partneři
+paměť
+parní
+parametry
+papíru
+památka
+patro
+palác
+paláce
+partner
+partnerství
+parkovacích
+parametrů
+parku
+pacientů
+palubě
+papírů
+pasivní
+památky
+parkoviště
+památku
+parlament
+partnery
+panelu
+panství
+paměti
+paliva
+patře
+palce
+pacienty
+parkovací
+
+Cluster 1
+pana
+pan
+paní
+pane
+papež
+
+Cluster 2
+par
+padesát
+
+Cluster 3
+patřil
+patrné
+patřila
+patrně
+pak
+patří
+
+Cluster 4
+pas
+
+Stem 10
+Cluster 0
+102
+109
+107
+105
+1000
+104
+106
+101
+103
+108
+100
+
+Cluster 1
+10
+
+Stem mo
+Cluster 0
+moji
+moderních
+moderní
+moci
+mojí
+moderním
+možno
+možnosti
+mou
+moderního
+možná
+možných
+mohl
+mobilních
+montáž
+možností
+moc
+možné
+mohly
+mobilní
+mohu
+možný
+mohla
+mohlo
+mohli
+momentálně
+mohou
+montáže
+možnost
+moje
+
+Cluster 1
+modelů
+motivem
+motor
+motorem
+motorů
+motiv
+moment
+modelu
+modul
+motivy
+modely
+motory
+motoru
+moduly
+model
+
+Cluster 2
+moře
+moři
+most
+mozek
+mozku
+mostu
+
+Cluster 3
+modré
+modrá
+modrý
+
+Cluster 4
+monitory
+monitor
+
+Stem ro
+Cluster 0
+rozsáhlé
+rozlišením
+rozšíření
+rozměru
+rozloha
+rozkládá
+rozšířené
+rozsah
+rozsahu
+rozmezí
+rozlišení
+rozloze
+rozměry
+rohu
+rozvoj
+rozhraní
+rozlohu
+rozvíjet
+rozvoji
+rozšířit
+rozměr
+rozvoje
+rozšířenou
+rozměrů
+
+Cluster 1
+rozhoduje
+rozhovor
+rozhodli
+rozhodně
+rozhodující
+rozhovoru
+rozdíly
+rozdělit
+rozdělení
+rozhlasu
+rozhodl
+rozhodnout
+rozhodnutí
+rozumí
+rozhodčí
+rozporu
+rovněž
+rozhodne
+rozdíl
+rozdělena
+rovnou
+rozhodnutím
+rozhodování
+rozhodla
+
+Cluster 2
+rodu
+rodiče
+rodinou
+rolí
+rodina
+rodičům
+rodin
+románu
+rodiči
+rodinu
+rodné
+rodinný
+rod
+rodinné
+rodinného
+roli
+rodiny
+rodině
+rodinných
+role
+rodičů
+román
+
+Cluster 3
+ročníků
+roky
+roční
+ropy
+rozpočtu
+ročníku
+rok
+rozpočet
+roce
+rokem
+roku
+ročník
+ročně
+
+Cluster 4
+rozená
+
+Cluster 5
+rock
+
+Cluster 6
+rovnice
+rovině
+
+Cluster 7
+roboty
+
+Cluster 8
+rostou
+rostlina
+roste
+rostoucí
+rostlin
+rostliny
+
+Stem 30
+Cluster 0
+3000
+300
+
+Cluster 1
+30
+
+Stem 60
+Cluster 0
+602
+608
+600
+
+Cluster 1
+60
+
+Stem Mo
+Cluster 0
+Moravská
+Monika
+Morava
+Mohlo
+Most
+Moderní
+Modrá
+Moskva
+Moravské
+Možná
+Moravský
+Moc
+Moskvě
+Moravě
+Moravy
+Možnost
+Možnosti
+Moje
+
+Cluster 1
+Mobile
+Motor
+Model
+
+Stem vy
+Cluster 0
+vyjadřuje
+vypadají
+vyplatí
+vyrobený
+využitím
+vybírat
+vyrobeno
+vysvětluje
+vyroben
+využít
+vytvořila
+využívat
+vytvořen
+vybrat
+vybraných
+vytváří
+vypadat
+vyhnout
+vyrobené
+vyberete
+vydrží
+vytvořit
+využívají
+vystupuje
+vyrábět
+vysvětlit
+vyrobit
+vytvořili
+vybavení
+vypadá
+vybral
+vybudovat
+vytváření
+vyhovuje
+vytvoření
+vytvářet
+vybaveny
+vytvořil
+vyskytují
+vyskytuje
+vyznačuje
+vybráno
+vytvoří
+vytvářejí
+vybudování
+vybavena
+vybrali
+vyžaduje
+vybrané
+využívá
+vyjádřit
+využívání
+vyrobena
+využití
+vyzkoušet
+vyrábí
+vybaven
+vyplývá
+vyměnit
+vyjádřil
+vybraného
+vyřešit
+
+Cluster 1
+vyzvednutí
+vylepšení
+vyhlášení
+vysvětlení
+vyhledávacího
+vystoupení
+vyhledání
+vyjádření
+vyhledávání
+vyhodnocení
+vyšetřování
+vymezení
+vyšetření
+vysílání
+
+Cluster 2
+vyhrazena
+vyznačené
+vyplněny
+
+Cluster 3
+vyučování
+vyučovacího
+
+Cluster 4
+vyšší
+vysokých
+vysokého
+vysoký
+vynikající
+vysoká
+vyšších
+vysoce
+vysokým
+vysoké
+vysokou
+vyšším
+
+Cluster 5
+vytápění
+vysavač
+vysavače
+
+Cluster 6
+vyšlo
+vydala
+vydání
+vyd
+vydavatel
+vyšel
+vydána
+vydává
+vychází
+vydán
+vydat
+vydáno
+vydané
+vydal
+vydavatelství
+vycházejí
+vyšla
+vyjde
+vydali
+
+Cluster 7
+vy
+
+Cluster 8
+vyprávění
+vypráví
+
+Cluster 9
+vyhlášky
+vyhláška
+
+Cluster 10
+vybojoval
+vystudoval
+vyhrát
+vyhrál
+vyhrála
+
+Cluster 11
+vykonávat
+vykonávající
+
+Stem z
+Cluster 0
+z
+
+Stem au
+Cluster 0
+auta
+automobilu
+autě
+automaticky
+automobilů
+audio
+automobily
+auto
+aut
+autobusové
+automatické
+autobusy
+autem
+autobus
+automobil
+
+Cluster 1
+autorem
+autoři
+autor
+autora
+autorů
+
+Stem až
+Cluster 0
+až
+
+Stem 53
+Cluster 0
+53
+
+Stem fa
+Cluster 0
+fakulta
+fajn
+fanoušky
+faktory
+fakulty
+fanoušků
+fakt
+faktorů
+fakultě
+
+Cluster 1
+fax
+
+Stem op
+Cluster 0
+opravu
+operací
+oprávnění
+opatření
+opravy
+operaci
+opakovaně
+opustil
+opět
+optický
+opustit
+oproti
+opevnění
+operace
+opakování
+opera
+optimální
+opery
+opravdu
+operačního
+oprava
+operační
+
+Cluster 1
+open
+op
+
+Stem vo
+Cluster 0
+vody
+volných
+vodního
+vodou
+volný
+vodní
+vodu
+volného
+vodě
+volné
+vod
+vodních
+volně
+voda
+
+Cluster 1
+vozu
+vozidel
+vozů
+vojáci
+vojenskou
+vojska
+vojenských
+vozy
+vozidlo
+vozidla
+voják
+vojenský
+vojsk
+vojáků
+vojáky
+vojenské
+vojsko
+vojenského
+
+Cluster 2
+voleb
+volbou
+volební
+volba
+volbách
+volby
+volit
+volbu
+volání
+
+Cluster 3
+von
+
+Stem tl
+Cluster 0
+tlak
+tlaku
+tlakem
+
+Cluster 1
+tlačítko
+tlačítkem
+tlačítka
+
+Stem 16
+Cluster 0
+1600
+169
+166
+164
+165
+160
+168
+
+Cluster 1
+16
+
+Stem 34
+Cluster 0
+34
+
+Cluster 1
+340
+
+Stem 32
+Cluster 0
+320
+
+Cluster 1
+32
+
+Stem Tř
+Cluster 0
+Třinec
+Tři
+Třetí
+Třebíč
+Třeba
+
+Cluster 1
+Třída
+
+Stem Ve
+Cluster 0
+Velké
+Velká
+Veřejná
+Velmi
+Velikonoční
+Veronika
+Veřejné
+Ves
+Velkou
+Ventilátory
+Vedoucí
+Vedle
+Vedení
+Velikost
+Veškeré
+Velký
+
+Cluster 1
+Ve
+
+Stem Ti
+Cluster 0
+Tisková
+Time
+Tiskárny
+Tisk
+
+Cluster 1
+Ti
+
+Stem tř
+Cluster 0
+třikrát
+třicet
+třetího
+třech
+třeba
+třemi
+třetí
+třetím
+třetiny
+tří
+tři
+
+Cluster 1
+třídění
+třídě
+třída
+tříd
+třídu
+třídy
+
+Stem ab
+Cluster 0
+absolutně
+absolutní
+aby
+
+Cluster 1
+absolvoval
+
+Stem by
+Cluster 0
+bytů
+bydlel
+bytě
+bydliště
+bytové
+byt
+byty
+bytových
+bydlí
+bydlení
+bytu
+
+Cluster 1
+byl
+bys
+bychom
+byly
+bylo
+byste
+byla
+byť
+by
+bych
+byli
+
+Stem vž
+Cluster 0
+vždycky
+
+Cluster 1
+vždy
+
+Stem fo
+Cluster 0
+fotografování
+fotbalový
+fotografií
+fotografii
+fotoaparáty
+fotbal
+foto
+fotograf
+fotku
+fotografie
+fotoaparátu
+fotbalista
+fotbalové
+fotky
+
+Cluster 1
+for
+
+Cluster 2
+fondy
+formátu
+fondu
+formuláře
+fond
+formální
+forem
+formou
+formu
+formulář
+forma
+formát
+formě
+formy
+fondů
+
+Stem fu
+Cluster 0
+fungují
+funkce
+fungování
+funguje
+funkční
+funkci
+funkcí
+fungovat
+
+Cluster 1
+furt
+
+Stem oc
+Cluster 0
+ocení
+ochraně
+ocenění
+ochrana
+oceli
+ochranné
+ochrany
+ochranu
+ocel
+ochranou
+
+Cluster 1
+oceánu
+
+Stem už
+Cluster 0
+užívat
+užívání
+uživatelům
+uživatelů
+uživatel
+uživatelé
+užití
+užitečné
+užívá
+užít
+uživateli
+uživatele
+
+Cluster 1
+už
+
+Stem to
+Cluster 0
+tobě
+touto
+to
+toku
+totiž
+totéž
+tomhle
+tou
+tomto
+toto
+tom
+tohle
+tomuto
+tolik
+tohoto
+tomu
+toho
+topení
+tok
+
+Cluster 1
+top
+
+Stem zp
+Cluster 0
+zpátky
+zpracování
+způsobů
+zprávy
+způsobem
+zpracováním
+způsob
+zpráv
+způsobilosti
+způsobuje
+zprávu
+zpočátku
+způsobit
+zpracovaný
+způsoby
+zpravidla
+způsobené
+zpravodaj
+zpět
+zpravodajství
+způsobu
+zpráva
+
+Cluster 1
+zpěvák
+zpěvačka
+zpěv
+
+Stem al
+Cluster 0
+alternativní
+album
+alba
+ale
+albu
+alkoholu
+alespoň
+alb
+alkohol
+
+Cluster 1
+all
+al
+
+Stem i
+Cluster 0
+i
+
+Stem Jo
+Cluster 0
+Joseph
+Johna
+John
+Jozef
+Jones
+Johann
+Joe
+Josefa
+Josef
+
+Cluster 1
+Jo
+
+Stem in
+Cluster 0
+informacemi
+interní
+inovace
+informatiky
+informační
+infekce
+instalace
+inzerce
+investic
+informačních
+individuální
+instituce
+infrastruktury
+informaci
+interiéru
+inzeráty
+informace
+investice
+inspirace
+inspiraci
+integrace
+inzerátu
+inzerát
+inteligentní
+informovat
+informuje
+informací
+investičních
+inzerci
+intenzivní
+institucí
+instalaci
+investiční
+interiér
+
+Cluster 1
+in
+
+Cluster 2
+inspekce
+index
+inspektorát
+
+Stem ak
+Cluster 0
+akční
+aktivních
+akce
+akcí
+aktuálně
+akademie
+akcií
+aktualizace
+akademii
+aktivit
+aktivity
+aktuální
+akcích
+aktivně
+akcie
+aktivní
+akci
+aktivita
+
+Cluster 1
+akorát
+
+Stem Na
+Cluster 0
+Nabízí
+Naše
+Nachází
+Nabízíme
+Naši
+Nadace
+Naopak
+National
+Navíc
+Nabídky
+Nabídka
+Nařízení
+Nakladatelství
+Napsat
+Například
+Nad
+Narodil
+Nabízím
+Napsal
+Nakonec
+Naštěstí
+
+Cluster 1
+Na
+
+Stem va
+Cluster 0
+varianty
+vaším
+vazba
+varianta
+variantu
+vařit
+vaření
+vazby
+vašeho
+vaši
+vašem
+vady
+vaší
+vašich
+valné
+variant
+vaše
+vadí
+
+Cluster 1
+van
+
+Stem sn
+Cluster 0
+snižuje
+snadné
+snaží
+snížení
+snažil
+snaha
+snažili
+snahy
+snižování
+snažím
+snížit
+snídaně
+snahu
+snadný
+snažit
+snadnou
+snadno
+snaze
+snad
+
+Cluster 1
+snímek
+sněmovny
+sněhu
+sníh
+snímků
+snímky
+snímku
+sněmu
+
+Stem sk
+Cluster 0
+skutečnost
+skutečné
+skalní
+skrze
+skvěle
+skončí
+skoro
+skončilo
+skončil
+skutečnosti
+skvělý
+skóre
+skončila
+skvělou
+skvělá
+skončení
+skvělé
+skutečně
+
+Cluster 1
+skříň
+skladů
+sklad
+skladování
+skříně
+sklo
+skladu
+skříňky
+sklady
+skla
+
+Cluster 2
+skupinou
+skladba
+skupin
+skupiny
+skladby
+skládá
+skladatel
+skladeb
+skupinu
+skupině
+skupina
+
+Stem ce
+Cluster 0
+cenou
+celého
+celkový
+cenově
+celková
+celých
+cenu
+celé
+celý
+cena
+celá
+celku
+cenných
+ceny
+celkového
+cenné
+celkem
+celkovou
+cen
+ceně
+celém
+celkově
+celkové
+celek
+celou
+celým
+
+Cluster 1
+cestovní
+cestujících
+cestovního
+cestující
+cest
+cestování
+cesta
+cestách
+cestou
+cestu
+cesty
+cestě
+
+Cluster 2
+centrální
+centru
+celostátní
+centrem
+centrum
+center
+centra
+
+Cluster 3
+certifikát
+
+Stem zí
+Cluster 0
+získáte
+získal
+získávání
+získané
+získání
+získat
+získalo
+získala
+získá
+získává
+získali
+
+Cluster 1
+zítra
+
+Stem 15
+Cluster 0
+1500
+151
+159
+150
+155
+152
+
+Cluster 1
+15
+
+Stem %
+Cluster 0
+%
+
+Stem zá
+Cluster 0
+záření
+zákoně
+závazky
+základny
+základu
+základě
+zásadně
+zákoníku
+zákonem
+zákoník
+záležitost
+základ
+základy
+základem
+zákonů
+základní
+závazná
+základním
+zákon
+zákony
+zákona
+záležitosti
+základních
+záleží
+závislé
+základního
+zásady
+zároveň
+záležitostí
+závislosti
+závisí
+zásadní
+
+Cluster 1
+zápasu
+závody
+zájezd
+zápase
+zápasech
+závodech
+zápas
+zápasů
+závod
+závodů
+závodu
+zápasy
+závodní
+závodě
+zájezdy
+
+Cluster 2
+západu
+zálivu
+západě
+západně
+západní
+západním
+západ
+
+Cluster 3
+zákazník
+zábava
+zákazníků
+záruky
+zábavy
+zážitky
+zákazníkům
+zážitek
+zárukou
+zákazníka
+zákazníci
+zázemí
+záruka
+zábavu
+zákazníky
+
+Cluster 4
+zástupců
+zájem
+záznamy
+zájmů
+záznamu
+záznam
+záznamů
+zápisu
+záměr
+zásah
+zájmy
+zájemce
+zániku
+zájmu
+zápis
+zákaz
+zásahu
+zástupce
+zástupci
+záměru
+
+Cluster 5
+záda
+zádech
+
+Cluster 6
+zásob
+zásoby
+zálohy
+
+Cluster 7
+závadný
+
+Cluster 8
+závěr
+září
+závěru
+závěrečné
+
+Cluster 9
+zámek
+zámků
+zámku
+zásuvky
+zámky
+
+Stem dů
+Cluster 0
+důchodu
+dům
+
+Cluster 1
+důkladně
+důvodu
+důvodem
+důležité
+důkazy
+důležitý
+důvodů
+důvěru
+důležitých
+důležitou
+důležitá
+důvody
+důvod
+důkaz
+důsledku
+důsledky
+důraz
+
+Stem vů
+Cluster 0
+vůle
+vůdce
+vůli
+vůči
+vůbec
+vůz
+
+Cluster 1
+vůně
+vůní
+vůni
+
+Stem ma
+Cluster 0
+makléře
+materiál
+materiálů
+masa
+materiálem
+maso
+maturitní
+masáž
+marketing
+materiálu
+matematiky
+manažer
+masáže
+marketingu
+management
+materiály
+managementu
+matrace
+
+Cluster 1
+malou
+malý
+malém
+maximální
+malé
+malých
+max
+masivní
+malým
+manipulaci
+manuální
+maximum
+malá
+malého
+maximálně
+
+Cluster 2
+majitelé
+majitele
+majetkem
+manželka
+matka
+manžel
+mateřské
+manželku
+manželky
+malíř
+manžela
+mateřská
+matky
+manželem
+majetek
+manželkou
+maminky
+majetku
+matkou
+majitel
+maminka
+manželství
+majitelem
+
+Cluster 3
+mandát
+
+Cluster 4
+ma
+mají
+
+Cluster 5
+map
+mapa
+mapu
+mapě
+mapy
+
+Stem sp
+Cluster 0
+spokojenost
+spokojená
+spuštění
+spokojeni
+splnit
+splnění
+spolehlivě
+spokojenosti
+spolehlivost
+správný
+spolehlivé
+spolehlivý
+správně
+správné
+splňuje
+správnou
+
+Cluster 1
+správci
+správa
+správy
+správce
+spoření
+správě
+spořitelny
+správní
+správu
+správního
+spravedlnosti
+
+Cluster 2
+specialisty
+specifikace
+spoustu
+spíše
+společenské
+speciálních
+specifické
+sportu
+spíš
+spousta
+sportovní
+speciální
+spodní
+sportovních
+speciálně
+sporty
+společenských
+sportovního
+sport
+
+Cluster 3
+spánku
+spát
+
+Cluster 4
+spotřeba
+splátky
+spotřeby
+spotřebu
+spotřebitele
+
+Cluster 5
+spočívá
+spadá
+
+Cluster 6
+spojená
+spojených
+spory
+společnosti
+spolu
+společných
+spolupracovat
+spolupracuje
+společnou
+společností
+společně
+spolku
+společného
+společný
+spojů
+spolupráci
+spolupracoval
+spojení
+spojené
+spor
+spoje
+sporu
+spolek
+spolupráce
+společenství
+spojuje
+společné
+společnost
+
+Cluster 7
+spisovatelka
+spisovatele
+spisovatel
+
+Stem vl
+Cluster 0
+vlasy
+vlasti
+vlaky
+vlhkosti
+vlastního
+vlastně
+vlákna
+vlny
+vlastními
+vlasů
+vlna
+vlastnictví
+vlhkost
+vlastních
+vlivy
+vlastníků
+vláken
+vládě
+vlivem
+vlastním
+vlastností
+vládou
+vlivu
+vládní
+vlaku
+vlastní
+vliv
+vlastnosti
+vláda
+vlak
+vlády
+vládu
+
+Cluster 1
+vložka
+vložky
+vložit
+
+Cluster 2
+vlevo
+
+Stem č
+Cluster 0
+č
+
+Stem 19
+Cluster 0
+1904
+1917
+1902
+1913
+1906
+1915
+1914
+1905
+1910
+1909
+1918
+1903
+1916
+1901
+1907
+1912
+1908
+1900
+1919
+
+Cluster 1
+1923
+1930
+1920
+1938
+1925
+1932
+1922
+1934
+1921
+1935
+1928
+1937
+1939
+1936
+1929
+1931
+1927
+1924
+1933
+1926
+
+Cluster 2
+1950
+1958
+1959
+1953
+1967
+1962
+1957
+1955
+1956
+1964
+1965
+1951
+1960
+1969
+1954
+1963
+1966
+1968
+1952
+1961
+
+Cluster 3
+1946
+1949
+1945
+1947
+1940
+1948
+1944
+1942
+1943
+1941
+
+Cluster 4
+1981
+1986
+1985
+1988
+1972
+1973
+1974
+1978
+1975
+1979
+1977
+1976
+1989
+1984
+1983
+1980
+1987
+1971
+1982
+1970
+
+Cluster 5
+19
+
+Cluster 6
+1995
+1991
+1996
+1994
+1992
+1990
+1997
+1993
+1999
+1998
+
+Cluster 7
+190
+
+Cluster 8
+199
+
+Cluster 9
+195
+
+Stem ze
+Cluster 0
+zeleniny
+zemědělství
+zemi
+země
+zemřela
+zejména
+zemědělského
+zemského
+zelený
+zemích
+zeptat
+zeleně
+zemědělských
+zem
+zelená
+zelené
+zemí
+zemřel
+zelených
+zemské
+zemědělské
+zeď
+
+Cluster 1
+ze
+
+Stem dr
+Cluster 0
+druhy
+dres
+druhou
+družstev
+druhů
+druhého
+dráze
+drobných
+držet
+drží
+dráhy
+dráha
+drobné
+druhá
+družstvo
+drama
+druhé
+druh
+držení
+druhý
+druhu
+dráhu
+drahé
+družstva
+druhém
+druhým
+druhem
+
+Cluster 1
+dr
+
+Cluster 2
+dražby
+dražba
+
+Stem čá
+Cluster 0
+částí
+částečně
+částku
+částka
+části
+část
+částech
+částky
+
+Cluster 1
+částic
+
+Stem Sv
+Cluster 0
+Svoboda
+Svitavy
+Svatý
+Svaté
+Sv
+
+Cluster 1
+Svou
+Svět
+Své
+Světové
+
+Stem fi
+Cluster 0
+filosofie
+filmový
+finance
+firma
+finanční
+financí
+filmových
+filmové
+firemní
+finančních
+firmu
+filmech
+firmy
+finančním
+finále
+firmou
+filmů
+filmu
+finančního
+firmě
+filmy
+film
+finančně
+fitness
+firem
+financování
+
+Cluster 1
+filtr
+filtry
+filtru
+
+Stem Ev
+Cluster 0
+Evropy
+Evropě
+Evropského
+Evropské
+Evropská
+Evropa
+Evropský
+Evropu
+
+Cluster 1
+Eva
+
+Stem ko
+Cluster 0
+kontaktovat
+kombinací
+komfort
+kontrole
+komunikaci
+koncentrace
+kombinaci
+kompaktní
+kombinace
+konstrukcí
+koncept
+kompetencí
+kontrolu
+komunikace
+kompatibilní
+kontaktní
+kontakty
+kontaktu
+komplexní
+kontrolou
+kompletně
+kontrolní
+kontroly
+konstrukci
+kontrola
+komunity
+kompletní
+koncepce
+komunikační
+kontakt
+konstrukce
+komunikací
+komfortní
+kompetence
+
+Cluster 1
+kovů
+kov
+kousek
+komponenty
+kousky
+kouzlo
+kovové
+konektor
+kořeny
+koření
+kovu
+
+Cluster 2
+konfliktu
+konečné
+kolik
+konkrétně
+kontextu
+konkurenční
+komunálních
+komu
+koho
+konkrétního
+konkurence
+konkurenci
+komerčních
+komerčního
+konkrétním
+konkurenceschopnost
+konkrétních
+komerční
+koncernu
+konkrétní
+
+Cluster 3
+konat
+koncertu
+koncert
+koncerty
+končí
+konání
+konec
+konalo
+konaného
+konala
+konal
+konferenci
+konference
+konci
+konané
+konce
+koná
+koncem
+konečně
+
+Cluster 4
+koalice
+komora
+kolekce
+kosmetika
+košile
+komise
+komedie
+komory
+
+Cluster 5
+koule
+koní
+kočka
+kolo
+kole
+kolečka
+kočky
+kol
+koně
+kopce
+koše
+kola
+kotle
+kolem
+
+Cluster 6
+komentáře
+komentářů
+komentář
+
+Cluster 7
+komplex
+koberec
+komplexu
+
+Cluster 8
+kosti
+kostí
+kostel
+kostele
+kostela
+
+Cluster 9
+kolegy
+kolega
+
+Cluster 10
+kopírování
+kopie
+
+Cluster 11
+korun
+koupil
+koupi
+koupit
+koupila
+koruny
+
+Cluster 12
+kouření
+koupání
+koupelny
+
+Stem dn
+Cluster 0
+dnešního
+dnů
+dny
+dni
+dnech
+dnešní
+dnešním
+dnes
+dní
+dnem
+dneska
+dnešních
+dne
+
+Cluster 1
+dno
+
+Stem 5
+Cluster 0
+5
+
+Stem 6
+Cluster 0
+6
+
+Stem us
+Cluster 0
+uskutečnil
+ustanovení
+uspořádání
+usnesení
+uskuteční
+
+Cluster 1
+usedlosti
+
+Stem Cí
+Cluster 0
+Cíl
+Cílem
+
+Cluster 1
+Cíle
+
+Stem tr
+Cluster 0
+trouby
+trati
+tratí
+tratě
+trička
+trasy
+trase
+tričko
+trasa
+trať
+
+Cluster 1
+trvá
+trošku
+trvání
+trpí
+trvat
+trvalo
+trochu
+trvalé
+trvale
+
+Cluster 2
+trénink
+trůn
+tréninku
+trestní
+trest
+trenér
+trestu
+trenéra
+
+Cluster 3
+trendy
+tržní
+trend
+tradičních
+triky
+trhy
+tržeb
+trh
+trhu
+tradice
+trzích
+tradici
+tradiční
+tradičně
+
+Stem me
+Cluster 0
+mediální
+metoda
+menu
+metodou
+medicíny
+mezi
+metody
+metodu
+mezinárodních
+mezitím
+metod
+menších
+mechaniky
+mezinárodní
+mezinárodním
+mezinárodního
+menší
+
+Cluster 1
+metru
+medaili
+medaile
+metra
+metrů
+
+Stem lz
+Cluster 0
+lze
+
+Stem hl
+Cluster 0
+hlavu
+hlavním
+hlavních
+hlavně
+hloubka
+hlavního
+hlavy
+hlavní
+hloubky
+hliníku
+hladiny
+hlavou
+hlediska
+hlavě
+hladké
+hlava
+
+Cluster 1
+hlásí
+hledání
+hledám
+hledá
+hlášení
+hledají
+hledáte
+hledat
+hledali
+
+Cluster 2
+hlasování
+hlasy
+hlas
+hlasů
+hlasu
+
+Stem bu
+Cluster 0
+budově
+budovy
+budou
+budu
+budova
+budeš
+budoucnu
+bude
+budete
+budovu
+budoucí
+budeme
+budování
+budov
+buňky
+budoucnosti
+budoucna
+buď
+budoucnost
+buněk
+
+Cluster 1
+bundy
+bunda
+
+Stem úč
+Cluster 0
+účinky
+účinek
+účastní
+účelu
+účinné
+účely
+účinností
+účasti
+účastnil
+účel
+účelem
+účinnost
+účast
+účinnosti
+účastníky
+účastníci
+účastníků
+
+Cluster 1
+účet
+účty
+účetní
+účtů
+účtu
+účetnictví
+
+Stem ús
+Cluster 0
+ústní
+ústavní
+ústav
+úseku
+ústí
+úsek
+ústavu
+
+Cluster 1
+úspěšné
+úspěchu
+úspěchy
+úspěch
+úsilí
+úspěšný
+úspěchem
+úspěšně
+
+Stem Ka
+Cluster 0
+Kapacita
+Katedra
+Kalendář
+Kanada
+Kariéra
+Každopádně
+Každé
+Každý
+Kam
+Katalog
+Kalhoty
+Každá
+Kategorie
+
+Cluster 1
+Karel
+Karlových
+Kateřina
+Karl
+Karla
+Karlovy
+Karlovarský
+Karlova
+Karviná
+
+Stem oč
+Cluster 0
+oči
+očima
+očí
+oční
+očkování
+
+Cluster 1
+očekávat
+očekávání
+očekává
+
+Stem ví
+Cluster 0
+vítr
+víno
+vítězství
+víry
+vína
+vítěz
+
+Cluster 1
+víme
+víkend
+víc
+víte
+vím
+ví
+více
+víkendu
+
+Stem su
+Cluster 0
+suché
+sukně
+super
+
+Cluster 1
+surovin
+suroviny
+subjektů
+subjektu
+subjekty
+
+Stem Am
+Cluster 0
+Americký
+Americká
+American
+
+Cluster 1
+Ameriky
+Americe
+Amerika
+
+Stem am
+Cluster 0
+americké
+amerického
+americký
+amerických
+americkém
+americká
+
+Cluster 1
+am
+
+Stem da
+Cluster 0
+daně
+databázi
+daný
+daňové
+dani
+databáze
+daň
+daném
+dat
+daní
+datum
+danou
+data
+datové
+daného
+dané
+
+Cluster 1
+da
+
+Cluster 2
+dal
+dalších
+dala
+dalšího
+daří
+další
+dali
+dalšími
+dalším
+dalo
+daleko
+dalšímu
+dají
+
+Stem o
+Cluster 0
+o
+
+Stem za
+Cluster 0
+zastupitelstva
+zastávka
+zasedací
+zastávky
+zasedání
+
+Cluster 1
+zastavit
+zachránit
+zakoupit
+zabránit
+zastavení
+zabít
+zadarmo
+zakázáno
+zaplatit
+
+Cluster 2
+založena
+zakladatel
+založená
+založen
+založení
+založit
+založil
+zapsaná
+založeno
+založili
+založený
+založené
+
+Cluster 3
+zajímavosti
+zabývající
+zaměření
+zahrnuje
+zajímavou
+zabývat
+zajímat
+zajímavá
+zaměřením
+zaměřené
+zaměřený
+zabývá
+zajímavý
+zajímavých
+zaměřuje
+zajímalo
+zajímavé
+zaujaly
+zajímá
+
+Cluster 4
+zastával
+začali
+začínají
+začne
+začaly
+zahájena
+začíná
+zaznamenal
+začátek
+začal
+začátkem
+zatím
+zatímco
+začátku
+začala
+začnou
+zas
+zase
+začalo
+zahájil
+začít
+
+Cluster 5
+zahraniční
+zahraničních
+zařízení
+zaměstnanci
+zahraničí
+zaměstnance
+zaměstnání
+zaměstnanosti
+zaměstnanců
+zaměstnanec
+zařízením
+zařízeních
+zaměstnavatele
+
+Cluster 6
+zahrada
+zahradu
+zahradě
+zahrad
+zahrady
+zahradní
+
+Cluster 7
+za
+
+Cluster 8
+zadání
+zadat
+zakázek
+zakázky
+zakázka
+zakázku
+
+Cluster 9
+zad
+zadní
+
+Cluster 10
+zapotřebí
+zastoupení
+zapojit
+zavedení
+zajistit
+zajistí
+zajišťují
+zabezpečení
+zapojení
+zatížení
+zachování
+zaručuje
+zajištění
+zařazení
+zařazen
+zaslouží
+zajišťuje
+zahájení
+
+Stem 36
+Cluster 0
+360
+365
+
+Cluster 1
+36
+
+Stem sl
+Cluster 0
+službách
+složek
+slouží
+slovy
+slovní
+sloužila
+sloužil
+sledovat
+slova
+službu
+slovník
+slovem
+slovenské
+služby
+sledování
+složení
+složky
+slavnostní
+složité
+slov
+slovenský
+slyšet
+sloužit
+složil
+služeb
+slavné
+sleduje
+slovenských
+slaví
+službě
+sloužící
+sloupci
+služba
+slovo
+
+Cluster 1
+slevy
+slev
+slevu
+sleva
+
+Cluster 2
+sluneční
+slunce
+
+Cluster 3
+sluchátka
+
+Stem ub
+Cluster 0
+ubytovací
+
+Cluster 1
+ubytování
+
+Stem 13
+Cluster 0
+137
+134
+132
+130
+135
+139
+138
+
+Cluster 1
+13
+
+Stem Br
+Cluster 0
+Británie
+Bruselu
+Brod
+Brna
+Bratislavě
+Bratislava
+Brno
+Bruntál
+Brně
+Británii
+Brazílie
+
+Cluster 1
+Branky
+
+Stem Fr
+Cluster 0
+France
+Františka
+Friedrich
+Francii
+František
+Franz
+Francie
+Frank
+
+Cluster 1
+Free
+
+Stem Be
+Cluster 0
+Best
+Belgie
+Bedřich
+Ben
+Beach
+Beskydy
+Berlíně
+Beroun
+Benešov
+
+Cluster 1
+Bezpečnost
+Bezpečnostní
+Bez
+
+Stem Šp
+Cluster 0
+Španělska
+Španělsku
+
+Cluster 1
+Španělsko
+
+Stem Af
+Cluster 0
+Africe
+
+Cluster 1
+Afriky
+
+Stem Ji
+Cluster 0
+Jičín
+Jiřího
+Jindřichův
+Jindřicha
+Jindřich
+Jižní
+Jizerou
+Jiří
+Jitka
+Jihlava
+
+Cluster 1
+Již
+Jinak
+Jiné
+
+Stem St
+Cluster 0
+Strakonice
+Street
+Studio
+Starší
+Středočeského
+Stránka
+Strategie
+Stav
+Staré
+Středočeský
+Státní
+Střední
+Stavební
+Standardní
+Starý
+Struktura
+Start
+Stavba
+Stará
+Strana
+Stavebnictví
+Star
+Standard
+
+Cluster 1
+Stanislav
+Steve
+Stáhnout
+Středa
+St
+
+Cluster 2
+Stejně
+Stále
+Stačí
+Stalo
+
+Stem As
+Cluster 0
+Asi
+Asii
+Asie
+
+Cluster 1
+Asociace
+
+Stem di
+Cluster 0
+diváků
+divadelní
+disponuje
+diskuze
+diskuse
+disku
+divadle
+dispozici
+diskuzi
+diskusi
+divize
+distribuci
+divadla
+divadlo
+diváci
+disky
+digitální
+displej
+disk
+diecéze
+distribuce
+
+Cluster 1
+di
+die
+
+Stem mů
+Cluster 0
+může
+můžu
+můžeš
+můžete
+můžou
+můžeme
+
+Cluster 1
+můj
+
+Stem bý
+Cluster 0
+bývá
+bývají
+být
+
+Cluster 1
+bývalá
+bývalé
+bývalého
+bývalý
+
+Stem tě
+Cluster 0
+těla
+těžce
+tělesa
+těžko
+těle
+těžké
+těm
+těsně
+těleso
+tělovýchovy
+těmito
+těch
+těmi
+těžký
+těchto
+těhotenství
+těmto
+tělo
+tělesné
+
+Cluster 1
+těšit
+těší
+tě
+těším
+
+Stem *
+Cluster 0
+*
+
+Stem el
+Cluster 0
+elektrických
+elektřiny
+elektrické
+elektronických
+elektro
+elektrárny
+elegantní
+elektronické
+elektrický
+
+Cluster 1
+el
+
+Stem or
+Cluster 0
+organizace
+orgány
+orgán
+orientace
+orgánu
+organizací
+originální
+organizační
+organismu
+organizaci
+orientaci
+orchestr
+originál
+orgánů
+
+Cluster 1
+or
+
+Stem bě
+Cluster 0
+běžně
+běžný
+běžných
+běžné
+běžného
+běžnou
+během
+
+Cluster 1
+běhu
+běží
+běh
+
+Stem dv
+Cluster 0
+dva
+dvanáct
+dvojice
+dvaceti
+dvěma
+dvakrát
+dvou
+dvě
+dvacet
+
+Cluster 1
+dveře
+dvora
+dvůr
+dveří
+dveřmi
+
+Stem 2
+Cluster 0
+2
+
+Stem Ma
+Cluster 0
+Mary
+Matěj
+Maďarsko
+Marek
+Masarykova
+Mariánské
+Marta
+Management
+Marii
+Manchesteru
+Man
+Mark
+Martin
+Masaryka
+Malé
+Madrid
+Max
+Mac
+Masarykovo
+Martina
+Malá
+Marie
+Malý
+Marcela
+Markéta
+Maria
+
+Cluster 1
+Materiál
+Maximální
+Mapa
+Matematika
+
+Cluster 2
+Mají
+
+Stem 00
+Cluster 0
+00
+
+Cluster 1
+000
+
+Stem 05
+Cluster 0
+05
+
+Stem Zm
+Cluster 0
+Změny
+
+Cluster 1
+Změna
+
+Stem lé
+Cluster 0
+létě
+léta
+lépe
+léto
+
+Cluster 1
+léky
+lékařem
+léčby
+léčba
+lékaře
+léčbě
+lékař
+lékařů
+lékařské
+lékaři
+lékařství
+léků
+léčbu
+lék
+
+Stem Mi
+Cluster 0
+Michala
+Miloš
+Ministerstvo
+Michaela
+Milan
+Microsoft
+Ministerstva
+Mikuláš
+Mistrovství
+Miroslava
+Michael
+Miloslav
+Michal
+Miss
+Mike
+Miroslav
+
+Cluster 1
+Minimální
+Mimo
+
+Stem Ta
+Cluster 0
+Tam
+Tak
+Tatry
+Taky
+Takto
+Takže
+Tachov
+Tato
+Tabulka
+Takové
+Tady
+Také
+
+Cluster 1
+Ta
+
+Stem pů
+Cluster 0
+půdy
+původních
+původního
+půda
+půdní
+působí
+půjde
+půl
+původu
+půd
+původ
+působení
+původním
+původem
+působnosti
+působil
+působící
+půdního
+původně
+působit
+původní
+půdních
+půdě
+
+Cluster 1
+půjčky
+
+Stem Tí
+Cluster 0
+Tímto
+
+Cluster 1
+Tím
+
+Stem če
+Cluster 0
+češtiny
+český
+česká
+česky
+čelní
+českou
+čerstvé
+československé
+češtině
+československý
+českým
+čeští
+čemu
+červená
+černou
+čemuž
+červený
+českého
+českém
+červenou
+červené
+české
+černý
+českých
+čehož
+čem
+čele
+čepice
+černá
+černého
+černé
+čeho
+
+Cluster 1
+červenec
+čekají
+červnu
+čeká
+červenci
+čekat
+června
+červen
+čekal
+července
+
+Cluster 2
+čerpadla
+četnost
+čerpání
+čerpadlo
+
+Cluster 3
+čeledi
+čeleď
+
+Stem ni
+Cluster 0
+nižší
+nikdy
+nim
+nikoho
+nicméně
+nikdo
+nic
+nimiž
+nikoli
+nich
+nichž
+nikoliv
+nimi
+nikde
+nikomu
+nijak
+
+Cluster 1
+ni
+
+Stem co
+Cluster 0
+cokoliv
+co
+
+Cluster 1
+což
+coby
+
+Stem tí
+Cluster 0
+tímto
+
+Cluster 1
+tím
+
+Stem žá
+Cluster 0
+žáka
+žádné
+žádá
+žádném
+žák
+žákům
+žádnou
+žáků
+žádná
+žáci
+žádosti
+žádný
+žáky
+žádostí
+žádost
+
+Cluster 1
+žánr
+
+Stem zk
+Cluster 0
+zkoumání
+zkuste
+zkouška
+zkvalitnění
+zkoušky
+zkoušek
+zkušenosti
+zkušenost
+zkušební
+zkoušku
+zkušeností
+zkusit
+zkrátka
+
+Cluster 1
+zkratky
+zkratka
+
+Stem Za
+Cluster 0
+Zařízení
+Zahájení
+Zajímá
+Začátek
+Zatímco
+Zařazení
+Zastupitelstvo
+Zajímavé
+Zahrada
+Zahradní
+Zatím
+Zastupitelstva
+Zahraniční
+Zajímavosti
+
+Cluster 1
+Za
+
+Stem kr
+Cluster 0
+krásně
+krásy
+krátký
+kratší
+krajiny
+krásné
+krása
+krátce
+krátkou
+krásná
+krásnou
+krátkým
+kromě
+krátké
+krásný
+
+Cluster 1
+krajích
+královna
+krajů
+královské
+krevní
+král
+krve
+krále
+králem
+kraj
+kraje
+krvi
+krajské
+kruhu
+krev
+kraji
+krajského
+krku
+království
+
+Cluster 2
+kryt
+krém
+krytí
+krmivo
+
+Cluster 3
+kroků
+kritiky
+krok
+kritéria
+kroky
+krokem
+kritérií
+krizi
+krize
+kroku
+
+Stem O
+Cluster 0
+O
+
+Stem ča
+Cluster 0
+čaj
+časté
+častěji
+čaje
+času
+časem
+časy
+čas
+často
+časové
+čase
+
+Cluster 1
+časopisech
+časopisu
+časopis
+
+Stem ří
+Cluster 0
+řídit
+řídí
+říkají
+říci
+říjen
+říjnu
+říct
+října
+řízení
+řídící
+říkala
+říkal
+říká
+říkám
+říkat
+
+Cluster 1
+římské
+říši
+říše
+
+Stem mí
+Cluster 0
+místem
+mít
+míry
+místnost
+místních
+místního
+mírně
+místy
+míru
+místností
+místo
+míra
+místním
+místnosti
+míst
+míří
+místa
+místní
+místech
+místě
+mínění
+míře
+mír
+
+Cluster 1
+míč
+
+Stem cí
+Cluster 0
+cílové
+cíli
+cílem
+cílů
+cíl
+cíle
+církevní
+císař
+církve
+církev
+císaře
+církvi
+
+Cluster 1
+cítit
+cítí
+
+Stem ok
+Cluster 0
+okraj
+okruh
+okruhu
+okolo
+okolností
+okr
+okolí
+okres
+oka
+okamžik
+okraje
+okrese
+okolní
+okně
+okamžitě
+okno
+okraji
+oken
+okolních
+okna
+okresu
+oko
+okresní
+okamžiku
+
+Cluster 1
+ok
+
+Stem zn
+Cluster 0
+značně
+znaků
+značné
+značek
+značení
+známky
+znaku
+znalosti
+zní
+známa
+znamená
+známý
+značka
+znám
+známo
+znát
+známého
+znění
+znamenalo
+znaky
+zná
+známe
+známým
+znamenat
+znalost
+známému
+značky
+znalostí
+známých
+znak
+znamení
+značkou
+známá
+značku
+známé
+
+Cluster 1
+zn
+
+Cluster 2
+znovu
+
+Stem Ab
+Cluster 0
+Aby
+
+Stem ně
+Cluster 0
+něho
+němž
+němu
+něhož
+něm
+něj
+něž
+ně
+
+Cluster 1
+německém
+německého
+německé
+německá
+německým
+německý
+německou
+německých
+německy
+
+Cluster 2
+některá
+některé
+některý
+někteří
+několikrát
+několika
+některým
+některých
+několik
+
+Cluster 3
+nějakým
+někdy
+někam
+nějakou
+nějaké
+nějaká
+nějak
+nějaký
+něčím
+někomu
+někdo
+něco
+někoho
+nějakého
+někde
+
+Stem úk
+Cluster 0
+úkoly
+úkolem
+úkolů
+úkol
+
+Cluster 1
+úklid
+
+Stem Kr
+Cluster 0
+Kroměříž
+Králové
+Krkonoše
+Král
+Krumlov
+Krása
+Kromě
+Krásná
+Krajský
+Krajského
+Krátce
+Krásné
+Krásný
+
+Cluster 1
+Krista
+
+Stem ře
+Cluster 0
+řekne
+řekl
+řekla
+řeči
+řekli
+řeč
+řeka
+řece
+řečeno
+řek
+řeky
+řecké
+
+Cluster 1
+ředitele
+ředitelem
+řešení
+řešením
+ředitelka
+ředitel
+řetězce
+řešit
+řeší
+
+Stem úv
+Cluster 0
+úvahu
+úvodní
+úvod
+úvodu
+
+Cluster 1
+úvazek
+úvěrů
+úvěru
+úvěr
+
+Stem 33
+Cluster 0
+330
+
+Cluster 1
+33
+
+Stem le
+Cluster 0
+lehké
+levnější
+levně
+lesk
+lehký
+lehká
+legendární
+lepší
+lehce
+levné
+
+Cluster 1
+letiště
+letadla
+letu
+letounu
+lese
+lesa
+letadel
+lesy
+letišti
+letecké
+lesní
+lesů
+letoun
+lesích
+letouny
+letadlo
+les
+
+Cluster 2
+let
+letech
+leden
+lety
+letošní
+ledu
+ledna
+lednu
+letošního
+led
+lednice
+letních
+letní
+letos
+letošním
+
+Cluster 3
+ležící
+levém
+levé
+leží
+levá
+
+Stem še
+Cluster 0
+šest
+šetření
+šesti
+šel
+
+Cluster 1
+šedé
+šedá
+
+Stem čl
+Cluster 0
+členy
+článek
+článků
+členství
+členění
+členských
+členské
+čl
+člen
+člena
+článku
+články
+členové
+členů
+členem
+
+Cluster 1
+člověkem
+člověk
+člověku
+člověka
+
+Stem ur
+Cluster 0
+určitě
+určitý
+určité
+určitých
+určitou
+
+Cluster 1
+určit
+určení
+určeny
+určeno
+určen
+určuje
+určený
+určených
+určená
+určené
+určena
+
+Stem U
+Cluster 0
+U
+
+Stem as
+Cluster 0
+asi
+aspoň
+as
+
+Cluster 1
+aspekty
+asistent
+asociace
+
+Stem či
+Cluster 0
+činnost
+čin
+čištění
+čisté
+čistě
+činností
+čili
+činí
+činnosti
+činu
+čistý
+
+Cluster 1
+činžovní
+či
+
+Stem Př
+Cluster 0
+Příklad
+Přidal
+Před
+Příspěvek
+Předmět
+Příspěvky
+Přesný
+Přihlásit
+Přesně
+Přehled
+Přírodní
+Především
+Příprava
+Připravili
+Přední
+Při
+Přidala
+Přítomni
+Přitom
+Přestože
+Přesto
+Předchozí
+Příloha
+Přes
+Příběh
+Představení
+
+Cluster 1
+Příbram
+Přerov
+
+Stem zm
+Cluster 0
+zmínka
+zmíněné
+
+Cluster 1
+změně
+změny
+změnil
+změnou
+změnit
+změnu
+změnila
+změna
+změnám
+změní
+změn
+
+Stem mi
+Cluster 0
+miluje
+miminko
+miminka
+minerální
+mini
+
+Cluster 1
+ministerstvo
+mistrů
+ministra
+ministr
+ministrem
+mistrovství
+mince
+mistr
+ministerstva
+mise
+mistra
+
+Cluster 2
+minulých
+minimum
+mimo
+minimální
+minuty
+miliony
+minutách
+mimořádné
+milion
+miliard
+minimálně
+minulém
+milionu
+miliónů
+minutě
+minutu
+minut
+minulého
+min
+milionů
+miliardy
+mimořádně
+mil
+minulý
+minulosti
+
+Cluster 3
+mi
+
+Stem uč
+Cluster 0
+učit
+učební
+učitele
+učitelka
+učebnice
+učení
+učitelé
+učitel
+učitelů
+učí
+
+Cluster 1
+učiliště
+
+Stem ži
+Cluster 0
+životě
+životnost
+životnímu
+životem
+životu
+žije
+žijící
+žijí
+žili
+židovské
+žilo
+životním
+života
+život
+životní
+životního
+živé
+živočichů
+žil
+židovského
+
+Cluster 1
+židle
+
+Stem ša
+Cluster 0
+šanci
+šance
+šampionátu
+
+Cluster 1
+šaty
+
+Stem HD
+Cluster 0
+HDP
+
+Cluster 1
+HD
+
+Stem Z
+Cluster 0
+Z
+
+Stem si
+Cluster 0
+silný
+situaci
+silou
+silnice
+silné
+situace
+situací
+sil
+silně
+silnější
+silnic
+silná
+situacích
+sice
+silnici
+signálu
+silnou
+silniční
+signál
+
+Cluster 1
+si
+
+Stem zv
+Cluster 0
+zvláštního
+zvuku
+zvláště
+zvyšuje
+zvyšování
+zvlášť
+zvýšené
+zvýšení
+zveřejnění
+zvuk
+zvýšit
+zvláštní
+zvláštním
+zvíře
+zvýšenou
+zvířata
+zvířat
+
+Cluster 1
+zvolit
+zvaný
+zvítězil
+zvolen
+
+Stem má
+Cluster 0
+má
+máš
+máme
+málo
+mám
+máte
+
+Cluster 1
+máslo
+
+Stem 24
+Cluster 0
+249
+240
+
+Cluster 1
+24
+
+Stem zb
+Cluster 0
+zboží
+zbraň
+zbraně
+zbraní
+
+Cluster 1
+zbytečně
+zbytečné
+zbavit
+zbytek
+zbývá
+zbytky
+
+Stem US
+Cluster 0
+USD
+US
+
+Cluster 1
+USA
+
+Stem un
+Cluster 0
+univerzity
+unie
+univerzitě
+unikátní
+univerzální
+univerzita
+unii
+
+Cluster 1
+und
+
+Stem Vě
+Cluster 0
+Věda
+Většina
+Věk
+Většinou
+
+Cluster 1
+Věra
+
+Stem S
+Cluster 0
+S
+
+Stem ci
+Cluster 0
+civilizace
+cizí
+cizích
+
+Cluster 1
+cit
+
+Stem sa
+Cluster 0
+samotný
+samostatný
+samostatná
+samostatné
+samostatně
+samo
+samotného
+sami
+sada
+samozřejmě
+samotné
+satelitní
+samé
+samy
+sadu
+samostatnou
+sama
+salát
+sady
+sazby
+samotném
+
+Cluster 1
+sa
+
+Stem "
+Cluster 0
+"
+
+Stem Ty
+Cluster 0
+Tyto
+
+Cluster 1
+Ty
+
+Stem Úř
+Cluster 0
+Úřadu
+
+Cluster 1
+Úřad
+
+Stem Bě
+Cluster 0
+Během
+
+Stem pě
+Cluster 0
+pěkný
+pěší
+pět
+pěkně
+pěti
+pěkné
+
+Cluster 1
+pěstování
+
+Stem 7
+Cluster 0
+7
+
+Stem řa
+Cluster 0
+řadí
+řazení
+
+Cluster 1
+řadě
+řad
+řadou
+řady
+řada
+řadu
+
+Stem Ja
+Cluster 0
+Jakmile
+Jablonec
+Jaromír
+Jakékoli
+Jazyk
+Jaké
+Jakuba
+Jak
+Jaroslava
+Jan
+Jako
+James
+Jack
+Jaká
+Janem
+Jaký
+Jaroslav
+Jakub
+Jana
+Jarní
+Jarmila
+
+Cluster 1
+Japonsku
+Japonsko
+
+Stem ex
+Cluster 0
+existuje
+existenci
+existence
+expozice
+existují
+
+Cluster 1
+extrémně
+extrémní
+externí
+extra
+
+Stem Sp
+Cluster 0
+Spolupráce
+Společnost
+Spolu
+Společně
+Sparta
+Sportovní
+Spojené
+Společnosti
+Správa
+Speciální
+Spotřební
+Sport
+Spotřeba
+Spodní
+Spojených
+
+Cluster 1
+Spacewatch
+
+Stem mě
+Cluster 0
+měsíc
+městech
+měří
+měsících
+městské
+měsíční
+měly
+měl
+měst
+města
+městem
+mění
+měsíčně
+měsíců
+měnit
+měla
+městská
+měsíce
+mělo
+městských
+městu
+městě
+měsícem
+měření
+měsíci
+měli
+městského
+město
+
+Cluster 1
+mě
+
+Cluster 2
+měkké
+
+Stem ny
+Cluster 0
+nyní
+
+Stem ke
+Cluster 0
+ke
+
+Stem zl
+Cluster 0
+zlata
+zlato
+zlaté
+zlatý
+zlatá
+zlatou
+
+Cluster 1
+zlepšení
+zlepšit
+
+Stem vz
+Cluster 0
+vztahu
+vzdělávacího
+vzájemně
+vztahuje
+vzniklé
+vztahů
+vznikají
+vzal
+vzdálenost
+vzít
+vzala
+vztah
+vzdělávací
+vztahy
+vzniklo
+vzdělání
+vznikly
+vznik
+vzniku
+vznikla
+vzájemné
+vzdálenosti
+vzniká
+vzdělávání
+vzdálené
+vzdělávacích
+vznikne
+vznikl
+vzniknout
+
+Cluster 1
+vzduchu
+vzhůru
+vzduch
+vzadu
+
+Cluster 2
+vzhledem
+vzorem
+vzhledu
+vzoru
+vzor
+vzhled
+
+Stem ar
+Cluster 0
+argumenty
+areálu
+archivu
+armáda
+architektura
+architektury
+areály
+armády
+areálů
+areál
+armádě
+architekt
+archiv
+
+Cluster 1
+are
+
+Stem ad
+Cluster 0
+adres
+adresy
+adaptér
+adresa
+adrese
+adresu
+administrativní
+
+Cluster 1
+ad
+
+Stem ní
+Cluster 0
+níž
+nímž
+ní
+ním
+níže
+
+Cluster 1
+nízká
+nízké
+nízkou
+
+Stem Dr
+Cluster 0
+Druhý
+Druhá
+Druh
+
+Cluster 1
+Drama
+
+Stem úř
+Cluster 0
+úřad
+úřadu
+úřadů
+úřady
+
+Cluster 1
+úřední
+
+Stem ml
+Cluster 0
+mladé
+mládež
+mladší
+mladých
+mladého
+mladí
+mladý
+mladá
+mluví
+mluvit
+mládeže
+mládežnické
+mládí
+mluvčí
+
+Cluster 1
+ml
+mlýn
+mléka
+mld
+mléko
+
+Stem dí
+Cluster 0
+díly
+dívky
+díle
+dítěte
+dítě
+dílo
+díla
+dílny
+dítětem
+dílů
+díl
+dílem
+dílu
+dítěti
+dívka
+
+Cluster 1
+díky
+
+Stem 20
+Cluster 0
+201
+205
+20
+200
+
+Cluster 1
+2009
+2013
+2007
+2010
+2020
+2001
+2000
+2015
+2008
+2016
+2005
+2004
+2006
+2002
+2012
+
+Stem 11
+Cluster 0
+119
+112
+116
+110
+118
+114
+113
+117
+115
+111
+
+Cluster 1
+11
+
+Stem dl
+Cluster 0
+dlouhou
+dlouhým
+dlouhodobé
+dlouho
+dlouhá
+dlouhých
+dlouhé
+dlouhodobě
+dlouhodobý
+dlouhý
+
+Cluster 1
+dle
+
+Stem Sd
+Cluster 0
+Sdružení
+
+Stem Of
+Cluster 0
+Of
+Office
+
+Cluster 1
+Oficiální
+
+Stem rů
+Cluster 0
+různým
+různé
+růžové
+různých
+různými
+růžová
+různě
+různá
+růže
+
+Cluster 1
+růstu
+růst
+
+Stem 75
+Cluster 0
+75
+
+Cluster 1
+750
+
+Stem tv
+Cluster 0
+tvrzení
+tvůj
+tvrdí
+
+Cluster 1
+tvaru
+tvar
+tvář
+tvořit
+tvoří
+tvorby
+tvary
+tvořen
+tvrdé
+tvorba
+tvůrce
+tvorbu
+tvorbě
+tváří
+tvořena
+tvrze
+tvůrčí
+
+Stem 70
+Cluster 0
+70
+
+Cluster 1
+700
+
+Stem of
+Cluster 0
+oficiální
+oficiálně
+oficiálním
+
+Cluster 1
+of
+
+Stem úr
+Cluster 0
+úrovní
+úrovni
+úrovně
+
+Cluster 1
+úroveň
+
+Stem zů
+Cluster 0
+zůstala
+zůstává
+zůstávají
+zůstaly
+zůstane
+zůstalo
+zůstal
+
+Cluster 1
+zůstat
+
+Stem be
+Cluster 0
+bezpečnostních
+bezpečné
+bezpečně
+bez
+bezprostředně
+bezpečnostní
+bezdrátové
+bezpečnosti
+bezpečnost
+bezpečí
+beze
+
+Cluster 1
+bere
+
+Stem kl
+Cluster 0
+klasický
+klasické
+klasickou
+klavír
+klávesnice
+klíčové
+klasifikace
+klíčových
+klávesy
+klasických
+klimatizace
+klasická
+
+Cluster 1
+klesá
+klade
+
+Cluster 2
+klient
+kluk
+klub
+klidně
+klubů
+kluby
+klíč
+klíče
+klienty
+klidné
+kluci
+klubu
+klidu
+klientům
+klášter
+kláštera
+klienta
+klientů
+klid
+
+Stem dř
+Cluster 0
+dřeva
+dřevěná
+dřevo
+dřevěných
+dřevěné
+
+Cluster 1
+dříve
+dřív
+dřívější
+
+Stem Ze
+Cluster 0
+Zemřel
+Zelená
+Zemědělské
+Země
+Zeman
+Zemi
+Zejména
+
+Cluster 1
+Ze
+
+Stem 40
+Cluster 0
+400
+
+Cluster 1
+40
+
+Stem Od
+Cluster 0
+Odkaz
+Odpovědět
+Odbor
+Odborné
+Oddělení
+
+Cluster 1
+Od
+
+Stem Le
+Cluster 0
+Lenka
+Les
+Le
+League
+Lee
+
+Cluster 1
+Letos
+Levné
+Letní
+Leží
+
+Stem bo
+Cluster 0
+bohatství
+bolesti
+bolest
+bohatou
+bohaté
+bojů
+boku
+bojí
+bojovat
+bolí
+bohatý
+boji
+bohužel
+boční
+boj
+boje
+
+Cluster 1
+bodů
+box
+bod
+bot
+body
+bodu
+boty
+bodem
+
+Stem Vl
+Cluster 0
+Vlasta
+Vlastní
+Vláda
+Vladimíra
+Vladimír
+Vlastimil
+
+Cluster 1
+Vltavou
+
+Stem um
+Cluster 0
+umění
+umělecká
+umělé
+uměleckých
+umělecké
+umělců
+
+Cluster 1
+umožňuje
+umístěny
+umožňují
+umístit
+umístění
+umožňující
+umístěna
+umí
+umožní
+umístěn
+
+Stem Pe
+Cluster 0
+Peak
+Pelhřimov
+Peter
+Penzion
+Petr
+Peugeot
+Petra
+
+Cluster 1
+Pevně
+Peníze
+
+Stem 28
+Cluster 0
+280
+
+Cluster 1
+28
+
+Stem Ny
+Cluster 0
+Nymburk
+
+Cluster 1
+Nyní
+
+Stem lá
+Cluster 0
+lásky
+lásku
+láska
+lásce
+láskou
+lázně
+
+Cluster 1
+látek
+látka
+látky
+
+Stem pe
+Cluster 0
+pevná
+pevné
+pevně
+pedagog
+perfektně
+pevnost
+pera
+pedagogické
+peníze
+pevný
+peněz
+perfektní
+personál
+personální
+pedagogických
+pevnosti
+pevnou
+pečlivě
+
+Cluster 1
+pekárny
+pečení
+penzionu
+penzionů
+pes
+penzion
+
+Stem mu
+Cluster 0
+musel
+musíte
+musíš
+musejí
+musí
+muset
+muž
+muzea
+musím
+museli
+muži
+mužská
+muzeu
+muselo
+muže
+musela
+mužů
+musíme
+muzeum
+
+Cluster 1
+mu
+
+Stem Má
+Cluster 0
+Máte
+Mám
+Máme
+
+Cluster 1
+Má
+
+Stem dě
+Cluster 0
+dělení
+dětské
+dětí
+dějinách
+dělají
+dělá
+dělí
+dětského
+dělala
+děj
+dětmi
+děje
+dětský
+děti
+dějiny
+dětství
+dějin
+dětem
+děl
+dědictví
+dění
+dětských
+dětská
+dělat
+dělal
+dělám
+
+Cluster 1
+děkujeme
+
+Stem mz
+Cluster 0
+mzdy
+
+Stem vr
+Cluster 0
+vrcholu
+vrchol
+vrstev
+vrchní
+vrstvy
+vrstva
+vraždy
+vrchu
+
+Cluster 1
+vrátila
+vrátit
+vrácení
+vrátil
+vrátí
+vrací
+
+Stem fr
+Cluster 0
+francouzské
+fronta
+frekvence
+francouzského
+francouzský
+francouzská
+frázi
+
+Cluster 1
+from
+
+Stem Co
+Cluster 0
+Co
+Což
+
+Cluster 1
+Company
+College
+County
+
+Stem br
+Cluster 0
+brněnské
+bratra
+bratr
+britská
+bratři
+bratrem
+britský
+britské
+britského
+
+Cluster 1
+brání
+brány
+brusle
+brýle
+bránit
+brána
+brzo
+brát
+brankář
+brzy
+branky
+brambory
+
+Stem Fi
+Cluster 0
+Finsko
+Finance
+Film
+Finanční
+Fitness
+Filmy
+
+Cluster 1
+Firma
+Filip
+
+Stem ČR
+Cluster 0
+ČR
+
+Stem zh
+Cluster 0
+zhlédnutí
+
+Cluster 1
+zhruba
+
+Stem čt
+Cluster 0
+čtyřmi
+čtvrtletí
+čtyř
+čtyřech
+čtvrté
+čtvrtfinále
+čtvrtek
+čtvrtý
+čtvrti
+čtyři
+
+Cluster 1
+čtenáři
+čtenáře
+čtenářů
+čtení
+
+Stem K
+Cluster 0
+K
+
+Stem Sm
+Cluster 0
+Smlouva
+Smlouvy
+Smluvní
+
+Cluster 1
+Smith
+
+Stem An
+Cluster 0
+Antonín
+Antonio
+Ani
+Anna
+Anton
+Ano
+Andrea
+Anglický
+Anny
+Anglii
+Anglie
+Andrej
+Angeles
+Antonína
+Anderson
+
+Cluster 1
+Analýza
+
+Stem No
+Cluster 0
+Nokia
+North
+No
+Norsko
+
+Cluster 1
+Nový
+Nova
+Novák
+Novotný
+Novinky
+Novém
+Noční
+Nového
+Nově
+Novinka
+Nové
+Nová
+
+Stem Mě
+Cluster 0
+Města
+Měsíc
+Měli
+Městská
+Městské
+Mělník
+Město
+Městského
+Měl
+Městský
+Měla
+
+Cluster 1
+Mě
+
+Stem ba
+Cluster 0
+baví
+baterie
+barevných
+bazén
+baterií
+barvy
+bar
+bavit
+barev
+barevné
+barvě
+barva
+balíček
+bavlna
+barvu
+barvách
+balení
+bazénu
+barvou
+batoh
+barevný
+
+Cluster 1
+babičky
+banka
+bankovní
+barokní
+banky
+bank
+
+Stem Pa
+Cluster 0
+Pak
+Paměti
+Patří
+
+Cluster 1
+Paříže
+Paříž
+Panny
+Pardubický
+Park
+Paris
+Paní
+Pavel
+Pardubice
+Pan
+Paul
+Pavla
+Paříži
+Palackého
+
+Stem Řa
+Cluster 0
+Řada
+
+Stem ši
+Cluster 0
+široký
+širokou
+široká
+široké
+
+Cluster 1
+širší
+
+Stem Lo
+Cluster 0
+Londýn
+Louis
+Louny
+Londýně
+London
+Londýna
+Los
+Love
+
+Cluster 1
+Ložnice
+
+Stem Kn
+Cluster 0
+Knihy
+Kniha
+
+Cluster 1
+Kněžnou
+
+Stem H
+Cluster 0
+H
+
+Stem IB
+Cluster 0
+IBM
+
+Stem Vo
+Cluster 0
+Volná
+Volný
+Voda
+Vodní
+Vojtěch
+
+Cluster 1
+Volkswagen
+
+Stem cv
+Cluster 0
+cvičení
+
+Stem ek
+Cluster 0
+ekologické
+ekonomická
+ekonomické
+ekologických
+ekonomických
+ekonomický
+
+Cluster 1
+ekonomika
+ekonomiky
+
+Stem šk
+Cluster 0
+školním
+školu
+škola
+školního
+školení
+škol
+školám
+školství
+školních
+školní
+školou
+školáky
+školy
+školách
+školky
+škole
+
+Cluster 1
+škoda
+škodu
+škody
+
+Stem kn
+Cluster 0
+knihy
+knihovna
+knihoven
+knížky
+kniha
+knížka
+knize
+knihovny
+knižní
+knihovně
+knihu
+knih
+
+Cluster 1
+kníže
+kněz
+
+Stem sy
+Cluster 0
+symbol
+systémů
+systému
+systémech
+systémem
+systém
+symbolem
+systémy
+
+Cluster 1
+syn
+syna
+synem
+
+Stem Bo
+Cluster 0
+Body
+Bohužel
+Boleslavi
+Boleslav
+Boží
+Bohuslav
+Bohumil
+Bohu
+Boha
+Boty
+
+Cluster 1
+Bosch
+
+Stem r
+Cluster 0
+r
+
+Stem 17
+Cluster 0
+179
+170
+175
+
+Cluster 1
+17
+
+Stem št
+Cluster 0
+štěstí
+
+Stem bl
+Cluster 0
+blízkosti
+blízko
+blíží
+blízké
+blíže
+
+Cluster 1
+blok
+bloku
+
+Stem Kl
+Cluster 0
+Klub
+Klíčová
+Klimatizace
+Klasické
+
+Cluster 1
+Klatovy
+Kladno
+Klára
+Klaus
+
+Stem To
+Cluster 0
+Top
+Toto
+Tohle
+To
+Tour
+
+Cluster 1
+Tomáše
+Tomáš
+Tom
+
+Stem uk
+Cluster 0
+ukončena
+ukládání
+ukončil
+ukončení
+
+Cluster 1
+ukazují
+ukázala
+ukázal
+ukáže
+ukázalo
+ukazuje
+ukazatele
+ukázat
+
+Stem ag
+Cluster 0
+agentury
+
+Cluster 1
+agentura
+
+Stem 80
+Cluster 0
+800
+
+Cluster 1
+80
+
+Stem 50
+Cluster 0
+500
+5000
+
+Cluster 1
+50
+
+Stem Zd
+Cluster 0
+Zdarma
+Zdravotní
+Zdraví
+Zdroje
+Zdroj
+Zde
+
+Cluster 1
+Zdeněk
+Zdeňka
+
+Stem hr
+Cluster 0
+hradě
+hraní
+hrnce
+hrad
+hrála
+hrál
+hráči
+hráče
+hradu
+hra
+hrabě
+hrají
+hrozně
+hrách
+hromady
+hrozí
+hrát
+hry
+hráčů
+hračky
+hru
+hráč
+hrdiny
+hráli
+hrdina
+hraje
+
+Cluster 1
+hranic
+hranici
+hranice
+
+Stem vh
+Cluster 0
+vhodná
+vhodný
+vhodnou
+vhodné
+
+Cluster 1
+vhodného
+
+Stem ri
+Cluster 0
+rizik
+rizika
+
+Cluster 1
+riziko
+
+Stem pá
+Cluster 0
+pásky
+pásmo
+páry
+pán
+pár
+pásma
+pásu
+pánské
+pásy
+páru
+pás
+
+Cluster 1
+pátek
+pád
+pádu
+pádem
+páté
+
+Stem vi
+Cluster 0
+vily
+virtuální
+
+Cluster 1
+videa
+vidím
+viz
+vidí
+viděli
+vidíte
+vidět
+video
+viděl
+viděla
+vidění
+
+Stem !
+Cluster 0
+!
+
+Stem NA
+Cluster 0
+NASA
+NATO
+
+Cluster 1
+NAD
+NA
+
+Stem Do
+Cluster 0
+Dobrá
+Dokonce
+Domov
+Doba
+Dobře
+Doplňující
+Domažlice
+Doporučujeme
+Doufám
+Domácí
+Dobrý
+Dobré
+Dolní
+Doprava
+Dopravní
+Domů
+Don
+
+Cluster 1
+Do
+Dodavatelem
+
+Stem at
+Cluster 0
+atd
+at
+
+Cluster 1
+atraktivní
+atmosféru
+atmosféra
+
+Stem Fe
+Cluster 0
+Ferrari
+Ferdinand
+
+Cluster 1
+Festival
+
+Stem Al
+Cluster 0
+Album
+Alois
+Alexandra
+Alexandr
+Aleš
+Ale
+All
+Alena
+Albert
+Alexander
+
+Cluster 1
+Al
+
+Stem zř
+Cluster 0
+zřejmě
+zřejmé
+
+Cluster 1
+zřízení
+
+Stem up
+Cluster 0
+upravuje
+upozornit
+uplatnit
+upravit
+upozornění
+upřesnit
+uplatnění
+
+Cluster 1
+uprostřed
+
+Stem ap
+Cluster 0
+aplikaci
+aplikace
+aplikací
+
+Cluster 1
+apod
+
+Stem &
+Cluster 0
+&
+
+Stem jd
+Cluster 0
+jde
+
+Cluster 1
+jdou
+
+Stem Čí
+Cluster 0
+Čísla
+Čím
+Číslo
+
+Cluster 1
+Číny
+Čína
+Číně
+
+Stem ef
+Cluster 0
+efektivní
+efektivně
+
+Cluster 1
+efekt
+efekty
+
+Stem ih
+Cluster 0
+ihned
+
+Stem B
+Cluster 0
+B
+
+Stem C
+Cluster 0
+C
+
+Stem By
+Cluster 0
+Byla
+Byly
+Bytový
+Byli
+Byt
+Byty
+Byl
+Bylo
+
+Cluster 1
+Bystřice
+Bystrica
+
+Stem ul
+Cluster 0
+ulice
+ulicích
+ulici
+ul
+ulic
+
+Cluster 1
+uložit
+uložené
+uložení
+uloženo
+
+Stem Zk
+Cluster 0
+Zkuste
+
+Stem vá
+Cluster 0
+válce
+válkou
+vážně
+vámi
+vám
+války
+váš
+vás
+válku
+válek
+válka
+vánoční
+vážné
+válečné
+
+Cluster 1
+váží
+váze
+váha
+váhy
+
+Stem Va
+Cluster 0
+Vaše
+Vašeho
+Vary
+Vašich
+Vaší
+Vaši
+
+Cluster 1
+Van
+
+Stem J
+Cluster 0
+J
+
+Stem G
+Cluster 0
+G
+
+Stem 73
+Cluster 0
+73
+
+Stem 89
+Cluster 0
+89
+
+Stem 59
+Cluster 0
+59
+
+Cluster 1
+599
+
+Stem Ne
+Cluster 0
+Nejlevnější
+Neví
+Nejnovější
+Nemáte
+Než
+Nejprve
+Nejčastěji
+Nejlepší
+Nebo
+Ne
+Není
+Nejen
+Nejstarší
+Nejvíce
+Nejvyšší
+Největší
+Nelíbí
+Nevím
+
+Cluster 1
+New
+Nemocnice
+
+Stem Če
+Cluster 0
+Čechů
+Československa
+Česká
+Česku
+Čechách
+Český
+Českou
+Česka
+Československo
+Českého
+Československé
+Čechy
+Českém
+Českých
+České
+Česko
+Čech
+Češi
+Československu
+
+Cluster 1
+Červený
+Černý
+Černá
+Červená
+Černé
+
+Stem Hr
+Cluster 0
+Hradiště
+Hradce
+Hrad
+Hrady
+Hradci
+Hranice
+Hradec
+
+Cluster 1
+Hry
+Hračky
+Hra
+
+Stem lí
+Cluster 0
+líto
+líbí
+líbit
+líp
+
+Cluster 1
+lístky
+
+Stem Te
+Cluster 0
+Test
+Technické
+Technologie
+Teprve
+Teď
+Tehdy
+Technická
+Text
+Termín
+Telefon
+Ten
+Tento
+Tentokrát
+Teorie
+Tedy
+Tel
+
+Cluster 1
+Team
+Teplice
+Tereza
+
+Stem my
+Cluster 0
+myši
+myslím
+myšlenky
+myslí
+myšlení
+myslel
+mytí
+myš
+myslíte
+myslela
+myslet
+mysli
+
+Cluster 1
+my
+
+Stem Op
+Cluster 0
+Operační
+Opera
+Opava
+Open
+
+Cluster 1
+Opravdu
+Oproti
+Opět
+
+Stem Me
+Cluster 0
+Meziříčí
+Mezi
+Mezinárodní
+
+Cluster 1
+Media
+Me
+
+Stem já
+Cluster 0
+jádro
+jádra
+
+Cluster 1
+já
+
+Stem Ča
+Cluster 0
+Často
+Čas
+
+Cluster 1
+Časopis
+
+Stem hv
+Cluster 0
+hvězdy
+hvězd
+
+Cluster 1
+hvězda
+
+Stem zt
+Cluster 0
+ztratit
+ztrácí
+ztratil
+
+Cluster 1
+ztráta
+ztráty
+ztrátu
+
+Stem sc
+Cluster 0
+schopen
+schopnosti
+scénář
+schválení
+schopností
+schůze
+scéně
+schválila
+schvaluje
+scény
+schopna
+schopni
+schopnost
+
+Cluster 1
+schránky
+schodiště
+
+Stem sá
+Cluster 0
+sál
+sále
+
+Cluster 1
+sám
+
+Stem Dá
+Cluster 0
+Dánsko
+
+Cluster 1
+Dále
+
+Stem Li
+Cluster 0
+Liberec
+Liberci
+Lidé
+Litoměřice
+Libor
+Liberecký
+
+Cluster 1
+Light
+Life
+Line
+Live
+
+Stem 18
+Cluster 0
+1895
+1850
+1879
+1899
+1867
+1873
+1882
+1861
+1889
+1890
+1871
+1884
+1892
+1886
+1881
+1848
+1893
+1880
+1887
+1885
+1894
+1883
+1888
+1869
+1870
+1800
+1891
+1898
+
+Cluster 1
+180
+185
+189
+
+Cluster 2
+18
+
+Stem My
+Cluster 0
+Myslím
+
+Cluster 1
+My
+
+Stem pé
+Cluster 0
+péče
+
+Cluster 1
+péči
+
+Stem on
+Cluster 0
+online
+onemocnění
+
+Cluster 1
+ony
+on
+ono
+oni
+ona
+
+Stem ev
+Cluster 0
+evropského
+evropské
+evropských
+
+Cluster 1
+evidenci
+evidence
+
+Stem hi
+Cluster 0
+historický
+historii
+historicky
+historie
+historického
+historických
+historické
+
+Cluster 1
+historik
+
+Stem ga
+Cluster 0
+garáží
+garáže
+
+Cluster 1
+galerii
+galerie
+
+Stem sí
+Cluster 0
+sítích
+síť
+síla
+síti
+sílu
+síly
+sítě
+síle
+sítí
+
+Cluster 1
+sídlo
+sídlem
+sídla
+sídlí
+
+Stem 31
+Cluster 0
+31
+
+Stem 66
+Cluster 0
+66
+
+Stem 95
+Cluster 0
+950
+
+Cluster 1
+95
+
+Stem 58
+Cluster 0
+58
+
+Stem lo
+Cluster 0
+logické
+lokalitě
+lodě
+lokální
+louky
+lokalita
+lodi
+loga
+logo
+lodí
+lokality
+lokalitu
+loď
+
+Cluster 1
+loňského
+loni
+loňském
+
+Stem Zl
+Cluster 0
+Zlatá
+Zlatý
+Zlaté
+
+Cluster 1
+Zlín
+Zlínský
+Zlíně
+
+Stem ol
+Cluster 0
+olympijských
+olympijské
+
+Cluster 1
+olej
+oleje
+
+Stem Ba
+Cluster 0
+Baby
+Banská
+Bank
+Barbora
+
+Cluster 1
+Balení
+
+Stem ku
+Cluster 0
+kupní
+kulturních
+kultury
+kuchyně
+kulturní
+kusů
+kurzy
+kurzů
+kusy
+kulturního
+kupovat
+kuchyňské
+kulturu
+kutily
+kultura
+kuchyni
+kurz
+kurzu
+kus
+
+Cluster 1
+ku
+
+Stem 21
+Cluster 0
+210
+215
+
+Cluster 1
+21
+
+Stem 01
+Cluster 0
+01
+
+Stem Šu
+Cluster 0
+Šumperk
+
+Cluster 1
+Šumava
+
+Stem ač
+Cluster 0
+ačkoliv
+ačkoli
+
+Cluster 1
+ač
+
+Stem °
+Cluster 0
+°
+
+Stem en
+Cluster 0
+energií
+energetické
+energii
+energie
+
+Cluster 1
+en
+
+Stem Dí
+Cluster 0
+Díky
+
+Cluster 1
+Dítě
+
+Stem zi
+Cluster 0
+zimních
+zimní
+zimu
+zimě
+zima
+
+Cluster 1
+zisku
+zisk
+
+Stem ží
+Cluster 0
+žít
+
+Stem nu
+Cluster 0
+nutnost
+nutno
+nutnosti
+nutná
+nutné
+
+Cluster 1
+nutně
+
+Stem 22
+Cluster 0
+224
+222
+229
+220
+225
+
+Cluster 1
+22
+
+Stem ov
+Cluster 0
+ovoce
+ovzduší
+
+Cluster 1
+ověření
+ověřit
+ovšem
+ovlivňuje
+ovládat
+ovlivnit
+ovládání
+
+Stem Jd
+Cluster 0
+Jde
+
+Stem rá
+Cluster 0
+rádi
+ráj
+rádio
+ráno
+rána
+rádce
+ráda
+rád
+
+Cluster 1
+rámci
+rámu
+rámec
+rám
+
+Stem TJ
+Cluster 0
+TJ
+
+Stem Dé
+Cluster 0
+Délka
+
+Stem km
+Cluster 0
+km
+
+Cluster 1
+kmene
+
+Stem Já
+Cluster 0
+Já
+
+Cluster 1
+Ján
+
+Stem Zá
+Cluster 0
+Zásady
+Zápis
+Základy
+Záruka
+Září
+Zákon
+Základem
+Zámek
+Základní
+Zároveň
+
+Cluster 1
+Západní
+
+Stem 35
+Cluster 0
+350
+
+Cluster 1
+35
+
+Stem Ře
+Cluster 0
+Řešení
+Ředitel
+
+Cluster 1
+Řecko
+
+Stem MF
+Cluster 0
+MF
+
+Stem Dn
+Cluster 0
+Dne
+Dnem
+
+Cluster 1
+Dnes
+Dnešní
+
+Stem Čá
+Cluster 0
+Část
+
+Stem zc
+Cluster 0
+zcela
+
+Stem hř
+Cluster 0
+hřbitov
+hřbitově
+hřišti
+hřiště
+
+Cluster 1
+hře
+
+Stem iz
+Cluster 0
+izolace
+
+Stem Vš
+Cluster 0
+Vše
+Všechno
+Všichni
+Všechna
+Všechny
+
+Cluster 1
+Všeobecné
+
+Stem Že
+Cluster 0
+Ženy
+Žena
+
+Cluster 1
+Že
+
+Stem 74
+Cluster 0
+74
+
+Stem 14
+Cluster 0
+145
+140
+149
+141
+
+Cluster 1
+14
+
+Stem 56
+Cluster 0
+56
+
+Cluster 1
+561
+
+Stem Fo
+Cluster 0
+Ford
+For
+
+Cluster 1
+Foto
+Fotografie
+
+Stem Bu
+Cluster 0
+Budova
+Business
+Budějovice
+Budeme
+Budějovicích
+Buďte
+Bude
+
+Cluster 1
+Bulharsko
+
+Stem m
+Cluster 0
+m
+
+Stem hm
+Cluster 0
+hmotnost
+hmotnosti
+
+Cluster 1
+hmoty
+
+Stem 8
+Cluster 0
+8
+
+Stem Vy
+Cluster 0
+Vysoké
+Vyprodáno
+Vybrané
+Vybavení
+Vyhláška
+Vyšší
+Vyškov
+Vystudoval
+Vyhledávání
+Vysoká
+Využití
+
+Cluster 1
+Vy
+
+Stem 90
+Cluster 0
+900
+
+Cluster 1
+90
+
+Stem vč
+Cluster 0
+včas
+včera
+
+Cluster 1
+včetně
+vč
+
+Stem 45
+Cluster 0
+45
+
+Cluster 1
+450
+
+Stem 87
+Cluster 0
+87
+
+Stem 43
+Cluster 0
+43
+
+Cluster 1
+430
+
+Stem Sr
+Cluster 0
+Srovnání
+
+Stem Ně
+Cluster 0
+Někteří
+Některé
+Někdy
+Něco
+Několik
+
+Cluster 1
+Německý
+Německa
+Německá
+Německu
+Německo
+Němci
+
+Stem ES
+Cluster 0
+ES
+
+Stem In
+Cluster 0
+Internetu
+Inn
+Info
+Intel
+Informace
+Inovace
+International
+Ing
+Institut
+Informační
+Internet
+Instalace
+In
+
+Cluster 1
+Indie
+Indii
+
+Stem Pl
+Cluster 0
+Plzni
+Plzně
+Plzeňský
+Plzeň
+Plus
+
+Cluster 1
+Plán
+Platba
+Platnost
+
+Stem Hl
+Cluster 0
+Hlavním
+Hledám
+Hledáte
+Hledání
+Hledat
+Hlavně
+Hlavní
+
+Cluster 1
+Hlava
+
+Stem 37
+Cluster 0
+370
+
+Cluster 1
+37
+
+Stem Ús
+Cluster 0
+Ústavu
+Ústav
+Ústavní
+
+Cluster 1
+Ústí
+Ústecký
+
+Stem La
+Cluster 0
+Labe
+Ladislav
+Labem
+
+Cluster 1
+Lake
+Las
+Lady
+La
+
+Stem Dv
+Cluster 0
+Dvořák
+Dvůr
+
+Cluster 1
+Dva
+Dvě
+
+Stem 03
+Cluster 0
+03
+
+Stem Ha
+Cluster 0
+Hans
+Hana
+
+Cluster 1
+Havlíčkův
+Havířov
+
+Stem Se
+Cluster 0
+Semily
+Senátu
+Seznamy
+Severní
+Set
+Service
+Sex
+Seminář
+Setkání
+Services
+Seznam
+
+Cluster 1
+Se
+
+Stem ra
+Cluster 0
+rada
+radnice
+radě
+rakouské
+rady
+radu
+rad
+raději
+rakouský
+radost
+radši
+
+Cluster 1
+rameno
+rakety
+
+Stem oz
+Cluster 0
+oznámil
+oznámení
+oznámila
+
+Cluster 1
+označován
+označil
+označení
+označuje
+označeny
+označením
+označují
+
+Stem PC
+Cluster 0
+PC
+
+Stem Di
+Cluster 0
+Digital
+Die
+Digitální
+Divadlo
+
+Cluster 1
+Diskuse
+
+Stem Da
+Cluster 0
+Další
+Daň
+Data
+Datum
+Dalším
+
+Cluster 1
+Davida
+Day
+Dana
+Daniel
+Dagmar
+Davis
+David
+Daniela
+
+Stem LA
+Cluster 0
+LAN
+
+Stem bř
+Cluster 0
+březen
+března
+březnu
+
+Cluster 1
+břehu
+
+Stem ún
+Cluster 0
+února
+únoru
+
+Cluster 1
+únor
+
+Stem b
+Cluster 0
+b
+
+Stem c
+Cluster 0
+c
+
+Stem De
+Cluster 0
+Denní
+Den
+Detail
+Definice
+Design
+Deník
+
+Cluster 1
+De
+Der
+
+Stem uš
+Cluster 0
+ušetřit
+
+Stem Ho
+Cluster 0
+Hodonín
+Horní
+House
+Home
+Holandsko
+Hotel
+Hory
+Hotely
+Hora
+
+Cluster 1
+Hodnocení
+Hobby
+Hodně
+Hodiny
+Holky
+
+Stem jí
+Cluster 0
+jídla
+jíst
+jízdě
+jízdní
+jídelní
+jízdy
+jídel
+jízdu
+jídelníčky
+jízda
+jídlo
+jít
+
+Cluster 1
+jí
+jím
+
+Stem hu
+Cluster 0
+hudby
+hudba
+hudebních
+hudebního
+hudebník
+hudbě
+hudbu
+hudební
+
+Cluster 1
+hustota
+
+Stem ru
+Cluster 0
+ruční
+ruského
+ruské
+ručně
+ruských
+ruský
+
+Cluster 1
+ruky
+rukou
+rukavice
+ruch
+ruce
+ruchu
+ruku
+rukávem
+
+Stem cm
+Cluster 0
+cm
+
+Stem =
+Cluster 0
+=
+
+Stem l
+Cluster 0
+l
+
+Stem 72
+Cluster 0
+72
+
+Cluster 1
+720
+
+Stem Tu
+Cluster 0
+Tuto
+Tu
+
+Cluster 1
+Turecko
+
+Stem ut
+Cluster 0
+utkání
+
+Stem NH
+Cluster 0
+NHL
+
+Stem Ni
+Cluster 0
+Nike
+Nisou
+Nikon
+Nizozemsko
+Night
+
+Cluster 1
+Nikdy
+Nicméně
+Nikdo
+Nic
+
+Stem Vž
+Cluster 0
+Vždyť
+
+Cluster 1
+Vždy
+
+Stem dé
+Cluster 0
+délka
+délku
+délky
+délce
+
+Cluster 1
+déle
+
+Stem 48
+Cluster 0
+480
+
+Cluster 1
+48
+
+Stem 9
+Cluster 0
+9
+
+Stem tj
+Cluster 0
+tj
+
+Stem So
+Cluster 0
+Součástí
+Sokolov
+Sokol
+Soutěž
+Sony
+Sobotka
+Sociální
+Soubor
+Soutěže
+Současně
+Souhlasím
+Software
+
+Cluster 1
+So
+
+Stem ;
+Cluster 0
+;
+
+Stem I
+Cluster 0
+I
+
+Stem Ov
+Cluster 0
+Ovšem
+
+Stem tz
+Cluster 0
+tzv
+
+Stem Sa
+Cluster 0
+San
+Santa
+Satelitní
+
+Cluster 1
+Samozřejmě
+
+Stem Zv
+Cluster 0
+Zvláštní
+
+Stem Ml
+Cluster 0
+Mladá
+
+Cluster 1
+Mladé
+
+Stem Sl
+Cluster 0
+Slovensku
+Slovan
+Slavia
+Slovenský
+Slovensko
+Slevy
+Sleva
+Služby
+Služba
+Slovenska
+Slovenské
+
+Cluster 1
+Slunce
+Složení
+Slovo
+
+Stem zj
+Cluster 0
+zjistili
+zjistí
+zjistit
+zjistil
+zjistila
+
+Cluster 1
+zjištění
+
+Stem hn
+Cluster 0
+hnutí
+hned
+
+Cluster 1
+hnědé
+hnědá
+
+Stem Ub
+Cluster 0
+Ubytování
+
+Stem WC
+Cluster 0
+WC
+
+Stem sr
+Cluster 0
+srp
+srpna
+srpnu
+srovnání
+srpen
+
+Cluster 1
+srdce
+srdeční
+srdci
+
+Stem vn
+Cluster 0
+vnitřním
+vnější
+vnitřního
+vnímání
+vnitřní
+vnitřních
+
+Cluster 1
+vnitra
+
+Stem JE
+Cluster 0
+JE
+
+Stem II
+Cluster 0
+II
+
+Cluster 1
+III
+
+Stem Ot
+Cluster 0
+Otec
+Otto
+
+Cluster 1
+Otázka
+
+Stem Iv
+Cluster 0
+Ivo
+Ivan
+
+Cluster 1
+Ivana
+Iva
+
+Stem vé
+Cluster 0
+vést
+
+Stem ČE
+Cluster 0
+ČESKÉ
+ČESKÁ
+
+Cluster 1
+ČEZ
+
+Stem Vs
+Cluster 0
+Vstup
+
+Cluster 1
+Vsetín
+
+Stem mý
+Cluster 0
+mým
+
+Cluster 1
+mých
+
+Stem ať
+Cluster 0
+ať
+
+Stem Už
+Cluster 0
+Už
+
+Stem om
+Cluster 0
+omezení
+omezené
+
+Cluster 1
+omezovat
+
+Stem vs
+Cluster 0
+vstupem
+vstup
+vstoupil
+vstřelil
+vstoupit
+vstupu
+vstupní
+
+Cluster 1
+vsi
+
+Stem šl
+Cluster 0
+šla
+šli
+
+Cluster 1
+šlo
+
+Stem Ví
+Cluster 0
+Více
+Vít
+Vím
+Víte
+
+Cluster 1
+Vídni
+Vídeň
+
+Stem On
+Cluster 0
+Online
+On
+One
+Ono
+
+Cluster 1
+Ondřej
+
+Stem DO
+Cluster 0
+DO
+
+Stem RM
+Cluster 0
+RM
+
+Stem Mn
+Cluster 0
+Mnoho
+
+Cluster 1
+Množství
+
+Stem Go
+Cluster 0
+Golf
+
+Stem Lá
+Cluster 0
+Lázně
+
+Cluster 1
+Láska
+
+Stem du
+Cluster 0
+duchovní
+dub
+duben
+dubnu
+duši
+duchu
+duše
+duševní
+dubna
+
+Cluster 1
+du
+
+Stem Ku
+Cluster 0
+Kurzy
+Kultura
+Kulturní
+Kurz
+Kuchyně
+
+Cluster 1
+Kutná
+
+Stem Šk
+Cluster 0
+Škola
+Školní
+
+Cluster 1
+Škoda
+
+Stem 65
+Cluster 0
+65
+
+Cluster 1
+650
+
+Stem Sá
+Cluster 0
+Sám
+Sáčky
+
+Cluster 1
+Sázavou
+
+Stem Cr
+Cluster 0
+Crystal
+
+Stem Dř
+Cluster 0
+Dřevo
+
+Cluster 1
+Dříve
+
+Stem Dů
+Cluster 0
+Důvodem
+Důležité
+
+Cluster 1
+Dům
+
+Stem Mu
+Cluster 0
+Muži
+Musí
+Muž
+Musím
+
+Cluster 1
+Muzeum
+Museum
+Music
+
+Stem 91
+Cluster 0
+91
+
+Stem 55
+Cluster 0
+550
+
+Cluster 1
+55
+
+Stem ká
+Cluster 0
+kávy
+kávu
+káva
+
+Cluster 1
+kámen
+
+Stem Iz
+Cluster 0
+Izrael
+Izraele
+
+Cluster 1
+Izraeli
+
+Stem Ru
+Cluster 0
+Ruské
+Ruska
+Rusku
+Rusko
+
+Cluster 1
+Rudolf
+
+Stem 57
+Cluster 0
+57
+
+Stem šp
+Cluster 0
+šperky
+španělské
+
+Cluster 1
+špatný
+špatné
+špatně
+
+Stem Vz
+Cluster 0
+Vzdělávací
+Vzdělávání
+Vznik
+
+Cluster 1
+Vzhledem
+
+Stem Sí
+Cluster 0
+Sídlo
+
+Stem 88
+Cluster 0
+88
+
+Stem CD
+Cluster 0
+CD
+
+Stem Wi
+Cluster 0
+Windows
+
+Cluster 1
+William
+
+Stem R
+Cluster 0
+R
+
+Stem Vi
+Cluster 0
+Video
+Viz
+
+Cluster 1
+Vilém
+Viktor
+
+Stem Ži
+Cluster 0
+Život
+Životní
+
+Cluster 1
+Židů
+Židé
+
+Stem úz
+Cluster 0
+územní
+území
+územního
+
+Cluster 1
+úzce
+
+Stem Mí
+Cluster 0
+Místní
+
+Cluster 1
+Místo
+
+Stem fe
+Cluster 0
+festival
+festivalu
+
+Cluster 1
+federace
+
+Stem SS
+Cluster 0
+SSSR
+
+Cluster 1
+SS
+
+Stem jm
+Cluster 0
+jmen
+jménem
+jménech
+jména
+jméno
+
+Cluster 1
+jmenovala
+jmenuje
+jmenován
+jmenoval
+
+Stem M
+Cluster 0
+M
+
+Stem it
+Cluster 0
+italské
+italský
+
+Cluster 1
+it
+
+Stem PR
+Cluster 0
+PROGRAM
+PRAHA
+PRÁCE
+PRO
+
+Cluster 1
+PR
+
+Stem sh
+Cluster 0
+shromáždění
+
+Cluster 1
+show
+
+Stem Až
+Cluster 0
+Až
+
+Stem oh
+Cluster 0
+ohledně
+ohledu
+ohledem
+
+Cluster 1
+ohrožení
+
+Stem sé
+Cluster 0
+sérii
+
+Cluster 1
+série
+
+Stem ki
+Cluster 0
+kina
+
+Cluster 1
+kilometrů
+
+Stem Ju
+Cluster 0
+Jugoslávie
+
+Cluster 1
+Junior
+
+Stem Ga
+Cluster 0
+Gabriela
+
+Cluster 1
+Galerie
+
+Stem Ok
+Cluster 0
+Okres
+
+Cluster 1
+Okresní
+
+Stem Dl
+Cluster 0
+Dle
+
+Cluster 1
+Dlouhá
+
+Stem MS
+Cluster 0
+MS
+
+Stem zu
+Cluster 0
+zuby
+zubů
+
+Cluster 1
+zubní
+
+Stem vc
+Cluster 0
+vcelku
+
+Stem AT
+Cluster 0
+ATP
+
+Stem Pů
+Cluster 0
+Původně
+
+Cluster 1
+Původní
+
+Stem E
+Cluster 0
+E
+
+Stem zo
+Cluster 0
+zobrazuje
+zobrazí
+
+Cluster 1
+zobrazit
+
+Stem bí
+Cluster 0
+bílá
+bílou
+bílé
+bílý
+
+Cluster 1
+bílého
+
+Stem tm
+Cluster 0
+tmavě
+
+Stem rt
+Cluster 0
+rty
+
+Stem id
+Cluster 0
+identifikační
+ideálním
+ideální
+
+Cluster 1
+id
+
+Stem žl
+Cluster 0
+žlutá
+
+Cluster 1
+žluté
+
+Stem řá
+Cluster 0
+řád
+řádu
+
+Cluster 1
+řádně
+
+Stem Řá
+Cluster 0
+Řád
+
+Stem Šv
+Cluster 0
+Švýcarsko
+Švýcarsku
+
+Cluster 1
+Švédsko
+
+Stem Ad
+Cluster 0
+Adresa
+Administrativní
+
+Cluster 1
+Adam
+Adolf
+
+Stem Ať
+Cluster 0
+Ať
+
+Stem T
+Cluster 0
+T
+
+Stem gy
+Cluster 0
+gymnáziu
+gymnázium
+
+Cluster 1
+gymnázia
+
+Stem út
+Cluster 0
+útoku
+útok
+útočník
+útoky
+
+Cluster 1
+úterý
+
+Stem UK
+Cluster 0
+UK
+
+Stem fá
+Cluster 0
+fáze
+
+Cluster 1
+fázi
+
+Stem Un
+Cluster 0
+University
+Unie
+Univerzity
+United
+Univerzita
+
+Cluster 1
+Univerzální
+
+Stem ČV
+Cluster 0
+ČVUT
+
+Stem d
+Cluster 0
+d
+
+Stem '
+Cluster 0
+'
+
+Stem gó
+Cluster 0
+góly
+gól
+
+Cluster 1
+gólů
+
+Stem 0
+Cluster 0
+0
+
+Stem Vč
+Cluster 0
+Včera
+
+Stem 77
+Cluster 0
+775
+777
+
+Cluster 1
+77
+
+Stem Yo
+Cluster 0
+Young
+You
+
+Cluster 1
+Yorku
+York
+
+Stem Gr
+Cluster 0
+Grand
+Green
+
+Cluster 1
+Group
+
+Stem 94
+Cluster 0
+94
+
+Stem av
+Cluster 0
+avšak
+
+Stem D
+Cluster 0
+D
+
+Stem pi
+Cluster 0
+pivo
+piva
+pití
+
+Cluster 1
+pilot
+
+Stem h
+Cluster 0
+h
+
+Stem sb
+Cluster 0
+sbírka
+sběru
+sbírky
+
+Cluster 1
+sbor
+sboru
+
+Stem ČN
+Cluster 0
+ČNB
+
+Stem N
+Cluster 0
+N
+
+Stem uz
+Cluster 0
+uzavřené
+uzavřena
+uzavřená
+uzavření
+
+Cluster 1
+uznání
+
+Stem 26
+Cluster 0
+260
+269
+
+Cluster 1
+26
+
+Stem cu
+Cluster 0
+cukru
+cukr
+
+Cluster 1
+cupu
+
+Stem ný
+Cluster 0
+nýbrž
+
+Stem ge
+Cluster 0
+generaci
+generace
+generál
+generální
+
+Cluster 1
+gel
+
+Stem bi
+Cluster 0
+bicí
+bitva
+bitvy
+bitvě
+
+Cluster 1
+biskup
+
+Stem IV
+Cluster 0
+IV
+
+Stem OD
+Cluster 0
+OD
+
+Cluster 1
+ODS
+
+Stem 41
+Cluster 0
+412
+
+Cluster 1
+41
+
+Stem vp
+Cluster 0
+vpravo
+
+Stem 29
+Cluster 0
+290
+299
+
+Cluster 1
+29
+
+Stem SD
+Cluster 0
+SD
+
+Stem šé
+Cluster 0
+šéf
+
+Stem Eg
+Cluster 0
+Egypt
+
+Stem Ul
+Cluster 0
+Ulice
+
+Stem sd
+Cluster 0
+sdružení
+sdělení
+
+Cluster 1
+sdílení
+sdílet
+
+Stem El
+Cluster 0
+Elektro
+Elektrické
+
+Cluster 1
+El
+
+Stem zr
+Cluster 0
+zrušena
+zranění
+zrušení
+zrušit
+
+Cluster 1
+zrovna
+
+Stem ků
+Cluster 0
+kůže
+
+Cluster 1
+kůži
+
+Stem dc
+Cluster 0
+dcery
+dceru
+dcerou
+
+Cluster 1
+dcera
+
+Stem Cz
+Cluster 0
+Czech
+
+Stem ha
+Cluster 0
+hala
+haly
+hale
+hasičů
+
+Cluster 1
+ha
+
+Stem úh
+Cluster 0
+úhlu
+
+Cluster 1
+úhel
+
+Stem bá
+Cluster 0
+bát
+básník
+
+Cluster 1
+bázi
+
+Stem Ex
+Cluster 0
+Existuje
+Existují
+
+Cluster 1
+Express
+
+Stem ČT
+Cluster 0
+ČTK
+
+Cluster 1
+ČT
+
+Stem Av
+Cluster 0
+Avšak
+
+Stem FM
+Cluster 0
+FM
+
+Stem t
+Cluster 0
+t
+
+Stem Hn
+Cluster 0
+Hned
+
+Stem SR
+Cluster 0
+SR
+
+Stem Au
+Cluster 0
+Autor
+Auto
+Audio
+Autoři
+Audi
+Autorem
+Audiovizuální
+
+Cluster 1
+Austrálie
+Austrálii
+
+Stem F
+Cluster 0
+F
+
+Stem tá
+Cluster 0
+tábora
+
+Cluster 1
+tábor
+
+Stem 49
+Cluster 0
+490
+
+Cluster 1
+49
+
+Stem Re
+Cluster 0
+Reality
+Region
+Recenze
+Realitní
+Reklama
+Registrace
+Restaurace
+Rekreační
+Regionální
+Realizace
+Rekonstrukce
+Re
+
+Cluster 1
+Records
+Republic
+Renault
+Reuters
+Resort
+Red
+
+Stem mó
+Cluster 0
+módní
+móda
+
+Cluster 1
+módy
+
+Stem Ur
+Cluster 0
+Určitě
+
+Stem TV
+Cluster 0
+TV
+
+Stem he
+Cluster 0
+herce
+hezky
+herečka
+hezký
+hezké
+herec
+herci
+herní
+her
+
+Cluster 1
+heslo
+hesla
+
+Stem Ač
+Cluster 0
+Ačkoli
+
+Cluster 1
+Ačkoliv
+
+Stem Mg
+Cluster 0
+Mgr
+
+Stem §
+Cluster 0
+§
+
+Stem 39
+Cluster 0
+390
+
+Cluster 1
+39
+
+Stem Sb
+Cluster 0
+Sb
+
+Stem 85
+Cluster 0
+85
+
+Cluster 1
+850
+
+Stem Zb
+Cluster 0
+Zboží
+
+Stem W
+Cluster 0
+W
+
+Stem Uh
+Cluster 0
+Uherské
+
+Stem fy
+Cluster 0
+fyzické
+fyzická
+fyzických
+
+Cluster 1
+fyziky
+
+Stem lu
+Cluster 0
+luk
+
+Cluster 1
+luxusní
+
+Stem zó
+Cluster 0
+zóna
+
+Cluster 1
+zóny
+
+Stem Ke
+Cluster 0
+Ke
+
+Stem Té
+Cluster 0
+Téma
+
+Cluster 1
+Téměř
+
+Stem kó
+Cluster 0
+kód
+
+Cluster 1
+kódu
+
+Stem AV
+Cluster 0
+AV
+
+Stem ža
+Cluster 0
+žadatele
+
+Stem ps
+Cluster 0
+psa
+psů
+psychologie
+psy
+
+Cluster 1
+psala
+psát
+psaní
+psal
+
+Stem Ak
+Cluster 0
+Aktivní
+Aktuální
+Akce
+Akční
+Aktualizace
+
+Cluster 1
+Akademie
+
+Stem pu
+Cluster 0
+publikace
+
+Stem Ri
+Cluster 0
+Richard
+
+Stem SP
+Cluster 0
+SP
+
+Stem 04
+Cluster 0
+04
+
+Stem Q
+Cluster 0
+Q
+
+Stem Kv
+Cluster 0
+Kvalita
+Kvalitní
+
+Cluster 1
+Kvůli
+
+Stem 76
+Cluster 0
+76
+
+Stem 42
+Cluster 0
+42
+
+Cluster 1
+420
+
+Stem 63
+Cluster 0
+63
+
+Stem AP
+Cluster 0
+AP
+
+Stem zú
+Cluster 0
+zúčastnil
+
+Stem BB
+Cluster 0
+BBC
+
+Stem Eu
+Cluster 0
+European
+Europe
+
+Cluster 1
+Euro
+
+Stem VW
+Cluster 0
+VW
+
+Stem AB
+Cluster 0
+ABC
+
+Cluster 1
+ABS
+
+Stem Dě
+Cluster 0
+Děčín
+Dějiny
+Dětské
+Děti
+Dětská
+
+Cluster 1
+Děkuji
+Děkujeme
+
+Stem Lí
+Cluster 0
+Lípa
+
+Stem ČS
+Cluster 0
+ČSOB
+ČSSD
+ČSSR
+ČSR
+
+Cluster 1
+ČSN
+
+Stem KS
+Cluster 0
+KSČ
+
+Stem 54
+Cluster 0
+54
+
+Stem 79
+Cluster 0
+79
+
+Cluster 1
+790
+
+Stem cy
+Cluster 0
+cyklus
+
+Cluster 1
+cyklu
+
+Stem kř
+Cluster 0
+kříže
+křeslo
+křesla
+křídla
+kříž
+
+Cluster 1
+křesťanství
+
+Stem MH
+Cluster 0
+MHz
+
+Cluster 1
+MHD
+
+Stem 83
+Cluster 0
+83
+
+Stem EU
+Cluster 0
+EUR
+
+Cluster 1
+EU
+
+Stem CS
+Cluster 0
+CSc
+
+Cluster 1
+CS
+
+Stem Hi
+Cluster 0
+Historické
+Historický
+
+Cluster 1
+Historie
+
+Stem It
+Cluster 0
+Itálii
+Itálie
+
+Cluster 1
+It
+
+Stem 44
+Cluster 0
+44
+
+Stem 71
+Cluster 0
+71
+
+Stem WT
+Cluster 0
+WTA
+
+Stem X
+Cluster 0
+X
+
+Stem Lz
+Cluster 0
+Lze
+
+Stem Ir
+Cluster 0
+Irsko
+
+Cluster 1
+Iráku
+
+Stem Gy
+Cluster 0
+Gymnázium
+
+Stem Sn
+Cluster 0
+Snídaně
+Snad
+
+Cluster 1
+Sněmovny
+
+Stem Mé
+Cluster 0
+Méně
+
+Stem Čl
+Cluster 0
+Články
+Členové
+Článek
+
+Cluster 1
+Člověk
+
+Stem Š
+Cluster 0
+Š
+
+Stem 86
+Cluster 0
+86
+
+Stem 69
+Cluster 0
+69
+
+Cluster 1
+690
+
+Stem 98
+Cluster 0
+98
+
+Stem Lu
+Cluster 0
+Ludvík
+Luboš
+Ludvíka
+Lukáš
+Lucie
+
+Cluster 1
+Luxusní
+
+Stem Cu
+Cluster 0
+Cup
+
+Stem Bí
+Cluster 0
+Bílé
+Bílá
+
+Cluster 1
+Bílý
+
+Stem Ří
+Cluster 0
+Římě
+Řím
+Říma
+
+Cluster 1
+Řízení
+
+Stem Bi
+Cluster 0
+Big
+
+Cluster 1
+Bible
+
+Stem ME
+Cluster 0
+ME
+
+Stem Ai
+Cluster 0
+Air
+
+Stem pn
+Cluster 0
+pneumatiky
+
+Cluster 1
+pneumatik
+
+Stem Th
+Cluster 0
+Thomas
+
+Cluster 1
+The
+
+Stem 3.
+Cluster 0
+3.1
+
+Cluster 1
+3.0
+
+Stem Um
+Cluster 0
+Umělé
+
+Cluster 1
+Umění
+
+Stem n
+Cluster 0
+n
+
+Stem p
+Cluster 0
+p
+
+Stem 47
+Cluster 0
+47
+
+Stem Bl
+Cluster 0
+Bližší
+Black
+Blue
+
+Cluster 1
+Blansko
+
+Stem 1.
+Cluster 0
+1.4
+1.3
+1.5
+1.1
+1.2
+
+Cluster 1
+1.0
+
+Stem kW
+Cluster 0
+kW
+
+Stem Žá
+Cluster 0
+Žádost
+Žádná
+Žádné
+
+Cluster 1
+Žák
+Žáci
+
+Stem Sk
+Cluster 0
+Skupina
+
+Cluster 1
+Skupiny
+
+Stem kg
+Cluster 0
+kg
+
+Stem EN
+Cluster 0
+EN
+
+Stem Su
+Cluster 0
+Super
+
+Stem Ed
+Cluster 0
+Eduard
+
+Stem BC
+Cluster 0
+BC
+
+Stem Úv
+Cluster 0
+Úvodní
+
+Cluster 1
+Úvod
+
+Stem ři
+Cluster 0
+řidič
+
+Cluster 1
+řidiče
+
+Stem Č
+Cluster 0
+Č
+
+Stem Wo
+Cluster 0
+World
+
+Stem 52
+Cluster 0
+52
+
+Stem SK
+Cluster 0
+SK
+
+Stem 46
+Cluster 0
+46
+
+Stem 82
+Cluster 0
+82
+
+Stem OS
+Cluster 0
+OSN
+
+Cluster 1
+OS
+
+Stem 2.
+Cluster 0
+2.1
+2.2
+
+Cluster 1
+2.0
+
+Stem AC
+Cluster 0
+AC
+
+Stem Čt
+Cluster 0
+Čtyři
+
+Cluster 1
+Čtěte
+
+Stem úl
+Cluster 0
+úloh
+úlohy
+
+Cluster 1
+úložiště
+
+Stem Bů
+Cluster 0
+Bůh
+
+Stem uh
+Cluster 0
+uhlí
+
+Stem 97
+Cluster 0
+97
+
+Stem Št
+Cluster 0
+Štěpán
+
+Stem DP
+Cluster 0
+DPH
+
+Cluster 1
+DPA
+
+Stem Tá
+Cluster 0
+Tábor
+
+Stem Si
+Cluster 0
+Sice
+
+Stem Sy
+Cluster 0
+System
+
+Cluster 1
+Systém
+
+Stem Ar
+Cluster 0
+Archiv
+
+Cluster 1
+Art
+
+Stem th
+Cluster 0
+the
+
+Stem 51
+Cluster 0
+51
+
+Stem 61
+Cluster 0
+61
+
+Stem úm
+Cluster 0
+úmrtí
+
+Stem Sc
+Cluster 0
+School
+
+Cluster 1
+Scott
+
+Stem MU
+Cluster 0
+MU
+
+Cluster 1
+MUDr
+
+Stem Wa
+Cluster 0
+Washington
+
+Stem Im
+Cluster 0
+Image
+
+Stem sč
+Cluster 0
+sčítání
+
+Stem ZA
+Cluster 0
+ZA
+
+Stem SE
+Cluster 0
+SE
+
+Stem PO
+Cluster 0
+PO
+
+Cluster 1
+PODMÍNKY
+
+Stem AS
+Cluster 0
+AS
+
+Stem 96
+Cluster 0
+96
+
+Stem 78
+Cluster 0
+78
+
+Stem Pá
+Cluster 0
+Pán
+
+Stem Pí
+Cluster 0
+Písek
+
+Stem PS
+Cluster 0
+PSČ
+
+Cluster 1
+PS
+
+Stem 62
+Cluster 0
+62
+
+Cluster 1
+621
+
+Stem 09
+Cluster 0
+09
+
+Stem Ry
+Cluster 0
+Rychlost
+
+Stem Uk
+Cluster 0
+Ukrajině
+
+Cluster 1
+Ukrajiny
+
+Stem SC
+Cluster 0
+SC
+
+Stem gr
+Cluster 0
+grafika
+grafické
+
+Cluster 1
+grafu
+
+Stem FO
+Cluster 0
+FOTO
+
+Stem Fu
+Cluster 0
+Funkce
+
+Stem 68
+Cluster 0
+68
+
+Stem BM
+Cluster 0
+BMW
+
+Stem fó
+Cluster 0
+fórum
+
+Cluster 1
+fólie
+
+Stem aj
+Cluster 0
+aj
+
+Stem Zi
+Cluster 0
+Zimní
+
+Stem RN
+Cluster 0
+RNDr
+
+Stem 92
+Cluster 0
+92
+
+Cluster 1
+921
+
+Stem cc
+Cluster 0
+cca
+
+Stem Y
+Cluster 0
+Y
+
+Stem ší
+Cluster 0
+šíření
+
+Cluster 1
+šířka
+
+Stem ÚV
+Cluster 0
+ÚVOD
+
+Stem pt
+Cluster 0
+ptáků
+
+Stem gl
+Cluster 0
+globální
+
+Stem _
+Cluster 0
+_
+
+Stem >
+Cluster 0
+>
+
+Stem <
+Cluster 0
+<
+
+Stem g
+Cluster 0
+g
+
+Stem TO
+Cluster 0
+TOP
+
+Cluster 1
+TO
+
+Stem e
+Cluster 0
+e
+
+Stem 93
+Cluster 0
+93
+
+Stem j
+Cluster 0
+j
+
+Stem Ek
+Cluster 0
+Ekonomika
+
+Stem VE
+Cluster 0
+VE
+
+Stem SM
+Cluster 0
+SMS
+
+Stem LP
+Cluster 0
+LP
+
+Stem 99
+Cluster 0
+999
+
+Cluster 1
+99
+
+Stem CO
+Cluster 0
+CO
+
+Stem RO
+Cluster 0
+ROK
+
+Stem oš
+Cluster 0
+ošetření
+
+Stem 81
+Cluster 0
+81
+
+Stem 67
+Cluster 0
+67
+
+Stem Or
+Cluster 0
+Organizační
+Organizace
+Originální
+
+Cluster 1
+Orlicí
+
+Stem Hu
+Cluster 0
+Hudba
+Hudební
+
+Cluster 1
+Hugo
+
+Stem Zu
+Cluster 0
+Zuzana
+
+Stem Ge
+Cluster 0
+George
+
+Stem ep
+Cluster 0
+epizoda
+
+Stem FC
+Cluster 0
+FC
+
+Stem Ap
+Cluster 0
+Apple
+
+Stem 64
+Cluster 0
+64
+
+Stem ed
+Cluster 0
+ed
+
+Cluster 1
+edice
+
+Stem PV
+Cluster 0
+PVC
+
+Stem ož
+Cluster 0
+oženil
+
+Stem He
+Cluster 0
+Henry
+Helena
+
+Cluster 1
+Heslo
+
+Stem Pé
+Cluster 0
+Péče
+
+Stem is
+Cluster 0
+is
+
+Stem [
+Cluster 0
+[
+
+Stem ]
+Cluster 0
+]
+
+Stem mr
+Cluster 0
+mrtvých
+
+Stem lh
+Cluster 0
+lhůta
+
+Stem Ci
+Cluster 0
+City
+
+Stem Tv
+Cluster 0
+Tvoří
+
+Cluster 1
+Tvorba
+
+Stem 84
+Cluster 0
+84
+
+Stem UV
+Cluster 0
+UV
+
+Stem Em
+Cluster 0
+Emil
+
+Stem FK
+Cluster 0
+FK
+
+Stem FF
+Cluster 0
+FF
+
+Stem Sý
+Cluster 0
+Sýrii
+
+Stem yo
+Cluster 0
+you
+
+Stem We
+Cluster 0
+West
+
+Stem Up
+Cluster 0
+Upozornění
+
+Stem ah
+Cluster 0
+ahoj
+
+Stem DJ
+Cluster 0
+DJ
+
+Stem 06
+Cluster 0
+06
+
+Stem OK
+Cluster 0
+OK
+
+Stem 08
+Cluster 0
+08
+
+Stem HC
+Cluster 0
+HC
+
+Stem Mó
+Cluster 0
+Móda
+
+Stem la
+Cluster 0
+lampy
+
+Cluster 1
+la
+
+Stem Ac
+Cluster 0
+Acer
+
+Cluster 1
+Active
+
+Stem šr
+Cluster 0
+šrouby
+
+Stem et
+Cluster 0
+et
+
+Stem š
+Cluster 0
+š
+
+Stem mg
+Cluster 0
+mg
+
+Stem mř
+Cluster 0
+mřížka
+
+Stem y
+Cluster 0
+y
+
+Stem Is
+Cluster 0
+Island
+
+Stem XP
+Cluster 0
+XP
+
+Stem PP
+Cluster 0
+PP
+
+Stem MB
+Cluster 0
+MB
+
+Stem Id
+Cluster 0
+Identifikace
+
+Cluster 1
+Ideální
+
+Stem LE
+Cluster 0
+LED
+
+Stem Jm
+Cluster 0
+Jméno
+
+Stem Gm
+Cluster 0
+GmbH
+
+Stem Vh
+Cluster 0
+Vhodné
+
+Stem Ž
+Cluster 0
+Ž
+
+Stem MŠ
+Cluster 0
+MŠMT
+
+Stem IS
+Cluster 0
+ISO
+
+Stem Vn
+Cluster 0
+Vnitřní
+
+Stem ks
+Cluster 0
+ks
+
+Stem f
+Cluster 0
+f
+
+Stem Pu
+Cluster 0
+Publikace
+Publikování
+
+Cluster 1
+Puma
+
+Stem Úč
+Cluster 0
+Účetní
+
+Stem 07
+Cluster 0
+07
+
+Stem Oc
+Cluster 0
+Ochrana
+
+Cluster 1
+Ochranné
+
+Stem ly
+Cluster 0
+lyžování
+
+Stem Tr
+Cluster 0
+Trička
+
+Cluster 1
+Trutnov
+
+Stem ŠK
+Cluster 0
+ŠKOLA
+
+Cluster 1
+ŠKOLY
+
+Stem IN
+Cluster 0
+INFORMACE
+
+Stem Ša
+Cluster 0
+Šaty
+
+Stem Hm
+Cluster 0
+Hmotnost
+
+Stem Jí
+Cluster 0
+Jídelní
+
+Cluster 1
+Jídlo
+
+Stem ZŠ
+Cluster 0
+ZŠ
+
+Stem á
+Cluster 0
+á
+
+Stem ky
+Cluster 0
+kytara
+kytarista
+
+Cluster 1
+kyseliny
+
+Stem MĚ
+Cluster 0
+MĚSTO
+
+Cluster 1
+MĚSTA
+
+Stem -1
+Cluster 0
+-1
+
+Stem CZ
+Cluster 0
+CZ
+
+Stem Vr
+Cluster 0
+Vrchlabí
+
+Stem er
+Cluster 0
+erotické
+
+Stem Wh
+Cluster 0
+White
+
+Stem Gl
+Cluster 0
+Globálně
+
+Stem VI
+Cluster 0
+VII
+
+Cluster 1
+VI
+
+Stem Zn
+Cluster 0
+Znojmo
+
+Cluster 1
+Značka
+
+Stem Kó
+Cluster 0
+Kód
+
+Stem \
+Cluster 0
+\
+
+Stem nů
+Cluster 0
+nůž
+
+Stem Bř
+Cluster 0
+Břeclav
+
+Stem Á
+Cluster 0
+Á
+
+Stem Aw
+Cluster 0
+Award
+
+Stem RS
+Cluster 0
+RS
+
+Stem OP
+Cluster 0
+OP
+
+Stem Žď
+Cluster 0
+Žďár
+
+Stem Ki
+Cluster 0
+King
+
+Stem UN
+Cluster 0
+UNESCO
+
+Stem Ep
+Cluster 0
+Epson
+
+Stem ý
+Cluster 0
+ý
+
+Stem é
+Cluster 0
+é
+
+Stem EP
+Cluster 0
+EP
+
+Stem MP
+Cluster 0
+MPSV
+
+Stem Ca
+Cluster 0
+Canon
+
+Stem Us
+Cluster 0
+Usnesení
+
+Stem HP
+Cluster 0
+HP
+
+Stem Cl
+Cluster 0
+Classic
+
+Cluster 1
+Club
+
+Stem En
+Cluster 0
+English
+
+Stem jo
+Cluster 0
+jo
+
+Stem NE
+Cluster 0
+NE
+
+Stem čp
+Cluster 0
+čp
+
+Stem Út
+Cluster 0
+Úterý
+
+Stem ®
+Cluster 0
+®
+
+Stem tó
+Cluster 0
+tóny
+
+Stem ŘÁ
+Cluster 0
+ŘÁD
+
+Stem Pě
+Cluster 0
+Pěstování
+
+Stem DN
+Cluster 0
+DNA
+
+Stem w
+Cluster 0
+w
+
+Stem dy
+Cluster 0
+dynastie
+
+Stem XL
+Cluster 0
+XL
+
+Stem Ší
+Cluster 0
+Šířka
+
+Stem VŠ
+Cluster 0
+VŠ
+
+Stem RC
+Cluster 0
+RC
+
+Stem SŠ
+Cluster 0
+SŠ
+
+Stem ZD
+Cluster 0
+ZDE
+
+Stem ZÁ
+Cluster 0
+ZÁKLADNÍ
+
+Stem Zé
+Cluster 0
+Zéland
+
+Stem AN
+Cluster 0
+ANO
+
+Stem im
+Cluster 0
+im
+
+Stem DS
+Cluster 0
+DS
+
+Stem CN
+Cluster 0
+CNC
+
+Stem DC
+Cluster 0
+DC
+
+Stem OB
+Cluster 0
+OBSAH
+
+Stem ^
+Cluster 0
+^
+
+Stem Hz
+Cluster 0
+Hz
+
+Stem dB
+Cluster 0
+dB
+
+Stem $
+Cluster 0
+$
+
+Stem LF
+Cluster 0
+LF
+
+Stem wi
+Cluster 0
+with
+

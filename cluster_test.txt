@@ -1,0 +1,3908 @@
+|
+{'|'}
+1
+2
+Stem |
+Cluster 0
+|
+
+na
+{'naleznete', 'naší', 'nabídky', 'naopak', 'nad', 'navíc', 'nakonec', 'najdete', 'naše', 'nabídku', 'například', 'nabízí', 'na', 'nachází', 'našich'}
+15
+2
+Stem na
+Cluster 0
+naleznete
+naší
+nabídky
+naopak
+nad
+navíc
+nakonec
+najdete
+naše
+nabídku
+například
+nabízí
+nachází
+našich
+
+Cluster 1
+na
+
+ry
+{'rychle'}
+1
+2
+Stem ry
+Cluster 0
+rychle
+
+?
+{'?'}
+1
+2
+Stem ?
+Cluster 0
+?
+
+a
+{'a'}
+1
+2
+Stem a
+Cluster 0
+a
+
+.
+{'.'}
+1
+2
+Stem .
+Cluster 0
+.
+
+Vá
+{'Vám', 'Vás', 'Váš'}
+3
+2
+Stem Vá
+Cluster 0
+Vám
+Vás
+
+Cluster 1
+Váš
+
+je
+{'jež', 'jen', 'jednoho', 'jedné', 'její', 'jedná', 'jedna', 'jehož', 'jeho', 'jednou', 'jednání', 'jednotlivých', 'jeden', 'jednu', 'jedno', 'je', 'jestli', 'jejich', 'jej', 'ještě'}
+20
+2
+Stem je
+Cluster 0
+jež
+jen
+jednoho
+jedné
+její
+jedná
+jedna
+jehož
+jeho
+jednou
+jednání
+jednotlivých
+jeden
+jednu
+jedno
+jestli
+jejich
+jej
+ještě
+
+Cluster 1
+je
+
+V
+{'V'}
+1
+2
+Stem V
+Cluster 0
+V
+
+př
+{'příspěvků', 'před', 'přes', 'případně', 'přístup', 'přesně', 'příliš', 'přátel', 'příslušenství', 'případě', 'při', 'příjmení', 'přímo', 'především'}
+14
+2
+Stem př
+Cluster 0
+příspěvků
+před
+přes
+případně
+přístup
+přesně
+příliš
+přátel
+příslušenství
+případě
+při
+přímo
+především
+
+Cluster 1
+příjmení
+
+,
+{','}
+1
+2
+Stem ,
+Cluster 0
+,
+
+že
+{'ženy', 'ženská', 'že'}
+3
+2
+Stem že
+Cluster 0
+ženy
+ženská
+
+Cluster 1
+že
+
+se
+{'sem', 'sebe', 'se', 'sebou'}
+4
+2
+Stem se
+Cluster 0
+sem
+se
+
+Cluster 1
+sebe
+sebou
+
+de
+{'den', 'de'}
+2
+2
+Stem de
+Cluster 0
+de
+
+Cluster 1
+den
+
+čí
+{'číslo'}
+1
+2
+Stem čí
+Cluster 0
+číslo
+
+ve
+{'velmi', 'velikost', 've', 'velice', 'velký', 'vedení', 'velké', 'velikosti', 'verze'}
+9
+2
+Stem ve
+Cluster 0
+velmi
+velikost
+velice
+velký
+vedení
+velké
+velikosti
+verze
+
+Cluster 1
+ve
+
+ne
+{'nebo', 'než', 'nebude', 'nebylo', 'nejvyšší', 'nemá', 'ne', 'nebyl', 'nejsou', 'největší', 'nejen', 'nemovitostí', 'nejlepší', 'nemovitosti', 'není'}
+15
+2
+Stem ne
+Cluster 0
+nebo
+než
+nebude
+nebylo
+nejvyšší
+nemá
+ne
+nebyl
+nejsou
+největší
+nejen
+nejlepší
+není
+
+Cluster 1
+nemovitostí
+nemovitosti
+
+sv
+{'svém', 'svých', 'sv', 'světové', 'svým', 'svého', 'světa', 'své', 'světě', 'svůj', 'svou'}
+11
+2
+Stem sv
+Cluster 0
+svém
+svých
+světové
+svým
+svého
+světa
+své
+světě
+svůj
+svou
+
+Cluster 1
+sv
+
+té
+{'této', 'téměř', 'též', 'té'}
+4
+2
+Stem té
+Cluster 0
+téměř
+též
+
+Cluster 1
+této
+té
+
+po
+{'postupně', 'pozemky', 'pojištění', 'pod', 'používá', 'poté', 'použití', 'podmínky', 'pokud', 'počet', 'pouze', 'poslední', 'pomocí', 'podobné', 'potřeby', 'po', 'poprvé', 'podle', 'pokoj', 'později'}
+20
+2
+Stem po
+Cluster 0
+postupně
+pozemky
+pojištění
+pod
+používá
+poté
+použití
+podmínky
+pokud
+počet
+pouze
+poslední
+pomocí
+podobné
+potřeby
+poprvé
+podle
+pokoj
+později
+
+Cluster 1
+po
+
+js
+{'jsi', 'jsme', 'jsem', 'jste', 'jsou'}
+5
+2
+Stem js
+Cluster 0
+jsi
+jsme
+jsem
+jste
+
+Cluster 1
+jsou
+
+pr
+{'práce', 'prodej', 'programu', 'právě', 'problémy', 'problém', 'provozu', 'prodejně', 'proč', 'prostě', 'pro', 'program', 'prosince', 'prostřednictvím', 'prvním', 'pronájmy', 'prostor', 'pracovní', 'první', 'produkty', 'proto', 'projektu', 'protože', 'práci', 'projekt', 'prostředí', 'právo', 'prosím', 'prostoru', 'provedení', 'průběhu', 'prostory', 'práva', 'pronájem', 'produktu', 'proti'}
+36
+3
+Stem pr
+Cluster 0
+práce
+programu
+právě
+problémy
+problém
+provozu
+proč
+prostě
+pro
+program
+prostřednictvím
+prvním
+prostor
+pracovní
+první
+proto
+projektu
+protože
+práci
+projekt
+prostředí
+právo
+prosím
+prostoru
+provedení
+průběhu
+prostory
+práva
+proti
+
+Cluster 1
+prosince
+
+Cluster 2
+prodej
+prodejně
+pronájmy
+produkty
+pronájem
+produktu
+
+k
+{'k'}
+1
+2
+Stem k
+Cluster 0
+k
+
+Je
+{'Jedná', 'Je', 'Jeho'}
+3
+2
+Stem Je
+Cluster 0
+Jedná
+Jeho
+
+Cluster 1
+Je
+
+tu
+{'tuto', 'tu'}
+2
+2
+Stem tu
+Cluster 0
+tu
+
+Cluster 1
+tuto
+
+mn
+{'množství', 'mnoho', 'mnoha'}
+3
+2
+Stem mn
+Cluster 0
+mnoho
+mnoha
+
+Cluster 1
+množství
+
+kt
+{'kteří', 'kterém', 'kterou', 'kterých', 'která', 'které', 'který', 'kterým'}
+8
+2
+Stem kt
+Cluster 0
+kterém
+kterou
+kterých
+která
+které
+který
+kterým
+
+Cluster 1
+kteří
+
+st
+{'stránky', 'straně', 'strany', 'stání', 'strana', 'státní', 'stavu', 'stran', 'středu', 'stránek', 'střední', 'stojí', 'stále', 'stal', 'stát', 'stránka', 'stejně', 'stránkách', 'stanice', 'stav', 'století', 'státu'}
+22
+2
+Stem st
+Cluster 0
+stránky
+straně
+strany
+strana
+státní
+stavu
+stran
+středu
+stránek
+střední
+stojí
+stále
+stal
+stát
+stránka
+stejně
+stránkách
+stanice
+stav
+století
+státu
+
+Cluster 1
+stání
+
+v
+{'v'}
+1
+2
+Stem v
+Cluster 0
+v
+
+so
+{'soutěže', 'sobě', 'současné', 'sociálních', 'sociální', 'součástí'}
+6
+2
+Stem so
+Cluster 0
+soutěže
+současné
+sociálních
+sociální
+součástí
+
+Cluster 1
+sobě
+
+do
+{'dost', 'dobře', 'domu', 'době', 'do', 'doby', 'domácí', 'doma', 'dobré', 'došlo', 'doručení', 'domů', 'dobu', 'domy', 'dokonce'}
+15
+2
+Stem do
+Cluster 0
+do
+doručení
+
+Cluster 1
+dost
+dobře
+domu
+době
+doby
+domácí
+doma
+dobré
+došlo
+domů
+dobu
+domy
+dokonce
+
+zd
+{'zda', 'zdraví', 'zdroje', 'zdrojů', 'zdarma', 'zde'}
+6
+2
+Stem zd
+Cluster 0
+zda
+zdarma
+zde
+
+Cluster 1
+zdraví
+zdroje
+zdrojů
+
+s
+{'s'}
+1
+2
+Stem s
+Cluster 0
+s
+
+ta
+{'také', 'takže', 'tato', 'taky', 'tak', 'takové', 'tady', 'tam', 'ta'}
+9
+2
+Stem ta
+Cluster 0
+tato
+ta
+
+Cluster 1
+také
+takže
+taky
+tak
+takové
+tady
+tam
+
+úd
+{'údajů', 'údaje'}
+2
+2
+Stem úd
+Cluster 0
+údaje
+
+Cluster 1
+údajů
+
+P
+{'P'}
+1
+2
+Stem P
+Cluster 0
+P
+
+L
+{'L'}
+1
+2
+Stem L
+Cluster 0
+L
+
+Os
+{'Ostatní', 'Ostrava'}
+2
+2
+Stem Os
+Cluster 0
+Ostrava
+
+Cluster 1
+Ostatní
+
+ch
+{'chce', 'chcete'}
+2
+2
+Stem ch
+Cluster 0
+chcete
+
+Cluster 1
+chce
+
+úp
+{'úplně'}
+1
+2
+Stem úp
+Cluster 0
+úplně
+
+vš
+{'všechny', 'všech', 'vše', 'všichni', 'však', 'všechno', 'všem'}
+7
+2
+Stem vš
+Cluster 0
+všechny
+všech
+vše
+všichni
+všechno
+všem
+
+Cluster 1
+však
+
+-
+{'-'}
+1
+2
+Stem -
+Cluster 0
+-
+
+sm
+{'smrti', 'smlouvy'}
+2
+2
+Stem sm
+Cluster 0
+smlouvy
+
+Cluster 1
+smrti
+
+vě
+{'věci', 'věku', 'většinou', 'větší'}
+4
+2
+Stem vě
+Cluster 0
+věci
+většinou
+větší
+
+Cluster 1
+věku
+
+ji
+{'jiné', 'jiných', 'jim', 'jinak', 'ji', 'jiný', 'již'}
+7
+2
+Stem ji
+Cluster 0
+jim
+ji
+již
+
+Cluster 1
+jiné
+jiných
+jinak
+jiný
+
+u
+{'u'}
+1
+2
+Stem u
+Cluster 0
+u
+
+os
+{'osoby', 'osobní', 'osob', 'ostatní', 'osvětlení'}
+5
+2
+Stem os
+Cluster 0
+osoby
+osobní
+osob
+ostatní
+
+Cluster 1
+osvětlení
+
+te
+{'teď', 'tedy', 'ten', 'text', 'tento', 'termín'}
+6
+2
+Stem te
+Cluster 0
+teď
+tedy
+ten
+tento
+termín
+
+Cluster 1
+text
+
+kd
+{'kdy', 'když', 'kde', 'kdo'}
+4
+2
+Stem kd
+Cluster 0
+kdy
+když
+kde
+
+Cluster 1
+kdo
+
+:
+{':'}
+1
+2
+Stem :
+Cluster 0
+:
+
+25
+{'25'}
+1
+2
+Stem 25
+Cluster 0
+25
+
+Pr
+{'Prahy', 'První', 'Praha', 'Pro', 'Prodej', 'Pronájem', 'Praze'}
+7
+2
+Stem Pr
+Cluster 0
+První
+Pro
+Prodej
+Pronájem
+
+Cluster 1
+Prahy
+Praha
+Praze
+
+1
+{'1'}
+1
+2
+Stem 1
+Cluster 0
+1
+
++
+{'+'}
+1
+2
+Stem +
+Cluster 0
++
+
+(
+{'('}
+1
+2
+Stem (
+Cluster 0
+(
+
+02
+{'02'}
+1
+2
+Stem 02
+Cluster 0
+02
+
+)
+{')'}
+1
+2
+Stem )
+Cluster 0
+)
+
+27
+{'27'}
+1
+2
+Stem 27
+Cluster 0
+27
+
+3
+{'3'}
+1
+2
+Stem 3
+Cluster 0
+3
+
+ty
+{'typu', 'tyto', 'typ', 'ty'}
+4
+2
+Stem ty
+Cluster 0
+tyto
+ty
+
+Cluster 1
+typu
+typ
+
+A
+{'A'}
+1
+2
+Stem A
+Cluster 0
+A
+
+4
+{'4'}
+1
+2
+Stem 4
+Cluster 0
+4
+
+/
+{'/'}
+1
+2
+Stem /
+Cluster 0
+/
+
+12
+{'12'}
+1
+2
+Stem 12
+Cluster 0
+12
+
+mm
+{'mm'}
+1
+2
+Stem mm
+Cluster 0
+mm
+
+x
+{'x'}
+1
+2
+Stem x
+Cluster 0
+x
+
+Ce
+{'Cena'}
+1
+2
+Stem Ce
+Cluster 0
+Cena
+
+Kč
+{'Kč'}
+1
+2
+Stem Kč
+Cluster 0
+Kč
+
+Po
+{'Popis', 'Po', 'Podle', 'Počet', 'Pokud'}
+5
+2
+Stem Po
+Cluster 0
+Popis
+Podle
+Počet
+Pokud
+
+Cluster 1
+Po
+
+10
+{'10', '100'}
+2
+2
+Stem 10
+Cluster 0
+100
+
+Cluster 1
+10
+
+mo
+{'mohou', 'možná', 'možné', 'možností', 'možnosti', 'možnost', 'moc', 'mohl'}
+8
+2
+Stem mo
+Cluster 0
+mohou
+možná
+možné
+možností
+možnosti
+možnost
+mohl
+
+Cluster 1
+moc
+
+30
+{'300', '30'}
+2
+2
+Stem 30
+Cluster 0
+30
+
+Cluster 1
+300
+
+60
+{'60'}
+1
+2
+Stem 60
+Cluster 0
+60
+
+z
+{'z'}
+1
+2
+Stem z
+Cluster 0
+z
+
+až
+{'až'}
+1
+2
+Stem až
+Cluster 0
+až
+
+16
+{'16'}
+1
+2
+Stem 16
+Cluster 0
+16
+
+34
+{'34'}
+1
+2
+Stem 34
+Cluster 0
+34
+
+32
+{'32'}
+1
+2
+Stem 32
+Cluster 0
+32
+
+ab
+{'aby'}
+1
+2
+Stem ab
+Cluster 0
+aby
+
+by
+{'by', 'bytů', 'byly', 'byla', 'bych', 'bydlení', 'byl', 'bytu', 'bylo', 'byli'}
+10
+2
+Stem by
+Cluster 0
+by
+byly
+byla
+bych
+byl
+bylo
+byli
+
+Cluster 1
+bytů
+bydlení
+bytu
+
+vž
+{'vždy'}
+1
+2
+Stem vž
+Cluster 0
+vždy
+
+to
+{'tohoto', 'to', 'tomu', 'toto', 'toho', 'tomto', 'totiž', 'tom'}
+8
+2
+Stem to
+Cluster 0
+tohoto
+tomu
+toto
+toho
+tomto
+totiž
+tom
+
+Cluster 1
+to
+
+al
+{'album', 'alespoň', 'ale'}
+3
+2
+Stem al
+Cluster 0
+alespoň
+ale
+
+Cluster 1
+album
+
+i
+{'i'}
+1
+2
+Stem i
+Cluster 0
+i
+
+Jo
+{'Josef'}
+1
+2
+Stem Jo
+Cluster 0
+Josef
+
+ná
+{'nás', 'názvem', 'náhled', 'náměstí', 'následující', 'název', 'nám'}
+7
+2
+Stem ná
+Cluster 0
+názvem
+náhled
+následující
+název
+
+Cluster 1
+nás
+náměstí
+nám
+
+vý
+{'výše', 'výkon', 'výsledky', 'výrobce'}
+4
+2
+Stem vý
+Cluster 0
+výše
+výkon
+výsledky
+
+Cluster 1
+výrobce
+
+Na
+{'Na'}
+1
+2
+Stem Na
+Cluster 0
+Na
+
+sn
+{'snad'}
+1
+2
+Stem sn
+Cluster 0
+snad
+
+ce
+{'cenu', 'celý', 'celkem', 'cena', 'celé', 'ceny', 'celou'}
+7
+2
+Stem ce
+Cluster 0
+celý
+celkem
+celé
+celou
+
+Cluster 1
+cenu
+cena
+ceny
+
+ro
+{'roce', 'rozhodnutí', 'roku', 'rodiny', 'rok', 'roky', 'ročník', 'roli', 'rovněž'}
+9
+2
+Stem ro
+Cluster 0
+rozhodnutí
+rodiny
+roli
+
+Cluster 1
+roce
+roku
+rok
+roky
+ročník
+rovněž
+
+ja
+{'jak', 'jako'}
+2
+2
+Stem ja
+Cluster 0
+jako
+
+Cluster 1
+jak
+
+15
+{'15', '150'}
+2
+2
+Stem 15
+Cluster 0
+150
+
+Cluster 1
+15
+
+%
+{'%'}
+1
+2
+Stem %
+Cluster 0
+%
+
+sp
+{'spíše', 'společnost', 'spolu', 'společně', 'společnosti', 'sportovní'}
+6
+2
+Stem sp
+Cluster 0
+spíše
+sportovní
+
+Cluster 1
+společnost
+spolu
+společně
+společnosti
+
+vl
+{'vlastní', 'vlády'}
+2
+2
+Stem vl
+Cluster 0
+vlády
+
+Cluster 1
+vlastní
+
+č
+{'č'}
+1
+2
+Stem č
+Cluster 0
+č
+
+ze
+{'země', 'zejména', 'ze', 'zemi'}
+4
+2
+Stem ze
+Cluster 0
+země
+zejména
+zemi
+
+Cluster 1
+ze
+
+čá
+{'část', 'části'}
+2
+2
+Stem čá
+Cluster 0
+části
+
+Cluster 1
+část
+
+fi
+{'finanční', 'film', 'filmu', 'firmy'}
+4
+2
+Stem fi
+Cluster 0
+finanční
+firmy
+
+Cluster 1
+film
+filmu
+
+ob
+{'oblasti', 'obsahu', 'obsah', 'obchodní', 'obsahuje', 'obce', 'obec', 'období', 'obci', 'obcí', 'obyvatel', 'objekty', 'obchodu', 'obvykle', 'obchod', 'oblast'}
+16
+2
+Stem ob
+Cluster 0
+obsahu
+obsah
+obsahuje
+období
+obvykle
+
+Cluster 1
+oblasti
+obchodní
+obce
+obec
+obci
+obcí
+obyvatel
+objekty
+obchodu
+obchod
+oblast
+
+5
+{'5'}
+1
+2
+Stem 5
+Cluster 0
+5
+
+6
+{'6'}
+1
+2
+Stem 6
+Cluster 0
+6
+
+kv
+{'května', 'kvalitní', 'kvůli'}
+3
+2
+Stem kv
+Cluster 0
+kvalitní
+kvůli
+
+Cluster 1
+května
+
+me
+{'menší', 'metrů', 'mezi'}
+3
+2
+Stem me
+Cluster 0
+menší
+mezi
+
+Cluster 1
+metrů
+
+lz
+{'lze'}
+1
+2
+Stem lz
+Cluster 0
+lze
+
+no
+{'no', 'nový', 'novou', 'nové', 'nových', 'nového'}
+6
+2
+Stem no
+Cluster 0
+nový
+novou
+nové
+nových
+nového
+
+Cluster 1
+no
+
+bu
+{'budete', 'budova', 'bude', 'budou'}
+4
+2
+Stem bu
+Cluster 0
+budete
+bude
+budou
+
+Cluster 1
+budova
+
+in
+{'in', 'informace', 'informací'}
+3
+2
+Stem in
+Cluster 0
+informace
+informací
+
+Cluster 1
+in
+
+ví
+{'víc', 'více'}
+2
+2
+Stem ví
+Cluster 0
+více
+
+Cluster 1
+víc
+
+da
+{'další', 'datum', 'dat', 'data', 'dalších'}
+5
+2
+Stem da
+Cluster 0
+datum
+dat
+data
+
+Cluster 1
+další
+dalších
+
+o
+{'o'}
+1
+2
+Stem o
+Cluster 0
+o
+
+za
+{'zatím', 'začal', 'zařízení', 'zasedání', 'za', 'začátku', 'zase'}
+7
+2
+Stem za
+Cluster 0
+zatím
+začal
+zařízení
+zasedání
+začátku
+zase
+
+Cluster 1
+za
+
+ub
+{'ubytování'}
+1
+2
+Stem ub
+Cluster 0
+ubytování
+
+St
+{'Střední'}
+1
+2
+Stem St
+Cluster 0
+Střední
+
+di
+{'dispozici', 'diskuse'}
+2
+2
+Stem di
+Cluster 0
+diskuse
+
+Cluster 1
+dispozici
+
+mů
+{'může', 'můžete', 'můžeme'}
+3
+2
+Stem mů
+Cluster 0
+můžete
+můžeme
+
+Cluster 1
+může
+
+bý
+{'být'}
+1
+2
+Stem bý
+Cluster 0
+být
+
+tě
+{'těch', 'těchto'}
+2
+2
+Stem tě
+Cluster 0
+těchto
+
+Cluster 1
+těch
+
+*
+{'*'}
+1
+2
+Stem *
+Cluster 0
+*
+
+or
+{'organizace'}
+1
+2
+Stem or
+Cluster 0
+organizace
+
+sl
+{'slouží', 'služby', 'služeb', 'slova'}
+4
+2
+Stem sl
+Cluster 0
+slouží
+služby
+služeb
+
+Cluster 1
+slova
+
+bě
+{'během'}
+1
+2
+Stem bě
+Cluster 0
+během
+
+dv
+{'dva', 'dvě', 'dvou'}
+3
+2
+Stem dv
+Cluster 0
+dva
+dvě
+
+Cluster 1
+dvou
+
+ma
+{'materiál', 'malé', 'mají', 'materiálu'}
+4
+2
+Stem ma
+Cluster 0
+malé
+mají
+
+Cluster 1
+materiál
+materiálu
+
+2
+{'2'}
+1
+2
+Stem 2
+Cluster 0
+2
+
+Br
+{'Brno'}
+1
+2
+Stem Br
+Cluster 0
+Brno
+
+00
+{'000', '00'}
+2
+2
+Stem 00
+Cluster 0
+00
+
+Cluster 1
+000
+
+tř
+{'třídy', 'třeba', 'tři', 'třetí'}
+4
+2
+Stem tř
+Cluster 0
+třídy
+tři
+třetí
+
+Cluster 1
+třeba
+
+pa
+{'patří', 'pak'}
+2
+2
+Stem pa
+Cluster 0
+pak
+
+Cluster 1
+patří
+
+od
+{'odst', 'odběr', 'od'}
+3
+2
+Stem od
+Cluster 0
+odst
+odběr
+
+Cluster 1
+od
+
+če
+{'českých', 'června', 'české', 'července', 'český'}
+5
+2
+Stem če
+Cluster 0
+českých
+české
+český
+
+Cluster 1
+června
+července
+
+ni
+{'nich', 'nikdy', 'nikdo', 'nic'}
+4
+2
+Stem ni
+Cluster 0
+nikdy
+nikdo
+nic
+
+Cluster 1
+nich
+
+co
+{'což', 'co'}
+2
+2
+Stem co
+Cluster 0
+co
+
+Cluster 1
+což
+
+tí
+{'tím'}
+1
+2
+Stem tí
+Cluster 0
+tím
+
+žá
+{'žádný', 'žádné'}
+2
+2
+Stem žá
+Cluster 0
+žádné
+
+Cluster 1
+žádný
+
+O
+{'O'}
+1
+2
+Stem O
+Cluster 0
+O
+
+ča
+{'často', 'čas', 'času'}
+3
+2
+Stem ča
+Cluster 0
+čas
+času
+
+Cluster 1
+často
+
+zá
+{'základní', 'základě', 'zákona', 'zákon', 'září', 'zároveň'}
+6
+2
+Stem zá
+Cluster 0
+září
+zároveň
+
+Cluster 1
+základní
+základě
+zákona
+zákon
+
+ří
+{'řízení', 'říká', 'října'}
+3
+2
+Stem ří
+Cluster 0
+říká
+října
+
+Cluster 1
+řízení
+
+mí
+{'místo', 'mít', 'místa', 'místě', 'místní'}
+5
+2
+Stem mí
+Cluster 0
+místo
+mít
+místa
+místě
+
+Cluster 1
+místní
+
+ok
+{'okrese', 'okres', 'okolí'}
+3
+2
+Stem ok
+Cluster 0
+okrese
+okres
+
+Cluster 1
+okolí
+
+ně
+{'některé', 'některých', 'něm', 'něco', 'nějaké', 'několik', 'někdo', 'někdy', 'několika', 'něj'}
+10
+2
+Stem ně
+Cluster 0
+některé
+některých
+nějaké
+několik
+několika
+
+Cluster 1
+něm
+něco
+někdo
+někdy
+něj
+
+33
+{'33'}
+1
+2
+Stem 33
+Cluster 0
+33
+
+le
+{'let', 'ledna', 'lepší', 'letech'}
+4
+2
+Stem le
+Cluster 0
+let
+ledna
+letech
+
+Cluster 1
+lepší
+
+U
+{'U'}
+1
+2
+Stem U
+Cluster 0
+U
+
+či
+{'či', 'činnost', 'činnosti'}
+3
+2
+Stem či
+Cluster 0
+činnost
+činnosti
+
+Cluster 1
+či
+
+zm
+{'změně', 'změny'}
+2
+2
+Stem zm
+Cluster 0
+změny
+
+Cluster 1
+změně
+
+Z
+{'Z'}
+1
+2
+Stem Z
+Cluster 0
+Z
+
+si
+{'sice', 'si', 'situace'}
+3
+2
+Stem si
+Cluster 0
+sice
+situace
+
+Cluster 1
+si
+
+má
+{'má', 'mám', 'máte', 'máme'}
+4
+2
+Stem má
+Cluster 0
+mám
+máte
+máme
+
+Cluster 1
+má
+
+24
+{'24'}
+1
+2
+Stem 24
+Cluster 0
+24
+
+zb
+{'zboží'}
+1
+2
+Stem zb
+Cluster 0
+zboží
+
+US
+{'USA'}
+1
+2
+Stem US
+Cluster 0
+USA
+
+as
+{'asi'}
+1
+2
+Stem as
+Cluster 0
+asi
+
+S
+{'S'}
+1
+2
+Stem S
+Cluster 0
+S
+
+tr
+{'trhu', 'trochu'}
+2
+2
+Stem tr
+Cluster 0
+trochu
+
+Cluster 1
+trhu
+
+sa
+{'samozřejmě'}
+1
+2
+Stem sa
+Cluster 0
+samozřejmě
+
+"
+{'"'}
+1
+2
+Stem "
+Cluster 0
+"
+
+zn
+{'znamená', 'znění', 'značky', 'znovu'}
+4
+2
+Stem zn
+Cluster 0
+znění
+značky
+
+Cluster 1
+znamená
+znovu
+
+Bě
+{'Během'}
+1
+2
+Stem Bě
+Cluster 0
+Během
+
+7
+{'7'}
+1
+2
+Stem 7
+Cluster 0
+7
+
+op
+{'opět', 'opravdu'}
+2
+2
+Stem op
+Cluster 0
+opravdu
+
+Cluster 1
+opět
+
+Ve
+{'Ve'}
+1
+2
+Stem Ve
+Cluster 0
+Ve
+
+Kd
+{'Když'}
+1
+2
+Stem Kd
+Cluster 0
+Když
+
+ti
+{'tisíc', 'ti'}
+2
+2
+Stem ti
+Cluster 0
+ti
+
+Cluster 1
+tisíc
+
+ko
+{'korun', 'konce', 'kolo', 'kolem', 'kola', 'konci'}
+6
+2
+Stem ko
+Cluster 0
+konce
+kolo
+kolem
+kola
+konci
+
+Cluster 1
+korun
+
+ny
+{'nyní'}
+1
+2
+Stem ny
+Cluster 0
+nyní
+
+ke
+{'ke'}
+1
+2
+Stem ke
+Cluster 0
+ke
+
+ní
+{'ní', 'ním'}
+2
+2
+Stem ní
+Cluster 0
+ním
+
+Cluster 1
+ní
+
+li
+{'listopadu', 'lidí', 'lidé'}
+3
+2
+Stem li
+Cluster 0
+lidí
+lidé
+
+Cluster 1
+listopadu
+
+20
+{'2016', '2007', '2002', '2005', '2013', '2015', '200', '2008', '2012', '2004', '2009', '2006', '2001', '2010', '20', '2000'}
+16
+2
+Stem 20
+Cluster 0
+200
+20
+
+Cluster 1
+2016
+2007
+2002
+2005
+2013
+2015
+2008
+2012
+2004
+2009
+2006
+2001
+2010
+2000
+
+Za
+{'Za'}
+1
+2
+Stem Za
+Cluster 0
+Za
+
+Ty
+{'Tyto'}
+1
+2
+Stem Ty
+Cluster 0
+Tyto
+
+ho
+{'hodnoty', 'hodnocení', 'hodin', 'ho', 'hodně'}
+5
+2
+Stem ho
+Cluster 0
+hodnoty
+hodnocení
+hodin
+hodně
+
+Cluster 1
+ho
+
+dn
+{'dny', 'dní', 'dne', 'dnů', 'dnes'}
+5
+2
+Stem dn
+Cluster 0
+dny
+dní
+dne
+dnů
+
+Cluster 1
+dnes
+
+11
+{'11'}
+1
+2
+Stem 11
+Cluster 0
+11
+
+dl
+{'dle', 'dlouho'}
+2
+2
+Stem dl
+Cluster 0
+dlouho
+
+Cluster 1
+dle
+
+tý
+{'týden'}
+1
+2
+Stem tý
+Cluster 0
+týden
+
+rů
+{'různé', 'různých'}
+2
+2
+Stem rů
+Cluster 0
+různých
+
+Cluster 1
+různé
+
+an
+{'and', 'ani'}
+2
+2
+Stem an
+Cluster 0
+ani
+
+Cluster 1
+and
+
+tv
+{'tvoří'}
+1
+2
+Stem tv
+Cluster 0
+tvoří
+
+70
+{'70'}
+1
+2
+Stem 70
+Cluster 0
+70
+
+mi
+{'mi', 'minut', 'mimo'}
+3
+2
+Stem mi
+Cluster 0
+minut
+mimo
+
+Cluster 1
+mi
+
+mě
+{'mě', 'města', 'měl', 'mělo', 'město', 'městě', 'měli', 'měla'}
+8
+2
+Stem mě
+Cluster 0
+mě
+měl
+mělo
+měli
+měla
+
+Cluster 1
+města
+město
+městě
+
+be
+{'bez'}
+1
+2
+Stem be
+Cluster 0
+bez
+
+40
+{'40'}
+1
+2
+Stem 40
+Cluster 0
+40
+
+Od
+{'Od'}
+1
+2
+Stem Od
+Cluster 0
+Od
+
+Ja
+{'Jako', 'Jak', 'Jan', 'Jana'}
+4
+2
+Stem Ja
+Cluster 0
+Jako
+Jak
+
+Cluster 1
+Jan
+Jana
+
+um
+{'umění', 'umožňuje'}
+2
+2
+Stem um
+Cluster 0
+umožňuje
+
+Cluster 1
+umění
+
+28
+{'28'}
+1
+2
+Stem 28
+Cluster 0
+28
+
+ka
+{'každé', 'každý', 'kategorie', 'kategorii'}
+4
+2
+Stem ka
+Cluster 0
+každé
+každý
+
+Cluster 1
+kategorie
+kategorii
+
+mu
+{'mu', 'mužská', 'musí'}
+3
+2
+Stem mu
+Cluster 0
+mužská
+musí
+
+Cluster 1
+mu
+
+Má
+{'Má'}
+1
+2
+Stem Má
+Cluster 0
+Má
+
+kr
+{'kromě', 'kraj', 'kraje'}
+3
+2
+Stem kr
+Cluster 0
+kraj
+kraje
+
+Cluster 1
+kromě
+
+vy
+{'vyšší', 'využití', 'vysoce', 'vydání'}
+4
+2
+Stem vy
+Cluster 0
+využití
+vydání
+
+Cluster 1
+vyšší
+vysoce
+
+Co
+{'Co'}
+1
+2
+Stem Co
+Cluster 0
+Co
+
+19
+{'1997', '1999', '19', '1998', '1990'}
+5
+2
+Stem 19
+Cluster 0
+1997
+1999
+1998
+1990
+
+Cluster 1
+19
+
+ČR
+{'ČR'}
+1
+2
+Stem ČR
+Cluster 0
+ČR
+
+čl
+{'článek', 'články', 'článku', 'člověk'}
+4
+2
+Stem čl
+Cluster 0
+článek
+články
+článku
+
+Cluster 1
+člověk
+
+K
+{'K'}
+1
+2
+Stem K
+Cluster 0
+K
+
+Ji
+{'Jiří'}
+1
+2
+Stem Ji
+Cluster 0
+Jiří
+
+Př
+{'Při', 'Přidala'}
+2
+2
+Stem Př
+Cluster 0
+Přidala
+
+Cluster 1
+Při
+
+čt
+{'čtyři'}
+1
+2
+Stem čt
+Cluster 0
+čtyři
+
+zí
+{'získal'}
+1
+2
+Stem zí
+Cluster 0
+získal
+
+dů
+{'dům'}
+1
+2
+Stem dů
+Cluster 0
+dům
+
+už
+{'už'}
+1
+2
+Stem už
+Cluster 0
+už
+
+sy
+{'systém', 'systému'}
+2
+2
+Stem sy
+Cluster 0
+systému
+
+Cluster 1
+systém
+
+kn
+{'knihy'}
+1
+2
+Stem kn
+Cluster 0
+knihy
+
+Ma
+{'Marie', 'Martin'}
+2
+2
+Stem Ma
+Cluster 0
+Martin
+
+Cluster 1
+Marie
+
+r
+{'r'}
+1
+2
+Stem r
+Cluster 0
+r
+
+17
+{'17'}
+1
+2
+Stem 17
+Cluster 0
+17
+
+pe
+{'peníze'}
+1
+2
+Stem pe
+Cluster 0
+peníze
+
+To
+{'To'}
+1
+2
+Stem To
+Cluster 0
+To
+
+vů
+{'vůbec'}
+1
+2
+Stem vů
+Cluster 0
+vůbec
+
+50
+{'500', '50'}
+2
+2
+Stem 50
+Cluster 0
+50
+
+Cluster 1
+500
+
+zp
+{'zpráva', 'způsobem'}
+2
+2
+Stem zp
+Cluster 0
+způsobem
+
+Cluster 1
+zpráva
+
+pá
+{'pár'}
+1
+2
+Stem pá
+Cluster 0
+pár
+
+hl
+{'hlavní', 'hlavně'}
+2
+2
+Stem hl
+Cluster 0
+hlavně
+
+Cluster 1
+hlavní
+
+!
+{'!'}
+1
+2
+Stem !
+Cluster 0
+!
+
+Do
+{'Do', 'Domácí', 'Doprava'}
+3
+2
+Stem Do
+Cluster 0
+Do
+Doprava
+
+Cluster 1
+Domácí
+
+ži
+{'života', 'život'}
+2
+2
+Stem ži
+Cluster 0
+život
+
+Cluster 1
+života
+
+Al
+{'Ale'}
+1
+2
+Stem Al
+Cluster 0
+Ale
+
+ap
+{'apod', 'aplikace'}
+2
+2
+Stem ap
+Cluster 0
+aplikace
+
+Cluster 1
+apod
+
+Ta
+{'Tak', 'Tato'}
+2
+2
+Stem Ta
+Cluster 0
+Tato
+
+Cluster 1
+Tak
+
+&
+{'&'}
+1
+2
+Stem &
+Cluster 0
+&
+
+jd
+{'jde'}
+1
+2
+Stem jd
+Cluster 0
+jde
+
+vi
+{'vidět'}
+1
+2
+Stem vi
+Cluster 0
+vidět
+
+B
+{'B'}
+1
+2
+Stem B
+Cluster 0
+B
+
+C
+{'C'}
+1
+2
+Stem C
+Cluster 0
+C
+
+dr
+{'druhé'}
+1
+2
+Stem dr
+Cluster 0
+druhé
+
+vá
+{'války', 'vás', 'vám'}
+3
+2
+Stem vá
+Cluster 0
+vás
+vám
+
+Cluster 1
+války
+
+Va
+{'Vaše'}
+1
+2
+Stem Va
+Cluster 0
+Vaše
+
+Če
+{'České', 'Česká', 'Český'}
+3
+2
+Stem Če
+Cluster 0
+České
+Česká
+
+Cluster 1
+Český
+
+re
+{'republice', 'republiky'}
+2
+2
+Stem re
+Cluster 0
+republiky
+
+Cluster 1
+republice
+
+Hr
+{'Hradec'}
+1
+2
+Stem Hr
+Cluster 0
+Hradec
+
+Kr
+{'Králové'}
+1
+2
+Stem Kr
+Cluster 0
+Králové
+
+mé
+{'méně'}
+1
+2
+Stem mé
+Cluster 0
+méně
+
+Me
+{'Mezi'}
+1
+2
+Stem Me
+Cluster 0
+Mezi
+
+sá
+{'sám'}
+1
+2
+Stem sá
+Cluster 0
+sám
+
+18
+{'18'}
+1
+2
+Stem 18
+Cluster 0
+18
+
+31
+{'31'}
+1
+2
+Stem 31
+Cluster 0
+31
+
+dí
+{'dítě', 'díky'}
+2
+2
+Stem dí
+Cluster 0
+díky
+
+Cluster 1
+dítě
+
+21
+{'21'}
+1
+2
+Stem 21
+Cluster 0
+21
+
+01
+{'01'}
+1
+2
+Stem 01
+Cluster 0
+01
+
+°
+{'°'}
+1
+2
+Stem °
+Cluster 0
+°
+
+en
+{'energie'}
+1
+2
+Stem en
+Cluster 0
+energie
+
+Dí
+{'Díky'}
+1
+2
+Stem Dí
+Cluster 0
+Díky
+
+nu
+{'nutné'}
+1
+2
+Stem nu
+Cluster 0
+nutné
+
+rá
+{'rámci'}
+1
+2
+Stem rá
+Cluster 0
+rámci
+
+dá
+{'dál', 'dále'}
+2
+2
+Stem dá
+Cluster 0
+dále
+
+Cluster 1
+dál
+
+km
+{'km'}
+1
+2
+Stem km
+Cluster 0
+km
+
+Já
+{'Já'}
+1
+2
+Stem Já
+Cluster 0
+Já
+
+ře
+{'řekl', 'řešení'}
+2
+2
+Stem ře
+Cluster 0
+řešení
+
+Cluster 1
+řekl
+
+zc
+{'zcela'}
+1
+2
+Stem zc
+Cluster 0
+zcela
+
+Vš
+{'Všechny'}
+1
+2
+Stem Vš
+Cluster 0
+Všechny
+
+14
+{'14'}
+1
+2
+Stem 14
+Cluster 0
+14
+
+vo
+{'vody'}
+1
+2
+Stem vo
+Cluster 0
+vody
+
+m
+{'m'}
+1
+2
+Stem m
+Cluster 0
+m
+
+8
+{'8'}
+1
+2
+Stem 8
+Cluster 0
+8
+
+90
+{'90'}
+1
+2
+Stem 90
+Cluster 0
+90
+
+vč
+{'včetně'}
+1
+2
+Stem vč
+Cluster 0
+včetně
+
+45
+{'45'}
+1
+2
+Stem 45
+Cluster 0
+45
+
+By
+{'Byl'}
+1
+2
+Stem By
+Cluster 0
+Byl
+
+38
+{'38'}
+1
+2
+Stem 38
+Cluster 0
+38
+
+23
+{'23'}
+1
+2
+Stem 23
+Cluster 0
+23
+
+35
+{'35'}
+1
+2
+Stem 35
+Cluster 0
+35
+
+No
+{'Nové', 'Nová', 'No', 'Nový'}
+4
+2
+Stem No
+Cluster 0
+Nové
+Nová
+Nový
+
+Cluster 1
+No
+
+13
+{'13'}
+1
+2
+Stem 13
+Cluster 0
+13
+
+Pl
+{'Plzeň'}
+1
+2
+Stem Pl
+Cluster 0
+Plzeň
+
+In
+{'Ing', 'Informace'}
+2
+2
+Stem In
+Cluster 0
+Informace
+
+Cluster 1
+Ing
+
+PC
+{'PC'}
+1
+2
+Stem PC
+Cluster 0
+PC
+
+fu
+{'funkce'}
+1
+2
+Stem fu
+Cluster 0
+funkce
+
+bř
+{'března'}
+1
+2
+Stem bř
+Cluster 0
+března
+
+b
+{'b'}
+1
+2
+Stem b
+Cluster 0
+b
+
+c
+{'c'}
+1
+2
+Stem c
+Cluster 0
+c
+
+sk
+{'skupiny', 'skupina'}
+2
+2
+Stem sk
+Cluster 0
+skupina
+
+Cluster 1
+skupiny
+
+cm
+{'cm'}
+1
+2
+Stem cm
+Cluster 0
+cm
+
+=
+{'='}
+1
+2
+Stem =
+Cluster 0
+=
+
+l
+{'l'}
+1
+2
+Stem l
+Cluster 0
+l
+
+at
+{'atd'}
+1
+2
+Stem at
+Cluster 0
+atd
+
+hr
+{'hry'}
+1
+2
+Stem hr
+Cluster 0
+hry
+
+48
+{'48'}
+1
+2
+Stem 48
+Cluster 0
+48
+
+9
+{'9'}
+1
+2
+Stem 9
+Cluster 0
+9
+
+vh
+{'vhodné'}
+1
+2
+Stem vh
+Cluster 0
+vhodné
+
+dě
+{'dětí', 'děti'}
+2
+2
+Stem dě
+Cluster 0
+děti
+
+Cluster 1
+dětí
+
+;
+{';'}
+1
+2
+Stem ;
+Cluster 0
+;
+
+I
+{'I'}
+1
+2
+Stem I
+Cluster 0
+I
+
+Te
+{'Tento'}
+1
+2
+Stem Te
+Cluster 0
+Tento
+
+hn
+{'hned'}
+1
+2
+Stem hn
+Cluster 0
+hned
+
+Zá
+{'Základní'}
+1
+2
+Stem Zá
+Cluster 0
+Základní
+
+Da
+{'Datum', 'Další'}
+2
+2
+Stem Da
+Cluster 0
+Další
+
+Cluster 1
+Datum
+
+Ka
+{'Karel', 'Kategorie'}
+2
+2
+Stem Ka
+Cluster 0
+Kategorie
+
+Cluster 1
+Karel
+
+II
+{'III', 'II'}
+2
+2
+Stem II
+Cluster 0
+II
+
+Cluster 1
+III
+
+Pa
+{'Pavel'}
+1
+2
+Stem Pa
+Cluster 0
+Pavel
+
+ať
+{'ať'}
+1
+2
+Stem ať
+Cluster 0
+ať
+
+va
+{'vaše'}
+1
+2
+Stem va
+Cluster 0
+vaše
+
+du
+{'dubna'}
+1
+2
+Stem du
+Cluster 0
+dubna
+
+vz
+{'vzdělávání'}
+1
+2
+Stem vz
+Cluster 0
+vzdělávání
+
+R
+{'R'}
+1
+2
+Stem R
+Cluster 0
+R
+
+ov
+{'ovšem'}
+1
+2
+Stem ov
+Cluster 0
+ovšem
+
+úz
+{'území'}
+1
+2
+Stem úz
+Cluster 0
+území
+
+já
+{'já'}
+1
+2
+Stem já
+Cluster 0
+já
+
+fa
+{'fakt'}
+1
+2
+Stem fa
+Cluster 0
+fakt
+
+M
+{'M'}
+1
+2
+Stem M
+Cluster 0
+M
+
+my
+{'my'}
+1
+2
+Stem my
+Cluster 0
+my
+
+dř
+{'dříve'}
+1
+2
+Stem dř
+Cluster 0
+dříve
+
+ak
+{'akce'}
+1
+2
+Stem ak
+Cluster 0
+akce
+
+E
+{'E'}
+1
+2
+Stem E
+Cluster 0
+E
+
+PR
+{'PRO'}
+1
+2
+Stem PR
+Cluster 0
+PRO
+
+22
+{'22'}
+1
+2
+Stem 22
+Cluster 0
+22
+
+55
+{'55'}
+1
+2
+Stem 55
+Cluster 0
+55
+
+ur
+{'určitě'}
+1
+2
+Stem ur
+Cluster 0
+určitě
+
+Fr
+{'František'}
+1
+2
+Stem Fr
+Cluster 0
+František
+
+T
+{'T'}
+1
+2
+Stem T
+Cluster 0
+T
+
+Mě
+{'Město'}
+1
+2
+Stem Mě
+Cluster 0
+Město
+
+šk
+{'škola', 'škole', 'školní', 'školy'}
+4
+2
+Stem šk
+Cluster 0
+škola
+škole
+školy
+
+Cluster 1
+školní
+
+d
+{'d'}
+1
+2
+Stem d
+Cluster 0
+d
+
+'
+{"'"}
+1
+2
+Stem '
+Cluster 0
+'
+
+0
+{'0'}
+1
+2
+Stem 0
+Cluster 0
+0
+
+Ne
+{'New'}
+1
+2
+Stem Ne
+Cluster 0
+New
+
+jm
+{'jméno', 'jména'}
+2
+2
+Stem jm
+Cluster 0
+jména
+
+Cluster 1
+jméno
+
+D
+{'D'}
+1
+2
+Stem D
+Cluster 0
+D
+
+h
+{'h'}
+1
+2
+Stem h
+Cluster 0
+h
+
+N
+{'N'}
+1
+2
+Stem N
+Cluster 0
+N
+
+on
+{'online', 'on'}
+2
+2
+Stem on
+Cluster 0
+on
+
+Cluster 1
+online
+
+26
+{'26'}
+1
+2
+Stem 26
+Cluster 0
+26
+
+37
+{'37'}
+1
+2
+Stem 37
+Cluster 0
+37
+
+ra
+{'rady'}
+1
+2
+Stem ra
+Cluster 0
+rady
+
+41
+{'41'}
+1
+2
+Stem 41
+Cluster 0
+41
+
+29
+{'29'}
+1
+2
+Stem 29
+Cluster 0
+29
+
+80
+{'80'}
+1
+2
+Stem 80
+Cluster 0
+80
+
+hu
+{'hudební'}
+1
+2
+Stem hu
+Cluster 0
+hudební
+
+Hl
+{'Hlavní'}
+1
+2
+Stem Hl
+Cluster 0
+Hlavní
+
+sr
+{'srpna'}
+1
+2
+Stem sr
+Cluster 0
+srpna
+
+pé
+{'péče'}
+1
+2
+Stem pé
+Cluster 0
+péče
+
+Pe
+{'Petr'}
+1
+2
+Stem Pe
+Cluster 0
+Petr
+
+Ví
+{'Více'}
+1
+2
+Stem Ví
+Cluster 0
+Více
+
+jí
+{'jí'}
+1
+2
+Stem jí
+Cluster 0
+jí
+
+t
+{'t'}
+1
+2
+Stem t
+Cluster 0
+t
+
+pů
+{'původní'}
+1
+2
+Stem pů
+Cluster 0
+původní
+
+49
+{'49'}
+1
+2
+Stem 49
+Cluster 0
+49
+
+TV
+{'TV'}
+1
+2
+Stem TV
+Cluster 0
+TV
+
+Mg
+{'Mgr'}
+1
+2
+Stem Mg
+Cluster 0
+Mgr
+
+§
+{'§'}
+1
+2
+Stem §
+Cluster 0
+§
+
+Sb
+{'Sb'}
+1
+2
+Stem Sb
+Cluster 0
+Sb
+
+W
+{'W'}
+1
+2
+Stem W
+Cluster 0
+W
+
+kó
+{'kód'}
+1
+2
+Stem kó
+Cluster 0
+kód
+
+Au
+{'Autor'}
+1
+2
+Stem Au
+Cluster 0
+Autor
+
+Ob
+{'Obsah'}
+1
+2
+Stem Ob
+Cluster 0
+Obsah
+
+of
+{'of'}
+1
+2
+Stem of
+Cluster 0
+of
+
+42
+{'42'}
+1
+2
+Stem 42
+Cluster 0
+42
+
+Ho
+{'Horní', 'Hotel'}
+2
+2
+Stem Ho
+Cluster 0
+Hotel
+
+Cluster 1
+Horní
+
+36
+{'36'}
+1
+2
+Stem 36
+Cluster 0
+36
+
+EU
+{'EU'}
+1
+2
+Stem EU
+Cluster 0
+EU
+
+ad
+{'adresu'}
+1
+2
+Stem ad
+Cluster 0
+adresu
+
+Th
+{'The'}
+1
+2
+Stem Th
+Cluster 0
+The
+
+n
+{'n'}
+1
+2
+Stem n
+Cluster 0
+n
+
+p
+{'p'}
+1
+2
+Stem p
+Cluster 0
+p
+
+kg
+{'kg'}
+1
+2
+Stem kg
+Cluster 0
+kg
+
+ún
+{'února'}
+1
+2
+Stem ún
+Cluster 0
+února
+
+dé
+{'délka'}
+1
+2
+Stem dé
+Cluster 0
+délka
+
+DP
+{'DPH'}
+1
+2
+Stem DP
+Cluster 0
+DPH
+
+th
+{'the'}
+1
+2
+Stem th
+Cluster 0
+the
+
+Úv
+{'Úvod'}
+1
+2
+Stem Úv
+Cluster 0
+Úvod
+
+09
+{'09'}
+1
+2
+Stem 09
+Cluster 0
+09
+
+ba
+{'bar'}
+1
+2
+Stem ba
+Cluster 0
+bar
+
+cc
+{'cca'}
+1
+2
+Stem cc
+Cluster 0
+cca
+
+_
+{'_'}
+1
+2
+Stem _
+Cluster 0
+_
+
+>
+{'>'}
+1
+2
+Stem >
+Cluster 0
+>
+
+<
+{'<'}
+1
+2
+Stem <
+Cluster 0
+<
+
+g
+{'g'}
+1
+2
+Stem g
+Cluster 0
+g
+
+e
+{'e'}
+1
+2
+Stem e
+Cluster 0
+e
+
+Čí
+{'Číslo'}
+1
+2
+Stem Čí
+Cluster 0
+Číslo
+
+[
+{'['}
+1
+2
+Stem [
+Cluster 0
+[
+
+]
+{']'}
+1
+2
+Stem ]
+Cluster 0
+]
+
+08
+{'08'}
+1
+2
+Stem 08
+Cluster 0
+08
+
+LE
+{'LED'}
+1
+2
+Stem LE
+Cluster 0
+LED
+
+Jm
+{'Jméno'}
+1
+2
+Stem Jm
+Cluster 0
+Jméno
+
+Té
+{'Téma'}
+1
+2
+Stem Té
+Cluster 0
+Téma
+
+ks
+{'ks'}
+1
+2
+Stem ks
+Cluster 0
+ks
+
+Re
+{'Region'}
+1
+2
+Stem Re
+Cluster 0
+Region
+
+07
+{'07'}
+1
+2
+Stem 07
+Cluster 0
+07
+
+\
+{'\\'}
+1
+2
+Stem \
+Cluster 0
+\
+
+Ná
+{'Název'}
+1
+2
+Stem Ná
+Cluster 0
+Název
+
+So
+{'Soubor'}
+1
+2
+Stem So
+Cluster 0
+Soubor
+
+®
+{'®'}
+1
+2
+Stem ®
+Cluster 0
+®
+
+De
+{'Detail'}
+1
+2
+Stem De
+Cluster 0
+Detail
+
