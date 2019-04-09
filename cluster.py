@@ -28,7 +28,7 @@ from pyjarowinkler import distance
 import unidecode
 
 import matplotlib
-matplotlib.use('Agg')
+#matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 ap = argparse.ArgumentParser(
@@ -45,6 +45,8 @@ ap.add_argument("-V", "--verbose", action="store_true",
         help="Print more verbose progress info")
 ap.add_argument("-N", "--normalize", action="store_true",
         help="Normalize the embeddings")
+ap.add_argument("-p", "--plot", type=str,
+        help="Plot the dendrogramme for the given stem")
 ap.add_argument("-s", "--similarity", type=str,
         help="Similarity: cos or jw")
 ap.add_argument("-S", "--stems", action="store_true",
@@ -58,6 +60,54 @@ ap.add_argument("-C", "--cut", type=int, default=100,
 ap.add_argument("-U", "--upperbound", action="store_true",
         help="Highest achievable accuracy given the settings (esp. stem pruning)")
 args = ap.parse_args()
+
+
+
+
+
+
+# https://github.com/scikit-learn/scikit-learn/blob/70cf4a676caa2d2dad2e3f6e4478d64bcb0506f7/examples/cluster/plot_hierarchical_clustering_dendrogram.py
+# Authors: Mathew Kallada
+# License: BSD 3 clause
+"""
+=========================================
+Plot Hierarachical Clustering Dendrogram 
+=========================================
+This example plots the corresponding dendrogram of a hierarchical clustering
+using AgglomerativeClustering and the dendrogram method available in scipy.
+"""
+
+import numpy as np
+
+from matplotlib import pyplot as plt
+from scipy.cluster.hierarchy import dendrogram
+from sklearn.datasets import load_iris
+from sklearn.cluster import AgglomerativeClustering
+
+def plot_dendrogram(model, **kwargs):
+
+    # Children of hierarchical clustering
+    children = model.children_
+
+    # Distances between each pair of children
+    # Since we don't have this information, we can use a uniform one for plotting
+    distance = np.arange(children.shape[0])
+
+    # The number of observations contained in each cluster level
+    no_of_observations = np.arange(2, children.shape[0]+2)
+
+    # Create linkage matrix and then plot the dendrogram
+    linkage_matrix = np.column_stack([children, distance, no_of_observations]).astype(float)
+
+    # Plot the corresponding dendrogram
+    dendrogram(linkage_matrix, **kwargs)
+
+
+
+
+
+
+
 
 
 def embsim(word, otherword):
@@ -163,8 +213,13 @@ def get_sim(form1, form2):
 # cluster each hypercluster
 
 L = 'average'
-for stem, forms in forms_stemmed.items():
+iterate_over = forms_stemmed.items()
+if args.plot:
+    iterate_over = [args.plot]
+
+for stem in iterate_over:
     # vocabulary
+    forms = forms_stemmed[stem]
     index2word = list(forms)
     word2index = dict()
     for index, word in enumerate(index2word):
@@ -181,7 +236,7 @@ for stem, forms in forms_stemmed.items():
 
     clustering = AgglomerativeClustering(affinity='precomputed',
             linkage = L,
-            compute_full_tree = False,
+            compute_full_tree = True,
             n_clusters=C)
 
     if args.verbose:
@@ -189,10 +244,12 @@ for stem, forms in forms_stemmed.items():
         print(forms)
         print(I)
         print(C)
+        print(dir(clustering))
         #print(D)
 
     if (I > 1):
         labels = clustering.fit_predict(D)
+        print(dir(clustering))
     else:
         # just one word -> just one cluster
         assert I == 1
@@ -210,6 +267,7 @@ for stem, forms in forms_stemmed.items():
             print(index2word[index])
         print()
 
-
-
-
+    if args.plot:
+        plt.title('Hierarchical Clustering Dendrogram')
+        plot_dendrogram(clustering, labels=labels)
+        plt.show()
