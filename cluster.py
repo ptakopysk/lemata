@@ -273,7 +273,7 @@ for stem in iterate_over:
 
     if args.plot:
         # at the i-th iteration, children[i][0] and children[i][1] are merged to form node n_samples + i
-        index = I
+        index = I-1
         for merge in clustering.children_:
             print(index, merge[0], merge[1])
             index += 1
