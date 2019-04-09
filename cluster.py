@@ -86,6 +86,7 @@ from sklearn.cluster import AgglomerativeClustering
 
 def plot_dendrogram(model, **kwargs):
 
+
     # Children of hierarchical clustering
     children = model.children_
 
@@ -102,6 +103,9 @@ def plot_dendrogram(model, **kwargs):
     # Plot the corresponding dendrogram
     dendrogram(linkage_matrix, **kwargs)
 
+    plt.xticks(rotation=90)
+    plt.margins(0.2)
+    plt.subplots_adjust(bottom=0.2)
 
 
 
@@ -269,5 +273,5 @@ for stem in iterate_over:
 
     if args.plot:
         plt.title('Hierarchical Clustering Dendrogram')
-        plot_dendrogram(clustering, labels=labels)
+        plot_dendrogram(clustering, labels=index2word)
         plt.show()
