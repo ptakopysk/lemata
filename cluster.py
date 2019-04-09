@@ -272,6 +272,15 @@ for stem in iterate_over:
         print()
 
     if args.plot:
+        # at the i-th iteration, children[i][0] and children[i][1] are merged to form node n_samples + i
+        index = 0
+        for merge in clustering.children_:
+            print(index, merge[0], merge[1])
+            index += 1
+
         plt.title('Hierarchical Clustering Dendrogram')
         plot_dendrogram(clustering, labels=index2word)
         plt.show()
+
+
+
