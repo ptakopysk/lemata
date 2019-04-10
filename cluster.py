@@ -62,16 +62,14 @@ ap.add_argument("-m", "--merges", action="store_true",
         help="Write out the merges")
 ap.add_argument("-s", "--similarity", type=str,
         help="Similarity: cos or jw")
+ap.add_argument("-C", "--clusters", action="store_true",
+        help="Print out the clusters.")
 ap.add_argument("-S", "--stems", action="store_true",
         help="only look for words with the same stem")
 ap.add_argument("-L", "--length", type=float, default=0.05,
         help="Weight for length similarity")
 ap.add_argument("-l", "--lowercase", action="store_true",
         help="lowercase input forms")
-ap.add_argument("-C", "--cut", type=int, default=100,
-        help="Cut down the number of most similar words to 100 for each word")
-ap.add_argument("-U", "--upperbound", action="store_true",
-        help="Highest achievable accuracy given the settings (esp. stem pruning)")
 args = ap.parse_args()
 
 
@@ -299,14 +297,15 @@ def aggclust(forms_stemmed):
 
 clustering = aggclust(forms_stemmed)
 
-cluster2forms = defaultdict(list)
-for form, cluster in clustering.items():
-    cluster2forms[cluster].append(form)
-for cluster in sorted(cluster2forms.keys()):
-    print(cluster)
-    for form in cluster2forms[cluster]:
-        print(form)
-    print()
+if args.clusters:
+    cluster2forms = defaultdict(list)
+    for form, cluster in clustering.items():
+        cluster2forms[cluster].append(form)
+    for cluster in sorted(cluster2forms.keys()):
+        print(cluster)
+        for form in cluster2forms[cluster]:
+            print(form)
+        print()
 
 
 logging.info('Computing homogeneity.')
@@ -318,8 +317,8 @@ for form, lemma in test_data:
         predictions.append(clustering[form])
     else:
         # fallback for OOVs: lemma = form
-        predictions.append(form)
-
+        stem = get_stem(form)
+        predictions.append(stem + '___' + form)
 hcv = homogeneity_completeness_v_measure(golden, predictions)
 print('Homogeneity', 'completenss', 'vmeasure', sep='\t')
 print(*hcv, sep='\t')
