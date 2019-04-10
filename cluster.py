@@ -31,6 +31,8 @@ import matplotlib
 #matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
+import logging
+
 ap = argparse.ArgumentParser(
         description='find lemma for form as nearest lemma in emb space')
 ap.add_argument('embeddings',
@@ -64,6 +66,9 @@ ap.add_argument("-U", "--upperbound", action="store_true",
 args = ap.parse_args()
 
 
+
+level = logging.DEBUG if args.verbose else logging.INFO
+logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%Y-%m-%d %H:%M:%S', level=level)
 
 
 
@@ -145,7 +150,7 @@ def similarity(word, otherword):
         # cos
         return embsim(word, otherword)
 
-print('Read in embeddings', file=sys.stderr)
+logging.info('Read in embeddings')
 embedding = defaultdict(list)
 with open(args.embeddings) as embfile:
     size, dim = map(int, embfile.readline().split())
@@ -160,7 +165,7 @@ with open(args.embeddings) as embfile:
 def get_stem(form):
     return form[:2]
 
-print('Read in forms and lemmas', file=sys.stderr)
+logging.info('Read in forms and lemmas')
 forms = set()
 lemmas = set()  # not currently used
 forms_stemmed = defaultdict(set)
@@ -183,7 +188,7 @@ with open(args.conllu_all) as conllufile:
                 #forms.add(lemma)
                 #forms_stemmed[get_stem(lemma)].add(lemma)
 
-print('Read in test form-lemma pairs', file=sys.stderr)
+logging.info('Read in test form-lemma pairs')
 test_data = list()
 with open(args.conllu_test) as conllufile:
     for line in conllufile:
@@ -197,7 +202,7 @@ with open(args.conllu_test) as conllufile:
                 form = form.lower()
                 lemma = lemma.lower()
             test_data.append((form, lemma))
-print('Done reading', file=sys.stderr)
+logging.info('Done reading')
 
 def get_dist(form1, form2):
     # similarity to distance
@@ -226,7 +231,7 @@ iterate_over = forms_stemmed
 if args.plot:
     iterate_over = [args.plot]
 
-print('Run the main loop', file=sys.stderr)
+logging.info('Run the main loop')
 for stem in iterate_over:
     # vocabulary
     forms = forms_stemmed[stem]
@@ -249,13 +254,12 @@ for stem in iterate_over:
             compute_full_tree = True,
             n_clusters=C)
 
-    if args.verbose:
-        print(stem)
-        print(forms)
-        print(I)
-        print(C)
-        print(dir(clustering))
-        #print(D)
+    logging.debug(stem)
+    logging.debug(forms)
+    logging.debug(I)
+    logging.debug(C)
+    logging.debug(dir(clustering))
+    #logging.debug(D)
 
     if (I > 1):
         labels = clustering.fit_predict(D)
@@ -298,5 +302,5 @@ for stem in iterate_over:
         plt.show()
 
 
-print('Done.', file=sys.stderr)
+logging.info('Done.')
 
