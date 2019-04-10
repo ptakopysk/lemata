@@ -286,53 +286,26 @@ for stem in iterate_over:
         result[index2word[0]] = stem + '0'
     else:
         clustering.fit(D)
-
-
-
-    # old branch -- individual clusters
-
-    if (I > 1):
-        labels = clustering.fit_predict(D)
-    else:
-        # just one word -> just one cluster
-        assert I == 1
-        C = 1
-        labels = [0]
-
-    label2words = defaultdict(list)
-    for i in range(I):
-        label2words[labels[i]].append(i)
-
-    if I > 1:
-        # print('Stem', stem)
-        if args.merges:
-            # at the i-th iteration, children[i][0] and children[i][1] are merged to form node n_samples + i
-            nodes = [[i] for i in range(I)]
-            for merge in clustering.children_:
-                node = list()
-                node.extend(nodes[merge[0]])
-                node.extend(nodes[merge[1]])
-                nodes.append(node)
-                lmin, lavg, lmax = linkage(nodes[merge[0]], nodes[merge[1]], D)
-                print(
-                        '{:.2f}'.format(lmin),
-                        '{:.2f}'.format(lavg),
-                        '{:.2f}'.format(lmax),
-                        node2str(nodes[merge[0]], index2word),
-                        '+',
-                        node2str(nodes[merge[1]], index2word),
-                        #'->',
-                        #node2str(nodes[-1], index2word),
-                    )
-        else:
-            for label in range(C):
-                #print('Cluster', label)
-                for index in label2words[label]:
-                    result[index2word[index]] = stem + str(label)
-                    #print(index2word[index])
-        #print()
-    else:
-        result[index2word[0]] = stem + '0'
+        # default: each has own cluster
+        clusters = list(range(I))
+        # at the i-th iteration, children[i][0] and children[i][1] are merged to form node n_samples + i
+        nodes = [[i] for i in range(I)]
+        for merge in clustering.children_:
+            # perform the merge
+            node = list()
+            node.extend(nodes[merge[0]])
+            node.extend(nodes[merge[1]])
+            nodes.append(node)
+            # reassign words to new cluster ID
+            for i in nodes[-1]:
+                clusters[i] = len(nodes)
+            # check stopping criterion
+            lmin, lavg, lmax = linkage(nodes[merge[0]], nodes[merge[1]], D)
+            if lavg > args.threshold:
+                break
+        for i, cluster in enumerate(clusters):
+            result[index2word[i]] = stem + str(cluster)
+            
 
     if args.plot:
         plt.title('Hierarchical Clustering Dendrogram')
