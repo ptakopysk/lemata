@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 #coding: utf-8
 
+# if avg linkage > 0.30 stop
+
 import argparse
 import sys
 from collections import defaultdict
@@ -9,6 +11,8 @@ from collections import OrderedDict
 
 from sklearn.metrics import accuracy_score
 from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.metrics import homogeneity_completeness_v_measure
+
 from numpy import inner
 from numpy.linalg import norm
 
@@ -48,6 +52,8 @@ ap.add_argument("-V", "--verbose", action="store_true",
         help="Print more verbose progress info")
 ap.add_argument("-N", "--normalize", action="store_true",
         help="Normalize the embeddings")
+ap.add_argument("-t", "--threshold", type=float, default=0.30,
+        help="Do not perform merges with avg distance greater than this")
 ap.add_argument("-p", "--plot", type=str,
         help="Plot the dendrogramme for the given stem")
 ap.add_argument("-m", "--merges", action="store_true",
@@ -248,6 +254,9 @@ iterate_over = forms_stemmed
 if args.plot:
     iterate_over = [args.plot]
 
+# form -> cluster
+result = defaultdict(str)
+
 logging.info('Run the main loop')
 for stem in iterate_over:
     # vocabulary
@@ -315,14 +324,26 @@ for stem in iterate_over:
             for label in range(C):
                 print('Cluster', label)
                 for index in label2words[label]:
+                    result[index2word[index]] = stem + str(label)
                     print(index2word[index])
         print()
+    else:
+        result[index2word[0]] = stem + '0'
 
     if args.plot:
         plt.title('Hierarchical Clustering Dendrogram')
         plot_dendrogram(clustering, labels=index2word)
         plt.show()
 
+logging.info('Computing homogeneity.')
+golden = list()
+predictions = list()
+for form, lemma in test_data:
+    golden.append(lemma)
+    predictions.append(result[form])
+hcv = homogeneity_completeness_v_measure(golden, predictions)
+print('Homogeneity', 'completenss', 'vmeasure', sep='\t')
+print(*hcv, sep='\t')
 
 logging.info('Done.')
 
