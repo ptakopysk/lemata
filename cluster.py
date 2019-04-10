@@ -47,6 +47,8 @@ ap.add_argument("-N", "--normalize", action="store_true",
         help="Normalize the embeddings")
 ap.add_argument("-p", "--plot", type=str,
         help="Plot the dendrogramme for the given stem")
+ap.add_argument("-m", "--merges", action="store_true",
+        help="Write out the merges")
 ap.add_argument("-s", "--similarity", type=str,
         help="Similarity: cos or jw")
 ap.add_argument("-S", "--stems", action="store_true",
@@ -213,14 +215,18 @@ def get_sim(form1, form2):
     else:
         return -2
 
+# list of indexes -> list of words
+def node2str(node, index2word):
+    return [index2word[index] for index in node]
 
 # cluster each hypercluster
 
 L = 'average'
-iterate_over = forms_stemmed.items()
+iterate_over = forms_stemmed
 if args.plot:
     iterate_over = [args.plot]
 
+print('Run the main loop', file=sys.stderr)
 for stem in iterate_over:
     # vocabulary
     forms = forms_stemmed[stem]
@@ -253,7 +259,6 @@ for stem in iterate_over:
 
     if (I > 1):
         labels = clustering.fit_predict(D)
-        print(dir(clustering))
     else:
         # just one word -> just one cluster
         assert I == 1
@@ -265,22 +270,33 @@ for stem in iterate_over:
         label2words[labels[i]].append(i)
 
     print('Stem', stem)
-    for label in range(C):
-        print('Cluster', label)
-        for index in label2words[label]:
-            print(index2word[index])
-        print()
+    if args.merges and I > 1:
+        # at the i-th iteration, children[i][0] and children[i][1] are merged to form node n_samples + i
+        nodes = [[i] for i in range(I)]
+        for merge in clustering.children_:
+            node = list()
+            node.extend(nodes[merge[0]])
+            node.extend(nodes[merge[1]])
+            nodes.append(node)
+            print(
+                    node2str(nodes[merge[0]], index2word),
+                    '+',
+                    node2str(nodes[merge[1]], index2word),
+                    #'->',
+                    #node2str(nodes[-1], index2word),
+                )
+    else:
+        for label in range(C):
+            print('Cluster', label)
+            for index in label2words[label]:
+                print(index2word[index])
+    print()
 
     if args.plot:
-        # at the i-th iteration, children[i][0] and children[i][1] are merged to form node n_samples + i
-        index = I-1
-        for merge in clustering.children_:
-            print(index, merge[0], merge[1])
-            index += 1
-
         plt.title('Hierarchical Clustering Dendrogram')
         plot_dendrogram(clustering, labels=index2word)
         plt.show()
 
 
+print('Done.', file=sys.stderr)
 
