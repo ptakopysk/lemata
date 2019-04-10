@@ -127,7 +127,7 @@ def embsim(word, otherword):
     emb2 = embedding[otherword]
     sim = inner(emb1, emb2)/(norm(emb1)*norm(emb2))
     # sim = cosine_similarity([emb1], [emb2])
-    assert sim >= -1 and sim <= 1, "Cos sim must be between -1 and 1"
+    # assert sim >= -1 and sim <= 1, "Cos sim must be between -1 and 1"
     # shift to 0..1 range
     sim = (sim+1)/2
     return sim
@@ -232,10 +232,10 @@ def get_sim(form1, form2):
 def node2str(node, index2word):
     return [index2word[index] for index in node]
 
-def linkage(cluster, D):
+def linkage(cluster1, cluster2, D):
     linkages = list()
-    for i1, node1 in enumerate(cluster):
-        for node2 in cluster[:i1]:
+    for node1 in cluster1:
+        for node2 in cluster2:
             linkages.append(D[node1, node2])
     # min avg max
     return min(linkages), sum(linkages)/len(linkages), max(linkages)
@@ -290,32 +290,33 @@ for stem in iterate_over:
     for i in range(I):
         label2words[labels[i]].append(i)
 
-    print('Stem', stem)
-    if args.merges and I > 1:
-        # at the i-th iteration, children[i][0] and children[i][1] are merged to form node n_samples + i
-        nodes = [[i] for i in range(I)]
-        for merge in clustering.children_:
-            node = list()
-            node.extend(nodes[merge[0]])
-            node.extend(nodes[merge[1]])
-            nodes.append(node)
-            lmin, lavg, lmax = linkage(nodes[-1], D)
-            print(
-                    '{:.2f}'.format(lmin),
-                    '{:.2f}'.format(lavg),
-                    '{:.2f}'.format(lmax),
-                    node2str(nodes[merge[0]], index2word),
-                    '+',
-                    node2str(nodes[merge[1]], index2word),
-                    #'->',
-                    #node2str(nodes[-1], index2word),
-                )
-    else:
-        for label in range(C):
-            print('Cluster', label)
-            for index in label2words[label]:
-                print(index2word[index])
-    print()
+    if I > 1:
+        print('Stem', stem)
+        if args.merges:
+            # at the i-th iteration, children[i][0] and children[i][1] are merged to form node n_samples + i
+            nodes = [[i] for i in range(I)]
+            for merge in clustering.children_:
+                node = list()
+                node.extend(nodes[merge[0]])
+                node.extend(nodes[merge[1]])
+                nodes.append(node)
+                lmin, lavg, lmax = linkage(nodes[merge[0]], nodes[merge[1]], D)
+                print(
+                        '{:.2f}'.format(lmin),
+                        '{:.2f}'.format(lavg),
+                        '{:.2f}'.format(lmax),
+                        node2str(nodes[merge[0]], index2word),
+                        '+',
+                        node2str(nodes[merge[1]], index2word),
+                        #'->',
+                        #node2str(nodes[-1], index2word),
+                    )
+        else:
+            for label in range(C):
+                print('Cluster', label)
+                for index in label2words[label]:
+                    print(index2word[index])
+        print()
 
     if args.plot:
         plt.title('Hierarchical Clustering Dendrogram')
