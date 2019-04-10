@@ -52,6 +52,8 @@ ap.add_argument("-V", "--verbose", action="store_true",
         help="Print more verbose progress info")
 ap.add_argument("-N", "--normalize", action="store_true",
         help="Normalize the embeddings")
+ap.add_argument("-b", "--baselines", action="store_true",
+        help="Compute baselines and upper bounds")
 ap.add_argument("-t", "--threshold", type=float, default=0.30,
         help="Do not perform merges with avg distance greater than this")
 ap.add_argument("-p", "--plot", type=str,
@@ -236,85 +238,69 @@ def linkage(cluster1, cluster2, D):
         for node2 in cluster2:
             linkages.append(D[node1, node2])
     # min avg max
-    return min(linkages), sum(linkages)/len(linkages), max(linkages)
+    # return min(linkages), sum(linkages)/len(linkages), max(linkages)
+    # avg
+    return sum(linkages)/len(linkages)
 
 
 # cluster each hypercluster
 logging.info('Run the main loop')
 
-L = 'average'
-iterate_over = forms_stemmed
-if args.plot:
-    iterate_over = [args.plot]
-
-# form -> cluster
-result = defaultdict(str)
-
-for stem in iterate_over:
-    # vocabulary
-    forms = forms_stemmed[stem]
-    index2word = list(forms)
-    word2index = dict()
-    for index, word in enumerate(index2word):
-        word2index[word] = index
-
-    I = len(index2word)
-    
-    D = np.empty((I, I))
-    for i1 in range(I):
-        for i2 in range(I):
-            D[i1,i2] = get_dist(index2word[i1], index2word[i2])
-
-    C = max(int(I/3), 2)
-    C = I
-
-    clustering = AgglomerativeClustering(affinity='precomputed',
-            linkage = L,
-            compute_full_tree = True,
-            n_clusters=C)
-
-    logging.debug(stem)
-    logging.debug(forms)
-    logging.debug(I)
-    logging.debug(C)
-    logging.debug(dir(clustering))
-    #logging.debug(D)
+#iterate_over = forms_stemmed
+#if args.plot:
+#    iterate_over = [args.plot]
 
 
-    # new branch -- cut off at given linkage
-    if I == 1:
-        result[index2word[0]] = stem + '0'
-    else:
+def aggclust(forms_stemmed):
+    # form -> cluster
+    result = dict()
+    for stem in forms_stemmed:
+        # vocabulary
+        index2word = list(forms_stemmed[stem])
+        I = len(index2word)
+        
+        logging.debug(stem)
+        logging.debug(I)
+        logging.debug(index2word)
+        
+        if I == 1:
+            result[index2word[0]] = stem + '___' + '0'
+            continue
+
+        D = np.empty((I, I))
+        for i1 in range(I):
+            for i2 in range(I):
+                D[i1,i2] = get_dist(index2word[i1], index2word[i2])
+        clustering = AgglomerativeClustering(affinity='precomputed',
+                linkage = 'average', n_clusters=1)
         clustering.fit(D)
+
         # default: each has own cluster
         clusters = list(range(I))
-        # at the i-th iteration, children[i][0] and children[i][1] are merged to form node n_samples + i
         nodes = [[i] for i in range(I)]
         for merge in clustering.children_:
             # check stopping criterion
-            lmin, lavg, lmax = linkage(nodes[merge[0]], nodes[merge[1]], D)
-            if lavg > args.threshold:
+            if args.threshold < linkage(nodes[merge[0]], nodes[merge[1]], D):
                 break
             # perform the merge
-            node = list()
-            node.extend(nodes[merge[0]])
-            node.extend(nodes[merge[1]])
-            nodes.append(node)
+            nodes.append(nodes[merge[0]] + nodes[merge[1]])
             # reassign words to new cluster ID
             for i in nodes[-1]:
-                clusters[i] = len(nodes)
+                clusters[i] = len(nodes) - 1
         for i, cluster in enumerate(clusters):
-            result[index2word[i]] = stem + str(cluster)
-            
+            result[index2word[i]] = stem + '___' + str(cluster)
+    return result
+                
 
-    if args.plot:
-        plt.title('Hierarchical Clustering Dendrogram')
-        plot_dendrogram(clustering, labels=index2word)
-        plt.show()
+#if args.plot:
+#        plt.title('Hierarchical Clustering Dendrogram')
+#        plot_dendrogram(clustering, labels=index2word)
+#        plt.show()
 
+clustering = aggclust(forms_stemmed)
 
 cluster2forms = defaultdict(list)
-for form, cluster in result.items():
+for form, cluster in clustering.items():
     cluster2forms[cluster].append(form)
 for cluster in sorted(cluster2forms.keys()):
     print(cluster)
@@ -328,8 +314,8 @@ golden = list()
 predictions = list()
 for form, lemma in test_data:
     golden.append(lemma)
-    if form in result:
-        predictions.append(result[form])
+    if form in clustering:
+        predictions.append(clustering[form])
     else:
         # fallback for OOVs: lemma = form
         predictions.append(form)
