@@ -224,6 +224,15 @@ def get_sim(form1, form2):
 def node2str(node, index2word):
     return [index2word[index] for index in node]
 
+def linkage(cluster, D):
+    linkages = list()
+    for i1, node1 in enumerate(cluster):
+        for node2 in cluster[:i1]:
+            linkages.append(D[node1, node2])
+    # min avg max
+    return min(linkages), sum(linkages)/len(linkages), max(linkages)
+
+
 # cluster each hypercluster
 
 L = 'average'
@@ -282,7 +291,11 @@ for stem in iterate_over:
             node.extend(nodes[merge[0]])
             node.extend(nodes[merge[1]])
             nodes.append(node)
+            lmin, lavg, lmax = linkage(nodes[-1], D)
             print(
+                    round(lmin, 2),
+                    round(lavg, 2),
+                    round(lmax, 2),
                     node2str(nodes[merge[0]], index2word),
                     '+',
                     node2str(nodes[merge[1]], index2word),
