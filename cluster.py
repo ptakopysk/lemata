@@ -291,6 +291,10 @@ for stem in iterate_over:
         # at the i-th iteration, children[i][0] and children[i][1] are merged to form node n_samples + i
         nodes = [[i] for i in range(I)]
         for merge in clustering.children_:
+            # check stopping criterion
+            lmin, lavg, lmax = linkage(nodes[merge[0]], nodes[merge[1]], D)
+            if lavg > args.threshold:
+                break
             # perform the merge
             node = list()
             node.extend(nodes[merge[0]])
@@ -299,10 +303,6 @@ for stem in iterate_over:
             # reassign words to new cluster ID
             for i in nodes[-1]:
                 clusters[i] = len(nodes)
-            # check stopping criterion
-            lmin, lavg, lmax = linkage(nodes[merge[0]], nodes[merge[1]], D)
-            if lavg > args.threshold:
-                break
         for i, cluster in enumerate(clusters):
             result[index2word[i]] = stem + str(cluster)
             
@@ -312,12 +312,24 @@ for stem in iterate_over:
         plot_dendrogram(clustering, labels=index2word)
         plt.show()
 
+
+cluster2forms = defaultdict(list)
+for form, cluster in result.items():
+    cluster2forms[cluster].append(form)
+for cluster in sorted(cluster2forms.keys()):
+    print(cluster)
+    for form in cluster2forms[cluster]:
+        print(form)
+    print()
+
+
 logging.info('Computing homogeneity.')
 golden = list()
 predictions = list()
 for form, lemma in test_data:
-    golden.append(lemma)
-    predictions.append(result[form])
+    #if form in result:
+        golden.append(lemma)
+        predictions.append(result[form])
 hcv = homogeneity_completeness_v_measure(golden, predictions)
 print('Homogeneity', 'completenss', 'vmeasure', sep='\t')
 print(*hcv, sep='\t')
