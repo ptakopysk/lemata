@@ -95,7 +95,6 @@ import numpy as np
 
 from matplotlib import pyplot as plt
 from scipy.cluster.hierarchy import dendrogram
-from sklearn.datasets import load_iris
 from sklearn.cluster import AgglomerativeClustering
 
 def plot_dendrogram(model, **kwargs):
@@ -181,7 +180,7 @@ def get_stem(form):
 
 logging.info('Read in forms and lemmas')
 forms = set()
-lemmas = set()  # not currently used
+# lemmas = set()  # not currently used
 forms_stemmed = defaultdict(set)
 with open(args.conllu_all) as conllufile:
     for line in conllufile:
@@ -189,16 +188,16 @@ with open(args.conllu_all) as conllufile:
         if fields and fields[0].isdecimal():
             assert len(fields) > 2
             form = fields[1]
-            lemma = fields[2]
+            #lemma = fields[2]
             # pos = fields[3]
             if args.lowercase:
                 form = form.lower()
-                lemma = lemma.lower()
+                #lemma = lemma.lower()
             if form in embedding:
                 forms.add(form)
                 forms_stemmed[get_stem(form)].add(form)
-            if lemma in embedding:
-                lemmas.add(lemma)
+            #if lemma in embedding:
+                #lemmas.add(lemma)
                 #forms.add(lemma)
                 #forms_stemmed[get_stem(lemma)].add(lemma)
 
@@ -227,13 +226,6 @@ def get_dist(form1, form2):
         return None
 
 
-def get_sim(form1, form2):
-    if form1 in dists and form2 in dists[form1]:
-        # distance to similarity
-        return -dists[form1][form2]
-    else:
-        return -2
-
 # list of indexes -> list of words
 def node2str(node, index2word):
     return [index2word[index] for index in node]
@@ -248,6 +240,7 @@ def linkage(cluster1, cluster2, D):
 
 
 # cluster each hypercluster
+logging.info('Run the main loop')
 
 L = 'average'
 iterate_over = forms_stemmed
@@ -257,7 +250,6 @@ if args.plot:
 # form -> cluster
 result = defaultdict(str)
 
-logging.info('Run the main loop')
 for stem in iterate_over:
     # vocabulary
     forms = forms_stemmed[stem]
@@ -273,7 +265,8 @@ for stem in iterate_over:
         for i2 in range(I):
             D[i1,i2] = get_dist(index2word[i1], index2word[i2])
 
-    C = max(int(I/10), 2)
+    C = max(int(I/3), 2)
+    C = I
 
     clustering = AgglomerativeClustering(affinity='precomputed',
             linkage = L,
@@ -286,6 +279,17 @@ for stem in iterate_over:
     logging.debug(C)
     logging.debug(dir(clustering))
     #logging.debug(D)
+
+
+    # new branch -- cut off at given linkage
+    if I == 1:
+        result[index2word[0]] = stem + '0'
+    else:
+        clustering.fit(D)
+
+
+
+    # old branch -- individual clusters
 
     if (I > 1):
         labels = clustering.fit_predict(D)
@@ -300,7 +304,7 @@ for stem in iterate_over:
         label2words[labels[i]].append(i)
 
     if I > 1:
-        print('Stem', stem)
+        # print('Stem', stem)
         if args.merges:
             # at the i-th iteration, children[i][0] and children[i][1] are merged to form node n_samples + i
             nodes = [[i] for i in range(I)]
@@ -322,11 +326,11 @@ for stem in iterate_over:
                     )
         else:
             for label in range(C):
-                print('Cluster', label)
+                #print('Cluster', label)
                 for index in label2words[label]:
                     result[index2word[index]] = stem + str(label)
-                    print(index2word[index])
-        print()
+                    #print(index2word[index])
+        #print()
     else:
         result[index2word[0]] = stem + '0'
 
