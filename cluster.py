@@ -248,6 +248,8 @@ logging.info('Run the main loop')
 #if args.plot:
 #    iterate_over = [args.plot]
 
+def cl(stem, cluster):
+    return stem + '___' + str(cluster)
 
 def aggclust(forms_stemmed):
     # form -> cluster
@@ -262,7 +264,7 @@ def aggclust(forms_stemmed):
         logging.debug(index2word)
         
         if I == 1:
-            result[index2word[0]] = stem + '___' + '0'
+            result[index2word[0]] = cl(stem, 0)
             continue
 
         D = np.empty((I, I))
@@ -286,7 +288,7 @@ def aggclust(forms_stemmed):
             for i in nodes[-1]:
                 clusters[i] = len(nodes) - 1
         for i, cluster in enumerate(clusters):
-            result[index2word[i]] = stem + '___' + str(cluster)
+            result[index2word[i]] = cl(stem, cluster)
     return result
                 
 
@@ -295,9 +297,7 @@ def aggclust(forms_stemmed):
 #        plot_dendrogram(clustering, labels=index2word)
 #        plt.show()
 
-clustering = aggclust(forms_stemmed)
-
-if args.clusters:
+def writeout_clusters(clustering):
     cluster2forms = defaultdict(list)
     for form, cluster in clustering.items():
         cluster2forms[cluster].append(form)
@@ -307,21 +307,45 @@ if args.clusters:
             print(form)
         print()
 
+def homogeneity(clustering):
+    golden = list()
+    predictions = list()
+    for form, lemma in test_data:
+        golden.append(lemma)
+        if form in clustering:
+            predictions.append(clustering[form])
+        else:
+            # fallback for OOVs: lemma = form
+            stem = get_stem(form)
+            predictions.append(cl(stem, form))
+    return homogeneity_completeness_v_measure(golden, predictions)
 
-logging.info('Computing homogeneity.')
-golden = list()
-predictions = list()
-for form, lemma in test_data:
-    golden.append(lemma)
-    if form in clustering:
-        predictions.append(clustering[form])
-    else:
-        # fallback for OOVs: lemma = form
+def baseline_clustering(test_data, basetype):
+    result = dict()
+    for form, lemma in test_data:
         stem = get_stem(form)
-        predictions.append(stem + '___' + form)
-hcv = homogeneity_completeness_v_measure(golden, predictions)
-print('Homogeneity', 'completenss', 'vmeasure', sep='\t')
-print(*hcv, sep='\t')
+        if basetype == 'formlemma':
+            result[form] = cl(stem, form)
+        elif basetype == 'stemlemma':
+            result[form] = cl(stem, 0)
+        elif basetype == 'upper':
+            result[form] = cl(stem, lemma)
+    return result
+
+
+if args.baselines:
+    print('Type', 'homogeneity', 'completenss', 'vmeasure', sep='\t')
+    for basetype in ('formlemma', 'stemlemma', 'upper'):
+        clustering = baseline_clustering(test_data, basetype)
+        hcv = homogeneity(clustering)
+        print(basetype, *hcv, sep='\t')
+else:
+    clustering = aggclust(forms_stemmed)
+    if args.clusters:
+        writeout_clusters(clustering)
+    hcv = homogeneity(clustering)
+    print('Homogeneity', 'completenss', 'vmeasure', sep='\t')
+    print(*hcv, sep='\t')
 
 logging.info('Done.')
 
