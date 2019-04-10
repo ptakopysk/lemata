@@ -8,6 +8,7 @@ from sortedcollections import ValueSortedDict
 from collections import OrderedDict
 
 from sklearn.metrics import accuracy_score
+from sklearn.metrics.pairwise import cosine_similarity
 from numpy import inner
 from numpy.linalg import norm
 
@@ -119,12 +120,17 @@ def plot_dendrogram(model, **kwargs):
 
 
 
-
+# TODO WTF ?!
 
 def embsim(word, otherword):
     emb1 = embedding[word]
     emb2 = embedding[otherword]
-    return inner(emb1, emb2)/(norm(emb1)*norm(emb2))
+    sim = inner(emb1, emb2)/(norm(emb1)*norm(emb2))
+    # sim = cosine_similarity([emb1], [emb2])
+    assert sim >= -1 and sim <= 1, "Cos sim must be between -1 and 1"
+    # shift to 0..1 range
+    sim = (sim+1)/2
+    return sim
 
 def jwsim(word, otherword):
     # called distance but is actually similarity
@@ -132,7 +138,9 @@ def jwsim(word, otherword):
     uword = unidecode.unidecode(word)
     uotherword = unidecode.unidecode(otherword)
     usim = distance.get_jaro_distance(uword, uotherword)    
-    return (sim+usim)/2
+    sim = (sim+usim)/2
+    assert sim >= 0 and sim <= 1, "JW sim must be between 0 and 1"
+    return sim
 
 def lensim(word, otherword):
     return 1 / (1 + args.length * abs(len(word) - len(otherword)) )
@@ -208,7 +216,7 @@ def get_dist(form1, form2):
     # similarity to distance
     # if form1 != form2 and form1 in embedding and form2 in embedding:
     if form1 in embedding and form2 in embedding:
-        return -similarity(form1, form2)
+        return 1-similarity(form1, form2)
     else:
         return None
 
@@ -293,9 +301,9 @@ for stem in iterate_over:
             nodes.append(node)
             lmin, lavg, lmax = linkage(nodes[-1], D)
             print(
-                    round(lmin, 2),
-                    round(lavg, 2),
-                    round(lmax, 2),
+                    '{:.2f}'.format(lmin),
+                    '{:.2f}'.format(lavg),
+                    '{:.2f}'.format(lmax),
                     node2str(nodes[merge[0]], index2word),
                     '+',
                     node2str(nodes[merge[1]], index2word),
