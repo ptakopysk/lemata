@@ -327,9 +327,13 @@ logging.info('Computing homogeneity.')
 golden = list()
 predictions = list()
 for form, lemma in test_data:
-    #if form in result:
-        golden.append(lemma)
+    golden.append(lemma)
+    if form in result:
         predictions.append(result[form])
+    else:
+        # fallback for OOVs: lemma = form
+        predictions.append(form)
+
 hcv = homogeneity_completeness_v_measure(golden, predictions)
 print('Homogeneity', 'completenss', 'vmeasure', sep='\t')
 print(*hcv, sep='\t')
