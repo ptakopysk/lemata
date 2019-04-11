@@ -13,8 +13,8 @@ def cz_stem(word, aggressive=False):
     if not re.match("^\\w+$", word):
         return word
     if not word.islower() and not word.istitle() and not word.isupper():
-        print("warning: skipping word with mixed case: {}".format(word),
-              file=sys.stderr)
+        #print("warning: skipping word with mixed case: {}".format(word),
+        #      file=sys.stderr)
         return word
     s = word.lower() # all our pattern matching is done in lowercase
     s = _remove_case(s)

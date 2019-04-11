@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #coding: utf-8
 
-# if avg linkage > 0.30 stop
+from czech_stemmer import cz_stem
 
 import argparse
 import sys
@@ -176,7 +176,8 @@ with open(args.embeddings) as embfile:
             embedding[fields[0]] /= norm(embedding[fields[0]])
 
 def get_stem(form):
-    return form[:2]
+    # return form[:2]
+    return cz_stem(form, aggressive=False)
 
 logging.info('Read in forms and lemmas')
 forms = set()
