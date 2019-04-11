@@ -360,7 +360,7 @@ def rename_clusters(clustering):
 # (probably similar result but not necesarily)
 def find_cluster_for_form(form, clustering):
     stem = get_stem(form)
-    cluster = cl(stem, form)  # backoff: new cluster
+    cluster = form  # backoff: new cluster
     if stem in forms_stemmed:
         dists = dict()
         for otherform in forms_stemmed[stem]:
@@ -374,18 +374,30 @@ def find_cluster_for_form(form, clustering):
 def homogeneity(clustering, writeout=False):
     golden = list()
     predictions = list()
+    lemmatization_corrects = 0
     found_clusters = dict()  # caching
     for form, lemma in test_data:
         golden.append(lemma)
         if form in clustering:
             # note: baselines and upper bounds should always fall here
-            predictions.append(clustering[form])
+            cluster = clustering[form]
         else:
             if form not in found_clusters:
                 found_clusters[form] = find_cluster_for_form(form, clustering)
-            predictions.append(found_clusters[form])
+            cluster = found_clusters[form]
+        predictions.append(cluster)
         if writeout:
-            print(form, 'CLUSTER:', predictions[-1], 'LEMMA:', lemma)
+            oov = 'OOV' if form in found_clusters else ''
+            lemma_cluster = '???' if lemma not in clustering else clustering[lemma]
+            print(form, oov,
+                    '[', cluster, '{:.4f}'.format(get_dist(form, cluster)), ']',
+                    'LEMMA:', lemma, '{:.4f}'.format(get_dist(form, lemma)),
+                    '[', lemma_cluster, '{:.4f}'.format(get_dist(form, lemma_cluster)), ']')
+            if cluster == lemma or cluster == lemma_cluster:
+                lemmatization_corrects += 1
+    if writeout:
+        print('Jakoby lemmatization accuracy',
+                (lemmatization_corrects/len(golden)))
     return homogeneity_completeness_v_measure(golden, predictions)
 
 def baseline_clustering(test_data, basetype):
