@@ -330,12 +330,14 @@ def baseline_clustering(test_data, basetype):
             result[form] = cl(stem, 0)
         elif basetype == 'upper':
             result[form] = cl(stem, lemma)
+        elif basetype == 'stem5':
+            result[form] = cl(stem, form[:5])
     return result
 
 
 if args.baselines:
     print('Type', 'homogeneity', 'completenss', 'vmeasure', sep='\t')
-    for basetype in ('formlemma', 'stemlemma', 'upper'):
+    for basetype in ('formlemma', 'stemlemma', 'stem5', 'upper'):
         clustering = baseline_clustering(test_data, basetype)
         hcv = homogeneity(clustering)
         print(basetype, *hcv, sep='\t')

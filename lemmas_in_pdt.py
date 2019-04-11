@@ -22,13 +22,25 @@ with open(sys.argv[1]) as conllufile:
 for lemma in sorted(lemma_forms.keys()):
     print(lemma, lemma_forms[lemma].most_common())
 
+def measure(lemmas, forms):
+    print('hcv', metrics.homogeneity_completeness_v_measure(lemmas, forms))
+    print('rs', metrics.adjusted_rand_score(lemmas, forms))
+    #print('mi', metrics.mutual_info_score(lemmas, forms),
+    #        metrics.adjusted_mutual_info_score(lemmas, forms),
+    #        metrics.normalized_mutual_info_score(lemmas, forms))
+
+
+print('stem5')
+stem5s = list()
+for form in forms:
+    stem5s.append(form[:5])
+measure(lemmas, stem5s)
+
 print('lemma is form')
-print('hcv', metrics.homogeneity_completeness_v_measure(lemmas, forms))
-print('rs', metrics.adjusted_rand_score(lemmas, forms))
+measure(lemmas, forms)
 
 print('gold')
-print(metrics.homogeneity_completeness_v_measure(lemmas, lemmas))
-print(metrics.adjusted_rand_score(lemmas, lemmas))
+measure(lemmas, lemmas)
 
 import random
 print('selecting random lemmas from the set of lemmas')
@@ -36,8 +48,7 @@ randoms = list()
 selection = list(lemma_forms.keys())
 for form in forms:
     randoms.append(random.choice(selection))
-print(metrics.homogeneity_completeness_v_measure(lemmas, randoms))
-print(metrics.adjusted_rand_score(lemmas, randoms))
+measure(lemmas, randoms)
 
 
 
