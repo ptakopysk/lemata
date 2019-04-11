@@ -209,7 +209,7 @@ def get_stem(form):
     # return cz_stem(form, aggressive=False)
 
 logging.info('Read in forms and lemmas')
-forms = set()
+# forms = set()
 # lemmas = set()  # not currently used
 forms_stemmed = defaultdict(set)
 with open(args.conllu_all) as conllufile:
@@ -224,7 +224,7 @@ with open(args.conllu_all) as conllufile:
                 form = form.lower()
                 #lemma = lemma.lower()
             if form in embedding:
-                forms.add(form)
+                # forms.add(form)
                 forms_stemmed[get_stem(form)].add(form)
             #if lemma in embedding:
                 #lemmas.add(lemma)
@@ -328,14 +328,31 @@ def writeout_clusters(clustering):
     for form, cluster in clustering.items():
         cluster2forms[cluster].append(form)
     for cluster in sorted(cluster2forms.keys()):
-        print(cluster)
+        print('CLUSTER', cluster)
         for form in cluster2forms[cluster]:
             print(form)
         print()
 
 # TODO each cluster name becomes its most frequent wordform
 def rename_clusters(clustering):
-    return clustering
+    cluster2forms = defaultdict(list)
+    for form, cluster in clustering.items():
+        cluster2forms[cluster].append(form)
+
+    cluster2newname = dict()
+    for cluster, forms in cluster2forms.items():
+        form2rank = dict()
+        for form in forms:
+            assert form in form_freq_rank
+            form2rank[form] = form_freq_rank[form]
+        most_frequent_form = min(form2rank, key=form2rank.get)
+        cluster2newname[cluster] = most_frequent_form
+
+    new_clustering = dict()
+    for form, cluster in clustering.items():
+        new_clustering[form] = cluster2newname[cluster]
+
+    return new_clustering
 
 # now 1 nearest neighbour wordform;
 # other option is nearest cluster in avg linkage
@@ -403,7 +420,14 @@ if args.baselines:
 else:
     clustering = aggclust(forms_stemmed)
     if args.clusters:
+        logging.info('Rename clusters')
+        renamed_clustering = rename_clusters(clustering)
+        logging.info('Write out train clusters')
         writeout_clusters(clustering)
+        print('==== RENAME ====')
+        writeout_clusters(renamed_clustering)
+        logging.info('Writing out clusters done')
+        # TODO I would also be interested in the clustering of the test data
     hcv = homogeneity(clustering)
     print('Homogeneity', 'completenss', 'vmeasure', sep='\t')
     print(*hcv, sep='\t')
