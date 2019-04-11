@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 #coding: utf-8
 
+
+
+
 from czech_stemmer import cz_stem
 
 import argparse
@@ -80,6 +83,8 @@ level = logging.DEBUG if args.verbose else logging.INFO
 logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%Y-%m-%d %H:%M:%S', level=level)
 
 
+# TODO how to do this right?
+OOV_EMB_SIM = 0.9
 
 
 # https://github.com/scikit-learn/scikit-learn/blob/70cf4a676caa2d2dad2e3f6e4478d64bcb0506f7/examples/cluster/plot_hierarchical_clustering_dendrogram.py
@@ -139,7 +144,7 @@ def embsim(word, otherword):
         sim = (sim+1)/2
     else:
         # backoff
-        sim = 0.1
+        sim = OOV_EMB_SIM
     return sim
 
 def jwsim(word, otherword):
@@ -337,25 +342,30 @@ def rename_clusters(clustering):
 # (probably similar result but not necesarily)
 def find_cluster_for_form(form, clustering):
     stem = get_stem(form)
-    cluster = cl(stem, form)  # backoff
+    cluster = cl(stem, form)  # backoff: new cluster
     if stem in forms_stemmed:
         dists = dict()
         for otherform in forms_stemmed[stem]:
             dists[otherform] = get_dist(form, otherform)
         nearest_form = min(dists, key=dists.get)
-        cluster = clustering[nearest_form]
+        if dists[nearest_form] < args.threshold:
+            cluster = clustering[nearest_form]
+            # else leave the default, i.e. a separate new cluster
     return cluster
 
 def homogeneity(clustering):
     golden = list()
     predictions = list()
+    found_clusters = dict()  # caching
     for form, lemma in test_data:
         golden.append(lemma)
         if form in clustering:
+            # note: baselines and upper bounds should always fall here
             predictions.append(clustering[form])
         else:
-            # note: baselines and upper bounds should never fall here
-            predictions.append(find_cluster_for_form(form, clustering))
+            if form not in found_clusters:
+                found_clusters[form] = find_cluster_for_form(form, clustering)
+            predictions.append(found_clusters[form])
     return homogeneity_completeness_v_measure(golden, predictions)
 
 def baseline_clustering(test_data, basetype):
@@ -373,7 +383,18 @@ def baseline_clustering(test_data, basetype):
     return result
 
 
+logging.info('Run evaluation')
 if args.baselines:
+    known = 0
+    unknown = 0
+    for form, _ in test_data:
+        if form in embedding:
+            known += 1
+        else:
+            unknown += 1
+    print('OOV rate:', unknown, '/', (known+unknown), '=',
+            (unknown/(known+unknown)*100))
+
     print('Type', 'homogeneity', 'completenss', 'vmeasure', sep='\t')
     for basetype in ('formlemma', 'stemlemma', 'stem5', 'upper'):
         clustering = baseline_clustering(test_data, basetype)
