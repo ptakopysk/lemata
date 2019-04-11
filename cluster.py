@@ -127,16 +127,19 @@ def plot_dendrogram(model, **kwargs):
 
 
 
-# TODO WTF ?!
-
 def embsim(word, otherword):
-    emb1 = embedding[word]
-    emb2 = embedding[otherword]
-    sim = inner(emb1, emb2)/(norm(emb1)*norm(emb2))
-    # sim = cosine_similarity([emb1], [emb2])
-    # assert sim >= -1 and sim <= 1, "Cos sim must be between -1 and 1"
-    # shift to 0..1 range
-    sim = (sim+1)/2
+    if word in embedding and otherword in embedding:
+        emb1 = embedding[word]
+        emb2 = embedding[otherword]
+        sim = inner(emb1, emb2)/(norm(emb1)*norm(emb2))
+        logging.debug(sim)
+        # sim = cosine_similarity([emb1], [emb2])
+        assert sim >= -1.0001 and sim <= 1.0001, "Cos sim must be between -1 and 1"
+        # shift to 0..1 range
+        sim = (sim+1)/2
+    else:
+        # backoff
+        sim = 0.1
     return sim
 
 def jwsim(word, otherword):
