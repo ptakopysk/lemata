@@ -132,8 +132,8 @@ def embsim(word, otherword):
         emb1 = embedding[word]
         emb2 = embedding[otherword]
         sim = inner(emb1, emb2)/(norm(emb1)*norm(emb2))
-        logging.debug(sim)
         # sim = cosine_similarity([emb1], [emb2])
+        #logging.debug(sim)
         assert sim >= -1.0001 and sim <= 1.0001, "Cos sim must be between -1 and 1"
         # shift to 0..1 range
         sim = (sim+1)/2
@@ -170,13 +170,16 @@ def similarity(word, otherword):
 
 logging.info('Read in embeddings')
 embedding = defaultdict(list)
+form_freq_rank = dict()
 with open(args.embeddings) as embfile:
     size, dim = map(int, embfile.readline().split())
     if args.number:
         size = min(size, args.number)
     for i in range(size):
         fields = embfile.readline().split()
-        embedding[fields[0]] = list(map(float, fields[1:]))
+        form = fields[0]
+        embedding[form] = list(map(float, fields[1:]))
+        form_freq_rank[form] = i
         if args.normalize:
             embedding[fields[0]] /= norm(embedding[fields[0]])
 
@@ -241,11 +244,7 @@ logging.info('Done reading')
 
 def get_dist(form1, form2):
     # similarity to distance
-    # if form1 != form2 and form1 in embedding and form2 in embedding:
-    if form1 in embedding and form2 in embedding:
-        return 1-similarity(form1, form2)
-    else:
-        return None
+    return 1-similarity(form1, form2)
 
 
 # list of indexes -> list of words
@@ -329,6 +328,24 @@ def writeout_clusters(clustering):
             print(form)
         print()
 
+# TODO each cluster name becomes its most frequent wordform
+def rename_clusters(clustering):
+    return clustering
+
+# now 1 nearest neighbour wordform;
+# other option is nearest cluster in avg linkage
+# (probably similar result but not necesarily)
+def find_cluster_for_form(form, clustering):
+    stem = get_stem(form)
+    cluster = cl(stem, form)  # backoff
+    if stem in forms_stemmed:
+        dists = dict()
+        for otherform in forms_stemmed[stem]:
+            dists[otherform] = get_dist(form, otherform)
+        nearest_form = min(dists, key=dists.get)
+        cluster = clustering[nearest_form]
+    return cluster
+
 def homogeneity(clustering):
     golden = list()
     predictions = list()
@@ -337,9 +354,8 @@ def homogeneity(clustering):
         if form in clustering:
             predictions.append(clustering[form])
         else:
-            # fallback for OOVs: lemma = form
-            stem = get_stem(form)
-            predictions.append(cl(stem, form))
+            # note: baselines and upper bounds should never fall here
+            predictions.append(find_cluster_for_form(form, clustering))
     return homogeneity_completeness_v_measure(golden, predictions)
 
 def baseline_clustering(test_data, basetype):
