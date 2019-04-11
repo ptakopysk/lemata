@@ -332,6 +332,7 @@ def writeout_clusters(clustering):
         for form in cluster2forms[cluster]:
             print(form)
         print()
+    sys.stdout.flush()
 
 # TODO each cluster name becomes its most frequent wordform
 def rename_clusters(clustering):
@@ -370,7 +371,7 @@ def find_cluster_for_form(form, clustering):
             # else leave the default, i.e. a separate new cluster
     return cluster
 
-def homogeneity(clustering):
+def homogeneity(clustering, writeout=False):
     golden = list()
     predictions = list()
     found_clusters = dict()  # caching
@@ -383,6 +384,8 @@ def homogeneity(clustering):
             if form not in found_clusters:
                 found_clusters[form] = find_cluster_for_form(form, clustering)
             predictions.append(found_clusters[form])
+        if writeout:
+            print(form, 'CLUSTER:', predictions[-1], 'LEMMA:', lemma)
     return homogeneity_completeness_v_measure(golden, predictions)
 
 def baseline_clustering(test_data, basetype):
@@ -400,8 +403,8 @@ def baseline_clustering(test_data, basetype):
     return result
 
 
-logging.info('Run evaluation')
 if args.baselines:
+    logging.info('Run evaluation')
     known = 0
     unknown = 0
     for form, _ in test_data:
@@ -419,16 +422,15 @@ if args.baselines:
         print(basetype, *hcv, sep='\t')
 else:
     clustering = aggclust(forms_stemmed)
+    logging.info('Rename clusters')
+    renamed_clustering = rename_clusters(clustering)
     if args.clusters:
-        logging.info('Rename clusters')
-        renamed_clustering = rename_clusters(clustering)
         logging.info('Write out train clusters')
-        writeout_clusters(clustering)
-        print('==== RENAME ====')
+        print('START TRAIN CLUSTERS')
         writeout_clusters(renamed_clustering)
-        logging.info('Writing out clusters done')
-        # TODO I would also be interested in the clustering of the test data
-    hcv = homogeneity(clustering)
+        print('END TRAIN CLUSTERS')
+    logging.info('Run evaluation')
+    hcv = homogeneity(renamed_clustering, writeout=args.clusters)
     print('Homogeneity', 'completenss', 'vmeasure', sep='\t')
     print(*hcv, sep='\t')
 
