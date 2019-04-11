@@ -4,6 +4,7 @@
 import sys
 from collections import defaultdict, Counter
 from sklearn import metrics
+from czech_stemmer import cz_stem
 
 lemma_forms = defaultdict(Counter)
 lemmas = list()
@@ -35,6 +36,18 @@ stem5s = list()
 for form in forms:
     stem5s.append(form[:5])
 measure(lemmas, stem5s)
+
+print('czstem light')
+czstem = list()
+for form in forms:
+    czstem.append(cz_stem(form, aggressive=False))
+measure(lemmas, czstem)
+
+print('czstem aggressive')
+czstem = list()
+for form in forms:
+    czstem.append(cz_stem(form, aggressive=True))
+measure(lemmas, czstem)
 
 print('lemma is form')
 measure(lemmas, forms)
