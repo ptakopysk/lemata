@@ -183,10 +183,17 @@ with open(args.embeddings) as embfile:
     for i in range(size):
         fields = embfile.readline().split()
         form = fields[0]
-        embedding[form] = list(map(float, fields[1:]))
-        form_freq_rank[form] = i
+        emb = list(map(float, fields[1:]))
         if args.normalize:
-            embedding[fields[0]] /= norm(embedding[fields[0]])
+            emb /= norm(emb)
+        embedding[form] = emb
+        form_freq_rank[form] = i
+        if args.lowercase:
+            form = form.lower()
+            if form not in embedding:
+                embedding[form] = emb
+                form_freq_rank[form] = i
+                
 
 if args.postags:
     logging.info('Read in POS tag dictionary')
@@ -376,6 +383,7 @@ def homogeneity(clustering, writeout=False):
     predictions = list()
     lemmatization_corrects = 0
     found_clusters = dict()  # caching
+    lemma2clusters2forms = defaultdict(lambda: defaultdict(set))
     for form, lemma in test_data:
         golden.append(lemma)
         if form in clustering:
@@ -386,6 +394,7 @@ def homogeneity(clustering, writeout=False):
                 found_clusters[form] = find_cluster_for_form(form, clustering)
             cluster = found_clusters[form]
         predictions.append(cluster)
+        lemma2clusters2forms[lemma][cluster].add(form)
         if writeout:
             oov = 'OOV' if form in found_clusters else ''
             lemma_cluster = '???' if lemma not in clustering else clustering[lemma]
@@ -396,6 +405,12 @@ def homogeneity(clustering, writeout=False):
             if cluster == lemma or cluster == lemma_cluster:
                 lemmatization_corrects += 1
     if writeout:
+        print('PER LEMMA WRITEOUT')
+        for lemma in lemma2clusters2forms:
+            print('LEMMA:', lemma)
+            for cluster in lemma2clusters2forms[lemma]:
+                print(cluster, ':', lemma2clusters2forms[lemma][cluster])
+            print()
         print('Jakoby lemmatization accuracy',
                 (lemmatization_corrects/len(golden)))
     return homogeneity_completeness_v_measure(golden, predictions)
