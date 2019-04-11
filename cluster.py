@@ -58,6 +58,8 @@ ap.add_argument("-t", "--threshold", type=float, default=0.30,
         help="Do not perform merges with avg distance greater than this")
 ap.add_argument("-p", "--plot", type=str,
         help="Plot the dendrogramme for the given stem")
+ap.add_argument("-P", "--postags", type=str,
+        help="Read in a POS tag disctionary")
 ap.add_argument("-m", "--merges", action="store_true",
         help="Write out the merges")
 ap.add_argument("-s", "--similarity", type=str,
@@ -175,9 +177,25 @@ with open(args.embeddings) as embfile:
         if args.normalize:
             embedding[fields[0]] /= norm(embedding[fields[0]])
 
+if args.postags:
+    logging.info('Read in POS tag dictionary')
+    # TODO save most frequent tag (now last occurring tag)
+    postag = defaultdict(str)
+    with open(args.postags) as conllufile:
+        for line in conllufile:
+            fields = line.split()
+            if fields and fields[0].isdecimal():
+                assert len(fields) > 2
+                form = fields[1]
+                pos = fields[2]
+                postag[form] = pos
+
 def get_stem(form):
-    # return form[:2]
-    return cz_stem(form, aggressive=False)
+    if args.postags:
+        return form[:2] + '_' + postag[form]
+    else:
+        return form[:2]
+    # return cz_stem(form, aggressive=False)
 
 logging.info('Read in forms and lemmas')
 forms = set()
