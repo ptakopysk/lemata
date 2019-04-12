@@ -8,7 +8,7 @@ from czech_stemmer import cz_stem
 
 import argparse
 import sys
-from collections import defaultdict
+from collections import defaultdict, Counter
 from sortedcollections import ValueSortedDict
 from collections import OrderedDict
 
@@ -49,6 +49,18 @@ ap.add_argument('conllu_all',
         help='file with the forms and lemmas')
 ap.add_argument('conllu_test',
         help='file with the forms and lemmas')
+
+ap.add_argument("-l", "--lowercase", action="store_true",
+        help="lowercase input forms")
+ap.add_argument("-S", "--stems", type=int, default=2,
+        help="Use stems of length S (first S characters, but see also M and D)")
+ap.add_argument("-M", "--mayfield", action="store_true",
+        help="Use Mayfield M-grams as stems")
+ap.add_argument("-D", "--devow", action="store_true",
+        help="Devowel stems")
+ap.add_argument("-P", "--postags", type=str,
+        help="Read in a POS tag disctionary and add POS to stems")
+
 ap.add_argument("-n", "--number", type=int,
         help="How many embeddings to read in")
 ap.add_argument("-V", "--verbose", action="store_true",
@@ -59,22 +71,17 @@ ap.add_argument("-b", "--baselines", action="store_true",
         help="Compute baselines and upper bounds")
 ap.add_argument("-t", "--threshold", type=float, default=0.30,
         help="Do not perform merges with avg distance greater than this")
+# TODO unued
 ap.add_argument("-p", "--plot", type=str,
         help="Plot the dendrogramme for the given stem")
-ap.add_argument("-P", "--postags", type=str,
-        help="Read in a POS tag disctionary")
 ap.add_argument("-m", "--merges", action="store_true",
         help="Write out the merges")
 ap.add_argument("-s", "--similarity", type=str,
         help="Similarity: cos or jw")
 ap.add_argument("-C", "--clusters", action="store_true",
         help="Print out the clusters.")
-ap.add_argument("-S", "--stems", action="store_true",
-        help="only look for words with the same stem")
 ap.add_argument("-L", "--length", type=float, default=0.05,
         help="Weight for length similarity")
-ap.add_argument("-l", "--lowercase", action="store_true",
-        help="lowercase input forms")
 args = ap.parse_args()
 
 
@@ -130,6 +137,31 @@ def plot_dendrogram(model, **kwargs):
 
 
 
+# unidecode and remove vowels
+def devow(form):
+    # implicit transliteration and deaccentization
+    uform = unidecode.unidecode(form)
+
+    # remove vowels, do not presuppose lowercasing
+    dform = uform
+    dform = dform.replace("a", "")
+    dform = dform.replace("e", "")
+    dform = dform.replace("i", "")
+    dform = dform.replace("o", "")
+    dform = dform.replace("u", "")
+    dform = dform.replace("y", "")
+    dform = dform.replace("A", "")
+    dform = dform.replace("E", "")
+    dform = dform.replace("I", "")
+    dform = dform.replace("O", "")
+    dform = dform.replace("U", "")
+    dform = dform.replace("Y", "")
+    
+    # backoff: if empty, keep first vowel
+    if dform == "":
+        dform = uform[:1]
+    
+    return dform
 
 
 def embsim(word, otherword):
@@ -193,12 +225,32 @@ with open(args.embeddings) as embfile:
             if form not in embedding:
                 embedding[form] = emb
                 form_freq_rank[form] = i
-                
+
+if args.mayfield:
+    logging.info('Compute IDFs for ngrams')
+    # TODO on dictionary or on texts?
+    ngrams = Counter()
+    for form in embedding:
+        baseform = form
+        if args.devow:
+            baseform = devow(baseform)
+        if args.lowercase:
+            baseform = baseform.lower()
+        # ngram length
+        n = args.stems
+        if len(baseform) <= n:
+            ngrams[baseform] += 1
+        else:
+            for start in range(len(baseform)-n+1):
+                ngram = baseform[start:start+n]
+                assert len(ngram) == n
+                ngrams[ngram] += 1
+    MAYMAX = max(ngrams.values())+1
 
 if args.postags:
     logging.info('Read in POS tag dictionary')
     # TODO save most frequent tag (now last occurring tag)
-    postag = defaultdict(str)
+    postag = defaultdict(lambda: 'NOUN')
     with open(args.postags) as conllufile:
         for line in conllufile:
             fields = line.split()
@@ -207,12 +259,41 @@ if args.postags:
                 form = fields[1]
                 pos = fields[2]
                 postag[form] = pos
+                if args.lowercase and form not in postag:
+                    postag[form.lower()] = pos
+
+# the least frequent sub-ngram is the most distinctive and therefore the best stem
+def mayfield_stem(form):
+    n = args.stems
+    if len(form) <= n:
+        return form
+    else:
+        best_ngram = None
+        best_score = MAYMAX
+        for start in range(len(form)-n+1):
+            ngram = form[start:start+n]
+            if ngrams[ngram] < best_score:
+                best_score = ngrams[ngram]
+                best_ngram = ngram
+        assert best_ngram != None
+        return best_ngram
 
 def get_stem(form):
-    if args.postags:
-        return form[:2] + '_' + postag[form]
+    if args.lowercase:
+        form = form.lower()
+
+    if args.devow:
+        form = devow(form)
+    
+    if args.mayfield:
+        stem = mayfield_stem(form)
     else:
-        return form[:2]
+        stem = form[:args.stems]
+    
+    if args.postags:
+        stem = stem + '_' + postag[form]
+
+    return stem
     # return cz_stem(form, aggressive=False)
 
 logging.info('Read in forms and lemmas')
