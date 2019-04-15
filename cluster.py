@@ -205,6 +205,21 @@ def similarity(word, otherword):
         # cos
         return embsim(word, otherword)
 
+if args.postags:
+    logging.info('Read in POS tag dictionary')
+    # TODO save most frequent tag (now last occurring tag)
+    postag = defaultdict(lambda: 'NOUN')
+    with open(args.postags) as conllufile:
+        for line in conllufile:
+            fields = line.split()
+            if fields and fields[0].isdecimal():
+                assert len(fields) > 2
+                form = fields[1]
+                pos = fields[2]
+                postag[form] = pos
+                if args.lowercase and form not in postag:
+                    postag[form.lower()] = pos
+
 logging.info('Read in embeddings')
 embedding = defaultdict(list)
 form_freq_rank = dict()
@@ -247,21 +262,6 @@ if args.mayfield:
                 ngrams[ngram] += 1
     MAYMAX = max(ngrams.values())+1
 
-if args.postags:
-    logging.info('Read in POS tag dictionary')
-    # TODO save most frequent tag (now last occurring tag)
-    postag = defaultdict(lambda: 'NOUN')
-    with open(args.postags) as conllufile:
-        for line in conllufile:
-            fields = line.split()
-            if fields and fields[0].isdecimal():
-                assert len(fields) > 2
-                form = fields[1]
-                pos = fields[2]
-                postag[form] = pos
-                if args.lowercase and form not in postag:
-                    postag[form.lower()] = pos
-
 # the least frequent sub-ngram is the most distinctive and therefore the best stem
 def mayfield_stem(form):
     n = args.stems
@@ -295,6 +295,10 @@ def get_stem(form):
 
     return stem
     # return cz_stem(form, aggressive=False)
+
+if args.verbose:
+    for form in sorted(embedding.keys()):
+        logging.debug(form + ' -> ' + get_stem(form))
 
 logging.info('Read in forms and lemmas')
 # forms = set()
@@ -510,6 +514,7 @@ def baseline_clustering(test_data, basetype):
             result[form] = cl(stem, lemma)
         elif basetype == 'stem5':
             result[form] = cl(stem, form[:5])
+        logging.debug(basetype + ': ' + form + ' -> ' + result[form])
     return result
 
 
