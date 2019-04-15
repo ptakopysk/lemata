@@ -177,12 +177,25 @@ def embsim(word, otherword):
         sim = OOV_EMB_SIM
     return sim
 
+# Jaro Winkler that can take emtpy words
+def jw_safe(srcword, tgtword):
+    if srcword == '' or tgtword == '':
+        # 1 if both empty
+        # 0.5 if one is length 1
+        # 0.33 if one is length 2
+        # ...
+        return 1/(len(srcword)+len(tgtword)+1)
+    elif srcword == tgtword:
+        return 1
+    else:
+        return distance.get_jaro_distance(srcword, tgtword)
+
 def jwsim(word, otherword):
     # called distance but is actually similarity
-    sim = distance.get_jaro_distance(word, otherword)
+    sim = jw_safe(word, otherword)
     uword = unidecode.unidecode(word)
     uotherword = unidecode.unidecode(otherword)
-    usim = distance.get_jaro_distance(uword, uotherword)    
+    usim = jw_safe(uword, uotherword)    
     sim = (sim+usim)/2
     assert sim >= 0 and sim <= 1, "JW sim must be between 0 and 1"
     return sim
