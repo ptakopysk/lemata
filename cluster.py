@@ -45,8 +45,6 @@ ap = argparse.ArgumentParser(
         description='find lemma for form as nearest lemma in emb space')
 ap.add_argument('embeddings',
         help='file with the embeddings')
-ap.add_argument('conllu_all',
-        help='file with the forms and lemmas')
 ap.add_argument('conllu_test',
         help='file with the forms and lemmas')
 
@@ -54,8 +52,6 @@ ap.add_argument("-l", "--lowercase", action="store_true",
         help="lowercase input forms")
 ap.add_argument("-S", "--stems", type=int, default=2,
         help="Use stems of length S (first S characters, but see also M and D)")
-ap.add_argument("-M", "--mayfield", action="store_true",
-        help="Use Mayfield M-grams as stems")
 ap.add_argument("-D", "--devow", action="store_true",
         help="Devowel stems")
 ap.add_argument("-P", "--postags", type=str,
@@ -218,12 +214,28 @@ if args.postags:
                 assert len(fields) > 2
                 form = fields[1]
                 pos = fields[2]
+                if args.lowercase:
+                    form = form.lower()
                 postag[form] = pos
-                if args.lowercase and form not in postag:
-                    postag[form.lower()] = pos
+
+def get_stem(form):
+    if args.lowercase:
+        form = form.lower()
+
+    if args.devow:
+        form = devow(form)
+    
+    stem = form[:args.stems]
+    
+    if args.postags:
+        stem = stem + '_' + postag[form]
+
+    return stem
+    # return cz_stem(form, aggressive=False)
 
 logging.info('Read in embeddings')
 embedding = defaultdict(list)
+forms_stemmed = defaultdict(set)
 form_freq_rank = dict()
 with open(args.embeddings) as embfile:
     size, dim = map(int, embfile.readline().split())
@@ -235,97 +247,19 @@ with open(args.embeddings) as embfile:
         emb = list(map(float, fields[1:]))
         if args.normalize:
             emb /= norm(emb)
-        embedding[form] = emb
-        form_freq_rank[form] = i
-        if args.lowercase:
+        if args.lowercase and not form.islower():
             form = form.lower()
-            if form not in embedding:
-                embedding[form] = emb
-                form_freq_rank[form] = i
-
-if args.mayfield:
-    logging.info('Compute IDFs for ngrams')
-    # TODO on dictionary or on texts?
-    ngrams = Counter()
-    for form in embedding:
-        baseform = form
-        if args.devow:
-            baseform = devow(baseform)
-        if args.lowercase:
-            baseform = baseform.lower()
-        # ngram length
-        n = args.stems
-        if len(baseform) <= n:
-            ngrams[baseform] += 1
-        else:
-            for start in range(len(baseform)-n+1):
-                ngram = baseform[start:start+n]
-                assert len(ngram) == n
-                ngrams[ngram] += 1
-    MAYMAX = max(ngrams.values())+1
-
-# the least frequent sub-ngram is the most distinctive and therefore the best stem
-def mayfield_stem(form):
-    n = args.stems
-    if len(form) <= n:
-        return form
-    else:
-        best_ngram = None
-        best_score = MAYMAX
-        for start in range(len(form)-n+1):
-            ngram = form[start:start+n]
-            if ngrams[ngram] < best_score:
-                best_score = ngrams[ngram]
-                best_ngram = ngram
-        assert best_ngram != None
-        return best_ngram
-
-def get_stem(form):
-    if args.lowercase:
-        form = form.lower()
-
-    if args.devow:
-        form = devow(form)
-    
-    if args.mayfield:
-        stem = mayfield_stem(form)
-    else:
-        stem = form[:args.stems]
-    
-    if args.postags:
-        stem = stem + '_' + postag[form]
-
-    return stem
-    # return cz_stem(form, aggressive=False)
+            if form in embedding:
+                # do not overwrite "bush" with "Bush"
+                continue
+        embedding[form] = emb
+        stem = get_stem(form)
+        forms_stemmed[stem].add(form)
+        form_freq_rank[form] = i
 
 if args.verbose:
     for form in sorted(embedding.keys()):
         logging.debug(form + ' -> ' + get_stem(form))
-
-logging.info('Read in forms and lemmas')
-# forms = set()
-# lemmas = set()  # not currently used
-forms_stemmed = defaultdict(set)
-form2lemma = dict()
-with open(args.conllu_all) as conllufile:
-    for line in conllufile:
-        fields = line.split()
-        if fields and fields[0].isdecimal():
-            assert len(fields) > 2
-            form = fields[1]
-            lemma = fields[2]
-            # pos = fields[3]
-            if args.lowercase:
-                form = form.lower()
-                #lemma = lemma.lower()
-            if form in embedding:
-                # forms.add(form)
-                forms_stemmed[get_stem(form)].add(form)
-                form2lemma[form] = lemma
-            #if lemma in embedding:
-                #lemmas.add(lemma)
-                #forms.add(lemma)
-                #forms_stemmed[get_stem(lemma)].add(lemma)
 
 logging.info('Read in test form-lemma pairs')
 test_data = list()
@@ -541,19 +475,6 @@ else:
     clustering = aggclust(forms_stemmed)
     logging.info('Rename clusters')
     renamed_clustering = rename_clusters(clustering)
-    if args.clusters:
-        print('START TRAIN PER-LEMMA CLUSTERS')
-        lemma2clusters2forms = defaultdict(lambda: defaultdict(set))
-        for form in form2lemma:
-            lemma = form2lemma[form]
-            cluster = renamed_clustering[form]
-            lemma2clusters2forms[lemma][cluster].add(form)
-        for lemma in lemma2clusters2forms:
-            print('LEMMA:', lemma)
-            for cluster in lemma2clusters2forms[lemma]:
-                print(get_stem(cluster), cluster, ':', lemma2clusters2forms[lemma][cluster])
-            print()
-        print('END TRAIN PER-LEMMA CLUSTERS')
     if args.clusters:
         logging.info('Write out train clusters')
         print('START TRAIN CLUSTERS')
