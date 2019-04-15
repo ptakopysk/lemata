@@ -71,6 +71,8 @@ ap.add_argument("-b", "--baselines", action="store_true",
         help="Compute baselines and upper bounds")
 ap.add_argument("-t", "--threshold", type=float, default=0.30,
         help="Do not perform merges with avg distance greater than this")
+ap.add_argument("-O", "--oov", type=str, default="guess",
+        help="OOVs: keep/guess")
 # TODO unued
 ap.add_argument("-p", "--plot", type=str,
         help="Plot the dendrogramme for the given stem")
@@ -455,7 +457,7 @@ def rename_clusters(clustering):
 def find_cluster_for_form(form, clustering):
     stem = get_stem(form)
     cluster = form  # backoff: new cluster
-    if stem in forms_stemmed:
+    if args.oov == "guess" and stem in forms_stemmed:
         dists = dict()
         for otherform in forms_stemmed[stem]:
             dists[otherform] = get_dist(form, otherform)
