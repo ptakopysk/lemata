@@ -300,13 +300,14 @@ logging.info('Read in forms and lemmas')
 # forms = set()
 # lemmas = set()  # not currently used
 forms_stemmed = defaultdict(set)
+form2lemma = dict()
 with open(args.conllu_all) as conllufile:
     for line in conllufile:
         fields = line.split()
         if fields and fields[0].isdecimal():
             assert len(fields) > 2
             form = fields[1]
-            #lemma = fields[2]
+            lemma = fields[2]
             # pos = fields[3]
             if args.lowercase:
                 form = form.lower()
@@ -314,6 +315,7 @@ with open(args.conllu_all) as conllufile:
             if form in embedding:
                 # forms.add(form)
                 forms_stemmed[get_stem(form)].add(form)
+                form2lemma[form] = lemma
             #if lemma in embedding:
                 #lemmas.add(lemma)
                 #forms.add(lemma)
@@ -422,7 +424,7 @@ def writeout_clusters(clustering):
         print()
     sys.stdout.flush()
 
-# TODO each cluster name becomes its most frequent wordform
+# each cluster name becomes its most frequent wordform
 def rename_clusters(clustering):
     cluster2forms = defaultdict(list)
     for form, cluster in clustering.items():
@@ -490,7 +492,7 @@ def homogeneity(clustering, writeout=False):
         for lemma in lemma2clusters2forms:
             print('LEMMA:', lemma)
             for cluster in lemma2clusters2forms[lemma]:
-                print(cluster, ':', lemma2clusters2forms[lemma][cluster])
+                print(get_stem(cluster), cluster, ':', lemma2clusters2forms[lemma][cluster])
             print()
         print('Jakoby lemmatization accuracy',
                 (lemmatization_corrects/len(golden)))
@@ -532,6 +534,19 @@ else:
     clustering = aggclust(forms_stemmed)
     logging.info('Rename clusters')
     renamed_clustering = rename_clusters(clustering)
+    if args.clusters:
+        print('START TRAIN PER-LEMMA CLUSTERS')
+        lemma2clusters2forms = defaultdict(lambda: defaultdict(set))
+        for form in form2lemma:
+            lemma = form2lemma[form]
+            cluster = renamed_clustering[form]
+            lemma2clusters2forms[lemma][cluster].add(form)
+        for lemma in lemma2clusters2forms:
+            print('LEMMA:', lemma)
+            for cluster in lemma2clusters2forms[lemma]:
+                print(get_stem(cluster), cluster, ':', lemma2clusters2forms[lemma][cluster])
+            print()
+        print('END TRAIN PER-LEMMA CLUSTERS')
     if args.clusters:
         logging.info('Write out train clusters')
         print('START TRAIN CLUSTERS')
