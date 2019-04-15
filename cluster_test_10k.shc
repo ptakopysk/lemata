@@ -39,10 +39,10 @@ set -o xtrace
 
 renice 10 $$ >&2
 
-echo 100k $@
+echo 10k $@
 
 ./cluster.py -n 10000  -s jwxcos fasttext.cs cs_pdt-ud-dev.conllu $@ -b -C
 ./cluster.py -n 10000  -s jwxcos fasttext.cs cs_pdt-ud-dev.conllu $@ -C
 
-echo 100k $@
+echo 10k $@
 

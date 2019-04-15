@@ -140,8 +140,9 @@ def devow(form):
     # implicit transliteration and deaccentization
     uform = unidecode.unidecode(form)
 
+    # keep first letter
+    dform = uform[1:]
     # remove vowels, do not presuppose lowercasing
-    dform = uform
     dform = dform.replace("a", "")
     dform = dform.replace("e", "")
     dform = dform.replace("i", "")
@@ -155,11 +156,7 @@ def devow(form):
     dform = dform.replace("U", "")
     dform = dform.replace("Y", "")
     
-    # backoff: if empty, keep first vowel
-    if dform == "":
-        dform = uform[:1]
-    
-    return dform
+    return uform[:1] + dform
 
 
 def embsim(word, otherword):
