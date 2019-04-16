@@ -52,6 +52,8 @@ ap.add_argument("-l", "--lowercase", action="store_true",
         help="lowercase input forms")
 ap.add_argument("-S", "--stems", type=int, default=2,
         help="Use stems of length S (first S characters, but see also M and D)")
+ap.add_argument("-R", "--remerge", type=int,
+        help="Remerge clusters on test data using stem length R")
 ap.add_argument("-D", "--devow", action="store_true",
         help="Devowel stems")
 ap.add_argument("-P", "--postags", type=str,
@@ -228,14 +230,17 @@ if args.postags:
                     form = form.lower()
                 postag[form] = pos
 
-def get_stem(form):
+def get_stem(form, remerging=False):
     if args.lowercase:
         form = form.lower()
 
     if args.devow:
         form = devow(form)
-    
-    stem = form[:args.stems]
+
+    if remerging:
+        stem = form[:args.remerge]
+    else:
+        stem = form[:args.stems]
     
     if args.postags:
         stem = stem + '_' + postag[form]
@@ -374,6 +379,8 @@ def writeout_clusters(clustering):
         print()
     sys.stdout.flush()
 
+clusterset = set()
+
 # each cluster name becomes its most frequent wordform
 def rename_clusters(clustering):
     cluster2forms = defaultdict(list)
@@ -388,6 +395,7 @@ def rename_clusters(clustering):
             form2rank[form] = form_freq_rank[form]
         most_frequent_form = min(form2rank, key=form2rank.get)
         cluster2newname[cluster] = most_frequent_form
+        clusterset.add(most_frequent_form)
 
     new_clustering = dict()
     for form, cluster in clustering.items():
@@ -411,32 +419,75 @@ def find_cluster_for_form(form, clustering):
             # else leave the default, i.e. a separate new cluster
     return cluster
 
+
+clusters_restemmed = defaultdict(list)
+cluster_remerged = dict()
+
+def remerge(pivot_cluster):
+    merged_clusters = set()
+    merged_clusters.add(pivot_cluster)
+    stem = get_stem(pivot_cluster, remerging=True)
+    for candidate_cluster in clusters_restemmed[stem]:
+        # find all near clusters; just look at the representant words
+        if get_dist(pivot_cluster, candidate_cluster) < args.threshold:
+            merged_clusters.add(candidate_cluster)
+    # find name for the new merghed cluster
+    form2rank = dict()
+    form2rank[pivot_cluster] = args.number
+    for form in merged_clusters:
+        if form in form_freq_rank:
+            form2rank[form] = form_freq_rank[form]
+    merged_name = min(form2rank, key=form2rank.get)
+    # define the merge
+    print('MERGE:', merged_name, merged_clusters)
+    for cluster in merged_clusters:
+        cluster_remerged[cluster] = merged_name
+
+
 def homogeneity(clustering, writeout=False):
     golden = list()
     predictions = list()
     lemmatization_corrects = 0
     found_clusters = dict()  # caching
     lemma2clusters2forms = defaultdict(lambda: defaultdict(set))
+    if args.remerge:
+        for cluster in clusterset:
+            clusters_restemmed[get_stem(cluster, remerging=True)].append(cluster)
+    
     for form, lemma in test_data:
         golden.append(lemma)
         if form in clustering:
-            # note: baselines and upper bounds should always fall here
             cluster = clustering[form]
         else:
             if form not in found_clusters:
                 found_clusters[form] = find_cluster_for_form(form, clustering)
             cluster = found_clusters[form]
+        if lemma in clustering:
+            lemmacluster = clustering[lemma]
+        else:
+            if lemma not in found_clusters:
+                found_clusters[lemma] = find_cluster_for_form(lemma, clustering)
+            lemmacluster = found_clusters[lemma]
+
+        if args.remerge:
+            if cluster not in cluster_remerged:
+                remerge(cluster)
+            cluster = cluster_remerged[cluster]
+            if lemmacluster not in cluster_remerged:
+                remerge(lemmacluster)
+            lemmacluster = cluster_remerged[lemmacluster]
+
         predictions.append(cluster)
         lemma2clusters2forms[lemma][cluster].add(form)
+        if cluster == lemmacluster:
+            lemmatization_corrects += 1
         if writeout:
-            oov = 'OOV' if form in found_clusters else ''
-            lemma_cluster = '???' if lemma not in clustering else clustering[lemma]
-            print(form, oov,
-                    '[', cluster, '{:.4f}'.format(get_dist(form, cluster)), ']',
-                    'LEMMA:', lemma, '{:.4f}'.format(get_dist(form, lemma)),
-                    '[', lemma_cluster, '{:.4f}'.format(get_dist(form, lemma_cluster)), ']')
-            if cluster == lemma or cluster == lemma_cluster:
-                lemmatization_corrects += 1
+            oov = 'OOVform' if form in found_clusters else ''
+            lemmaoov = 'OOVlemma' if lemma in found_clusters else ''
+            dist = get_dist(form, lemma)
+            good = 'GOOD' if cluster == lemmacluster else 'BAD'
+            print(oov, form, '->', cluster, good,
+                    '{:.4f}'.format(dist), lemmaoov, lemma, '->', lemmacluster)
     if writeout:
         print('PER LEMMA WRITEOUT')
         for lemma in lemma2clusters2forms:
@@ -444,23 +495,23 @@ def homogeneity(clustering, writeout=False):
             for cluster in lemma2clusters2forms[lemma]:
                 print(get_stem(cluster), cluster, ':', lemma2clusters2forms[lemma][cluster])
             print()
-        print('Jakoby lemmatization accuracy',
-                (lemmatization_corrects/len(golden)))
+    print('Lemmatization accuracy', (lemmatization_corrects/len(golden)))
     return homogeneity_completeness_v_measure(golden, predictions)
 
 def baseline_clustering(test_data, basetype):
     result = dict()
     for form, lemma in test_data:
-        stem = get_stem(form)
-        if basetype == 'formlemma':
-            result[form] = cl(stem, form)
-        elif basetype == 'stemlemma':
-            result[form] = cl(stem, 0)
-        elif basetype == 'upper':
-            result[form] = cl(stem, lemma)
-        elif basetype == 'stem5':
-            result[form] = cl(stem, form[:5])
-        logging.debug(basetype + ': ' + form + ' -> ' + result[form])
+        for word in (form, lemma):
+            stem = get_stem(word)
+            if basetype == 'wordlemma':
+                result[word] = cl(stem, word)
+            elif basetype == 'stemlemma':
+                result[word] = cl(stem, 0)
+            elif basetype == 'upper':
+                result[word] = cl(stem, lemma)
+            elif basetype == 'stem5':
+                result[word] = cl(stem, word[:5])
+            logging.debug(basetype + ': ' + word + ' -> ' + result[word])
     return result
 
 
