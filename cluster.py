@@ -53,6 +53,8 @@ ap.add_argument("-S", "--stems", type=int, default=2,
         help="Use stems of length S (first S characters, but see also M and D)")
 ap.add_argument("-R", "--remerge", type=int,
         help="Remerge clusters on test data using stem length R")
+ap.add_argument("-r", "--remergethreshold", type=float, default=0.3,
+        help="threshold when remerging")
 ap.add_argument("-D", "--devow", action="store_true",
         help="Devowel stems")
 ap.add_argument("-P", "--postags", type=str,
@@ -428,7 +430,7 @@ def remerge(pivot_cluster):
     stem = get_stem(pivot_cluster, remerging=True)
     for candidate_cluster in clusters_restemmed[stem]:
         # find all near clusters; just look at the representant words
-        if get_dist(pivot_cluster, candidate_cluster) < args.threshold:
+        if get_dist(pivot_cluster, candidate_cluster) < args.remergethreshold:
             merged_clusters.add(candidate_cluster)
     # find name for the new merghed cluster
     form2rank = dict()
