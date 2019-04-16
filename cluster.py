@@ -3,8 +3,6 @@
 
 
 
-import functools
-
 from czech_stemmer import cz_stem
 
 import argparse
@@ -293,7 +291,6 @@ with open(args.conllu_test) as conllufile:
             test_data.append((form, lemma))
 logging.info('Done reading')
 
-@functools.lru_cache(maxsize=1000000)
 def get_dist(form1, form2):
     # similarity to distance
     return 1-similarity(form1, form2)
