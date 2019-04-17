@@ -496,15 +496,14 @@ def homogeneity(clustering, writeout=False):
             for cluster in lemma2clusters2forms[lemma]:
                 print(get_stem(cluster), cluster, ':', lemma2clusters2forms[lemma][cluster])
             print()
-    print('Lemmatization accuracy', (lemmatization_corrects/len(golden)))
-    return homogeneity_completeness_v_measure(golden, predictions)
+    return (homogeneity_completeness_v_measure(golden, predictions), lemmatization_corrects/len(golden))
 
 def baseline_clustering(test_data, basetype):
     result = dict()
     for form, lemma in test_data:
         for word in (form, lemma):
             stem = get_stem(word)
-            if basetype == 'wordlemma':
+            if basetype == 'formlemma':
                 result[word] = cl(stem, word)
             elif basetype == 'stemlemma':
                 result[word] = cl(stem, 0)
@@ -528,11 +527,11 @@ if args.baselines:
     print('OOV rate:', unknown, '/', (known+unknown), '=',
             (unknown/(known+unknown)*100))
 
-    print('Type', 'homogeneity', 'completenss', 'vmeasure', sep='\t')
+    print('Type', 'homogeneity', 'completenss', 'vmeasure', 'accuracy', sep='\t')
     for basetype in ('formlemma', 'stemlemma', 'stem5', 'upper'):
         clustering = baseline_clustering(test_data, basetype)
-        hcv = homogeneity(clustering)
-        print(basetype, *hcv, sep='\t')
+        hcva = homogeneity(clustering)
+        print(basetype, *hcva, sep='\t')
 else:
     clustering = aggclust(forms_stemmed)
     logging.info('Rename clusters')
@@ -544,8 +543,8 @@ else:
         print('END TRAIN CLUSTERS')
     logging.info('Run evaluation')
     hcv = homogeneity(renamed_clustering, writeout=args.clusters)
-    print('Homogeneity', 'completenss', 'vmeasure', sep='\t')
-    print(*hcv, sep='\t')
+    print('Homogeneity', 'completenss', 'vmeasure', 'accuracy', sep='\t')
+    print(*hcva, sep='\t')
 
 logging.info('Done.')
 
