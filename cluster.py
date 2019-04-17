@@ -5,6 +5,7 @@
 
 from czech_stemmer import cz_stem
 
+import functools
 import argparse
 import sys
 from collections import defaultdict, Counter
@@ -141,6 +142,7 @@ def plot_dendrogram(model, **kwargs):
 
 
 # unidecode and remove vowels
+@functools.lru_cache(maxsize=1000000)
 def devow(form):
     # implicit transliteration and deaccentization
     uform = unidecode.unidecode(form)
@@ -504,7 +506,9 @@ def homogeneity(clustering, writeout=False):
             for cluster in lemma2clusters2forms[lemma]:
                 print(get_stem(cluster), cluster, ':', lemma2clusters2forms[lemma][cluster])
             print()
-    return (homogeneity_completeness_v_measure(golden, predictions), lemmatization_corrects/len(golden))
+    hcv = homogeneity_completeness_v_measure(golden, predictions)
+    acc = lemmatization_corrects/len(golden)
+    return (*hcv, acc)
 
 def baseline_clustering(test_data, basetype):
     result = dict()
