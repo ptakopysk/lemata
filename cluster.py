@@ -142,7 +142,6 @@ def plot_dendrogram(model, **kwargs):
 
 
 # unidecode and remove vowels
-@functools.lru_cache(maxsize=1000000)
 def devow(form):
     # implicit transliteration and deaccentization
     uform = unidecode.unidecode(form)
