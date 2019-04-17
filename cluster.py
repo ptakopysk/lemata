@@ -77,6 +77,8 @@ ap.add_argument("-p", "--plot", type=str,
         help="Plot the dendrogramme for the given stem")
 ap.add_argument("-m", "--merges", action="store_true",
         help="Write out the merges")
+ap.add_argument("-M", "--measure", type=str, default='average',
+        help="Linkage measure average/complete/single")
 ap.add_argument("-s", "--similarity", type=str,
         help="Similarity: cos or jw")
 ap.add_argument("-C", "--clusters", action="store_true",
@@ -193,8 +195,8 @@ def jw_safe(srcword, tgtword):
 def jwsim(word, otherword):
     # called distance but is actually similarity
     sim = jw_safe(word, otherword)
-    uword = unidecode.unidecode(word)
-    uotherword = unidecode.unidecode(otherword)
+    uword = devow(word)
+    uotherword = devow(otherword)
     usim = jw_safe(uword, uotherword)    
     sim = (sim+usim)/2
     assert sim >= 0 and sim <= 1, "JW sim must be between 0 and 1"
@@ -308,9 +310,15 @@ def linkage(cluster1, cluster2, D):
         for node2 in cluster2:
             linkages.append(D[node1, node2])
     # min avg max
-    # return min(linkages), sum(linkages)/len(linkages), max(linkages)
-    # avg
-    return sum(linkages)/len(linkages)
+    if args.measure == 'average':
+        return sum(linkages)/len(linkages)
+    elif args.measure == 'single':
+        return min(linkages)
+    elif args.measure == 'complete':
+        return max(linkages)
+    else:
+        assert False
+
 
 
 # cluster each hypercluster
@@ -344,7 +352,7 @@ def aggclust(forms_stemmed):
             for i2 in range(I):
                 D[i1,i2] = get_dist(index2word[i1], index2word[i2])
         clustering = AgglomerativeClustering(affinity='precomputed',
-                linkage = 'average', n_clusters=1)
+                linkage = args.measure, n_clusters=1)
         clustering.fit(D)
 
         # default: each has own cluster
@@ -542,7 +550,7 @@ else:
         writeout_clusters(renamed_clustering)
         print('END TRAIN CLUSTERS')
     logging.info('Run evaluation')
-    hcv = homogeneity(renamed_clustering, writeout=args.clusters)
+    hcva = homogeneity(renamed_clustering, writeout=args.clusters)
     print('Homogeneity', 'completenss', 'vmeasure', 'accuracy', sep='\t')
     print(*hcva, sep='\t')
 
