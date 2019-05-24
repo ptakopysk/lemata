@@ -1,0 +1,39 @@
+#!/bin/bash
+#
+# SGE CONFIGURATION
+#
+# !!! Array job with $SGE_TASK_ID going from A to B
+#$ -t 1-37
+#
+# !!! Memory limit
+#$ -l h_data=14g
+#$ -l mem_free=14g
+#
+# Run in this directory
+#$ -cwd
+#
+# Use bash
+#$ -S /bin/bash
+#
+# Export environment variables
+#$ -V
+#
+# Logs
+#$ -o /home/rosa/logs
+#$ -e /home/rosa/logs
+# Do not merge stderr with stdout
+#$ -j n
+#
+# Avoid pandoras
+#$ -l h=!'pandora*'
+#
+
+# Print each command to STDERR before executing (expanded), prefixed by "+ "
+set -o xtrace
+
+renice 10 $$ >&2
+
+echo $SGE_TASK_ID >&2
+
+zcat syn_v4.conll.gz | lemma_form_lists.py $SGE_TASK_ID
+

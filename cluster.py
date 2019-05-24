@@ -12,8 +12,7 @@ from collections import defaultdict, Counter
 from sortedcollections import ValueSortedDict
 from collections import OrderedDict
 
-from sklearn.metrics import accuracy_score
-from sklearn.metrics.pairwise import cosine_similarity
+#from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.metrics import homogeneity_completeness_v_measure
 
 from numpy import inner
@@ -142,6 +141,7 @@ def plot_dendrogram(model, **kwargs):
 
 
 # unidecode and remove vowels
+# @functools.lru_cache(maxsize=1000000)
 def devow(form):
     # implicit transliteration and deaccentization
     uform = unidecode.unidecode(form)
