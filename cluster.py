@@ -5,6 +5,7 @@
 
 from czech_stemmer import cz_stem
 
+import fasttext
 import functools
 import argparse
 import sys
@@ -253,28 +254,35 @@ def get_stem(form, remerging=False):
     # return cz_stem(form, aggressive=False)
 
 logging.info('Read in embeddings')
-embedding = defaultdict(list)
-forms_stemmed = defaultdict(set)
-form_freq_rank = dict()
-with open(args.embeddings) as embfile:
-    size, dim = map(int, embfile.readline().split())
-    if args.number:
-        size = min(size, args.number)
-    for i in range(size):
-        fields = embfile.readline().split()
-        form = fields[0]
-        emb = list(map(float, fields[1:]))
-        if args.normalize:
-            emb /= norm(emb)
-        if args.lowercase and not form.islower():
-            form = form.lower()
-            if form in embedding:
-                # do not overwrite "bush" with "Bush"
-                continue
-        embedding[form] = emb
-        stem = get_stem(form)
-        forms_stemmed[stem].add(form)
-        form_freq_rank[form] = i
+if args.embeddings.endswith('.bin'):
+    # get word embedding still the same way, i.e. as embedding[word]
+    # TODO no iterating over this
+    # (or if, then iterate over embedding.words)
+    embedding = fasttext.load_model(args.embeddings)
+else:
+    embedding = defaultdict(list)
+    forms_stemmed = defaultdict(set)
+    form_freq_rank = dict()
+    with open(args.embeddings) as embfile:
+        size, dim = map(int, embfile.readline().split())
+        if args.number:
+            size = min(size, args.number)
+        for i in range(size):
+            fields = embfile.readline().split()
+            form = fields[0]
+            emb = list(map(float, fields[1:]))
+            if args.normalize:
+                emb /= norm(emb)
+            if args.lowercase and not form.islower():
+                form = form.lower()
+                if form in embedding:
+                    # do not overwrite "bush" with "Bush"
+                    continue
+            embedding[form] = emb
+            stem = get_stem(form)
+            forms_stemmed[stem].add(form)
+            form_freq_rank[form] = i
+
 
 if args.verbose:
     for form in sorted(embedding.keys()):
