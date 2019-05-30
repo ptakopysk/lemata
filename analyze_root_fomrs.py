@@ -158,7 +158,7 @@ else:
             fields = line.split()
             word = fields[0]
             vector = [float(x) for x in fields[1:]]
-            embedding[word] = embedding
+            embedding[word] = vector
 logging.info('Embeddings read')
 
 
@@ -200,23 +200,27 @@ for root in root_lemma_forms:
     clustering.fit(D)
     
     # print out
+    print()
     print("ROOT:", root)
+    print("The cluster contains {} word forms belonging to {} lemmas: {}".format(
+        len(data), cluster_num, " ".join(root_lemma_forms[root].keys()) ))
+
     cluster_elements = defaultdict(set)
     for word, lemma, cluster in zip(data, labels, clustering.labels_):
         cluster_elements[cluster].add((word, lemma))
-    for cluster in cluster_elements:
+    for cluster in sorted(cluster_elements):
         contents = ["{} [{}],".format(word, lemma)
                 for word, lemma in cluster_elements[cluster]]
         print(cluster, *contents)
 
     # eval
     hcv = homogeneity_completeness_v_measure(labels, clustering.labels_)
-    logging.info(" ".join(hcv))
+    # logging.info("HCV: " + " ".join([str(x) for x in hcv]))
+    print("HCV:", *hcv, flush=True)
     all_true_labels.extend(labels)
     all_predicted_labels.extend([root+str(label) for label in clustering.labels_])
 
 hcv = homogeneity_completeness_v_measure(all_true_labels,
         all_predicted_labels)
-logging.info("Total HCV:")
-logging.info(" ".join(hcv))
+print("Total HCV:", *hcv)
 

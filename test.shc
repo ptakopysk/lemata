@@ -4,9 +4,9 @@
 #
 # !!! Memory limit
 #$ -hard
-#$ -l mem_free=30g
-#$ -l act_mem_free=30g
-#$ -l h_vmem=30g
+#$ -l mem_free=5g
+#$ -l act_mem_free=5g
+#$ -l h_vmem=5g
 #
 # Run in this directory
 #$ -cwd
