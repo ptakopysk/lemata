@@ -11,6 +11,7 @@ import unidecode
 import fasttext
 
 #from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
 from numpy import inner
 from numpy.linalg import norm
 from sklearn.metrics import homogeneity_completeness_v_measure
@@ -32,6 +33,8 @@ args = ap.parse_args()
 
 level = logging.DEBUG if args.verbose else logging.INFO
 logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%Y-%m-%d %H:%M:%S', level=level)
+
+OOV_EMB_SIM = 0.9
 
 
 # @functools.lru_cache(maxsize=1000000)
@@ -65,14 +68,19 @@ def embsim(word, otherword):
 
     Shifted into the 0..1 range."""
 
-    emb1 = embedding[word]
-    emb2 = embedding[otherword]
-    sim = inner(emb1, emb2)/(norm(emb1)*norm(emb2))
-    # sim = cosine_similarity([emb1], [emb2])
-    #logging.debug(sim)
-    assert sim >= -1.0001 and sim <= 1.0001, "Cos sim must be between -1 and 1"
-    # shift to 0..1 range
-    sim = (sim+1)/2
+    if word in embedding and otherword in embedding:
+        emb1 = embedding[word]
+        emb2 = embedding[otherword]
+        sim = inner(emb1, emb2)/(norm(emb1)*norm(emb2))
+        # sim = cosine_similarity([emb1], [emb2])
+        #logging.debug(sim)
+        assert sim >= -1.0001 and sim <= 1.0001, "Cos sim must be between -1 and 1"
+        # shift to 0..1 range
+        sim = (sim+1)/2
+    else:
+        # backoff
+        sim = OOV_EMB_SIM
+        logging.warning("Embedding unknown for '{}', '{}'".format(word, otherword))
     return sim
 
 def jw_safe(srcword, tgtword):
@@ -139,10 +147,18 @@ def get_dist(form1, form2):
 
 
 logging.info('Read in embeddings')
-assert args.embeddings.endswith('.bin')
-# get word embedding still the same way, i.e. as embedding[word]
-# (iterate over embedding.words if at all needed)
-embedding = fasttext.load_model(args.embeddings)
+embedding = dict()
+if args.embeddings.endswith('.bin'):
+    # get word embedding still the same way, i.e. as embedding[word]
+    # (iterate over embedding.words if at all needed)
+    embedding = fasttext.load_model(args.embeddings)
+else:
+    with open(args.embeddings) as fh:
+        for line in fh:
+            fields = line.split()
+            word = fields[0]
+            vector = [float(x) for x in fields[1:]]
+            embedding[word] = embedding
 logging.info('Embeddings read')
 
 
@@ -161,7 +177,7 @@ logging.info('Cluster forms')
 all_true_labels = list()
 all_predicted_labels = list()
 for root in root_lemma_forms:
-    logging.info("Clustering forms for dertree {}".format(root))
+    logging.info("Clustering forms for dertree '{}'".format(root))
     data = list()  # the forms
     labels = list()  # their lemmas
     for lemma in root_lemma_forms[root]:
