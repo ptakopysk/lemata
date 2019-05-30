@@ -10,6 +10,7 @@ from pyjarowinkler import distance
 import unidecode
 import fasttext
 
+#from sklearn.metrics.pairwise import cosine_similarity
 from numpy import inner
 from numpy.linalg import norm
 from sklearn.metrics import homogeneity_completeness_v_measure
@@ -33,9 +34,10 @@ level = logging.DEBUG if args.verbose else logging.INFO
 logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%Y-%m-%d %H:%M:%S', level=level)
 
 
-# unidecode and remove vowels
 # @functools.lru_cache(maxsize=1000000)
 def devow(form):
+    """unidecode and remove non-initial vowels"""
+
     # implicit transliteration and deaccentization
     uform = unidecode.unidecode(form)
 
@@ -59,22 +61,26 @@ def devow(form):
 
 
 def embsim(word, otherword):
-    if word in embedding and otherword in embedding:
-        emb1 = embedding[word]
-        emb2 = embedding[otherword]
-        sim = inner(emb1, emb2)/(norm(emb1)*norm(emb2))
-        # sim = cosine_similarity([emb1], [emb2])
-        #logging.debug(sim)
-        assert sim >= -1.0001 and sim <= 1.0001, "Cos sim must be between -1 and 1"
-        # shift to 0..1 range
-        sim = (sim+1)/2
-    else:
-        # backoff
-        sim = OOV_EMB_SIM
+    """Cosine similarity of wrod embeddings.
+
+    Shifted into the 0..1 range."""
+
+    emb1 = embedding[word]
+    emb2 = embedding[otherword]
+    sim = inner(emb1, emb2)/(norm(emb1)*norm(emb2))
+    # sim = cosine_similarity([emb1], [emb2])
+    #logging.debug(sim)
+    assert sim >= -1.0001 and sim <= 1.0001, "Cos sim must be between -1 and 1"
+    # shift to 0..1 range
+    sim = (sim+1)/2
     return sim
 
-# Jaro Winkler that can take emtpy words
 def jw_safe(srcword, tgtword):
+    """Jaro Winkler similarity that can take emtpy words.
+
+    Is in 0..1 range.
+    """
+
     if srcword == '' or tgtword == '':
         # 1 if both empty
         # 0.5 if one is length 1
@@ -84,10 +90,10 @@ def jw_safe(srcword, tgtword):
     elif srcword == tgtword:
         return 1
     else:
+        # called distance but is actually similarity
         return distance.get_jaro_distance(srcword, tgtword)
 
 def jwsim(word, otherword):
-    # called distance but is actually similarity
     sim = jw_safe(word, otherword)
     uword = devow(word)
     uotherword = devow(otherword)
@@ -116,27 +122,26 @@ def get_dist(form1, form2):
     # similarity to distance
     return 1-similarity(form1, form2)
 
-def linkage(cluster1, cluster2, D):
-    linkages = list()
-    for node1 in cluster1:
-        for node2 in cluster2:
-            linkages.append(D[node1, node2])
-    # min avg max
-    if args.measure == 'average':
-        return sum(linkages)/len(linkages)
-    elif args.measure == 'single':
-        return min(linkages)
-    elif args.measure == 'complete':
-        return max(linkages)
-    else:
-        assert False
+#def linkage(cluster1, cluster2, D):
+#    linkages = list()
+#    for node1 in cluster1:
+#        for node2 in cluster2:
+#            linkages.append(D[node1, node2])
+#    # min avg max
+#    if args.measure == 'average':
+#        return sum(linkages)/len(linkages)
+#    elif args.measure == 'single':
+#        return min(linkages)
+#    elif args.measure == 'complete':
+#        return max(linkages)
+#    else:
+#        assert False
 
 
 logging.info('Read in embeddings')
-assert args.embeddings.endswith('.bin'):
+assert args.embeddings.endswith('.bin')
 # get word embedding still the same way, i.e. as embedding[word]
-# TODO no iterating over this
-# (or if, then iterate over embedding.words)
+# (iterate over embedding.words if at all needed)
 embedding = fasttext.load_model(args.embeddings)
 logging.info('Embeddings read')
 
@@ -153,6 +158,8 @@ with open(args.roots_lemmas_forms) as fh:
 logging.info('{} root lemma forms read'.format(len(root_lemma_forms)))
 
 logging.info('Cluster forms')
+all_true_labels = list()
+all_predicted_labels = list()
 for root in root_lemma_forms:
     logging.info("Clustering forms for dertree {}".format(root))
     data = list()  # the forms
@@ -175,9 +182,25 @@ for root in root_lemma_forms:
     clustering = AgglomerativeClustering(affinity='precomputed',
             linkage = args.measure, n_clusters=cluster_num)
     clustering.fit(D)
-    # evaluate
-    # TODO: hcv = homogeneity_completeness_v_measure(golden, predictions)
+    
+    # print out
+    print("ROOT:", root)
+    cluster_elements = defaultdict(set)
+    for word, lemma, cluster in zip(data, labels, clustering.labels_):
+        cluster_elements[cluster].add((word, lemma))
+    for cluster in cluster_elements:
+        contents = ["{} [{}],".format(word, lemma)
+                for word, lemma in cluster_elements[cluster]]
+        print(cluster, *contents)
 
-# TODO embedings nejsou OOV a neiteruje se přes ně !!!
+    # eval
+    hcv = homogeneity_completeness_v_measure(labels, clustering.labels_)
+    logging.info(" ".join(hcv))
+    all_true_labels.extend(labels)
+    all_predicted_labels.extend([root+str(label) for label in clustering.labels_])
 
+hcv = homogeneity_completeness_v_measure(all_true_labels,
+        all_predicted_labels)
+logging.info("Total HCV:")
+logging.info(" ".join(hcv))
 
