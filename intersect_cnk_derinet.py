@@ -10,27 +10,36 @@ logging.basicConfig(level=logging.INFO)
 derinet_file, cnk_file = sys.argv[1:3]
 
 logging.info("Read derinet")
-number2rootlemma = dict()
-lemma2rootlemma = dict()
-homonymous = set()
+number2lemma = dict()
+number2parent = dict()
 with open(derinet_file) as fh:
     for line in fh:
-        fields = line.split()
         # number, lemma, fulllemma, pos, parent = line.split()
+        fields = line.split()
         number = int(fields[0])
         lemma = fields[1]
-        if lemma in lemma2rootlemma:
-            # seeing the lemma for a second time
-            homonymous.add(lemma)
-            
         if len(fields) == 4:
-            # no parent -> is root
-            rootlemma = lemma
+            parent = None
         else:
             parent = int(fields[4])
-            rootlemma = number2rootlemma[parent]
-        lemma2rootlemma[lemma] = rootlemma
-        number2rootlemma[number] = rootlemma
+        number2lemma[number] = lemma
+        number2parent[number] = parent
+
+lemma2rootlemma = dict()
+homonymous = set()
+for number in number2lemma:
+    # find root
+    n = number
+    while number2parent[n] != None:
+        n = number2parent[n]
+    rootlemma = number2lemma[n]
+    
+    lemma = number2lemma[number]
+    if lemma in lemma2rootlemma:
+        # seeing the lemma for a second time
+        homonymous.add(lemma)
+    lemma2rootlemma[lemma] = rootlemma
+
 logging.info("Read {} derinet lemmas".format(len(lemma2rootlemma)))
 
 logging.info("Remove homonyms")
