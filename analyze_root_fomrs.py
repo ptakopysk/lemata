@@ -19,7 +19,7 @@ from sklearn.metrics import homogeneity_completeness_v_measure
 from sklearn.cluster import AgglomerativeClustering
 
 import matplotlib
-#matplotlib.use('Agg')
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 ap = argparse.ArgumentParser(
@@ -36,8 +36,10 @@ ap.add_argument("-s", "--similarity", type=str, default='jwxcos',
 ap.add_argument("-M", "--measure", type=str, default='average',
         help="Linkage measure average/complete/single")
 
+ap.add_argument("-R", "--root", type=str,
+        help="Only process the given root")
 ap.add_argument("-p", "--plot", type=str,
-        help="Plot the dendrogramme for the given stem")
+        help="Plot the CDF under the given file prefix")
 ap.add_argument("-b", "--baselines", action="store_true",
         help="Compute baselines and upper bounds")
 ap.add_argument("-V", "--verbose", action="store_true",
@@ -193,7 +195,13 @@ logging.info('{} root lemma forms read'.format(len(root_lemma_forms)))
 logging.info('Cluster forms')
 all_true_labels = list()
 all_predicted_labels = list()
-for root in root_lemma_forms:
+
+if args.root:
+    iterate_over = [args.root]
+else:
+    iterate_over = root_lemma_forms
+
+for root in iterate_over:
     logging.info("Clustering forms for dertree '{}'".format(root))
     data = list()  # the forms
     labels = list()  # their lemmas
@@ -263,7 +271,14 @@ for root in root_lemma_forms:
                            cumulative=True, label='Infl')
             ax.hist(dist_ninf, bins=bins, density=True, histtype='step',
                     cumulative=True, label='Noninfl')
-            plt.savefig("plots/"+args.plot+"-"+root+".pdf")
+            ax.grid(True)
+            ax.legend(loc='right')
+            ax.set_title('Empirical CDF for forms of {}'.format(root))
+            ax.set_xlabel('Word form distance, ' + args.similarity)
+            ax.set_ylabel('Proportion of word forms, CDF')
+            plt.xlim(0, 1)
+            plt.ylim(0, 1)
+            plt.savefig(args.plot+"-"+root+".png")
         else:
             clustering = AgglomerativeClustering(affinity='precomputed',
                     linkage = args.measure, n_clusters=cluster_num)
