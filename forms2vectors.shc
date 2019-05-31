@@ -28,8 +28,6 @@
 #$ -q 'cpu-*.q'
 #
 # send mail: b started, e ended, a aborted or rescheduled, s suspended
-#$ -M rosa@ufal.mff.cuni.cz
-#  -m beas
 #
 # 1 thread
 #$ -pe smp 1

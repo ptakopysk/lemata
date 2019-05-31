@@ -30,16 +30,12 @@
 # send mail: b started, e ended, a aborted or rescheduled, s suspended
 #
 # 1 thread
-#$ -pe smp 26
+#$ -pe smp 1
 
 # Print each command to STDERR before executing (expanded), prefixed by "+ "
 set -o xtrace
 
 renice 10 $$ >&2
 
-for l in a b c d e f g h i j k l m n o p q r s t u v w x y z
-do
-    ./clean_lemma_forms.py < lemma_forms/$l > lemma_forms_clean/$l &
-done
-
+./intersect_vectors_lc.py syn_v4_forms_lemmas.txt.vectors derroot_lemma_forms.ssv.1k > syn_v4_forms_lemmas.1k.lc.vectors
 
