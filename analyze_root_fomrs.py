@@ -5,6 +5,7 @@ from collections import defaultdict
 import sys
 import logging
 import argparse
+import random
 
 from pyjarowinkler import distance
 import unidecode
@@ -17,16 +18,28 @@ from numpy.linalg import norm
 from sklearn.metrics import homogeneity_completeness_v_measure
 from sklearn.cluster import AgglomerativeClustering
 
+import matplotlib
+#matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+
 ap = argparse.ArgumentParser(
         description='cluster forms of all lemmas in a dertree')
 ap.add_argument('embeddings',
         help='file with the embeddings')
 ap.add_argument('roots_lemmas_forms',
         help='file with the dertree roots and forms and lemmas')
+
+ap.add_argument("-l", "--lowercase", action="store_true",
+        help="lowercase input forms")
 ap.add_argument("-s", "--similarity", type=str, default='jwxcos',
         help="Similarity: cos or jw or jwxcos")
 ap.add_argument("-M", "--measure", type=str, default='average',
         help="Linkage measure average/complete/single")
+
+ap.add_argument("-p", "--plot", type=str,
+        help="Plot the dendrogramme for the given stem")
+ap.add_argument("-b", "--baselines", action="store_true",
+        help="Compute baselines and upper bounds")
 ap.add_argument("-V", "--verbose", action="store_true",
         help="Print more verbose progress info")
 args = ap.parse_args()
@@ -114,6 +127,10 @@ def lensim(word, otherword):
     return 1 / (1 + args.length * abs(len(word) - len(otherword)) )
 
 def similarity(word, otherword):
+    if args.lowercase:
+        word = word.lower()
+        otherword = otherword.lower()
+    
     if args.similarity == 'jw':
         return jwsim(word, otherword)
     elif args.similarity == 'jwxcos':
@@ -189,36 +206,83 @@ for root in root_lemma_forms:
         labels.extend(lemmas)
     # number of lemmas is number of clusters
     cluster_num = len(root_lemma_forms[root])
-    # cluster the forms
-    I = len(data)
-    D = np.empty((I, I))
-    for i1 in range(I):
-        for i2 in range(I):
-            D[i1,i2] = get_dist(data[i1], data[i2])
-    clustering = AgglomerativeClustering(affinity='precomputed',
-            linkage = args.measure, n_clusters=cluster_num)
-    clustering.fit(D)
     
-    # print out
-    print()
-    print("ROOT:", root)
-    print("The cluster contains {} word forms belonging to {} lemmas: {}".format(
-        len(data), cluster_num, " ".join(root_lemma_forms[root].keys()) ))
+    if args.baselines:
+        pred_labels = labels.copy()
+        random.shuffle(pred_labels)
+        all_true_labels.extend(labels)
+        all_predicted_labels.extend(pred_labels)
+    else:
+        # cluster the forms
+        I = len(data)
+        D = np.empty((I, I))
+        dist_label_pairs = list()
+        infl_total = 0
+        for i1 in range(I):
+            for i2 in range(I):
+                dist = get_dist(data[i1], data[i2])
+                D[i1,i2] = dist
+                if i1 < i2:
+                    is_infl = labels[i1] == labels[i2]
+                    dist_label_pairs.append( (dist, is_infl) )
+                    if is_infl:
+                        infl_total += 1
+        
+        # print out
+        print()
+        print("ROOT:", root)
+        print("The cluster contains {} word forms belonging to {} lemmas: {}".format(
+            len(data), cluster_num, " ".join(root_lemma_forms[root].keys()) ))
 
-    cluster_elements = defaultdict(set)
-    for word, lemma, cluster in zip(data, labels, clustering.labels_):
-        cluster_elements[cluster].add((word, lemma))
-    for cluster in sorted(cluster_elements):
-        contents = ["{} [{}],".format(word, lemma)
-                for word, lemma in cluster_elements[cluster]]
-        print(cluster, *contents)
+        # analyze optimal threshold
+        dist_label_pairs.sort(key=lambda x: x[0])
+        total = 0
+        infl = 0
+        best_f = 0
+        best_thresh = 0
+        for dist, is_infl in dist_label_pairs:
+            total += 1
+            if is_infl:
+                infl += 1
+            prec = infl/total
+            rec = infl/infl_total
+            f = 2 * prec * rec / (prec + rec)
+            if f > best_f:
+                best_f = f
+                best_thresh = dist
+        print("BEST THRESH:", best_thresh, "with f1:", best_f)
+        dist_infl = [dist for dist, is_infl in dist_label_pairs if is_infl]
+        dist_ninf = [dist for dist, is_infl in dist_label_pairs if not is_infl]
+        print("ALLINFL:", *dist_infl)
+        print("ALLNOIN:", *dist_ninf)
 
-    # eval
-    hcv = homogeneity_completeness_v_measure(labels, clustering.labels_)
-    # logging.info("HCV: " + " ".join([str(x) for x in hcv]))
-    print("HCV:", *hcv, flush=True)
-    all_true_labels.extend(labels)
-    all_predicted_labels.extend([root+str(label) for label in clustering.labels_])
+        if args.plot:
+            n_bins = I
+            fig, ax = plt.subplots(figsize=(8, 4))
+            n, bins, patches = ax.hist(dist_infl, n_bins, density=True, histtype='step',
+                           cumulative=True, label='Infl')
+            ax.hist(dist_ninf, bins=bins, density=True, histtype='step',
+                    cumulative=True, label='Noninfl')
+            plt.savefig("plots/"+args.plot+"-"+root+".pdf")
+        else:
+            clustering = AgglomerativeClustering(affinity='precomputed',
+                    linkage = args.measure, n_clusters=cluster_num)
+            clustering.fit(D)
+            
+            cluster_elements = defaultdict(set)
+            for word, lemma, cluster in zip(data, labels, clustering.labels_):
+                cluster_elements[cluster].add((word, lemma))
+            for cluster in sorted(cluster_elements):
+                contents = ["{} [{}],".format(word, lemma)
+                        for word, lemma in cluster_elements[cluster]]
+                print(cluster, *contents)
+
+            # eval
+            hcv = homogeneity_completeness_v_measure(labels, clustering.labels_)
+            # logging.info("HCV: " + " ".join([str(x) for x in hcv]))
+            print("HCV:", *hcv, flush=True)
+            all_true_labels.extend(labels)
+            all_predicted_labels.extend([root+str(label) for label in clustering.labels_])
 
 hcv = homogeneity_completeness_v_measure(all_true_labels,
         all_predicted_labels)
