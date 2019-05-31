@@ -43,5 +43,5 @@ sim=$2
 ./analyze_root_fomrs.py \
     derroot_lemma_forms_50l.words.vectors \
     derroot_lemma_forms_50l.ssv \
-    -V -l -s $sim -R $root -p plots_bigroots/lc50l-$sim
+    -V -l -s $sim -R $root -p plots_bigroots_cutoff/lc50l-$sim
 

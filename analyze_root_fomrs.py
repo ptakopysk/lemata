@@ -10,6 +10,7 @@ import random
 from pyjarowinkler import distance
 import unidecode
 import fasttext
+import editdistance
 
 #from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
@@ -40,6 +41,8 @@ ap.add_argument("-R", "--root", type=str,
         help="Only process the given root")
 ap.add_argument("-p", "--plot", type=str,
         help="Plot the CDF under the given file prefix")
+ap.add_argument("-T", "--analthresh", action="store_true",
+        help="Analyze the best threshold")
 ap.add_argument("-b", "--baselines", action="store_true",
         help="Compute baselines and upper bounds")
 ap.add_argument("-V", "--verbose", action="store_true",
@@ -125,6 +128,9 @@ def jwsim(word, otherword):
     assert sim >= 0 and sim <= 1, "JW sim must be between 0 and 1"
     return sim
 
+def rellev(word, otherword):
+    return 1 - editdistance.eval(word, otherword) / (len(word)+len(otherword))
+
 def lensim(word, otherword):
     return 1 / (1 + args.length * abs(len(word) - len(otherword)) )
 
@@ -141,6 +147,8 @@ def similarity(word, otherword):
         return jwsim(word, otherword) * embsim(word, otherword) * lensim(word, otherword);
     elif args.similarity == 'len':
         return lensim(word, otherword);
+    elif args.similarity == 'lev':
+        return rellev(word, otherword);
     else:
         # cos
         return embsim(word, otherword)
@@ -185,11 +193,13 @@ logging.info('Read in root lemma forms')
 root_lemma_forms = defaultdict(dict)
 with open(args.roots_lemmas_forms) as fh:
     for line in fh:
+        if args.lowercase:
+            line = line.lower()
         words = line.split()
         root = words[0]
         lemma = words[1]
         forms = words[1:]  # the lemma is also a form
-        root_lemma_forms[root][lemma] = forms
+        root_lemma_forms[root][lemma] = set(forms)
 logging.info('{} root lemma forms read'.format(len(root_lemma_forms)))
 
 logging.info('Cluster forms')
@@ -221,11 +231,10 @@ for root in iterate_over:
         all_true_labels.extend(labels)
         all_predicted_labels.extend(pred_labels)
     else:
-        # cluster the forms
+        # compute the distance matrix
         I = len(data)
         D = np.empty((I, I))
         dist_label_pairs = list()
-        infl_total = 0
         for i1 in range(I):
             for i2 in range(I):
                 dist = get_dist(data[i1], data[i2])
@@ -233,73 +242,88 @@ for root in iterate_over:
                 if i1 < i2:
                     is_infl = labels[i1] == labels[i2]
                     dist_label_pairs.append( (dist, is_infl) )
-                    if is_infl:
-                        infl_total += 1
-        
-        # print out
-        print()
-        print("ROOT:", root)
-        print("The cluster contains {} word forms belonging to {} lemmas: {}".format(
-            len(data), cluster_num, " ".join(root_lemma_forms[root].keys()) ))
 
-        # analyze optimal threshold
+        # for further analyses, sort the distances and separate into infls and noninfls
         dist_label_pairs.sort(key=lambda x: x[0])
-        total = 0
-        infl = 0
-        best_f = 0
-        best_thresh = 0
-        for dist, is_infl in dist_label_pairs:
-            total += 1
-            if is_infl:
-                infl += 1
-            prec = infl/total
-            rec = infl/infl_total
-            f = 2 * prec * rec / (prec + rec)
-            if f > best_f:
-                best_f = f
-                best_thresh = dist
-        print("BEST THRESH:", best_thresh, "with f1:", best_f)
         dist_infl = [dist for dist, is_infl in dist_label_pairs if is_infl]
         dist_ninf = [dist for dist, is_infl in dist_label_pairs if not is_infl]
-        print("ALLINFL:", *dist_infl)
-        print("ALLNOIN:", *dist_ninf)
+        
+        # print out
+        if args.verbose:
+            print()
+            print("ROOT:", root)
+            print("The cluster contains {} word forms belonging to {} lemmas: {}".format(
+                len(data), cluster_num, " ".join(root_lemma_forms[root].keys()) ))
 
-        if args.plot:
+        if args.analthresh:
+            # analyze optimal threshold
+            total = 0
+            infl = 0
+            infl_total = len(dist_infl)
+            best_f = 0
+            best_thresh = 0
+            for dist, is_infl in dist_label_pairs:
+                total += 1
+                if is_infl:
+                    infl += 1
+                prec = infl/total
+                rec = infl/infl_total
+                f = 2 * prec * rec / (prec + rec)
+                if f > best_f:
+                    best_f = f
+                    best_thresh = dist
+            if args.verbose:
+                print("BEST THRESH:", best_thresh, "with f1:", best_f)
+            else:
+                print(best_thresh, best_f)
+            if args.verbose:
+                print("ALLINFL:", *dist_infl)
+                print("ALLNOIN:", *dist_ninf)
+
+        elif args.plot:
             n_bins = I
             fig, ax = plt.subplots(figsize=(8, 4))
             n, bins, patches = ax.hist(dist_infl, n_bins, density=True, histtype='step',
                            cumulative=True, label='Infl')
-            ax.hist(dist_ninf, bins=bins, density=True, histtype='step',
+            plot_dist_ninf = dist_ninf[:len(dist_infl)]
+            ax.hist(plot_dist_ninf, bins=bins, density=True, histtype='step',
                     cumulative=True, label='Noninfl')
             ax.grid(True)
             ax.legend(loc='right')
             ax.set_title('Empirical CDF for forms of {}'.format(root))
             ax.set_xlabel('Word form distance, ' + args.similarity)
-            ax.set_ylabel('Proportion of word forms, CDF')
+            ax.set_ylabel('Proportion of word form pairs, CDF')
             plt.xlim(0, 1)
             plt.ylim(0, 1)
             plt.savefig(args.plot+"-"+root+".png")
+        
         else:
+            # cluster the forms
             clustering = AgglomerativeClustering(affinity='precomputed',
                     linkage = args.measure, n_clusters=cluster_num)
             clustering.fit(D)
             
-            cluster_elements = defaultdict(set)
-            for word, lemma, cluster in zip(data, labels, clustering.labels_):
-                cluster_elements[cluster].add((word, lemma))
-            for cluster in sorted(cluster_elements):
-                contents = ["{} [{}],".format(word, lemma)
-                        for word, lemma in cluster_elements[cluster]]
-                print(cluster, *contents)
+            if args.verbose:
+                cluster_elements = defaultdict(set)
+                for word, lemma, cluster in zip(data, labels, clustering.labels_):
+                    cluster_elements[cluster].add((word, lemma))
+                for cluster in sorted(cluster_elements):
+                    contents = ["{} [{}],".format(word, lemma)
+                            for word, lemma in cluster_elements[cluster]]
+                    print(cluster, *contents)
 
             # eval
+            # ratio of forms in the same cluster as their lemmas
+            lemmaacc = 0
             hcv = homogeneity_completeness_v_measure(labels, clustering.labels_)
             # logging.info("HCV: " + " ".join([str(x) for x in hcv]))
-            print("HCV:", *hcv, flush=True)
+            #print("HCV:", *hcv, flush=True)
+            print(lemmaacc, *hcv, flush=True)
             all_true_labels.extend(labels)
             all_predicted_labels.extend([root+str(label) for label in clustering.labels_])
 
-hcv = homogeneity_completeness_v_measure(all_true_labels,
-        all_predicted_labels)
-print("Total HCV:", *hcv)
+if all_predicted_labels:
+    hcv = homogeneity_completeness_v_measure(all_true_labels,
+            all_predicted_labels)
+    print("Total HCV:", *hcv)
 
