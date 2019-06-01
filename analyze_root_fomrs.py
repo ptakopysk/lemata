@@ -41,6 +41,8 @@ ap.add_argument("-R", "--root", type=str,
         help="Only process the given root")
 ap.add_argument("-p", "--plot", type=str,
         help="Plot the CDF under the given file prefix")
+ap.add_argument("-P", "--prfplot", type=str,
+        help="Plot the prec rec and F under the given file prefix")
 ap.add_argument("-T", "--analthresh", action="store_true",
         help="Analyze the best threshold")
 ap.add_argument("-b", "--baselines", action="store_true",
@@ -205,6 +207,8 @@ logging.info('{} root lemma forms read'.format(len(root_lemma_forms)))
 logging.info('Cluster forms')
 all_true_labels = list()
 all_predicted_labels = list()
+all_forms = 0
+all_correct = 0
 
 if args.root:
     iterate_over = [args.root]
@@ -255,30 +259,37 @@ for root in iterate_over:
             print("The cluster contains {} word forms belonging to {} lemmas: {}".format(
                 len(data), cluster_num, " ".join(root_lemma_forms[root].keys()) ))
 
-        if args.analthresh:
-            # analyze optimal threshold
+        if args.analthresh or args.prfplot:
             total = 0
             infl = 0
             infl_total = len(dist_infl)
-            best_f = 0
-            best_thresh = 0
+            dprf = list()
             for dist, is_infl in dist_label_pairs:
                 total += 1
                 if is_infl:
                     infl += 1
                 prec = infl/total
                 rec = infl/infl_total
-                f = 2 * prec * rec / (prec + rec)
+                if prec + rec > 0:
+                    f = 2 * prec * rec / (prec + rec)
+                else:
+                    f = 0
+                dprf.append( (dist, prec, rec, f) )
+        
+        if args.analthresh:
+            # analyze optimal threshold
+            best_f = -1
+            best_thresh = -1
+            for dist, _, _, f in prf:
                 if f > best_f:
                     best_f = f
                     best_thresh = dist
             if args.verbose:
                 print("BEST THRESH:", best_thresh, "with f1:", best_f)
-            else:
-                print(best_thresh, best_f)
-            if args.verbose:
                 print("ALLINFL:", *dist_infl)
                 print("ALLNOIN:", *dist_ninf)
+            else:
+                print(best_thresh, best_f)
 
         elif args.plot:
             n_bins = I
@@ -291,11 +302,29 @@ for root in iterate_over:
             ax.grid(True)
             ax.legend(loc='right')
             ax.set_title('Empirical CDF for forms of {}'.format(root))
-            ax.set_xlabel('Word form distance, ' + args.similarity)
+            ax.set_xlabel('Word form distance threshold, ' + args.similarity)
             ax.set_ylabel('Proportion of word form pairs, CDF')
             plt.xlim(0, 1)
             plt.ylim(0, 1)
             plt.savefig(args.plot+"-"+root+".png")
+        
+        elif args.prfplot:
+            dists = [x[0] for x in dprf]
+            precs = [x[1] for x in dprf]
+            recs  = [x[2] for x in dprf]
+            fs    = [x[3] for x in dprf]
+
+            plt.plot(dists, precs, label='precision')
+            plt.plot(dists, recs, label='recall')
+            plt.plot(dists, fs, label='F1')
+            plt.grid(True)
+            plt.legend()
+            plt.title('Inflection identification for forms of {}'.format(root))
+            plt.xlabel('Word form distance threshold, ' + args.similarity)
+            plt.ylabel('Inflection pairs below threshold')
+            plt.xlim(0, 1)
+            plt.ylim(0, 1)
+            plt.savefig(args.prfplot+"-"+root+".png")
         
         else:
             # cluster the forms
@@ -313,17 +342,29 @@ for root in iterate_over:
                     print(cluster, *contents)
 
             # eval
+            word2cluster = {word: cluster for word, cluster in zip(data, clustering.labels_)}
+            correct = sum([1 for word, lemma in zip(data, labels)
+                if word != lemma and word2cluster[word] == word2cluster[lemma]])
+            # total count of forms = all forms - lemmas
+            total = I - cluster_num
             # ratio of forms in the same cluster as their lemmas
-            lemmaacc = 0
-            hcv = homogeneity_completeness_v_measure(labels, clustering.labels_)
+            lemmaacc = correct / total
+
+            #hcv = homogeneity_completeness_v_measure(labels, clustering.labels_)
+            
             # logging.info("HCV: " + " ".join([str(x) for x in hcv]))
             #print("HCV:", *hcv, flush=True)
             print(lemmaacc, *hcv, flush=True)
-            all_true_labels.extend(labels)
-            all_predicted_labels.extend([root+str(label) for label in clustering.labels_])
+            
+            all_forms += total
+            all_correct += correct
+            #all_true_labels.extend(labels)
+            #all_predicted_labels.extend([root+str(label) for label in clustering.labels_])
 
-if all_predicted_labels:
-    hcv = homogeneity_completeness_v_measure(all_true_labels,
-            all_predicted_labels)
-    print("Total HCV:", *hcv)
+
+#if all_predicted_labels and not args.root:
+#    hcv = homogeneity_completeness_v_measure(all_true_labels,
+#            all_predicted_labels)
+#    lemmaacc = all_correct / all_forms
+#    print(lemmaacc, *hcv)
 
