@@ -32,11 +32,15 @@ ap.add_argument('roots_lemmas_forms',
 
 ap.add_argument("-l", "--lowercase", action="store_true",
         help="lowercase input forms")
+ap.add_argument("-S", "--simplify", action="store_true",
+        help="simplify input forms for edit dost")
 ap.add_argument("-s", "--similarity", type=str, default='jwxcos',
         help="Similarity: cos or jw or jwxcos")
 ap.add_argument("-M", "--measure", type=str, default='average',
         help="Linkage measure average/complete/single")
 
+ap.add_argument("-E", "--eval", type=str, default="lemmatization",
+        help="what to evaluate -- lemmatization or pairs")
 ap.add_argument("-R", "--root", type=str,
         help="Only process the given root")
 ap.add_argument("-p", "--plot", type=str,
@@ -49,6 +53,8 @@ ap.add_argument("-b", "--baselines", action="store_true",
         help="Compute baselines and upper bounds")
 ap.add_argument("-V", "--verbose", action="store_true",
         help="Print more verbose progress info")
+ap.add_argument("-O", "--output", action="store_true",
+        help="Print results to standard output")
 args = ap.parse_args()
 
 level = logging.DEBUG if args.verbose else logging.INFO
@@ -123,15 +129,25 @@ def jw_safe(srcword, tgtword):
 
 def jwsim(word, otherword):
     sim = jw_safe(word, otherword)
-    uword = devow(word)
-    uotherword = devow(otherword)
-    usim = jw_safe(uword, uotherword)    
-    sim = (sim+usim)/2
+    if args.simplify:
+        uword = devow(word)
+        uotherword = devow(otherword)
+        usim = jw_safe(uword, uotherword)    
+        sim = (sim+usim)/2
     assert sim >= 0 and sim <= 1, "JW sim must be between 0 and 1"
     return sim
 
-def rellev(word, otherword):
+def _rellev(word, otherword):
     return 1 - editdistance.eval(word, otherword) / (len(word)+len(otherword))
+
+def rellev(word, otherword):
+    sim = _rellev(word, otherword)
+    if args.simplify:
+        uword = devow(word)
+        uotherword = devow(otherword)
+        usim = _rellev(uword, uotherword)    
+        sim = (sim+usim)/2
+    return sim
 
 def lensim(word, otherword):
     return 1 / (1 + args.length * abs(len(word) - len(otherword)) )
@@ -175,6 +191,74 @@ def get_dist(form1, form2):
 #        assert False
 
 
+
+
+def eval_clust(data, labels, pred_labels, cluster_num, I):
+    cluster_elements = defaultdict(set)
+    for word, lemma, cluster in zip(data, labels, pred_labels):
+        cluster_elements[cluster].add((word, lemma))
+    if args.verbose:
+        for cluster in sorted(cluster_elements):
+            contents = ["{} [{}],".format(word, lemma)
+                    for word, lemma in cluster_elements[cluster]]
+            print(cluster, *contents)
+    if args.output:
+        for cluster in sorted(cluster_elements):
+            contents = ["[{}] {}".format(lemma, word)
+                    for word, lemma in cluster_elements[cluster]]
+            sorted(contents)
+            print("\nCLUSTER {}:".format(cluster), *contents, sep="\n")
+        print()
+
+    # eval
+    word2cluster = {word: cluster for word, cluster in zip(data, pred_labels)}
+    
+    if args.eval == "lemmatization":
+        # form is in same cluster as its lemma
+        correct = sum([1 for word, lemma in zip(data, labels)
+            if word != lemma and word2cluster[word] == word2cluster[lemma]])
+        
+        # total count of forms = all forms - lemmas
+        total_forms = I - cluster_num
+        rec = correct / total_forms
+        
+        # total sizes of clusters with lemmas
+        # (clusters with multiple lemmas counted multiple times,
+        # clusters without lemmas not counted)
+        total_cluster_sizes = sum([len(cluster_elements[cluster])
+            for word, lemma, cluster
+            in zip(data, labels, pred_labels)
+            if word == lemma])
+        prec = correct / total_cluster_sizes
+    elif args.eval == "pairs":
+        correct = 0
+        noninfl_in_cluster = 0
+        infl_outside_cluster = 0
+        for i1 in range(I):
+            for i2 in range(i1+1, I):
+                is_infl = labels[i1] == labels[i2]
+                is_clust = pred_labels[i1] == pred_labels[i2]
+                if is_infl and is_clust:
+                    correct += 1
+                elif is_infl and not is_clust:
+                    infl_outside_cluster += 1
+                elif not is_infl and is_clust:
+                    noninfl_in_cluster += 1
+        prec = correct / (correct + noninfl_in_cluster)
+        rec = correct / (correct + infl_outside_cluster)
+    else:
+        assert False
+
+    if prec + rec > 0:
+        f = 2*prec*rec/(prec+rec)
+    else:
+        f = 0
+
+    print(prec, rec, f, flush=True)
+
+
+
+
 logging.info('Read in embeddings')
 embedding = dict()
 if args.embeddings.endswith('.bin'):
@@ -205,10 +289,6 @@ with open(args.roots_lemmas_forms) as fh:
 logging.info('{} root lemma forms read'.format(len(root_lemma_forms)))
 
 logging.info('Cluster forms')
-all_true_labels = list()
-all_predicted_labels = list()
-all_forms = 0
-all_correct = 0
 
 if args.root:
     iterate_over = [args.root]
@@ -228,17 +308,18 @@ for root in iterate_over:
         labels.extend(lemmas)
     # number of lemmas is number of clusters
     cluster_num = len(root_lemma_forms[root])
+    # number of forms
+    I = len(data)
     
     if args.baselines:
         pred_labels = labels.copy()
         random.shuffle(pred_labels)
-        all_true_labels.extend(labels)
-        all_predicted_labels.extend(pred_labels)
+        eval_clust(data, labels, pred_labels, cluster_num, I)
     else:
         # compute the distance matrix
-        I = len(data)
         D = np.empty((I, I))
         dist_label_pairs = list()
+        dist_label_pairs_verbose = list()
         for i1 in range(I):
             for i2 in range(I):
                 dist = get_dist(data[i1], data[i2])
@@ -246,9 +327,18 @@ for root in iterate_over:
                 if i1 < i2:
                     is_infl = labels[i1] == labels[i2]
                     dist_label_pairs.append( (dist, is_infl) )
+                    if args.output:
+                        dist_label_pairs_verbose.append( (
+                            dist,
+                            data[i1],
+                            data[i2],
+                            is_infl
+                            ))
+
 
         # for further analyses, sort the distances and separate into infls and noninfls
         dist_label_pairs.sort(key=lambda x: x[0])
+        dist_label_pairs_verbose.sort(key=lambda x: x[0])
         dist_infl = [dist for dist, is_infl in dist_label_pairs if is_infl]
         dist_ninf = [dist for dist, is_infl in dist_label_pairs if not is_infl]
         
@@ -280,7 +370,7 @@ for root in iterate_over:
             # analyze optimal threshold
             best_f = -1
             best_thresh = -1
-            for dist, _, _, f in prf:
+            for dist, _, _, f in dprf:
                 if f > best_f:
                     best_f = f
                     best_thresh = dist
@@ -290,6 +380,13 @@ for root in iterate_over:
                 print("ALLNOIN:", *dist_ninf)
             else:
                 print(best_thresh, best_f)
+            if args.output:
+                for dist, w1, w2, is_infl in dist_label_pairs_verbose:
+                    is_lower = dist <= best_thresh
+                    infl_str = 'INFL' if is_infl else 'DERI'
+                    # good: lower & infl or !lower & !infl
+                    good_str = 'BAAD' if bool(is_lower) ^ bool(is_infl) else 'GOOD'
+                    print(good_str, infl_str, dist, w1, w2, sep="\t")
 
         elif args.plot:
             n_bins = I
@@ -331,40 +428,7 @@ for root in iterate_over:
             clustering = AgglomerativeClustering(affinity='precomputed',
                     linkage = args.measure, n_clusters=cluster_num)
             clustering.fit(D)
+            pred_labels = clustering.labels_
             
-            if args.verbose:
-                cluster_elements = defaultdict(set)
-                for word, lemma, cluster in zip(data, labels, clustering.labels_):
-                    cluster_elements[cluster].add((word, lemma))
-                for cluster in sorted(cluster_elements):
-                    contents = ["{} [{}],".format(word, lemma)
-                            for word, lemma in cluster_elements[cluster]]
-                    print(cluster, *contents)
-
-            # eval
-            word2cluster = {word: cluster for word, cluster in zip(data, clustering.labels_)}
-            correct = sum([1 for word, lemma in zip(data, labels)
-                if word != lemma and word2cluster[word] == word2cluster[lemma]])
-            # total count of forms = all forms - lemmas
-            total = I - cluster_num
-            # ratio of forms in the same cluster as their lemmas
-            lemmaacc = correct / total
-
-            #hcv = homogeneity_completeness_v_measure(labels, clustering.labels_)
-            
-            # logging.info("HCV: " + " ".join([str(x) for x in hcv]))
-            #print("HCV:", *hcv, flush=True)
-            print(lemmaacc, *hcv, flush=True)
-            
-            all_forms += total
-            all_correct += correct
-            #all_true_labels.extend(labels)
-            #all_predicted_labels.extend([root+str(label) for label in clustering.labels_])
-
-
-#if all_predicted_labels and not args.root:
-#    hcv = homogeneity_completeness_v_measure(all_true_labels,
-#            all_predicted_labels)
-#    lemmaacc = all_correct / all_forms
-#    print(lemmaacc, *hcv)
+            eval_clust(data, labels, pred_labels, cluster_num, I)
 
