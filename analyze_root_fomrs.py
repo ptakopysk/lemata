@@ -206,8 +206,7 @@ def eval_clust(data, labels, pred_labels, cluster_num, I):
         for cluster in sorted(cluster_elements):
             contents = ["[{}] {}".format(lemma, word)
                     for word, lemma in cluster_elements[cluster]]
-            sorted(contents)
-            print("\nCLUSTER {}:".format(cluster), *contents, sep="\n")
+            print("\nCLUSTER {}:".format(cluster), *sorted(contents), sep="\n")
         print()
 
     # eval
@@ -378,15 +377,26 @@ for root in iterate_over:
                 print("BEST THRESH:", best_thresh, "with f1:", best_f)
                 print("ALLINFL:", *dist_infl)
                 print("ALLNOIN:", *dist_ninf)
+            elif args.output:
+                print("BEST THRESH:", best_thresh, "with f1:", best_f)
             else:
                 print(best_thresh, best_f)
             if args.output:
+                print('above/below threshold', 'good/bad',
+                        'inflection/derivation', 'distance', 'word1', 'word2',
+                        sep="\t")
+                reached_threshold = False
                 for dist, w1, w2, is_infl in dist_label_pairs_verbose:
-                    is_lower = dist <= best_thresh
+                    if not reached_threshold and dist >= best_thresh:
+                        print('====================')
+                        reached_threshold = True
+
+                    thr_str = 'ABOVE' if reached_threshold else 'BELOW'
+                    good = (not reached_threshold and is_infl) or (reached_threshold and not is_infl)
+                    good_str = 'GOOD' if good else 'BAAD'
                     infl_str = 'INFL' if is_infl else 'DERI'
-                    # good: lower & infl or !lower & !infl
-                    good_str = 'BAAD' if bool(is_lower) ^ bool(is_infl) else 'GOOD'
-                    print(good_str, infl_str, dist, w1, w2, sep="\t")
+                    print(thr_str, good_str, infl_str,
+                            "{:.4f}".format(dist), w1, w2, sep="\t")
 
         elif args.plot:
             n_bins = I
