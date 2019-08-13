@@ -209,6 +209,19 @@ def eval_clust(data, labels, pred_labels, cluster_num, I):
             print("\nCLUSTER {}:".format(cluster), *sorted(contents), sep="\n")
         print()
 
+        print('PERLEMMA')
+        lemma2formclusters = defaultdict(list)
+        for cluster in cluster_elements:
+            for form, lemma in cluster_elements[cluster]:
+                lemma2formclusters[lemma].append((cluster, form))
+        for lemma in lemma2formclusters:
+            print()
+            print('LEMMA {}:'.format(lemma))
+            lemma2formclusters[lemma].sort(key=lambda x: x[0])
+            for cluster, form in lemma2formclusters[lemma]:
+                print(cluster, form, sep="\t")
+
+
     # eval
     word2cluster = {word: cluster for word, cluster in zip(data, pred_labels)}
     
