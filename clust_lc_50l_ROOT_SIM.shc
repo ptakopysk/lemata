@@ -1,0 +1,47 @@
+#!/bin/bash
+#
+# SGE CONFIGURATION
+#
+# !!! Memory limit
+#$ -hard
+#$ -l mem_free=10g
+#$ -l act_mem_free=10g
+#$ -l h_vmem=10g
+#
+# Run in this directory
+#$ -cwd
+#
+# Use bash
+#$ -S /bin/bash
+#
+# Export environment variables
+#$ -V
+#
+# Logs
+#$ -o /home/rosa/logs
+#$ -e /home/rosa/logs
+# Do not merge stderr with stdout
+#$ -j n
+#
+# run in troja or ms (but not gpu)
+# -q '(troja*|ms*)'
+#$ -q 'cpu-*.q'
+#
+# send mail: b started, e ended, a aborted or rescheduled, s suspended
+#
+# 1 thread
+#$ -pe smp 1
+
+# Print each command to STDERR before executing (expanded), prefixed by "+ "
+set -o xtrace
+
+renice 10 $$ >&2
+
+root=$1
+sim=$2
+
+./analyze_root_fomrs.py \
+    derroot_lemma_forms_50l.words.vectors \
+    derroot_lemma_forms_50l.ssv \
+    -l -s $sim -R $root
+
