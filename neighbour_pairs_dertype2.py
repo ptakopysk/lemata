@@ -11,6 +11,8 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S',
     level=logging.INFO)
 
+MINCOUNT = 10
+
 logging.info('Read in Derinet edges')
 lemma2plemma = dict()
 with open('derinet_edges.tsv') as infile:
@@ -20,20 +22,26 @@ with open('derinet_edges.tsv') as infile:
 
 logging.info('Read in lemma forms')
 lemma2forms = defaultdict(set)
-with open('lemma_forms_3.tsv') as infile:
-#with open('lemma_forms.tsv') as infile:
+with open('lemma_forms.tsv') as infile:
     for line in infile:
         lemma, pos, form, tag, count = line.rstrip('\n').split("\t")
         lemma2forms[(lemma, pos)].add((form, tag, count))
 
+printbuffer = set()
+
 def printout(inde, form1, form2):
     if form1[0] == form2[0]:
         return
+
+    if int(form1[2]) < MINCOUNT or int(form2[2]) < MINCOUNT:
+        return
+
     if form1[0] > form2[0]:
         tmp = form2
         form2 = form1
         form1 = tmp
-    print(inde, *form1, *form2, sep="\t")
+        
+    printbuffer.add((inde, *form1, *form2))
 
 def tag_distance(form1, form2):
     return _tag_distance(form1[1], form2[1])
@@ -48,7 +56,18 @@ def _tag_distance(tag1, tag2):
             diff += 1
     return diff
 
-logging.info('Print out pairs')
+pos2name = [ 'POS', 'SUBPOS', 'GENDER', 'NUMBER', 'CASE', 'POSSGENDER', 'POSSNUMBER', 'PERSON', 'TENSE', 'GRADE', 'NEGATION', 'VOICE', 'RESERVE1', 'RESERVE2', 'VAR', 'ASPECT', ]
+
+def optypes(form1, form2):
+    optypes = list()
+    tag1 = form1[1]
+    tag2 = form2[1]
+    for index, (pos1, pos2) in enumerate(zip(tag1, tag2)):
+        if pos1 != pos2:
+            optypes.append(pos2name[index])
+    return optypes
+
+logging.info('Prepare pairs')
 for lemma, pos in lemma2forms:
     forms = lemma2forms[(lemma, pos)]
 
@@ -56,7 +75,8 @@ for lemma, pos in lemma2forms:
     for form1 in forms:
         for form2 in forms:
             if tag_distance(form1, form2) <= 1:
-                printout('INFL', form1, form2)
+                for optp in optypes(form1, form2):
+                    printout('INFL_' + optp, form1, form2)
 
     # derivations
     if (lemma, pos) in lemma2plemma:
@@ -72,5 +92,8 @@ for lemma, pos in lemma2forms:
                         printout('DERI_EDGE',
                                 (form, tag, count), (pform, ptag, pcount))
 
+logging.info('Print out pairs')
+for item in printbuffer:
+    print(*item, sep='\t')
 
 logging.info('Done')

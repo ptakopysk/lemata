@@ -23,8 +23,9 @@ def tag_distance(tag1, tag2):
 
 for line in sys.stdin:
     fields = line.rstrip().split('\t')
-    #count1 = fields[0]
-    #count2 = fields[1]
+    count1 = int(fields[0])
+    count2 = int(fields[1])
+    count = count1 * count2
     optp = fields[2]
     dist = float(fields[3])
     tag1 = fields[6]
@@ -36,17 +37,18 @@ for line in sys.stdin:
         # we are now only interested in inflections
         for index, (pos1, pos2) in enumerate(zip(tag1, tag2)):
             if pos1 != pos2:
-                change[index].append(dist)
+                change[index].append((dist, count))
     else:
-        derchange[optp].append(dist)
+        derchange[optp].append((dist, count))
 
 results = list()
 
 for index in change:
-    l = len(change[index])
+    l = sum([c[1] for c in change[index]])
     if l > MINCOUNT:
-        sd = statistics.stdev(change[index])
-        s = sum(change[index])
+        #sd = statistics.stdev(change[index])
+        sd = 1
+        s = sum([c[0] * c[1] for c in change[index]])
         avg = s/l
         results.append("\t".join(
             ("{:.4f}".format(avg), "{:.4f}".format(sd), pos2name[index], str(l))))
@@ -54,10 +56,11 @@ for index in change:
         print('Skipping', pos2name[index], str(l), file=sys.stderr)
 
 for dertype in derchange:
-    l = len(derchange[dertype])
+    l = sum([c[1] for c in derchange[dertype]])
     if l > MINCOUNT:
-        sd = statistics.stdev(derchange[dertype])
-        s = sum(derchange[dertype])
+        #sd = statistics.stdev(derchange[dertype])
+        sd = 1
+        s = sum([c[0] * c[1] for c in derchange[dertype]])
         avg = s/l
         results.append("\t".join(
             ("{:.4f}".format(avg), "{:.4f}".format(sd), dertype, str(l))))

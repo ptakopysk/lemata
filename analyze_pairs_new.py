@@ -288,10 +288,9 @@ logging.info('Embeddings read')
 
 
 logging.info('Read in pairs and compute their dostacnes')
+result = list()
 with open(args.roots_lemmas_forms) as fh:
     for line in fh:
-        if args.lowercase:
-            line = line.lower()
         words = line.rstrip('\n').split('\t')
         inflderi = words[0]
         form1 = words[1]
@@ -300,10 +299,19 @@ with open(args.roots_lemmas_forms) as fh:
         form2 = words[4]
         tag2 = words[5]
         count2 = words[6]
+        
+        if args.lowercase and form1.lower() == form2.lower():
+            continue
 
         dist = get_dist(form1, form2)
 
-        print(count1, count2, inflderi, dist, form1, form2, tag1, tag2,
-                sep="\t")
+        result.append((count1, count2, inflderi, dist, form1, form2, tag1, tag2))
+
+logging.info('Sort by dist')
+result.sort(key = lambda x: x[3])
+
+logging.info('Print out')
+for item in result:
+    print(*item, sep="\t")
 
 logging.info('Done')
