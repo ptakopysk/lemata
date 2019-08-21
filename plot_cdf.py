@@ -5,6 +5,8 @@ import sys
 
 from collections import defaultdict
 
+from numpy import linspace
+
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -15,40 +17,51 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S',
     level=logging.INFO)
 
+filename = sys.argv[1]
 
-#neighbour_pairs_new_dist_dertype_jwxcos.tsv
+for aggregate in (True, False):
 
-logging.info('Read in data')
-dists = defaultdict(list)
-for line in sys.stdin:
-    _, _, optp, dist, _, _, _, _ = line.rstrip('\n').split('\t')
-    dist = float(dist)
-    dists[optp].append(dist)
+    logging.info('PASS WITH aggregate = {}'.format(aggregate))
 
-logging.info('Start plotting')
-maxcount = max([len(dists[optp]) for optp in dists])
-bins = maxcount
-#bins = 100
+    logging.info('Read in data')
+    dists = defaultdict(list)
+    with open(filename) as infile:
+        for line in infile:
+            _, _, optp, dist, _, _, _, _ = line.rstrip('\n').split('\t')
+            dist = float(dist)
+            if aggregate:
+                optp = optp[:4]
+            dists[optp].append(dist)
 
-for optp in sorted(dists):
-    logging.info('Plot {}'.format(optp))
-    ls = '-' if optp.startswith('DERI') else ':'
-    _, bins, _ = plt.hist(dists[optp], bins, density=True, histtype='step',
-            cumulative=True, label=optp, ls=ls)
-    
-logging.info('Set up graph')
-#ax.grid(True)
-plt.legend(loc='upper left')
-plt.title('Empirical CDF')
-plt.xlabel('Word form distance threshold')
-plt.ylabel('Proportion of word form pairs, CDF')
-plt.xticks([bins[0], bins[-1]])
-#plt.xlim(0, maxcount)
-#plt.ylim(0, 1)
+    logging.info('Start plotting')
+    plt.figure(figsize=(10,10), dpi=300)
+    bins = 1000
 
-#print(*bins)
+    for optp in sorted(dists):
+        logging.info('Plot {}'.format(optp))
+        if optp.startswith('DERI'):
+            ls = '-'
+        elif optp in ('INFL_VOICE', 'INFL_NEGATION', 'INFL_GRADE', 'INFL_SUBPOS', 'INFL_TENSE'):
+            ls = '--'
+        else:
+            ls = ':'
+        _, bins, _ = plt.hist(dists[optp], bins, density=True, histtype='step',
+                cumulative=True, label=optp, ls=ls)
+        
+    logging.info('Set up graph')
+    plt.grid(True)
+    plt.legend(loc='lower right')
+    plt.title(filename)
+    plt.xlabel('Word form distance')
+    plt.ylabel('Proportion of word form pairs, CDF')
+    plt.xlim(0, 1)
+    plt.ylim(0, 1)
+    plt.xticks(linspace(0, 1, 21))
+    plt.yticks(linspace(0, 1, 21))
 
-logging.info('Save graph')
-plt.savefig("cdf2.png")
+    agg = '.agg' if aggregate else ''
+    outfilename = "cdf/" + filename + agg + ".png"
+    logging.info('Save graph as ' + outfilename)
+    plt.savefig(outfilename)
 
-logging.info('Done')
+    logging.info('Done')
