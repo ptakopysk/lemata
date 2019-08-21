@@ -4,9 +4,9 @@
 #
 # !!! Memory limit
 #$ -hard
-#$ -l mem_free=20g
-#$ -l act_mem_free=20g
-#$ -l h_vmem=20g
+#$ -l mem_free=1g
+#$ -l act_mem_free=1g
+#$ -l h_vmem=1g
 #
 # Run in this directory
 #$ -cwd
@@ -28,6 +28,8 @@
 #$ -q 'cpu-*.q'
 #
 # send mail: b started, e ended, a aborted or rescheduled, s suspended
+# -M rosa@ufal.mff.cuni.cz
+#  -m beas
 #
 # 1 thread
 #$ -pe smp 1
@@ -37,12 +39,5 @@ set -o xtrace
 
 renice 10 $$ >&2
 
-sim=$1
-shift
-
-./analyze_pairs.py \
-    derroot_lemma_forms_50l.words.vectors \
-    neighbour_pairs.tsv \
-    -s $sim -S $@ \
-    > neighbour_pairs_dist_$sim.tsv
+./neighbour_pairs_new.py > neighbour_pairs_new.tsv
 

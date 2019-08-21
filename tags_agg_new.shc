@@ -40,9 +40,7 @@ renice 10 $$ >&2
 sim=$1
 shift
 
-./analyze_pairs.py \
-    derroot_lemma_forms_50l.words.vectors \
-    neighbour_pairs.tsv \
-    -s $sim -S $@ \
-    > neighbour_pairs_dist_$sim.tsv
+sort -u neighbour_pairs_new_dist_$sim.tsv | \
+    ./tags_agg_new.py \
+    > tags_agg_new_$sim.tsv
 
