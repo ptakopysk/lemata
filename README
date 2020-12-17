@@ -1,3 +1,11 @@
 Lemmatization across languages
 
+Code used for experiments for the following two papers:
 
+- Unsupervised Lemmatization as Embeddings-Based Word Clustering
+https://arxiv.org/abs/1908.08528
+
+- Attempting to separate inflection and derivation using vector space representations
+https://www.aclweb.org/anthology/W19-8508/
+
+The main code file is cluster.py
